@@ -44,13 +44,6 @@
           "h": [
             {
               "cost": 1,
-              "power": 7,
-              "baseCost": 1,
-              "basePower": 7,
-              "cardDefId": "EbonyMaw"
-            },
-            {
-              "cost": 1,
               "power": 5,
               "baseCost": 1,
               "basePower": 5,
@@ -61,7 +54,14 @@
               "power": 6,
               "baseCost": 2,
               "basePower": 6,
-              "cardDefId": "Maximus"
+              "cardDefId": "Lizard"
+            },
+            {
+              "cost": 8,
+              "power": 12,
+              "baseCost": 8,
+              "basePower": 12,
+              "cardDefId": "Death"
             }
           ],
           "n": {
@@ -85,12 +85,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             }
@@ -105,7 +105,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Vault",
+              "to": "GammaLab",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -122,7 +122,7 @@
                 {
                   "location": [
                     0,
-                    "Vault"
+                    "GammaLab"
                   ],
                   "revealed": [
                     0,
@@ -141,22 +141,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "Nightmare",
-              "cost": 3,
+              "card": "TyphoidMary",
+              "cost": 4,
               "type": "reveal",
-              "power": 1,
-              "entityId": 39,
+              "power": 10,
+              "entityId": 16,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Nightmare",
+              "card": "TyphoidMary",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -179,14 +179,39 @@
             2,
             4,
             {
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "TyphoidMary"
+                  ]
+                }
+              ],
               "3": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 1,
-                  "baseCost": 3,
-                  "basePower": 1,
-                  "cardDefId": "Nightmare"
+                  "cost": 8,
+                  "power": 12,
+                  "baseCost": 8,
+                  "basePower": 12,
+                  "cardDefId": "Death"
                 }
               ]
             }
@@ -228,7 +253,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative"
             }
           ]
@@ -245,8 +270,8 @@
               "who": "player",
               "card": "Martyr",
               "type": "play",
-              "entityId": 28,
-              "location": "Vault",
+              "entityId": 23,
+              "location": "GammaLab",
               "locationIndex": 0
             }
           ]
@@ -269,7 +294,7 @@
                           "cost": 1,
                           "power": 5,
                           "baseCost": 1,
-                          "entityId": 28,
+                          "entityId": 23,
                           "basePower": 5,
                           "cardDefId": "Martyr",
                           "arrivalSeq": 0
@@ -294,7 +319,7 @@
             2,
             3,
             {
-              "1": [
+              "0": [
                 1,
                 {
                   "cost": [
@@ -315,7 +340,32 @@
                   ],
                   "cardDefId": [
                     0,
-                    "Maximus"
+                    "Lizard"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "TyphoidMary"
                   ]
                 }
               ],
@@ -324,23 +374,23 @@
                 {
                   "cost": [
                     0,
-                    3
+                    8
                   ],
                   "power": [
                     0,
-                    1
+                    12
                   ],
                   "baseCost": [
                     0,
-                    3
+                    8
                   ],
                   "basePower": [
                     0,
-                    1
+                    12
                   ],
                   "cardDefId": [
                     0,
-                    "Nightmare"
+                    "Death"
                   ]
                 }
               ]
@@ -389,7 +439,7 @@
               "cost": 1,
               "type": "reveal",
               "power": 5,
-              "entityId": 28,
+              "entityId": 23,
               "drawReveal": false
             }
           ]
@@ -405,7 +455,7 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "Vault",
+              "location": "GammaLab",
               "playerPower": 5,
               "locationIndex": 0,
               "opponentPower": 0
@@ -436,12 +486,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             }
@@ -456,7 +506,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Sakaar",
+              "to": "DeepSpace",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -479,7 +529,7 @@
                 {
                   "location": [
                     0,
-                    "Sakaar"
+                    "DeepSpace"
                   ],
                   "revealed": [
                     0,
@@ -511,22 +561,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "Infinaut",
-              "cost": 6,
+              "card": "Maximus",
+              "cost": 2,
               "type": "reveal",
-              "power": 20,
-              "entityId": 29,
+              "power": 6,
+              "entityId": 21,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Infinaut",
+              "card": "Maximus",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -549,14 +599,64 @@
             2,
             4,
             {
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    2
+                  ],
+                  "power": [
+                    0,
+                    6
+                  ],
+                  "baseCost": [
+                    0,
+                    2
+                  ],
+                  "basePower": [
+                    0,
+                    6
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Maximus"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "TyphoidMary"
+                  ]
+                }
+              ],
               "3": [
                 0,
                 {
-                  "cost": 6,
-                  "power": 20,
-                  "baseCost": 6,
-                  "basePower": 20,
-                  "cardDefId": "Infinaut"
+                  "cost": 8,
+                  "power": 12,
+                  "baseCost": 8,
+                  "basePower": 12,
+                  "cardDefId": "Death"
                 }
               ]
             }
@@ -613,10 +713,10 @@
           "events": [
             {
               "who": "player",
-              "card": "EbonyMaw",
+              "card": "Lizard",
               "type": "play",
-              "entityId": 32,
-              "location": "Vault",
+              "entityId": 27,
+              "location": "GammaLab",
               "locationIndex": 0
             }
           ]
@@ -636,12 +736,12 @@
                       "1": [
                         0,
                         {
-                          "cost": 1,
-                          "power": 7,
-                          "baseCost": 1,
-                          "entityId": 32,
-                          "basePower": 7,
-                          "cardDefId": "EbonyMaw",
+                          "cost": 2,
+                          "power": 6,
+                          "baseCost": 2,
+                          "entityId": 27,
+                          "basePower": 6,
+                          "cardDefId": "Lizard",
                           "arrivalSeq": 1
                         }
                       ]
@@ -667,22 +767,6 @@
               "0": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
                   "cardDefId": [
                     0,
                     "Maximus"
@@ -694,23 +778,23 @@
                 {
                   "cost": [
                     0,
-                    3
+                    4
                   ],
                   "power": [
                     0,
-                    1
+                    10
                   ],
                   "baseCost": [
                     0,
-                    3
+                    4
                   ],
                   "basePower": [
                     0,
-                    1
+                    10
                   ],
                   "cardDefId": [
                     0,
-                    "Nightmare"
+                    "TyphoidMary"
                   ]
                 }
               ],
@@ -719,23 +803,23 @@
                 {
                   "cost": [
                     0,
-                    6
+                    8
                   ],
                   "power": [
                     0,
-                    20
+                    12
                   ],
                   "baseCost": [
                     0,
-                    6
+                    8
                   ],
                   "basePower": [
                     0,
-                    20
+                    12
                   ],
                   "cardDefId": [
                     0,
-                    "Infinaut"
+                    "Death"
                   ]
                 }
               ]
@@ -751,7 +835,7 @@
           "events": [
             {
               "who": "player",
-              "card": "EbonyMaw",
+              "card": "Lizard",
               "type": "cardStaged"
             }
           ]
@@ -780,10 +864,10 @@
           "events": [
             {
               "who": "opponent",
-              "card": "USAgent",
+              "card": "Psylocke",
               "type": "play",
-              "entityId": 17,
-              "location": "Sakaar",
+              "entityId": 36,
+              "location": "DeepSpace",
               "locationIndex": 1
             }
           ]
@@ -806,7 +890,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 17,
+                          "entityId": 36,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -837,11 +921,11 @@
           "events": [
             {
               "who": "player",
-              "card": "EbonyMaw",
-              "cost": 1,
+              "card": "Lizard",
+              "cost": 2,
               "type": "reveal",
-              "power": 7,
-              "entityId": 32,
+              "power": 6,
+              "entityId": 27,
               "drawReveal": false
             }
           ]
@@ -857,8 +941,8 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "Vault",
-              "playerPower": 12,
+              "location": "GammaLab",
+              "playerPower": 11,
               "locationIndex": 0,
               "opponentPower": 0
             }
@@ -874,7 +958,7 @@
           "events": [
             {
               "who": "player",
-              "card": "EbonyMaw",
+              "card": "Lizard",
               "type": "cardResolved"
             }
           ]
@@ -889,11 +973,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "USAgent",
+              "card": "Psylocke",
               "cost": 2,
               "type": "reveal",
-              "power": 3,
-              "entityId": 17,
+              "power": 2,
+              "entityId": 36,
               "drawReveal": false
             }
           ]
@@ -919,7 +1003,7 @@
                           ],
                           "power": [
                             0,
-                            3
+                            2
                           ],
                           "baseCost": [
                             0,
@@ -927,11 +1011,11 @@
                           ],
                           "basePower": [
                             0,
-                            3
+                            2
                           ],
                           "cardDefId": [
                             0,
-                            "USAgent"
+                            "Psylocke"
                           ]
                         }
                       ]
@@ -951,7 +1035,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "USAgent",
+              "card": "Psylocke",
               "type": "cardRevealed"
             }
           ]
@@ -967,344 +1051,10 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Sakaar",
+              "location": "DeepSpace",
               "playerPower": 0,
               "locationIndex": 1,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Maximus",
-              "type": "play",
-              "entityId": 38,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "LukeCage",
-              "type": "play",
-              "entityId": 27,
-              "location": "Sakaar",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 6,
-                          "baseCost": 2,
-                          "entityId": 38,
-                          "basePower": 6,
-                          "cardDefId": "Maximus",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 27,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Nightmare"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Maximus",
-              "cost": 2,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 38,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "LukeCage",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 27,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "LukeCage"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "LukeCage",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Event",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "USAgent",
-              "type": "powerLockChange"
-            },
-            {
-              "who": "opponent",
-              "card": "LukeCage",
-              "type": "powerLockChange"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 5
+              "opponentPower": 2
             }
           ]
         },
@@ -1317,14 +1067,14 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
-            {
               "who": "player",
               "type": "energy",
-              "energy": 4
+              "energy": 3
+            },
+            {
+              "who": "opponent",
+              "type": "energy",
+              "energy": 3
             }
           ]
         },
@@ -1337,7 +1087,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "TinkerersWorkshop",
+              "to": "StarkIsland",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -1354,7 +1104,7 @@
                 {
                   "location": [
                     0,
-                    "TinkerersWorkshop"
+                    "StarkIsland"
                   ]
                 }
               ]
@@ -1368,2868 +1118,23 @@
           "turn": 3,
           "label": "Draw",
           "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "cost": 5,
-              "type": "reveal",
-              "power": 14,
-              "entityId": 37,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    14
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    14
-                  ],
-                  "cardDefId": [
-                    0,
-                    "RedSkull"
-                  ]
-                }
-              ],
-              "2": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 20,
-                  "baseCost": 6,
-                  "basePower": 20,
-                  "cardDefId": "Infinaut"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "play",
-              "entityId": 39,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 1,
-                          "baseCost": 3,
-                          "entityId": 39,
-                          "basePower": 1,
-                          "cardDefId": "Nightmare",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    14
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    14
-                  ],
-                  "cardDefId": [
-                    0,
-                    "RedSkull"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HellcowFracturedFrontier",
-              "type": "play",
-              "entityId": 25,
-              "location": "Vault",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 25,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "cost": 3,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 1,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Override",
-          "events": [
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "abilityOverride",
-              "overrideAbility": "Sasquatch"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Sasquatch",
-              "cost": 6,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 46,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Override",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "abilityOverride",
-              "overrideAbility": "DeathFracturedFrontier"
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    14
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    14
-                  ],
-                  "cardDefId": [
-                    0,
-                    "RedSkull"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "DeathFracturedFrontier",
-              "cost": 5,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 47,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HellcowFracturedFrontier",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 25,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "HellcowFracturedFrontier"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HellcowFracturedFrontier",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Event",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HellcowFracturedFrontier",
-              "type": "powerLockChange"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vault",
-              "playerPower": 12,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "HellcowFracturedFrontier",
-              "newPower": 4,
-              "oldPower": 5,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "HellcowFracturedFrontier",
-              "newPower": 6,
-              "oldPower": 7,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vault",
-              "playerPower": 10,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "cost": 7,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 31,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "2": [
-                0,
-                {
-                  "cost": 7,
-                  "power": 12,
-                  "baseCost": 7,
-                  "basePower": 12,
-                  "cardDefId": "Skaar"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ManThing",
-              "type": "play",
-              "entityId": 18,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 18,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ManThing",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 18,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            7
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            7
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ManThing"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ManThing",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "power",
-              "source": "ManThing",
-              "newPower": -1,
-              "oldPower": 1,
-              "cardEntityId": 39
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Event",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ManThing",
-              "type": "powerLockChange"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TinkerersWorkshop",
-              "playerPower": -1,
-              "locationIndex": 2,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "HellcowFracturedFrontier",
-              "newPower": 3,
-              "oldPower": 4,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "HellcowFracturedFrontier",
-              "newPower": 5,
-              "oldPower": 6,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vault",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    14
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    14
-                  ],
-                  "cardDefId": [
-                    0,
-                    "RedSkull"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "cost": 2,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 35,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Lizard"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    14
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    14
-                  ],
-                  "cardDefId": [
-                    0,
-                    "RedSkull"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ],
-              "3": [
-                0,
-                {
-                  "cost": 7,
-                  "power": 12,
-                  "baseCost": 7,
-                  "basePower": 12,
-                  "cardDefId": "Skaar"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "play",
-              "entityId": 37,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 14,
-                          "baseCost": 5,
-                          "entityId": 37,
-                          "basePower": 14,
-                          "cardDefId": "RedSkull",
-                          "arrivalSeq": 1,
-                          "overrideAbility": "DeathFracturedFrontier"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "play",
-              "entityId": 20,
-              "location": "Vault",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "play",
-              "entityId": 22,
-              "location": "Vault",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 20,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 22,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "cost": 5,
-              "type": "reveal",
-              "power": 14,
-              "entityId": 37,
-              "drawReveal": false,
-              "overrideAbility": "DeathFracturedFrontier"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 13,
-              "locationIndex": 2,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Magik"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Event",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "powerLockChange"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vault",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Location",
-          "events": [
-            {
-              "to": "Limbo",
-              "from": "Vault",
-              "type": "location",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "Limbo"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Extra Turn",
-          "events": [
-            {
-              "type": "totalTurnsChanged",
-              "totalTurns": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "FastballSpecial"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HellcowFracturedFrontier",
-              "type": "destroyed",
-              "fromLocation": "Limbo"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "entityId": [
-                            0,
-                            20
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Magik"
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "entityId": [
-                            0,
-                            22
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "FastballSpecial"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 3,
-                      "power": 3,
-                      "cardDefId": "HellcowFracturedFrontier"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Event",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "powerLockChange"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "FastballSpecial",
-              "newPower": 2,
-              "oldPower": 5,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 2,
-                      "power": 0,
-                      "cardDefId": "FastballSpecial"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "cost": 5,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 34,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 5,
-                  "power": 9,
-                  "baseCost": 5,
-                  "basePower": 9,
-                  "cardDefId": "WarMachine"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "type": "play",
-              "entityId": 34,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 9,
-                          "baseCost": 5,
-                          "entityId": 34,
-                          "basePower": 9,
-                          "cardDefId": "WarMachine",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ScorpionBrandNewDay",
-              "type": "play",
-              "entityId": 23,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 23,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "cost": 5,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 34,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 22,
-              "locationIndex": 2,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ScorpionBrandNewDay",
-              "cost": 6,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 23,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "basePower": [
-                            0,
-                            6
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ScorpionBrandNewDay"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ScorpionBrandNewDay",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": 1,
-              "oldPower": 3,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -3,
-              "oldPower": 2,
-              "cardEntityId": 32
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -3,
-              "oldPower": -1,
-              "cardEntityId": 39
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            1
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Event",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ScorpionBrandNewDay",
-              "type": "powerLockChange"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "playerPower": -2,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 20,
-              "locationIndex": 2,
-              "opponentPower": 13
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
             {
               "who": "player",
               "card": "Zero",
               "cost": 1,
               "type": "reveal",
               "power": 3,
-              "entityId": 30,
+              "entityId": 17,
               "drawReveal": true
             },
             {
               "who": "player",
               "card": "Zero",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -4298,39 +1203,43 @@
                   ],
                   "cardDefId": [
                     0,
-                    "Lizard"
+                    "Maximus"
                   ]
                 }
               ],
               "2": [
                 1,
                 {
+                  "cost": [
+                    0,
+                    4
+                  ],
                   "power": [
                     0,
-                    20
+                    10
                   ],
                   "baseCost": [
                     0,
-                    6
+                    4
                   ],
                   "basePower": [
                     0,
-                    20
+                    10
                   ],
                   "cardDefId": [
                     0,
-                    "Infinaut"
+                    "TyphoidMary"
                   ]
                 }
               ],
               "3": [
                 0,
                 {
-                  "cost": 5,
+                  "cost": 8,
                   "power": 12,
-                  "baseCost": 7,
+                  "baseCost": 8,
                   "basePower": 12,
-                  "cardDefId": "Skaar"
+                  "cardDefId": "Death"
                 }
               ]
             }
@@ -4340,11 +1249,11 @@
             {
               "player": [
                 0,
-                2
+                6
               ],
               "opponent": [
                 0,
-                0
+                6
               ]
             }
           ]
@@ -4353,23 +1262,7 @@
       [
         {
           "_v": 2,
-          "turn": 7,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "Zero",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Turn Winner",
           "events": [
             {
@@ -4384,7 +1277,7 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Initiative",
           "events": [
             {
@@ -4398,15 +1291,15 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Play",
           "events": [
             {
               "who": "player",
-              "card": "Infinaut",
+              "card": "Zero",
               "type": "play",
-              "entityId": 29,
-              "location": "Limbo",
+              "entityId": 17,
+              "location": "GammaLab",
               "locationIndex": 0
             }
           ]
@@ -4426,14 +1319,13 @@
                       "2": [
                         0,
                         {
-                          "cost": 5,
-                          "power": 20,
-                          "baseCost": 6,
-                          "entityId": 29,
-                          "basePower": 20,
-                          "cardDefId": "Infinaut",
-                          "arrivalSeq": 2,
-                          "overrideAbility": "Sasquatch"
+                          "cost": 1,
+                          "power": 3,
+                          "baseCost": 1,
+                          "entityId": 17,
+                          "basePower": 3,
+                          "cardDefId": "Zero",
+                          "arrivalSeq": 2
                         }
                       ]
                     }
@@ -4455,16 +1347,70 @@
             2,
             3,
             {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    2
+                  ],
+                  "power": [
+                    0,
+                    6
+                  ],
+                  "baseCost": [
+                    0,
+                    2
+                  ],
+                  "basePower": [
+                    0,
+                    6
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Maximus"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "TyphoidMary"
+                  ]
+                }
+              ],
               "2": [
                 1,
                 {
+                  "cost": [
+                    0,
+                    8
+                  ],
                   "power": [
                     0,
                     12
                   ],
                   "baseCost": [
                     0,
-                    7
+                    8
                   ],
                   "basePower": [
                     0,
@@ -4472,7 +1418,7 @@
                   ],
                   "cardDefId": [
                     0,
-                    "Skaar"
+                    "Death"
                   ]
                 }
               ]
@@ -4483,12 +1429,12 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Staged",
           "events": [
             {
               "who": "player",
-              "card": "Infinaut",
+              "card": "Zero",
               "type": "cardStaged"
             }
           ]
@@ -4498,16 +1444,16 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Play",
           "events": [
             {
               "who": "player",
-              "card": "Lizard",
+              "card": "Maximus",
               "type": "play",
-              "entityId": 35,
-              "location": "Sakaar",
-              "locationIndex": 1
+              "entityId": 21,
+              "location": "GammaLab",
+              "locationIndex": 0
             }
           ]
         },
@@ -4516,23 +1462,23 @@
             2,
             3,
             {
-              "1": [
+              "0": [
                 1,
                 {
                   "playerCards": [
                     2,
-                    2,
+                    4,
                     {
-                      "1": [
+                      "3": [
                         0,
                         {
                           "cost": 2,
                           "power": 6,
                           "baseCost": 2,
-                          "entityId": 35,
+                          "entityId": 21,
                           "basePower": 6,
-                          "cardDefId": "Lizard",
-                          "arrivalSeq": 1
+                          "cardDefId": "Maximus",
+                          "arrivalSeq": 3
                         }
                       ]
                     }
@@ -4554,12 +1500,37 @@
             2,
             2,
             {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "TyphoidMary"
+                  ]
+                }
+              ],
               "1": [
                 1,
                 {
                   "cost": [
                     0,
-                    5
+                    8
                   ],
                   "power": [
                     0,
@@ -4567,7 +1538,7 @@
                   ],
                   "baseCost": [
                     0,
-                    7
+                    8
                   ],
                   "basePower": [
                     0,
@@ -4575,7 +1546,7 @@
                   ],
                   "cardDefId": [
                     0,
-                    "Skaar"
+                    "Death"
                   ]
                 }
               ]
@@ -4586,12 +1557,12 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Staged",
           "events": [
             {
               "who": "player",
-              "card": "Lizard",
+              "card": "Maximus",
               "type": "cardStaged"
             }
           ]
@@ -4601,60 +1572,11 @@
       [
         {
           "_v": 2,
-          "turn": 7,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "End Turn",
           "events": [
             {
-              "turn": 7,
+              "turn": 3,
               "type": "endTurn"
             }
           ]
@@ -4664,24 +1586,16 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Play",
           "events": [
             {
               "who": "opponent",
               "card": "Mystique",
               "type": "play",
-              "entityId": 19,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Moonstone",
-              "type": "play",
-              "entityId": 16,
-              "location": "Sakaar",
-              "locationIndex": 1
+              "entityId": 38,
+              "location": "StarkIsland",
+              "locationIndex": 2
             }
           ]
         },
@@ -4690,35 +1604,23 @@
             2,
             3,
             {
-              "1": [
+              "2": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    4,
+                    1,
                     {
-                      "2": [
+                      "0": [
                         0,
                         {
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 19,
+                          "entityId": 38,
                           "basePower": null,
                           "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ],
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 16,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
+                          "arrivalSeq": 0
                         }
                       ]
                     }
@@ -4732,7 +1634,7 @@
             {
               "opponent": [
                 0,
-                3
+                4
               ]
             }
           ]
@@ -4741,85 +1643,16 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Reveal",
           "events": [
             {
               "who": "player",
-              "card": "Infinaut",
-              "cost": 6,
+              "card": "Zero",
+              "cost": 1,
               "type": "reveal",
-              "power": 20,
-              "entityId": 29,
-              "drawReveal": false,
-              "overrideAbility": "Sasquatch"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "playerPower": 18,
-              "locationIndex": 0,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            2,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Lizard",
-              "cost": 2,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 35,
+              "power": 3,
+              "entityId": 17,
               "drawReveal": false
             }
           ]
@@ -4829,66 +1662,16 @@
       [
         {
           "_v": 2,
-          "turn": 7,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "power",
-              "source": "Lizard",
-              "sources": [
-                "Lizard",
-                "ScorpionBrandNewDay"
-              ],
-              "newPower": -2,
-              "oldPower": 6,
-              "cardEntityId": 35
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Score",
           "events": [
             {
               "type": "score",
-              "winner": "opponent",
-              "location": "Sakaar",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 5
+              "winner": "player",
+              "location": "GammaLab",
+              "playerPower": 14,
+              "locationIndex": 0,
+              "opponentPower": 0
             }
           ]
         },
@@ -4897,12 +1680,12 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Resolved",
           "events": [
             {
               "who": "player",
-              "card": "Lizard",
+              "card": "Zero",
               "type": "cardResolved"
             }
           ]
@@ -4912,7 +1695,75 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
+          "label": "Silenced",
+          "events": [
+            {
+              "who": "player",
+              "card": "Maximus",
+              "type": "textRemoved",
+              "removedBy": "Zero"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "Maximus",
+              "cost": 2,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 21,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "GammaLab",
+              "playerPower": 20,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "Maximus",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
           "label": "Reveal",
           "events": [
             {
@@ -4921,7 +1772,7 @@
               "cost": 3,
               "type": "reveal",
               "power": 1,
-              "entityId": 19,
+              "entityId": 38,
               "drawReveal": false
             }
           ]
@@ -4931,14 +1782,14 @@
             2,
             3,
             {
-              "1": [
+              "2": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    4,
+                    1,
                     {
-                      "2": [
+                      "0": [
                         1,
                         {
                           "cost": [
@@ -4974,7 +1825,7 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Resolve",
           "events": [
             {
@@ -4989,16 +1840,16 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Sakaar",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 6
+              "location": "StarkIsland",
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 1
             }
           ]
         },
@@ -5007,87 +1858,15 @@
       [
         {
           "_v": 2,
-          "turn": 7,
-          "label": "Override",
+          "turn": 3,
+          "label": "Transform",
           "events": [
             {
-              "who": "opponent",
-              "card": "Mystique",
-              "type": "abilityOverride",
-              "overrideAbility": "ScorpionBrandNewDay"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "overrideAbility": [
-                            0,
-                            "ScorpionBrandNewDay"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Power",
-          "events": [
-            {
+              "to": "Hulk",
               "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -3,
-              "oldPower": 1,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -13,
-              "oldPower": -3,
-              "cardEntityId": 32
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -10,
-              "oldPower": -2,
-              "cardEntityId": 35
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -7,
-              "oldPower": -3,
-              "cardEntityId": 39
+              "from": "Martyr",
+              "type": "morph",
+              "cardEntityId": 23
             }
           ]
         },
@@ -5101,63 +1880,30 @@
                 {
                   "playerCards": [
                     2,
-                    3,
+                    4,
                     {
                       "0": [
                         1,
                         {
+                          "cost": [
+                            0,
+                            6
+                          ],
                           "power": [
                             0,
-                            -3
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
+                            14
+                          ],
+                          "baseCost": [
                             0,
-                            -13
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
+                            6
+                          ],
+                          "basePower": [
                             0,
-                            -10
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
+                            14
+                          ],
+                          "cardDefId": [
                             0,
-                            -7
+                            "Hulk"
                           ]
                         }
                       ]
@@ -5172,32 +1918,16 @@
       [
         {
           "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "player",
-              "location": "Limbo",
-              "playerPower": 4,
+              "location": "GammaLab",
+              "playerPower": 29,
               "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Sakaar",
-              "playerPower": -4,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 16,
-              "locationIndex": 2,
-              "opponentPower": 13
+              "opponentPower": 0
             }
           ]
         },
@@ -5206,17 +1936,15 @@
       [
         {
           "_v": 2,
-          "turn": 7,
-          "label": "Reveal",
+          "turn": 3,
+          "label": "Transform",
           "events": [
             {
-              "who": "opponent",
-              "card": "Moonstone",
-              "cost": 4,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 16,
-              "drawReveal": false
+              "to": "Hulk",
+              "who": "player",
+              "from": "Lizard",
+              "type": "morph",
+              "cardEntityId": 27
             }
           ]
         },
@@ -5225,10 +1953,166 @@
             2,
             3,
             {
-              "1": [
+              "0": [
                 1,
                 {
-                  "opponentCards": [
+                  "playerCards": [
+                    2,
+                    4,
+                    {
+                      "1": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            6
+                          ],
+                          "power": [
+                            0,
+                            14
+                          ],
+                          "baseCost": [
+                            0,
+                            6
+                          ],
+                          "basePower": [
+                            0,
+                            14
+                          ],
+                          "cardDefId": [
+                            0,
+                            "Hulk"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "GammaLab",
+              "playerPower": 37,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Transform",
+          "events": [
+            {
+              "to": "Hulk",
+              "who": "player",
+              "from": "Zero",
+              "type": "morph",
+              "cardEntityId": 17
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    4,
+                    {
+                      "2": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            6
+                          ],
+                          "power": [
+                            0,
+                            14
+                          ],
+                          "baseCost": [
+                            0,
+                            6
+                          ],
+                          "basePower": [
+                            0,
+                            14
+                          ],
+                          "cardDefId": [
+                            0,
+                            "Hulk"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "GammaLab",
+              "playerPower": 48,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Transform",
+          "events": [
+            {
+              "to": "Hulk",
+              "who": "player",
+              "from": "Maximus",
+              "type": "morph",
+              "cardEntityId": 21
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
                     2,
                     4,
                     {
@@ -5237,23 +2121,23 @@
                         {
                           "cost": [
                             0,
-                            4
+                            6
                           ],
                           "power": [
                             0,
-                            6
+                            14
                           ],
                           "baseCost": [
                             0,
-                            4
+                            6
                           ],
                           "basePower": [
                             0,
-                            6
+                            14
                           ],
                           "cardDefId": [
                             0,
-                            "Moonstone"
+                            "Hulk"
                           ]
                         }
                       ]
@@ -5268,13 +2152,16 @@
       [
         {
           "_v": 2,
-          "turn": 7,
-          "label": "Resolve",
+          "turn": 3,
+          "label": "Score",
           "events": [
             {
-              "who": "opponent",
-              "card": "Moonstone",
-              "type": "cardRevealed"
+              "type": "score",
+              "winner": "player",
+              "location": "GammaLab",
+              "playerPower": 56,
+              "locationIndex": 0,
+              "opponentPower": 0
             }
           ]
         },
@@ -5283,156 +2170,156 @@
       [
         {
           "_v": 2,
-          "turn": 7,
-          "label": "Power",
+          "turn": 4,
+          "label": "Energy",
           "events": [
             {
-              "who": "opponent",
-              "card": "Moonstone",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 6,
-              "cardEntityId": 16
-            },
-            {
               "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -11,
-              "oldPower": -3,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -33,
-              "oldPower": -13,
-              "cardEntityId": 32
+              "type": "energy",
+              "energy": 4
             },
             {
               "who": "opponent",
-              "card": "Moonstone",
-              "type": "power",
-              "source": "USAgent",
-              "sources": [
-                "USAgent",
-                "Moonstone"
-              ],
-              "newPower": 0,
-              "oldPower": 3,
-              "cardEntityId": 16
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -26,
-              "oldPower": -10,
-              "cardEntityId": 35
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -15,
-              "oldPower": -7,
-              "cardEntityId": 39
+              "type": "energy",
+              "energy": 4
             }
           ]
         },
         {
-          "b": [
+          "h": [
+            2,
+            2,
+            {
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    7
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 4,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "Skaar",
+              "cost": 7,
+              "type": "reveal",
+              "power": 12,
+              "entityId": 20,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Skaar",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                3
+              ],
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ],
+          "h": [
             2,
             3,
             {
               "0": [
                 1,
                 {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -11
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -33
-                          ]
-                        }
-                      ]
-                    }
+                  "cost": [
+                    0,
+                    0
+                  ],
+                  "power": [
+                    0,
+                    12
+                  ],
+                  "baseCost": [
+                    0,
+                    7
+                  ],
+                  "basePower": [
+                    0,
+                    12
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Skaar"
                   ]
                 }
               ],
               "1": [
                 1,
                 {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -26
-                          ]
-                        }
-                      ]
-                    }
+                  "cost": [
+                    0,
+                    4
                   ],
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            0
-                          ]
-                        }
-                      ]
-                    }
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "TyphoidMary"
                   ]
                 }
               ],
               "2": [
-                1,
+                0,
                 {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -15
-                          ]
-                        }
-                      ]
-                    }
-                  ]
+                  "cost": 7,
+                  "power": 12,
+                  "baseCost": 8,
+                  "basePower": 12,
+                  "cardDefId": "Death"
                 }
+              ]
+            }
+          ],
+          "r": [
+            1,
+            {
+              "player": [
+                0,
+                5
+              ],
+              "opponent": [
+                0,
+                5
               ]
             }
           ]
@@ -5441,41 +2328,7 @@
       [
         {
           "_v": 2,
-          "turn": 7,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "playerPower": -24,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Sakaar",
-              "playerPower": -20,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TinkerersWorkshop",
-              "playerPower": 8,
-              "locationIndex": 2,
-              "opponentPower": 13
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
+          "turn": 4,
           "label": "Turn Winner",
           "events": [
             {
@@ -5483,11 +2336,49 @@
               "type": "turnWinner",
               "winner": "opponent"
             }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 4,
+          "label": "Initiative",
+          "events": [
+            {
+              "who": "opponent",
+              "type": "initiative"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 4,
+          "label": "Snap",
+          "events": [
+            {
+              "who": "opponent",
+              "type": "snap",
+              "cubeValue": 2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 4,
+          "label": "Cubes",
+          "events": [
+            {
+              "type": "cubePreview",
+              "cubeValueNextTurn": 2
+            }
           ]
         },
         {}
@@ -5531,7 +2422,7 @@
             {
               "card": "Martyr",
               "isPlayer": true,
-              "location": "Limbo",
+              "location": "GammaLab",
               "locationIndex": 0
             }
           ],
@@ -5541,71 +2432,71 @@
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 66
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 68
+              "_changeIdx": 67
             },
             {
-              "to": "Vault",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 69
+            },
+            {
+              "to": "GammaLab",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 71,
+              "_changeIdx": 72,
               "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "TyphoidMary",
+              "cost": 4,
+              "type": "reveal",
+              "power": 10,
+              "entityId": 16,
+              "_changeIdx": 75,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "TyphoidMary",
+              "type": "draw",
+              "_changeIdx": 76
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 74
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "cost": 3,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 39,
-              "_changeIdx": 77,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "draw",
-              "_changeIdx": 78
+              "_changeIdx": 79
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 81
+              "_changeIdx": 82
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 82
+              "_changeIdx": 83
             },
             {
               "who": "player",
               "card": "Martyr",
               "type": "play",
-              "entityId": 28,
-              "location": "Vault",
-              "_changeIdx": 85,
+              "entityId": 23,
+              "location": "GammaLab",
+              "_changeIdx": 86,
               "locationIndex": 0
             },
             {
               "who": "player",
               "card": "Martyr",
               "type": "cardStaged",
-              "_changeIdx": 86
+              "_changeIdx": 87
             },
             {
               "turn": 1,
@@ -5618,14 +2509,14 @@
               "cost": 1,
               "type": "reveal",
               "power": 5,
-              "entityId": 28,
+              "entityId": 23,
               "_changeIdx": 92,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "Vault",
+              "location": "GammaLab",
               "_changeIdx": 94,
               "playerPower": 5,
               "locationIndex": 0,
@@ -5664,27 +2555,15 @@
           "turn": 2,
           "plays": [
             {
-              "card": "EbonyMaw",
+              "card": "Lizard",
               "isPlayer": true,
-              "location": "Limbo",
+              "location": "GammaLab",
               "locationIndex": 0
             },
             {
-              "card": "USAgent",
+              "card": "Psylocke",
               "isPlayer": false,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "card": "Maximus",
-              "isPlayer": true,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "card": "LukeCage",
-              "isPlayer": false,
-              "location": "Sakaar",
+              "location": "DeepSpace",
               "locationIndex": 1
             }
           ],
@@ -5694,19 +2573,19 @@
           },
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2,
               "_changeIdx": 101
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2,
               "_changeIdx": 103
             },
             {
-              "to": "Sakaar",
+              "to": "DeepSpace",
               "from": "RevealOn2",
               "type": "location",
               "_changeIdx": 106,
@@ -5716,138 +2595,8 @@
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 110,
+              "_changeIdx": 111,
               "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 113
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "cost": 6,
-              "type": "reveal",
-              "power": 20,
-              "entityId": 29,
-              "_changeIdx": 116,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "draw",
-              "_changeIdx": 117
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 120
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 121
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "play",
-              "entityId": 32,
-              "location": "Vault",
-              "_changeIdx": 124,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "cardStaged",
-              "_changeIdx": 125
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 129
-            },
-            {
-              "who": "opponent",
-              "card": "USAgent",
-              "type": "play",
-              "entityId": 17,
-              "location": "Sakaar",
-              "_changeIdx": 130,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "cost": 1,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 32,
-              "_changeIdx": 134,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vault",
-              "_changeIdx": 137,
-              "playerPower": 12,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "cardResolved",
-              "_changeIdx": 140
-            },
-            {
-              "who": "opponent",
-              "card": "USAgent",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 17,
-              "_changeIdx": 141,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "USAgent",
-              "type": "cardRevealed",
-              "_changeIdx": 142
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Sakaar",
-              "_changeIdx": 145,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "Maximus",
-              "type": "play",
-              "entityId": 38,
-              "location": "Sakaar",
-              "_changeIdx": 150,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "LukeCage",
-              "type": "play",
-              "entityId": 27,
-              "location": "Sakaar",
-              "_changeIdx": 153,
-              "locationIndex": 1
             },
             {
               "who": "player",
@@ -5855,80 +2604,124 @@
               "cost": 2,
               "type": "reveal",
               "power": 6,
-              "entityId": 38,
-              "_changeIdx": 156,
+              "entityId": 21,
+              "_changeIdx": 114,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Maximus",
+              "type": "draw",
+              "_changeIdx": 115
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 118
+            },
+            {
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "player",
+              "_changeIdx": 121
+            },
+            {
+              "who": "player",
+              "type": "initiative",
+              "_changeIdx": 122
+            },
+            {
+              "who": "player",
+              "card": "Lizard",
+              "type": "play",
+              "entityId": 27,
+              "location": "GammaLab",
+              "_changeIdx": 126,
+              "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "Lizard",
+              "type": "cardStaged",
+              "_changeIdx": 127
+            },
+            {
+              "turn": 2,
+              "type": "endTurn",
+              "_changeIdx": 132
+            },
+            {
+              "who": "opponent",
+              "card": "Psylocke",
+              "type": "play",
+              "entityId": 36,
+              "location": "DeepSpace",
+              "_changeIdx": 133,
+              "locationIndex": 1
+            },
+            {
+              "who": "player",
+              "card": "Lizard",
+              "cost": 2,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 27,
+              "_changeIdx": 137,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 158,
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 3
+              "location": "GammaLab",
+              "_changeIdx": 140,
+              "playerPower": 11,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "who": "player",
+              "card": "Lizard",
+              "type": "cardResolved",
+              "_changeIdx": 143
             },
             {
               "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 162
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 165
-            },
-            {
-              "who": "opponent",
-              "card": "LukeCage",
+              "card": "Psylocke",
               "cost": 2,
               "type": "reveal",
               "power": 2,
-              "entityId": 27,
-              "_changeIdx": 169,
+              "entityId": 36,
+              "_changeIdx": 144,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "LukeCage",
+              "card": "Psylocke",
               "type": "cardRevealed",
-              "_changeIdx": 170
-            },
-            {
-              "who": "opponent",
-              "card": "USAgent",
-              "type": "powerLockChange",
-              "_changeIdx": 173
-            },
-            {
-              "who": "opponent",
-              "card": "LukeCage",
-              "type": "powerLockChange",
-              "_changeIdx": 175
+              "_changeIdx": 145
             },
             {
               "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 177,
-              "playerPower": 6,
+              "winner": "opponent",
+              "location": "DeepSpace",
+              "_changeIdx": 148,
+              "playerPower": 0,
               "locationIndex": 1,
-              "opponentPower": 5
+              "opponentPower": 2
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
               "winner": "player",
-              "playerPower": 12,
+              "playerPower": 11,
               "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 6,
-              "opponentPower": 5
+              "winner": "opponent",
+              "playerPower": 0,
+              "opponentPower": 2
             },
             {
               "winner": null,
@@ -5937,237 +2730,289 @@
             }
           ]
         },
-        31
+        24
       ],
       [
         {
           "turn": 3,
           "plays": [
             {
-              "card": "Nightmare",
+              "card": "Zero",
               "isPlayer": true,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
+              "location": "GammaLab",
+              "locationIndex": 0
             },
             {
-              "card": "HellcowFracturedFrontier",
-              "isPlayer": false,
-              "location": "Limbo",
+              "card": "Maximus",
+              "isPlayer": true,
+              "location": "GammaLab",
               "locationIndex": 0
+            },
+            {
+              "card": "Mystique",
+              "isPlayer": false,
+              "location": "StarkIsland",
+              "locationIndex": 2
             }
           ],
           "energy": {
-            "player": 4,
-            "opponent": 4
+            "player": 3,
+            "opponent": 3
           },
           "events": [
             {
+              "who": "player",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 155
+            },
+            {
               "who": "opponent",
               "type": "energy",
-              "energy": 4,
-              "_changeIdx": 183
+              "energy": 3,
+              "_changeIdx": 157
+            },
+            {
+              "to": "StarkIsland",
+              "from": "RevealOn2",
+              "type": "location",
+              "_changeIdx": 160,
+              "locationIndex": 2
             },
             {
               "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 185
+              "card": "Zero",
+              "cost": 1,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 17,
+              "_changeIdx": 163,
+              "drawReveal": true
             },
             {
-              "to": "TinkerersWorkshop",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 188,
-              "locationIndex": 2
+              "who": "player",
+              "card": "Zero",
+              "type": "draw",
+              "_changeIdx": 164
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 198
-            },
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "cost": 5,
-              "type": "reveal",
-              "power": 14,
-              "entityId": 37,
-              "_changeIdx": 201,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "draw",
-              "_changeIdx": 202
+              "_changeIdx": 167
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "player",
-              "_changeIdx": 205
+              "_changeIdx": 170
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 206
+              "_changeIdx": 171
             },
             {
               "who": "player",
-              "card": "Nightmare",
+              "card": "Zero",
               "type": "play",
-              "entityId": 39,
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 209,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "cardStaged",
-              "_changeIdx": 210
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 215
-            },
-            {
-              "who": "opponent",
-              "card": "HellcowFracturedFrontier",
-              "type": "play",
-              "entityId": 25,
-              "location": "Vault",
-              "_changeIdx": 216,
+              "entityId": 17,
+              "location": "GammaLab",
+              "_changeIdx": 175,
               "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "Nightmare",
-              "cost": 3,
+              "card": "Zero",
+              "type": "cardStaged",
+              "_changeIdx": 176
+            },
+            {
+              "who": "player",
+              "card": "Maximus",
+              "type": "play",
+              "entityId": 21,
+              "location": "GammaLab",
+              "_changeIdx": 180,
+              "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "Maximus",
+              "type": "cardStaged",
+              "_changeIdx": 181
+            },
+            {
+              "turn": 3,
+              "type": "endTurn",
+              "_changeIdx": 188
+            },
+            {
+              "who": "opponent",
+              "card": "Mystique",
+              "type": "play",
+              "entityId": 38,
+              "location": "StarkIsland",
+              "_changeIdx": 189,
+              "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "Zero",
+              "cost": 1,
               "type": "reveal",
-              "power": 1,
-              "entityId": 39,
-              "_changeIdx": 220,
+              "power": 3,
+              "entityId": 17,
+              "_changeIdx": 194,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 222,
-              "playerPower": 1,
-              "locationIndex": 2,
+              "location": "GammaLab",
+              "_changeIdx": 196,
+              "playerPower": 14,
+              "locationIndex": 0,
               "opponentPower": 0
             },
             {
               "who": "player",
-              "card": "Infinaut",
-              "type": "abilityOverride",
-              "_changeIdx": 228,
-              "overrideAbility": "Sasquatch"
-            },
-            {
-              "who": "player",
-              "card": "Sasquatch",
-              "cost": 6,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 46,
-              "_changeIdx": 230,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "abilityOverride",
-              "_changeIdx": 239,
-              "overrideAbility": "DeathFracturedFrontier"
-            },
-            {
-              "who": "player",
-              "card": "DeathFracturedFrontier",
-              "cost": 5,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 47,
-              "_changeIdx": 241,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
+              "card": "Zero",
               "type": "cardResolved",
-              "_changeIdx": 245
+              "_changeIdx": 205
+            },
+            {
+              "who": "player",
+              "card": "Maximus",
+              "type": "textRemoved",
+              "removedBy": "Zero",
+              "_changeIdx": 208
+            },
+            {
+              "who": "player",
+              "card": "Maximus",
+              "cost": 2,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 21,
+              "_changeIdx": 212,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "GammaLab",
+              "_changeIdx": 215,
+              "playerPower": 20,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "who": "player",
+              "card": "Maximus",
+              "type": "cardResolved",
+              "_changeIdx": 218
             },
             {
               "who": "opponent",
-              "card": "HellcowFracturedFrontier",
+              "card": "Mystique",
               "cost": 3,
               "type": "reveal",
-              "power": 3,
-              "entityId": 25,
-              "_changeIdx": 246,
+              "power": 1,
+              "entityId": 38,
+              "_changeIdx": 219,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "HellcowFracturedFrontier",
+              "card": "Mystique",
               "type": "cardRevealed",
-              "_changeIdx": 247
+              "_changeIdx": 220
             },
             {
-              "who": "opponent",
-              "card": "HellcowFracturedFrontier",
-              "type": "powerLockChange",
-              "_changeIdx": 250
+              "type": "score",
+              "winner": "opponent",
+              "location": "StarkIsland",
+              "_changeIdx": 222,
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 1
+            },
+            {
+              "to": "Hulk",
+              "who": "player",
+              "from": "Martyr",
+              "type": "morph",
+              "_changeIdx": 230,
+              "cardEntityId": 23
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "Vault",
-              "_changeIdx": 252,
-              "playerPower": 12,
+              "location": "GammaLab",
+              "_changeIdx": 232,
+              "playerPower": 29,
               "locationIndex": 0,
-              "opponentPower": 3
+              "opponentPower": 0
             },
             {
+              "to": "Hulk",
               "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "HellcowFracturedFrontier",
-              "newPower": 4,
-              "oldPower": 5,
-              "_changeIdx": 259,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "HellcowFracturedFrontier",
-              "newPower": 6,
-              "oldPower": 7,
-              "_changeIdx": 262,
-              "cardEntityId": 32
+              "from": "Lizard",
+              "type": "morph",
+              "_changeIdx": 236,
+              "cardEntityId": 27
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "Vault",
-              "_changeIdx": 266,
-              "playerPower": 10,
+              "location": "GammaLab",
+              "_changeIdx": 238,
+              "playerPower": 37,
               "locationIndex": 0,
-              "opponentPower": 3
+              "opponentPower": 0
+            },
+            {
+              "to": "Hulk",
+              "who": "player",
+              "from": "Zero",
+              "type": "morph",
+              "_changeIdx": 241,
+              "cardEntityId": 17
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "GammaLab",
+              "_changeIdx": 243,
+              "playerPower": 48,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "to": "Hulk",
+              "who": "player",
+              "from": "Maximus",
+              "type": "morph",
+              "_changeIdx": 247,
+              "cardEntityId": 21
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "GammaLab",
+              "_changeIdx": 249,
+              "playerPower": 56,
+              "locationIndex": 0,
+              "opponentPower": 0
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
               "winner": "player",
-              "playerPower": 10,
-              "opponentPower": 3
+              "playerPower": 56,
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -6175,47 +3020,34 @@
               "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 1,
-              "opponentPower": 0
+              "winner": "opponent",
+              "playerPower": 0,
+              "opponentPower": 1
             }
           ]
         },
-        55
+        56
       ],
       [
         {
           "turn": 4,
-          "plays": [
-            {
-              "card": "ManThing",
-              "isPlayer": false,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 4,
             "opponent": 4
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 271
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 4,
-              "_changeIdx": 273
+              "_changeIdx": 262
             },
             {
               "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 275
+              "type": "energy",
+              "energy": 4,
+              "_changeIdx": 264
             },
             {
               "who": "player",
@@ -6223,1171 +3055,119 @@
               "cost": 7,
               "type": "reveal",
               "power": 12,
-              "entityId": 31,
-              "_changeIdx": 278,
+              "entityId": 20,
+              "_changeIdx": 266,
               "drawReveal": true
             },
             {
               "who": "player",
               "card": "Skaar",
               "type": "draw",
-              "_changeIdx": 279
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 283
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 284
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 292
-            },
-            {
-              "who": "opponent",
-              "card": "ManThing",
-              "type": "play",
-              "entityId": 18,
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 293,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "ManThing",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 18,
-              "_changeIdx": 296,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ManThing",
-              "type": "cardRevealed",
-              "_changeIdx": 297
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "power",
-              "source": "ManThing",
-              "newPower": -1,
-              "oldPower": 1,
-              "_changeIdx": 300,
-              "cardEntityId": 39
-            },
-            {
-              "who": "opponent",
-              "card": "ManThing",
-              "type": "powerLockChange",
-              "_changeIdx": 305
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 307,
-              "playerPower": -1,
-              "locationIndex": 2,
-              "opponentPower": 7
-            },
-            {
-              "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "HellcowFracturedFrontier",
-              "newPower": 3,
-              "oldPower": 4,
-              "_changeIdx": 314,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "HellcowFracturedFrontier",
-              "newPower": 5,
-              "oldPower": 6,
-              "_changeIdx": 317,
-              "cardEntityId": 32
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vault",
-              "_changeIdx": 321,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 8,
-              "opponentPower": 3
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": -1,
-              "opponentPower": 7
-            }
-          ]
-        },
-        68
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "RedSkull",
-              "isPlayer": true,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            },
-            {
-              "card": "Magik",
-              "isPlayer": false,
-              "location": "Limbo",
-              "locationIndex": 0
-            },
-            {
-              "card": "FastballSpecial",
-              "isPlayer": false,
-              "location": "Limbo",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 331
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 333
+              "_changeIdx": 267
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 335
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "cost": 2,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 35,
-              "_changeIdx": 338,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "draw",
-              "_changeIdx": 339
+              "_changeIdx": 274
             },
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 342
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 343
-            },
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "play",
-              "entityId": 37,
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 346,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "cardStaged",
-              "_changeIdx": 347
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 356
-            },
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "play",
-              "entityId": 20,
-              "location": "Vault",
-              "_changeIdx": 357,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "play",
-              "entityId": 22,
-              "location": "Vault",
-              "_changeIdx": 360,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "cost": 5,
-              "type": "reveal",
-              "power": 14,
-              "entityId": 37,
-              "_changeIdx": 364,
-              "drawReveal": false,
-              "overrideAbility": "DeathFracturedFrontier"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 370,
-              "playerPower": 13,
-              "locationIndex": 2,
-              "opponentPower": 7
-            },
-            {
-              "who": "player",
-              "card": "RedSkull",
-              "type": "cardResolved",
-              "_changeIdx": 376
-            },
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 20,
-              "_changeIdx": 377,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "cardRevealed",
-              "_changeIdx": 378
-            },
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "powerLockChange",
-              "_changeIdx": 382
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vault",
-              "_changeIdx": 384,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 5
-            },
-            {
-              "to": "Limbo",
-              "from": "Vault",
-              "type": "location",
-              "_changeIdx": 389,
-              "locationIndex": 0
-            },
-            {
-              "type": "totalTurnsChanged",
-              "_changeIdx": 393,
-              "totalTurns": 7
-            },
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 22,
-              "_changeIdx": 395,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "cardRevealed",
-              "_changeIdx": 396
-            },
-            {
-              "who": "opponent",
-              "card": "HellcowFracturedFrontier",
-              "type": "destroyed",
-              "_changeIdx": 400,
-              "fromLocation": "Limbo"
-            },
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "powerLockChange",
-              "_changeIdx": 404
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "_changeIdx": 406,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "FastballSpecial",
-              "newPower": 2,
-              "oldPower": 5,
-              "_changeIdx": 409,
-              "cardEntityId": 32
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "_changeIdx": 413,
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "removed",
-              "_changeIdx": 417
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 5,
-              "opponentPower": 2
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "player",
-              "playerPower": 13,
-              "opponentPower": 7
-            }
-          ]
-        },
-        94
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "WarMachine",
-              "isPlayer": true,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            },
-            {
-              "card": "ScorpionBrandNewDay",
-              "isPlayer": false,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 429
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 431
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 433
-            },
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "cost": 5,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 34,
-              "_changeIdx": 436,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "type": "draw",
-              "_changeIdx": 437
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 440
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 441
-            },
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "type": "play",
-              "entityId": 34,
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 444,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "type": "cardStaged",
-              "_changeIdx": 445
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 454
-            },
-            {
-              "who": "opponent",
-              "card": "ScorpionBrandNewDay",
-              "type": "play",
-              "entityId": 23,
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 455,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "cost": 5,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 34,
-              "_changeIdx": 459,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true,
-              "_changeIdx": 462
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true,
-              "_changeIdx": 464
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true,
-              "_changeIdx": 466
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 468,
-              "playerPower": 22,
-              "locationIndex": 2,
-              "opponentPower": 7
-            },
-            {
-              "who": "player",
-              "card": "WarMachine",
-              "type": "cardResolved",
-              "_changeIdx": 471
-            },
-            {
-              "who": "opponent",
-              "card": "ScorpionBrandNewDay",
-              "cost": 6,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 23,
-              "_changeIdx": 472,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ScorpionBrandNewDay",
-              "type": "cardRevealed",
-              "_changeIdx": 473
-            },
-            {
-              "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": 1,
-              "oldPower": 3,
-              "_changeIdx": 476,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -3,
-              "oldPower": 2,
-              "_changeIdx": 477,
-              "cardEntityId": 32
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -3,
-              "oldPower": -1,
-              "_changeIdx": 478,
-              "cardEntityId": 39
-            },
-            {
-              "who": "opponent",
-              "card": "ScorpionBrandNewDay",
-              "type": "powerLockChange",
-              "_changeIdx": 486
-            },
-            {
-              "type": "score",
               "winner": "opponent",
-              "location": "Limbo",
-              "_changeIdx": 488,
-              "playerPower": -2,
-              "locationIndex": 0,
-              "opponentPower": 2
+              "_changeIdx": 277
             },
             {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 491,
-              "playerPower": 20,
-              "locationIndex": 2,
-              "opponentPower": 13
+              "who": "opponent",
+              "type": "initiative",
+              "_changeIdx": 278
             },
             {
-              "type": "finalTurn",
-              "_changeIdx": 497
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": -2,
-              "opponentPower": 2
+              "who": "opponent",
+              "type": "snap",
+              "cubeValue": 2,
+              "_changeIdx": 282
             },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "player",
-              "playerPower": 20,
-              "opponentPower": 13
-            }
-          ]
-        },
-        109
-      ],
-      [
-        {
-          "turn": 7,
-          "plays": [
-            {
-              "card": "Infinaut",
-              "isPlayer": true,
-              "location": "Limbo",
-              "locationIndex": 0
-            },
-            {
-              "card": "Lizard",
-              "isPlayer": true,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "card": "Mystique",
-              "isPlayer": false,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "card": "Moonstone",
-              "isPlayer": false,
-              "location": "Sakaar",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 7,
-            "opponent": 7
-          },
-          "events": [
             {
               "type": "cubePreview",
-              "_changeIdx": 499,
+              "_changeIdx": 282,
               "cubeValueNextTurn": 2
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 501
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 503
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 505
-            },
-            {
-              "who": "player",
-              "card": "Zero",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 30,
-              "_changeIdx": 508,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Zero",
-              "type": "draw",
-              "_changeIdx": 509
-            },
-            {
-              "who": "player",
-              "card": "Zero",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true,
-              "_changeIdx": 513
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 515
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 516
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "play",
-              "entityId": 29,
-              "location": "Limbo",
-              "_changeIdx": 519,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "cardStaged",
-              "_changeIdx": 520
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "play",
-              "entityId": 35,
-              "location": "Sakaar",
-              "_changeIdx": 525,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "cardStaged",
-              "_changeIdx": 526
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true,
-              "_changeIdx": 532
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "ignorePlayRestriction",
-              "canIgnore": true,
-              "_changeIdx": 536
-            },
-            {
-              "turn": 7,
-              "type": "endTurn",
-              "_changeIdx": 544
-            },
-            {
-              "who": "opponent",
-              "card": "Mystique",
-              "type": "play",
-              "entityId": 19,
-              "location": "Sakaar",
-              "_changeIdx": 545,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Moonstone",
-              "type": "play",
-              "entityId": 16,
-              "location": "Sakaar",
-              "_changeIdx": 548,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "cost": 6,
-              "type": "reveal",
-              "power": 20,
-              "entityId": 29,
-              "_changeIdx": 553,
-              "drawReveal": false,
-              "overrideAbility": "Sasquatch"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "_changeIdx": 560,
-              "playerPower": 18,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "cardResolved",
-              "_changeIdx": 563
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "cost": 2,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 35,
-              "_changeIdx": 564,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "power",
-              "source": "Lizard",
-              "sources": [
-                "Lizard",
-                "ScorpionBrandNewDay"
-              ],
-              "newPower": -2,
-              "oldPower": 6,
-              "_changeIdx": 572,
-              "cardEntityId": 35
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Sakaar",
-              "_changeIdx": 583,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 5
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "cardResolved",
-              "_changeIdx": 586
-            },
-            {
-              "who": "opponent",
-              "card": "Mystique",
-              "cost": 3,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 19,
-              "_changeIdx": 587,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Mystique",
-              "type": "cardRevealed",
-              "_changeIdx": 588
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Sakaar",
-              "_changeIdx": 590,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "who": "opponent",
-              "card": "Mystique",
-              "type": "abilityOverride",
-              "_changeIdx": 594,
-              "overrideAbility": "ScorpionBrandNewDay"
-            },
-            {
-              "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -3,
-              "oldPower": 1,
-              "_changeIdx": 602,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -13,
-              "oldPower": -3,
-              "_changeIdx": 605,
-              "cardEntityId": 32
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -10,
-              "oldPower": -2,
-              "_changeIdx": 608,
-              "cardEntityId": 35
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -7,
-              "oldPower": -3,
-              "_changeIdx": 611,
-              "cardEntityId": 39
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "_changeIdx": 614,
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Sakaar",
-              "_changeIdx": 617,
-              "playerPower": -4,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 620,
-              "playerPower": 16,
-              "locationIndex": 2,
-              "opponentPower": 13
-            },
-            {
-              "who": "opponent",
-              "card": "Moonstone",
-              "cost": 4,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 16,
-              "_changeIdx": 624,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Moonstone",
-              "type": "cardRevealed",
-              "_changeIdx": 625
-            },
-            {
-              "who": "opponent",
-              "card": "Moonstone",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 6,
-              "_changeIdx": 628,
-              "cardEntityId": 16
-            },
-            {
-              "who": "player",
-              "card": "Martyr",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -11,
-              "oldPower": -3,
-              "_changeIdx": 630,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "EbonyMaw",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -33,
-              "oldPower": -13,
-              "_changeIdx": 633,
-              "cardEntityId": 32
-            },
-            {
-              "who": "opponent",
-              "card": "Moonstone",
-              "type": "power",
-              "source": "USAgent",
-              "sources": [
-                "USAgent",
-                "Moonstone"
-              ],
-              "newPower": 0,
-              "oldPower": 3,
-              "_changeIdx": 639,
-              "cardEntityId": 16
-            },
-            {
-              "who": "player",
-              "card": "Lizard",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -26,
-              "oldPower": -10,
-              "_changeIdx": 643,
-              "cardEntityId": 35
-            },
-            {
-              "who": "player",
-              "card": "Nightmare",
-              "type": "power",
-              "source": "ScorpionBrandNewDay",
-              "newPower": -15,
-              "oldPower": -7,
-              "_changeIdx": 646,
-              "cardEntityId": 39
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "_changeIdx": 651,
-              "playerPower": -24,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Sakaar",
-              "_changeIdx": 654,
-              "playerPower": -20,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 657,
-              "playerPower": 8,
-              "locationIndex": 2,
-              "opponentPower": 13
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 666
             }
           ],
-          "snapEvent": {
-            "cubeValue": 2,
-            "totalSnaps": 1
-          },
+          "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
-              "playerPower": -24,
-              "opponentPower": 2
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
-              "winner": "opponent",
-              "playerPower": -20,
-              "opponentPower": 6
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
-              "winner": "opponent",
-              "playerPower": 8,
-              "opponentPower": 13
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             }
           ]
         },
-        141
+        57
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 9153,
-  "opp_sp": 5203,
+  "opp_cl": 6190,
+  "opp_sp": null,
   "bracket": null,
-  "match_id": "2ac808d7-76ef-4450-b6a3-4ca35d9ae931",
-  "opp_name": "Sierra Cinnar",
+  "match_id": "8cd69077-31ba-4616-b9d8-71a35aa2bc07",
+  "opp_name": "Molinet",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "Limbo",
-    "Sakaar",
-    "TinkerersWorkshop"
-  ],
-  "player_cl": 11551,
+  "locations": [],
+  "player_cl": 11557,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Death",
-    "ArtVariantDefId": "Death_06"
+    "CardDefId": "GrandMaster",
+    "ArtVariantDefId": "GrandMaster_04"
   },
   "opp_health": null,
-  "opp_is_bot": false,
+  "opp_is_bot": true,
   "mode_detail": null,
   "player_name": "SmokeFisher",
-  "current_turn": 8,
-  "match_result": "loss",
-  "match_status": "complete",
-  "opp_clan_tag": "AOM",
+  "current_turn": 5,
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_clan_tag": null,
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": null,
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "USAgent",
-    "LukeCage",
-    "HellcowFracturedFrontier",
-    "ManThing",
-    "Magik",
-    "FastballSpecial",
-    "ScorpionBrandNewDay",
-    "Mystique",
-    "Moonstone"
+    "Psylocke",
+    "Mystique"
   ],
-  "last_updated_at": "2026-10-09T11:44:09.183+00:00",
+  "last_updated_at": "2026-10-09T11:46:19.134+00:00",
   "opp_played_cards": [],
   "player_deck_cards": [
-    "EbonyMaw",
     "Death",
-    "Zero",
-    "Skaar",
-    "Infinaut",
-    "Nightmare",
-    "TyphoidMary",
     "Lizard",
     "Martyr",
-    "WarMachine",
-    "RedSkull",
-    "Maximus"
+    "TyphoidMary",
+    "Maximus",
+    "Zero",
+    "Skaar"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "USAgent",
-    "LukeCage",
-    "HellcowFracturedFrontier",
-    "ManThing",
-    "Magik",
-    "FastballSpecial",
-    "ScorpionBrandNewDay",
-    "Mystique",
-    "Moonstone"
+    "Psylocke",
+    "Mystique"
   ],
   "conquest_round_index": null
 }
