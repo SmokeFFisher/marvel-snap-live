@@ -5975,6 +5975,260 @@
           ]
         },
         {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 6,
+          "label": "End Turn",
+          "events": [
+            {
+              "turn": 6,
+              "type": "endTurn"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 6,
+          "label": "Play",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Sasquatch",
+              "type": "play",
+              "entityId": 23,
+              "location": "TheAbbey",
+              "locationIndex": 0
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "type": "play",
+              "entityId": 18,
+              "location": "ChronosphereSphinx",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    4,
+                    {
+                      "3": [
+                        0,
+                        {
+                          "cost": null,
+                          "power": null,
+                          "baseCost": null,
+                          "entityId": 23,
+                          "basePower": null,
+                          "cardDefId": null,
+                          "arrivalSeq": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    3,
+                    {
+                      "2": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 5,
+                          "baseCost": 1,
+                          "entityId": 18,
+                          "basePower": 4,
+                          "cardDefId": "KittyPryde",
+                          "arrivalSeq": 2
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                4
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 6,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Sasquatch",
+              "cost": 6,
+              "type": "reveal",
+              "power": 11,
+              "entityId": 23,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    4,
+                    {
+                      "3": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            6
+                          ],
+                          "power": [
+                            0,
+                            11
+                          ],
+                          "baseCost": [
+                            0,
+                            6
+                          ],
+                          "basePower": [
+                            0,
+                            11
+                          ],
+                          "cardDefId": [
+                            0,
+                            "Sasquatch"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 6,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Sasquatch",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 6,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "TheAbbey",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 16
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 6,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "reveal",
+              "power": 5,
+              "entityId": 18,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 6,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "ChronosphereSphinx",
+              "playerPower": 6,
+              "locationIndex": 2,
+              "opponentPower": 19
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 6,
+          "label": "Turn Winner",
+          "events": [
+            {
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "opponent"
+            }
+          ],
+          "survivingLocationIndexes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {}
       ]
     ],
     "compactTurns": [
@@ -7726,7 +7980,20 @@
       [
         {
           "turn": 6,
-          "plays": [],
+          "plays": [
+            {
+              "card": "Sasquatch",
+              "isPlayer": false,
+              "location": "TheAbbey",
+              "locationIndex": 0
+            },
+            {
+              "card": "KittyPryde",
+              "isPlayer": false,
+              "location": "ChronosphereSphinx",
+              "locationIndex": 2
+            }
+          ],
           "energy": {
             "player": 6,
             "opponent": 6
@@ -7824,14 +8091,90 @@
               "who": "opponent",
               "type": "initiative",
               "_changeIdx": 659
+            },
+            {
+              "turn": 6,
+              "type": "endTurn",
+              "_changeIdx": 668
+            },
+            {
+              "who": "opponent",
+              "card": "Sasquatch",
+              "type": "play",
+              "entityId": 23,
+              "location": "TheAbbey",
+              "_changeIdx": 669,
+              "locationIndex": 0
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "type": "play",
+              "entityId": 18,
+              "location": "ChronosphereSphinx",
+              "_changeIdx": 672,
+              "locationIndex": 2
+            },
+            {
+              "who": "opponent",
+              "card": "Sasquatch",
+              "cost": 6,
+              "type": "reveal",
+              "power": 11,
+              "entityId": 23,
+              "_changeIdx": 675,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Sasquatch",
+              "type": "cardRevealed",
+              "_changeIdx": 676
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "TheAbbey",
+              "_changeIdx": 679,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 16
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "reveal",
+              "power": 5,
+              "entityId": 18,
+              "_changeIdx": 682,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "ChronosphereSphinx",
+              "_changeIdx": 684,
+              "playerPower": 6,
+              "locationIndex": 2,
+              "opponentPower": 19
+            },
+            {
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "opponent",
+              "_changeIdx": 692
             }
           ],
-          "snapEvent": null,
+          "snapEvent": {
+            "cubeValue": 2,
+            "totalSnaps": 1
+          },
           "locationPower": [
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 16
             },
             {
               "winner": null,
@@ -7841,11 +8184,11 @@
             {
               "winner": "opponent",
               "playerPower": 6,
-              "opponentPower": 14
+              "opponentPower": 19
             }
           ]
         },
-        163
+        168
       ]
     ],
     "replayStorageVersion": 1
@@ -7857,7 +8200,11 @@
   "opp_name": "Rodaz",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [],
+  "locations": [
+    "TheAbbey",
+    "CaveOfTheDragon",
+    "ChronosphereSphinx"
+  ],
   "player_cl": 11557,
   "player_sp": 4875,
   "turn_data": null,
@@ -7872,12 +8219,12 @@
   "mode_detail": null,
   "player_name": "SmokeFisher",
   "current_turn": 7,
-  "match_result": null,
-  "match_status": "in_progress",
+  "match_result": "loss",
+  "match_status": "complete",
   "opp_clan_tag": null,
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": null,
+  "opp_retreated": false,
   "player_avatar": null,
   "player_health": null,
   "wild_boosters": null,
@@ -7886,24 +8233,27 @@
     "NicoMinoru",
     "Hood",
     "NicholasScratch",
-    "ShangChi"
+    "ShangChi",
+    "Sasquatch"
   ],
-  "last_updated_at": "2026-10-09T14:19:33.354+00:00",
+  "last_updated_at": "2026-10-09T14:21:28.761+00:00",
   "opp_played_cards": [
     "Demon",
     "KittyPryde"
   ],
   "player_deck_cards": [
-    "Vulture",
-    "MultipleMan",
-    "HydraStomper",
-    "Agony",
-    "FastballSpecial",
-    "StrangeSupreme",
-    "GhostSpider",
+    "Venom",
     "ThePhoenixForce",
+    "Hulkbuster",
+    "Agony",
+    "MultipleMan",
+    "StrangeSupreme",
+    "MadameWeb",
+    "Vulture",
     "IronFist",
-    "Venom"
+    "FastballSpecial",
+    "HydraStomper",
+    "GhostSpider"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
