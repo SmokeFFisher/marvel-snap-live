@@ -85,12 +85,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             }
@@ -105,7 +105,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "GrandCentral",
+              "to": "TheBigHouse",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -122,7 +122,7 @@
                 {
                   "location": [
                     0,
-                    "GrandCentral"
+                    "TheBigHouse"
                   ],
                   "revealed": [
                     0,
@@ -141,22 +141,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "FastballSpecial",
-              "cost": 2,
+              "card": "GhostSpider",
+              "cost": 1,
               "type": "reveal",
-              "power": 0,
-              "entityId": 39,
+              "power": 3,
+              "entityId": 17,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "FastballSpecial",
+              "card": "GhostSpider",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -182,17 +182,25 @@
               "0": [
                 1,
                 {
+                  "cost": [
+                    0,
+                    1
+                  ],
                   "power": [
                     0,
-                    0
+                    3
+                  ],
+                  "baseCost": [
+                    0,
+                    1
                   ],
                   "basePower": [
                     0,
-                    0
+                    3
                   ],
                   "cardDefId": [
                     0,
-                    "FastballSpecial"
+                    "GhostSpider"
                   ]
                 }
               ],
@@ -279,7 +287,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
           ]
@@ -308,10 +316,10 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "KittyPryde",
               "type": "play",
-              "entityId": 17,
-              "location": "GrandCentral",
+              "entityId": 28,
+              "location": "TheBigHouse",
               "locationIndex": 0
             }
           ]
@@ -334,7 +342,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 17,
+                          "entityId": 28,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -365,11 +373,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "KittyPryde",
               "cost": 1,
               "type": "reveal",
               "power": 1,
-              "entityId": 17,
+              "entityId": 28,
               "drawReveal": false
             }
           ]
@@ -407,7 +415,7 @@
                           ],
                           "cardDefId": [
                             0,
-                            "Nebula"
+                            "KittyPryde"
                           ]
                         }
                       ]
@@ -427,7 +435,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "KittyPryde",
               "type": "cardRevealed"
             }
           ]
@@ -443,7 +451,7 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "GrandCentral",
+              "location": "TheBigHouse",
               "playerPower": 0,
               "locationIndex": 0,
               "opponentPower": 1
@@ -459,12 +467,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             }
@@ -479,7 +487,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "RocketPad",
+              "to": "Genosha",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -502,7 +510,7 @@
                 {
                   "location": [
                     0,
-                    "RocketPad"
+                    "Genosha"
                   ],
                   "revealed": [
                     0,
@@ -531,25 +539,139 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Draw",
+          "label": "Reset",
           "events": [
             {
               "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 1
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Bounce",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "from": "TheBigHouse",
+              "type": "bounce",
+              "entityId": 28
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    0,
+                    {}
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                4
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reset",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 1
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": null,
+              "location": "TheBigHouse",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "type": "power",
+              "source": "KittyPryde",
+              "newPower": 2,
+              "oldPower": 1,
+              "cardEntityId": 28
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
             {
               "who": "player",
-              "card": "Vulture",
-              "cost": 1,
+              "card": "MadameWeb",
+              "cost": 2,
               "type": "reveal",
-              "power": 3,
-              "entityId": 28,
+              "power": 1,
+              "entityId": 23,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Vulture",
+              "card": "MadameWeb",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -564,7 +686,7 @@
               ],
               "opponent": [
                 0,
-                4
+                5
               ]
             }
           ],
@@ -572,45 +694,20 @@
             2,
             5,
             {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Vulture"
-                  ]
-                }
-              ],
               "1": [
                 1,
                 {
                   "power": [
                     0,
-                    0
+                    1
                   ],
                   "basePower": [
                     0,
-                    0
+                    1
                   ],
                   "cardDefId": [
                     0,
-                    "FastballSpecial"
+                    "MadameWeb"
                   ]
                 }
               ],
@@ -682,9 +779,9 @@
           "label": "Turn Winner",
           "events": [
             {
-              "tie": false,
+              "tie": true,
               "type": "turnWinner",
-              "winner": "opponent"
+              "winner": null
             }
           ]
         },
@@ -712,10 +809,10 @@
           "events": [
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "MadameWeb",
               "type": "play",
-              "entityId": 37,
-              "location": "GrandCentral",
+              "entityId": 23,
+              "location": "TheBigHouse",
               "locationIndex": 0
             }
           ]
@@ -736,11 +833,11 @@
                         0,
                         {
                           "cost": 2,
-                          "power": 4,
+                          "power": 1,
                           "baseCost": 2,
-                          "entityId": 37,
-                          "basePower": 4,
-                          "cardDefId": "MultipleMan",
+                          "entityId": 23,
+                          "basePower": 1,
+                          "cardDefId": "MadameWeb",
                           "arrivalSeq": 0
                         }
                       ]
@@ -763,6 +860,23 @@
             2,
             4,
             {
+              "1": [
+                1,
+                {
+                  "power": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    4
+                  ],
+                  "cardDefId": [
+                    0,
+                    "MultipleMan"
+                  ]
+                }
+              ],
               "2": [
                 1,
                 {
@@ -809,7 +923,7 @@
           "events": [
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "MadameWeb",
               "type": "cardStaged"
             }
           ]
@@ -838,11 +952,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "ColleenWing",
+              "card": "RedWolfFracturedFrontier",
               "type": "play",
-              "entityId": 18,
-              "location": "RocketPad",
-              "locationIndex": 1
+              "entityId": 29,
+              "location": "TheBigHouse",
+              "locationIndex": 0
             }
           ]
         },
@@ -851,7 +965,7 @@
             2,
             3,
             {
-              "1": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
@@ -864,7 +978,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 18,
+                          "entityId": 29,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -881,7 +995,7 @@
             {
               "opponent": [
                 0,
-                3
+                4
               ]
             }
           ]
@@ -895,11 +1009,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "ColleenWing",
+              "card": "RedWolfFracturedFrontier",
               "cost": 2,
               "type": "reveal",
-              "power": 4,
-              "entityId": 18,
+              "power": 1,
+              "entityId": 29,
               "drawReveal": false
             }
           ]
@@ -909,7 +1023,7 @@
             2,
             3,
             {
-              "1": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
@@ -925,7 +1039,7 @@
                           ],
                           "power": [
                             0,
-                            4
+                            1
                           ],
                           "baseCost": [
                             0,
@@ -933,11 +1047,11 @@
                           ],
                           "basePower": [
                             0,
-                            4
+                            1
                           ],
                           "cardDefId": [
                             0,
-                            "ColleenWing"
+                            "RedWolfFracturedFrontier"
                           ]
                         }
                       ]
@@ -957,7 +1071,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "ColleenWing",
+              "card": "RedWolfFracturedFrontier",
               "type": "cardRevealed"
             }
           ]
@@ -973,90 +1087,10 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RocketPad",
+              "location": "TheBigHouse",
               "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wolverine",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 26,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wolverine",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 2,
-                      "power": 3,
-                      "cardDefId": "Wolverine"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wolverine",
-              "cost": 2,
-              "type": "resetCard",
-              "power": 3
+              "locationIndex": 0,
+              "opponentPower": 1
             }
           ]
         },
@@ -1070,51 +1104,12 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Wolverine",
+              "card": "RedWolfFracturedFrontier",
               "type": "power",
-              "source": "Wolverine",
+              "source": "RedWolfFracturedFrontier",
               "newPower": 5,
-              "oldPower": 3,
-              "cardEntityId": 26
-            }
-          ]
-        },
-        {
-          "d": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    1,
-                    {
-                      "power": [
-                        0,
-                        5
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wolverine",
-              "type": "play",
-              "entityId": 26,
-              "location": "GrandCentral",
-              "locationIndex": 0
+              "oldPower": 1,
+              "cardEntityId": 29
             }
           ]
         },
@@ -1128,18 +1123,15 @@
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
-                        0,
+                      "0": [
+                        1,
                         {
-                          "cost": 2,
-                          "power": 5,
-                          "baseCost": 2,
-                          "entityId": 26,
-                          "basePower": 3,
-                          "cardDefId": "Wolverine",
-                          "arrivalSeq": 1
+                          "power": [
+                            0,
+                            5
+                          ]
                         }
                       ]
                     }
@@ -1147,37 +1139,8 @@
                 }
               ]
             }
-          ],
-          "d": [
-            1,
-            {
-              "opponent": [
-                2,
-                0,
-                {}
-              ]
-            }
           ]
         }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wolverine",
-              "cost": 2,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 26,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
       ],
       [
         {
@@ -1188,10 +1151,10 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "GrandCentral",
+              "location": "TheBigHouse",
               "playerPower": 0,
               "locationIndex": 0,
-              "opponentPower": 6
+              "opponentPower": 5
             }
           ]
         },
@@ -1205,11 +1168,11 @@
           "events": [
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "MadameWeb",
               "cost": 2,
               "type": "reveal",
-              "power": 4,
-              "entityId": 37,
+              "power": 1,
+              "entityId": 23,
               "drawReveal": false
             }
           ]
@@ -1225,10 +1188,10 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 4,
+              "location": "TheBigHouse",
+              "playerPower": 1,
               "locationIndex": 0,
-              "opponentPower": 6
+              "opponentPower": 5
             }
           ]
         },
@@ -1242,7 +1205,7 @@
           "events": [
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "MadameWeb",
               "type": "cardResolved"
             }
           ]
@@ -1256,12 +1219,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 3
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 3
             }
@@ -1276,7 +1239,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "ZennLa",
+              "to": "StarkIsland",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -1293,298 +1256,13 @@
                 {
                   "location": [
                     0,
-                    "ZennLa"
+                    "StarkIsland"
                   ]
                 }
               ]
             }
           ]
         }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gambit",
-              "type": "play",
-              "entityId": 21,
-              "location": "ZennLa",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 21,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gambit",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Gambit"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gambit",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "ZennLa",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ArnimZola",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 24,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ArnimZola",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 0,
-                      "cardDefId": "ArnimZola"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "player",
-              "card": "MultipleMan",
-              "type": "destroyed",
-              "fromLocation": "GrandCentral"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 2,
-                      "power": 4,
-                      "cardDefId": "MultipleMan"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
       ],
       [
         {
@@ -1593,22 +1271,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "Hulkbuster",
-              "cost": 2,
+              "card": "Agony",
+              "cost": 1,
               "type": "reveal",
-              "power": 3,
-              "entityId": 31,
+              "power": 2,
+              "entityId": 24,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Hulkbuster",
+              "card": "Agony",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -1623,7 +1301,7 @@
               ],
               "opponent": [
                 0,
-                2
+                5
               ]
             }
           ],
@@ -1631,6 +1309,48 @@
             2,
             5,
             {
+              "0": [
+                1,
+                {
+                  "power": [
+                    0,
+                    2
+                  ],
+                  "basePower": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Agony"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    1
+                  ],
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "baseCost": [
+                    0,
+                    1
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "GhostSpider"
+                  ]
+                }
+              ],
               "2": [
                 1,
                 {
@@ -1638,13 +1358,21 @@
                     0,
                     2
                   ],
+                  "power": [
+                    0,
+                    4
+                  ],
                   "baseCost": [
                     0,
                     2
                   ],
+                  "basePower": [
+                    0,
+                    4
+                  ],
                   "cardDefId": [
                     0,
-                    "Hulkbuster"
+                    "MultipleMan"
                   ]
                 }
               ],
@@ -1678,7 +1406,7 @@
               ],
               "opponent": [
                 0,
-                5
+                6
               ]
             }
           ]
@@ -1721,11 +1449,11 @@
           "events": [
             {
               "who": "player",
-              "card": "Vulture",
+              "card": "Agony",
               "type": "play",
-              "entityId": 28,
-              "location": "RocketPad",
-              "locationIndex": 1
+              "entityId": 24,
+              "location": "StarkIsland",
+              "locationIndex": 2
             }
           ]
         },
@@ -1734,7 +1462,7 @@
             2,
             3,
             {
-              "1": [
+              "2": [
                 1,
                 {
                   "playerCards": [
@@ -1745,11 +1473,11 @@
                         0,
                         {
                           "cost": 1,
-                          "power": 3,
+                          "power": 2,
                           "baseCost": 1,
-                          "entityId": 28,
-                          "basePower": 3,
-                          "cardDefId": "Vulture",
+                          "entityId": 24,
+                          "basePower": 2,
+                          "cardDefId": "Agony",
                           "arrivalSeq": 0
                         }
                       ]
@@ -1775,13 +1503,30 @@
               "0": [
                 1,
                 {
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "GhostSpider"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
                   "cost": [
                     0,
                     2
                   ],
                   "power": [
                     0,
-                    0
+                    4
                   ],
                   "baseCost": [
                     0,
@@ -1789,28 +1534,11 @@
                   ],
                   "basePower": [
                     0,
-                    0
+                    4
                   ],
                   "cardDefId": [
                     0,
-                    "FastballSpecial"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hulkbuster"
+                    "MultipleMan"
                   ]
                 }
               ],
@@ -1821,7 +1549,15 @@
                     0,
                     3
                   ],
+                  "power": [
+                    0,
+                    3
+                  ],
                   "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
                     0,
                     3
                   ],
@@ -1852,7 +1588,7 @@
           "events": [
             {
               "who": "player",
-              "card": "Vulture",
+              "card": "Agony",
               "type": "cardStaged"
             }
           ]
@@ -1867,11 +1603,11 @@
           "events": [
             {
               "who": "player",
-              "card": "Hulkbuster",
+              "card": "MultipleMan",
               "type": "play",
-              "entityId": 31,
-              "location": "RocketPad",
-              "locationIndex": 1
+              "entityId": 22,
+              "location": "StarkIsland",
+              "locationIndex": 2
             }
           ]
         },
@@ -1880,7 +1616,7 @@
             2,
             3,
             {
-              "1": [
+              "2": [
                 1,
                 {
                   "playerCards": [
@@ -1891,11 +1627,11 @@
                         0,
                         {
                           "cost": 2,
-                          "power": 3,
+                          "power": 4,
                           "baseCost": 2,
-                          "entityId": 31,
-                          "basePower": 3,
-                          "cardDefId": "Hulkbuster",
+                          "entityId": 22,
+                          "basePower": 4,
+                          "cardDefId": "MultipleMan",
                           "arrivalSeq": 1
                         }
                       ]
@@ -1925,7 +1661,15 @@
                     0,
                     3
                   ],
+                  "power": [
+                    0,
+                    3
+                  ],
                   "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
                     0,
                     3
                   ],
@@ -1956,7 +1700,7 @@
           "events": [
             {
               "who": "player",
-              "card": "Hulkbuster",
+              "card": "MultipleMan",
               "type": "cardStaged"
             }
           ]
@@ -1985,10 +1729,18 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Ironheart",
+              "card": "Angela",
               "type": "play",
-              "entityId": 20,
-              "location": "ZennLa",
+              "entityId": 34,
+              "location": "StarkIsland",
+              "locationIndex": 2
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "type": "play",
+              "entityId": 28,
+              "location": "StarkIsland",
               "locationIndex": 2
             }
           ]
@@ -2005,1516 +1757,27 @@
                     2,
                     2,
                     {
-                      "1": [
+                      "0": [
                         0,
                         {
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 20,
+                          "entityId": 34,
                           "basePower": null,
                           "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "Nebula",
-              "newPower": 3,
-              "oldPower": 1,
-              "cardEntityId": 17
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Ironheart",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Ironheart"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Ironheart",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "Ironheart",
-              "newPower": 6,
-              "oldPower": 3,
-              "cardEntityId": 17
-            },
-            {
-              "who": "opponent",
-              "card": "Gambit",
-              "type": "power",
-              "source": "Ironheart",
-              "newPower": 6,
-              "oldPower": 3,
-              "cardEntityId": 21
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 11
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "ZennLa",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 28,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 31,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "power",
-              "source": "Hulkbuster",
-              "newPower": 6,
-              "oldPower": 3,
-              "cardEntityId": 28
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "from": "RocketPad",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "cost": 2,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 36,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "MadameWeb"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "HydraStomper"
-                  ]
-                }
-              ],
-              "3": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 3,
-                  "baseCost": 3,
-                  "basePower": 3,
-                  "cardDefId": "Venom"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "play",
-              "entityId": 36,
-              "location": "RocketPad",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 1,
-                          "baseCost": 2,
-                          "entityId": 36,
-                          "basePower": 1,
-                          "cardDefId": "MadameWeb",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "HydraStomper"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Venom"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "Nebula",
-              "newPower": 8,
-              "oldPower": 6,
-              "cardEntityId": 17
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 13
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "cost": 2,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "power",
-              "source": "RocketPad",
-              "newPower": 7,
-              "oldPower": 6,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "power",
-              "source": "RocketPad",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 36
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Agony",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 30,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Agony",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Agony"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "FastballSpecial"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "HydraStomper"
-                  ]
-                }
-              ],
-              "3": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 3,
-                  "baseCost": 3,
-                  "basePower": 3,
-                  "cardDefId": "Venom"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Move",
-          "events": [
-            {
-              "to": "GrandCentral",
-              "who": "player",
-              "card": "Vulture",
-              "from": "RocketPad",
-              "type": "move",
-              "entityId": 28,
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 7,
-                          "baseCost": 1,
-                          "entityId": 28,
-                          "basePower": 3,
-                          "cardDefId": "Vulture",
                           "arrivalSeq": 0
                         }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "entityId": [
-                            0,
-                            36
-                          ],
-                          "basePower": [
-                            0,
-                            1
-                          ],
-                          "cardDefId": [
-                            0,
-                            "MadameWeb"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Agony",
-              "type": "play",
-              "entityId": 30,
-              "location": "RocketPad",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
+                      ],
                       "1": [
                         0,
                         {
                           "cost": 1,
                           "power": 2,
                           "baseCost": 1,
-                          "entityId": 30,
-                          "basePower": 2,
-                          "cardDefId": "Agony",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "FastballSpecial"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "HydraStomper"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Venom"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Agony",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "play",
-              "entityId": 38,
-              "location": "RocketPad",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 3,
-                          "baseCost": 3,
-                          "entityId": 38,
-                          "basePower": 3,
-                          "cardDefId": "HydraStomper",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "1": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Venom"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "play",
-              "entityId": 22,
-              "location": "RocketPad",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 22,
-                          "basePower": null,
-                          "cardDefId": null,
+                          "entityId": 28,
+                          "basePower": 1,
+                          "cardDefId": "KittyPryde",
                           "arrivalSeq": 1
                         }
                       ]
@@ -3529,7 +1792,7 @@
             {
               "opponent": [
                 0,
-                2
+                3
               ]
             }
           ]
@@ -3538,177 +1801,16 @@
       [
         {
           "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "Nebula",
-              "newPower": 10,
-              "oldPower": 8,
-              "cardEntityId": 17
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            10
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "power",
-              "source": "Vulture",
-              "newPower": 11,
-              "oldPower": 7,
-              "cardEntityId": 28
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            11
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 11,
-              "locationIndex": 0,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Reveal",
           "events": [
             {
               "who": "opponent",
-              "card": "BlackPanther",
-              "cost": 5,
+              "card": "Angela",
+              "cost": 2,
               "type": "reveal",
-              "power": 5,
-              "entityId": 22,
+              "power": 3,
+              "entityId": 34,
               "drawReveal": false
             }
           ]
@@ -3718,35 +1820,35 @@
             2,
             3,
             {
-              "1": [
+              "2": [
                 1,
                 {
                   "opponentCards": [
                     2,
                     2,
                     {
-                      "1": [
+                      "0": [
                         1,
                         {
                           "cost": [
                             0,
-                            5
+                            2
                           ],
                           "power": [
                             0,
-                            5
+                            3
                           ],
                           "baseCost": [
                             0,
-                            5
+                            2
                           ],
                           "basePower": [
                             0,
-                            5
+                            3
                           ],
                           "cardDefId": [
                             0,
-                            "BlackPanther"
+                            "Angela"
                           ]
                         }
                       ]
@@ -3761,12 +1863,12 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Resolve",
           "events": [
             {
               "who": "opponent",
-              "card": "BlackPanther",
+              "card": "Angela",
               "type": "cardRevealed"
             }
           ]
@@ -3776,16 +1878,16 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 9
+              "location": "StarkIsland",
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 3
             }
           ]
         },
@@ -3794,17 +1896,54 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 28,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "StarkIsland",
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 5
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
           "label": "Power",
           "events": [
             {
               "who": "opponent",
-              "card": "BlackPanther",
+              "card": "Angela",
               "type": "power",
-              "source": "BlackPanther",
-              "newPower": 10,
-              "oldPower": 5,
-              "cardEntityId": 22
+              "source": "Angela",
+              "newPower": 4,
+              "oldPower": 3,
+              "cardEntityId": 34
             }
           ]
         },
@@ -3813,149 +1952,14 @@
             2,
             3,
             {
-              "1": [
+              "2": [
                 1,
                 {
                   "opponentCards": [
                     2,
                     2,
                     {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            10
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 14
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Agony",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 30,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 14
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Agony",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 38,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "power",
-              "source": "HydraStomper",
-              "newPower": 4,
-              "oldPower": 3,
-              "cardEntityId": 38
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
+                      "0": [
                         1,
                         {
                           "power": [
@@ -3975,16 +1979,16 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 8,
-              "locationIndex": 1,
-              "opponentPower": 14
+              "location": "StarkIsland",
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 6
             }
           ]
         },
@@ -3993,12 +1997,49 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "Agony",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 24,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "StarkIsland",
+              "playerPower": 2,
+              "locationIndex": 2,
+              "opponentPower": 6
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
           "label": "Resolved",
           "events": [
             {
               "who": "player",
-              "card": "HydraStomper",
+              "card": "Agony",
               "type": "cardResolved"
             }
           ]
@@ -4008,17 +2049,69 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "MultipleMan",
+              "cost": 2,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 22,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": null,
+              "location": "StarkIsland",
+              "playerPower": 6,
+              "locationIndex": 2,
+              "opponentPower": 6
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "MultipleMan",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
           "label": "Power",
           "events": [
             {
               "who": "player",
-              "card": "HydraStomper",
+              "card": "MultipleMan",
               "type": "power",
               "source": "Agony",
               "newPower": 6,
               "oldPower": 4,
-              "cardEntityId": 38
+              "cardEntityId": 22
             }
           ]
         },
@@ -4027,14 +2120,14 @@
             2,
             3,
             {
-              "1": [
+              "2": [
                 1,
                 {
                   "playerCards": [
                     2,
-                    3,
+                    2,
                     {
-                      "2": [
+                      "1": [
                         1,
                         {
                           "power": [
@@ -4054,13 +2147,13 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Set Aside",
           "events": [
             {
               "who": "player",
               "card": "Agony",
-              "from": "RocketPad",
+              "from": "StarkIsland",
               "type": "setaside"
             }
           ]
@@ -4070,19 +2163,19 @@
             2,
             3,
             {
-              "1": [
+              "2": [
                 1,
                 {
                   "playerCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
+                      "0": [
                         1,
                         {
                           "cost": [
                             0,
-                            3
+                            2
                           ],
                           "power": [
                             0,
@@ -4090,19 +2183,19 @@
                           ],
                           "baseCost": [
                             0,
-                            3
+                            2
                           ],
                           "entityId": [
                             0,
-                            38
+                            22
                           ],
                           "basePower": [
                             0,
-                            3
+                            4
                           ],
                           "cardDefId": [
                             0,
-                            "HydraStomper"
+                            "MultipleMan"
                           ]
                         }
                       ]
@@ -4117,116 +2210,47 @@
       [
         {
           "_v": 2,
-          "turn": 5,
-          "label": "Play",
+          "turn": 4,
+          "label": "Energy",
           "events": [
             {
-              "who": "opponent",
-              "card": "Swarm",
-              "type": "play",
-              "entityId": 19,
-              "location": "GrandCentral",
-              "locationIndex": 0
+              "who": "player",
+              "type": "energy",
+              "energy": 4
             },
             {
-              "who": "player",
-              "card": "FastballSpecial",
-              "type": "play",
-              "entityId": 39,
-              "location": "GrandCentral",
-              "locationIndex": 0
+              "who": "opponent",
+              "type": "energy",
+              "energy": 4
             }
           ]
         },
         {
-          "b": [
+          "h": [
             2,
             3,
             {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 0,
-                          "baseCost": 2,
-                          "entityId": 39,
-                          "basePower": 0,
-                          "cardDefId": "FastballSpecial",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 19,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ],
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
+              "1": [
                 1,
                 {
                   "cost": [
                     0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
+                    2
                   ],
                   "cardDefId": [
                     0,
                     "Venom"
                   ]
                 }
+              ],
+              "2": [
+                1,
+                {
+                  "cardDefId": [
+                    0,
+                    "HydraStomper"
+                  ]
+                }
               ]
             }
           ]
@@ -4235,17 +2259,15 @@
       [
         {
           "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
+          "turn": 4,
+          "label": "Reset",
           "events": [
             {
               "who": "opponent",
-              "card": "Swarm",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 19,
-              "drawReveal": false
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 2
             }
           ]
         },
@@ -4254,189 +2276,22 @@
             2,
             3,
             {
-              "0": [
+              "2": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Swarm"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Swarm",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 11,
-              "locationIndex": 0,
-              "opponentPower": 18
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "FastballSpecial",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "destroyed",
-              "fromLocation": "GrandCentral"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
                     2,
-                    1,
                     {
-                      "0": [
+                      "1": [
                         1,
                         {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "entityId": [
-                            0,
-                            39
-                          ],
                           "basePower": [
                             0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "FastballSpecial"
+                            2
                           ]
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "player": [
-                2,
-                2,
-                {
-                  "0": [
-                    1,
-                    {
-                      "cost": [
-                        0,
-                        1
-                      ],
-                      "power": [
-                        0,
-                        11
-                      ],
-                      "cardDefId": [
-                        0,
-                        "Vulture"
-                      ]
-                    }
-                  ],
-                  "1": [
-                    0,
-                    {
-                      "cost": 2,
-                      "power": 4,
-                      "cardDefId": "MultipleMan"
                     }
                   ]
                 }
@@ -4448,35 +2303,15 @@
       [
         {
           "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 18
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
+          "turn": 4,
+          "label": "Bounce",
           "events": [
             {
               "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "FastballSpecial",
-              "newPower": -1,
-              "oldPower": 10,
-              "cardEntityId": 17
+              "card": "KittyPryde",
+              "from": "StarkIsland",
+              "type": "bounce",
+              "entityId": 28
             }
           ]
         },
@@ -4485,94 +2320,24 @@
             2,
             3,
             {
-              "0": [
+              "2": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "player",
-              "card": "FastballSpecial",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    0,
+                    1,
                     {}
                   ]
                 }
               ]
             }
           ],
-          "n": [
+          "c": [
             1,
             {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 2,
-                      "power": 0,
-                      "cardDefId": "FastballSpecial"
-                    }
-                  ]
-                }
+              "opponent": [
+                0,
+                4
               ]
             }
           ]
@@ -4581,45 +2346,15 @@
       [
         {
           "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
+          "turn": 4,
+          "label": "Reset",
           "events": [
             {
               "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 2
             }
           ]
         },
@@ -4628,26 +2363,63 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 4,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "StarkIsland",
+              "playerPower": 6,
+              "locationIndex": 2,
+              "opponentPower": 4
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 4,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "type": "power",
+              "source": "KittyPryde",
+              "newPower": 3,
+              "oldPower": 2,
+              "cardEntityId": 28
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 4,
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "ThePhoenixForce",
-              "cost": 4,
+              "card": "Hulkbuster",
+              "cost": 2,
               "type": "reveal",
-              "power": 5,
-              "entityId": 33,
+              "power": 3,
+              "entityId": 25,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "ThePhoenixForce",
+              "card": "Hulkbuster",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -4658,26 +2430,52 @@
             {
               "player": [
                 0,
-                2
+                4
               ],
               "opponent": [
                 0,
-                2
+                5
               ]
             }
           ],
           "h": [
             2,
-            2,
+            4,
             {
               "1": [
+                1,
+                {
+                  "baseCost": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Hulkbuster"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Venom"
+                  ]
+                }
+              ],
+              "3": [
                 0,
                 {
-                  "cost": 4,
-                  "power": 5,
-                  "baseCost": 4,
-                  "basePower": 5,
-                  "cardDefId": "ThePhoenixForce"
+                  "cost": 3,
+                  "power": 3,
+                  "baseCost": 3,
+                  "basePower": 3,
+                  "cardDefId": "HydraStomper"
                 }
               ]
             }
@@ -4687,11 +2485,11 @@
             {
               "player": [
                 0,
-                3
+                5
               ],
               "opponent": [
                 0,
-                2
+                5
               ]
             }
           ]
@@ -4700,7 +2498,7 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 4,
           "label": "Turn Winner",
           "events": [
             {
@@ -4715,47 +2513,13 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 4,
           "label": "Initiative",
           "events": [
             {
               "who": "opponent",
               "type": "initiative"
             }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Snap",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "snap",
-              "cubeValue": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 4
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -4797,9 +2561,9 @@
           "turn": 1,
           "plays": [
             {
-              "card": "Nebula",
+              "card": "KittyPryde",
               "isPlayer": false,
-              "location": "GrandCentral",
+              "location": "TheBigHouse",
               "locationIndex": 0
             }
           ],
@@ -4809,43 +2573,43 @@
           },
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1,
               "_changeIdx": 67
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1,
               "_changeIdx": 69
             },
             {
-              "to": "GrandCentral",
+              "to": "TheBigHouse",
               "from": "RevealOn1",
               "type": "location",
               "_changeIdx": 72,
               "locationIndex": 0
             },
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 76
-            },
-            {
               "who": "player",
-              "card": "FastballSpecial",
-              "cost": 2,
+              "card": "GhostSpider",
+              "cost": 1,
               "type": "reveal",
-              "power": 0,
-              "entityId": 39,
-              "_changeIdx": 79,
+              "power": 3,
+              "entityId": 17,
+              "_changeIdx": 75,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "FastballSpecial",
+              "card": "GhostSpider",
+              "type": "draw",
+              "_changeIdx": 76
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw",
               "_changeIdx": 80
             },
@@ -4856,7 +2620,7 @@
               "_changeIdx": 83
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative",
               "_changeIdx": 84
             },
@@ -4867,33 +2631,33 @@
             },
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "KittyPryde",
               "type": "play",
-              "entityId": 17,
-              "location": "GrandCentral",
+              "entityId": 28,
+              "location": "TheBigHouse",
               "_changeIdx": 88,
               "locationIndex": 0
             },
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "KittyPryde",
               "cost": 1,
               "type": "reveal",
               "power": 1,
-              "entityId": 17,
+              "entityId": 28,
               "_changeIdx": 91,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "KittyPryde",
               "type": "cardRevealed",
               "_changeIdx": 92
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "GrandCentral",
+              "location": "TheBigHouse",
               "_changeIdx": 94,
               "playerPower": 0,
               "locationIndex": 0,
@@ -4926,21 +2690,15 @@
           "turn": 2,
           "plays": [
             {
-              "card": "MultipleMan",
+              "card": "MadameWeb",
               "isPlayer": true,
-              "location": "GrandCentral",
+              "location": "TheBigHouse",
               "locationIndex": 0
             },
             {
-              "card": "ColleenWing",
+              "card": "RedWolfFracturedFrontier",
               "isPlayer": false,
-              "location": "RocketPad",
-              "locationIndex": 1
-            },
-            {
-              "card": "Wolverine",
-              "isPlayer": false,
-              "location": "GrandCentral",
+              "location": "TheBigHouse",
               "locationIndex": 0
             }
           ],
@@ -4950,19 +2708,19 @@
           },
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2,
               "_changeIdx": 100
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2,
               "_changeIdx": 102
             },
             {
-              "to": "RocketPad",
+              "to": "Genosha",
               "from": "RevealOn2",
               "type": "location",
               "_changeIdx": 105,
@@ -4977,190 +2735,190 @@
             },
             {
               "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 112
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 1,
+              "_changeIdx": 114
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "from": "TheBigHouse",
+              "type": "bounce",
+              "entityId": 28,
+              "_changeIdx": 115
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 1,
+              "_changeIdx": 118
+            },
+            {
+              "type": "score",
+              "winner": null,
+              "location": "TheBigHouse",
+              "_changeIdx": 119,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "type": "power",
+              "source": "KittyPryde",
+              "newPower": 2,
+              "oldPower": 1,
+              "_changeIdx": 123,
+              "cardEntityId": 28
             },
             {
               "who": "player",
-              "card": "Vulture",
-              "cost": 1,
+              "card": "MadameWeb",
+              "cost": 2,
               "type": "reveal",
-              "power": 3,
-              "entityId": 28,
-              "_changeIdx": 115,
+              "power": 1,
+              "entityId": 23,
+              "_changeIdx": 128,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Vulture",
+              "card": "MadameWeb",
               "type": "draw",
-              "_changeIdx": 116
+              "_changeIdx": 129
             },
             {
-              "tie": false,
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 132
+            },
+            {
+              "tie": true,
               "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 121
+              "winner": null,
+              "_changeIdx": 135
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 122
+              "_changeIdx": 136
             },
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "MadameWeb",
               "type": "play",
-              "entityId": 37,
-              "location": "GrandCentral",
-              "_changeIdx": 125,
+              "entityId": 23,
+              "location": "TheBigHouse",
+              "_changeIdx": 139,
               "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "MadameWeb",
               "type": "cardStaged",
-              "_changeIdx": 126
+              "_changeIdx": 140
             },
             {
               "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 130
-            },
-            {
-              "who": "opponent",
-              "card": "ColleenWing",
-              "type": "play",
-              "entityId": 18,
-              "location": "RocketPad",
-              "_changeIdx": 131,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "ColleenWing",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 18,
-              "_changeIdx": 135,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ColleenWing",
-              "type": "cardRevealed",
-              "_changeIdx": 136
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 138,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "opponent",
-              "card": "Wolverine",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 26,
-              "_changeIdx": 142,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Wolverine",
-              "type": "discarded",
               "_changeIdx": 143
             },
             {
               "who": "opponent",
-              "card": "Wolverine",
-              "cost": 2,
-              "type": "resetCard",
-              "power": 3,
-              "_changeIdx": 147
-            },
-            {
-              "who": "opponent",
-              "card": "Wolverine",
-              "type": "power",
-              "source": "Wolverine",
-              "newPower": 5,
-              "oldPower": 3,
-              "_changeIdx": 148,
-              "cardEntityId": 26
-            },
-            {
-              "who": "opponent",
-              "card": "Wolverine",
+              "card": "RedWolfFracturedFrontier",
               "type": "play",
-              "entityId": 26,
-              "location": "GrandCentral",
-              "_changeIdx": 151,
+              "entityId": 29,
+              "location": "TheBigHouse",
+              "_changeIdx": 144,
               "locationIndex": 0
             },
             {
               "who": "opponent",
-              "card": "Wolverine",
+              "card": "RedWolfFracturedFrontier",
               "cost": 2,
               "type": "reveal",
-              "power": 5,
-              "entityId": 26,
-              "_changeIdx": 153,
+              "power": 1,
+              "entityId": 29,
+              "_changeIdx": 148,
               "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "RedWolfFracturedFrontier",
+              "type": "cardRevealed",
+              "_changeIdx": 149
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 154,
+              "location": "TheBigHouse",
+              "_changeIdx": 151,
               "playerPower": 0,
               "locationIndex": 0,
-              "opponentPower": 6
+              "opponentPower": 1
+            },
+            {
+              "who": "opponent",
+              "card": "RedWolfFracturedFrontier",
+              "type": "power",
+              "source": "RedWolfFracturedFrontier",
+              "newPower": 5,
+              "oldPower": 1,
+              "_changeIdx": 155,
+              "cardEntityId": 29
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "TheBigHouse",
+              "_changeIdx": 159,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 5
             },
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "MadameWeb",
               "cost": 2,
               "type": "reveal",
-              "power": 4,
-              "entityId": 37,
-              "_changeIdx": 159,
+              "power": 1,
+              "entityId": 23,
+              "_changeIdx": 162,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 161,
-              "playerPower": 4,
+              "location": "TheBigHouse",
+              "_changeIdx": 165,
+              "playerPower": 1,
               "locationIndex": 0,
-              "opponentPower": 6
+              "opponentPower": 5
             },
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "MadameWeb",
               "type": "cardResolved",
-              "_changeIdx": 164
+              "_changeIdx": 168
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
               "winner": "opponent",
-              "playerPower": 4,
-              "opponentPower": 6
+              "playerPower": 1,
+              "opponentPower": 5
             },
             {
-              "winner": "opponent",
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 4
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -5169,34 +2927,34 @@
             }
           ]
         },
-        27
+        28
       ],
       [
         {
           "turn": 3,
           "plays": [
             {
-              "card": "Gambit",
-              "isPlayer": false,
-              "location": "ZennLa",
+              "card": "Agony",
+              "isPlayer": true,
+              "location": "StarkIsland",
               "locationIndex": 2
             },
             {
-              "card": "Vulture",
+              "card": "MultipleMan",
               "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 1
+              "location": "StarkIsland",
+              "locationIndex": 2
             },
             {
-              "card": "Hulkbuster",
-              "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 1
-            },
-            {
-              "card": "Ironheart",
+              "card": "Angela",
               "isPlayer": false,
-              "location": "ZennLa",
+              "location": "StarkIsland",
+              "locationIndex": 2
+            },
+            {
+              "card": "KittyPryde",
+              "isPlayer": false,
+              "location": "StarkIsland",
               "locationIndex": 2
             }
           ],
@@ -5206,1022 +2964,358 @@
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 168
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 170
+              "_changeIdx": 173
             },
             {
-              "to": "ZennLa",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 175
+            },
+            {
+              "to": "StarkIsland",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 173,
+              "_changeIdx": 178,
               "locationIndex": 2
             },
             {
+              "who": "player",
+              "card": "Agony",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 24,
+              "_changeIdx": 181,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Agony",
+              "type": "draw",
+              "_changeIdx": 182
+            },
+            {
               "who": "opponent",
-              "card": "Gambit",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 185
+            },
+            {
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "opponent",
+              "_changeIdx": 188
+            },
+            {
+              "who": "opponent",
+              "type": "initiative",
+              "_changeIdx": 189
+            },
+            {
+              "who": "player",
+              "card": "Agony",
               "type": "play",
-              "entityId": 21,
-              "location": "ZennLa",
-              "_changeIdx": 176,
+              "entityId": 24,
+              "location": "StarkIsland",
+              "_changeIdx": 192,
+              "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "Agony",
+              "type": "cardStaged",
+              "_changeIdx": 193
+            },
+            {
+              "who": "player",
+              "card": "MultipleMan",
+              "type": "play",
+              "entityId": 22,
+              "location": "StarkIsland",
+              "_changeIdx": 197,
+              "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "MultipleMan",
+              "type": "cardStaged",
+              "_changeIdx": 198
+            },
+            {
+              "turn": 3,
+              "type": "endTurn",
+              "_changeIdx": 204
+            },
+            {
+              "who": "opponent",
+              "card": "Angela",
+              "type": "play",
+              "entityId": 34,
+              "location": "StarkIsland",
+              "_changeIdx": 205,
               "locationIndex": 2
             },
             {
               "who": "opponent",
-              "card": "Gambit",
-              "cost": 3,
+              "card": "KittyPryde",
+              "type": "play",
+              "entityId": 28,
+              "location": "StarkIsland",
+              "_changeIdx": 208,
+              "locationIndex": 2
+            },
+            {
+              "who": "opponent",
+              "card": "Angela",
+              "cost": 2,
               "type": "reveal",
               "power": 3,
-              "entityId": 21,
-              "_changeIdx": 179,
+              "entityId": 34,
+              "_changeIdx": 213,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "Gambit",
+              "card": "Angela",
               "type": "cardRevealed",
-              "_changeIdx": 180
+              "_changeIdx": 214
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "ZennLa",
-              "_changeIdx": 181,
+              "location": "StarkIsland",
+              "_changeIdx": 216,
               "playerPower": 0,
               "locationIndex": 2,
               "opponentPower": 3
             },
             {
               "who": "opponent",
-              "card": "ArnimZola",
-              "cost": 6,
+              "card": "KittyPryde",
+              "cost": 1,
               "type": "reveal",
-              "power": 0,
-              "entityId": 24,
-              "_changeIdx": 185,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ArnimZola",
-              "type": "discarded",
-              "_changeIdx": 186
-            },
-            {
-              "who": "player",
-              "card": "MultipleMan",
-              "type": "destroyed",
-              "_changeIdx": 190,
-              "fromLocation": "GrandCentral"
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 192,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 6
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 199
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 31,
-              "_changeIdx": 202,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "draw",
-              "_changeIdx": 203
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 206
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 207
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "play",
+              "power": 2,
               "entityId": 28,
-              "location": "RocketPad",
-              "_changeIdx": 210,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardStaged",
-              "_changeIdx": 211
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "play",
-              "entityId": 31,
-              "location": "RocketPad",
-              "_changeIdx": 214,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "cardStaged",
-              "_changeIdx": 215
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 221
-            },
-            {
-              "who": "opponent",
-              "card": "Ironheart",
-              "type": "play",
-              "entityId": 20,
-              "location": "ZennLa",
-              "_changeIdx": 222,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "Nebula",
-              "newPower": 3,
-              "oldPower": 1,
-              "_changeIdx": 228,
-              "cardEntityId": 17
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 232,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 8
-            },
-            {
-              "who": "opponent",
-              "card": "Ironheart",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 20,
-              "_changeIdx": 235,
+              "_changeIdx": 220,
               "drawReveal": false
             },
             {
-              "who": "opponent",
-              "card": "Ironheart",
-              "type": "cardRevealed",
-              "_changeIdx": 236
-            },
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "Ironheart",
-              "newPower": 6,
-              "oldPower": 3,
-              "_changeIdx": 239,
-              "cardEntityId": 17
-            },
-            {
-              "who": "opponent",
-              "card": "Gambit",
-              "type": "power",
-              "source": "Ironheart",
-              "newPower": 6,
-              "oldPower": 3,
-              "_changeIdx": 242,
-              "cardEntityId": 21
-            },
-            {
               "type": "score",
               "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 246,
+              "location": "StarkIsland",
+              "_changeIdx": 222,
               "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 11
+              "locationIndex": 2,
+              "opponentPower": 5
+            },
+            {
+              "who": "opponent",
+              "card": "Angela",
+              "type": "power",
+              "source": "Angela",
+              "newPower": 4,
+              "oldPower": 3,
+              "_changeIdx": 226,
+              "cardEntityId": 34
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "ZennLa",
-              "_changeIdx": 249,
+              "location": "StarkIsland",
+              "_changeIdx": 230,
               "playerPower": 0,
               "locationIndex": 2,
               "opponentPower": 6
             },
             {
               "who": "player",
-              "card": "Vulture",
+              "card": "Agony",
               "cost": 1,
               "type": "reveal",
-              "power": 3,
-              "entityId": 28,
-              "_changeIdx": 252,
+              "power": 2,
+              "entityId": 24,
+              "_changeIdx": 233,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 254,
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 4
+              "location": "StarkIsland",
+              "_changeIdx": 235,
+              "playerPower": 2,
+              "locationIndex": 2,
+              "opponentPower": 6
             },
             {
               "who": "player",
-              "card": "Vulture",
+              "card": "Agony",
               "type": "cardResolved",
-              "_changeIdx": 257
+              "_changeIdx": 238
             },
             {
               "who": "player",
-              "card": "Hulkbuster",
+              "card": "MultipleMan",
               "cost": 2,
               "type": "reveal",
-              "power": 3,
-              "entityId": 31,
-              "_changeIdx": 258,
+              "power": 4,
+              "entityId": 22,
+              "_changeIdx": 240,
               "drawReveal": false
             },
             {
               "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 260,
+              "winner": null,
+              "location": "StarkIsland",
+              "_changeIdx": 242,
               "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 4
+              "locationIndex": 2,
+              "opponentPower": 6
             },
             {
               "who": "player",
-              "card": "Vulture",
-              "type": "power",
-              "source": "Hulkbuster",
-              "newPower": 6,
-              "oldPower": 3,
-              "_changeIdx": 265,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "from": "RocketPad",
-              "type": "setaside",
-              "_changeIdx": 270
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
+              "card": "MultipleMan",
               "type": "cardResolved",
-              "_changeIdx": 276
+              "_changeIdx": 245
+            },
+            {
+              "who": "player",
+              "card": "MultipleMan",
+              "type": "power",
+              "source": "Agony",
+              "newPower": 6,
+              "oldPower": 4,
+              "_changeIdx": 249,
+              "cardEntityId": 22
+            },
+            {
+              "who": "player",
+              "card": "Agony",
+              "from": "StarkIsland",
+              "type": "setaside",
+              "_changeIdx": 254
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 11
+              "opponentPower": 0
             },
             {
-              "winner": "player",
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
+            },
+            {
+              "winner": null,
               "playerPower": 6,
-              "opponentPower": 4
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
               "opponentPower": 6
             }
           ]
         },
-        64
+        59
       ],
       [
         {
           "turn": 4,
-          "plays": [
-            {
-              "card": "MadameWeb",
-              "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 1
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 4,
             "opponent": 4
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 281
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 4,
-              "_changeIdx": 283
+              "_changeIdx": 269
+            },
+            {
+              "who": "opponent",
+              "type": "energy",
+              "energy": 4,
+              "_changeIdx": 271
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 2,
+              "_changeIdx": 275
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "from": "StarkIsland",
+              "type": "bounce",
+              "entityId": 28,
+              "_changeIdx": 276
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 2,
+              "_changeIdx": 279
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "StarkIsland",
+              "_changeIdx": 280,
+              "playerPower": 6,
+              "locationIndex": 2,
+              "opponentPower": 4
+            },
+            {
+              "who": "opponent",
+              "card": "KittyPryde",
+              "type": "power",
+              "source": "KittyPryde",
+              "newPower": 3,
+              "oldPower": 2,
+              "_changeIdx": 284,
+              "cardEntityId": 28
+            },
+            {
+              "who": "player",
+              "card": "Hulkbuster",
+              "cost": 2,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 25,
+              "_changeIdx": 289,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Hulkbuster",
+              "type": "draw",
+              "_changeIdx": 290
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 285
-            },
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "cost": 2,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 36,
-              "_changeIdx": 288,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "draw",
-              "_changeIdx": 289
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 292
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
               "_changeIdx": 293
             },
             {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "play",
-              "entityId": 36,
-              "location": "RocketPad",
-              "_changeIdx": 296,
-              "locationIndex": 1
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "opponent",
+              "_changeIdx": 296
             },
             {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "cardStaged",
+              "who": "opponent",
+              "type": "initiative",
               "_changeIdx": 297
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 305
-            },
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "Nebula",
-              "newPower": 8,
-              "oldPower": 6,
-              "_changeIdx": 308,
-              "cardEntityId": 17
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 312,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 13
-            },
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "cost": 2,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 36,
-              "_changeIdx": 315,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 318,
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "cardResolved",
-              "_changeIdx": 321
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "power",
-              "source": "RocketPad",
-              "newPower": 7,
-              "oldPower": 6,
-              "_changeIdx": 324,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "MadameWeb",
-              "type": "power",
-              "source": "RocketPad",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 327,
-              "cardEntityId": 36
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 331,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 13
-            },
-            {
-              "winner": "player",
-              "playerPower": 9,
-              "opponentPower": 4
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        78
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "Agony",
-              "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 1
-            },
-            {
-              "card": "HydraStomper",
-              "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 1
-            },
-            {
-              "card": "BlackPanther",
-              "isPlayer": false,
-              "location": "RocketPad",
-              "locationIndex": 1
-            },
-            {
-              "card": "Swarm",
-              "isPlayer": false,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            },
-            {
-              "card": "FastballSpecial",
-              "isPlayer": true,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 338
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 340
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 342
-            },
-            {
-              "who": "player",
-              "card": "Agony",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 30,
-              "_changeIdx": 345,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Agony",
-              "type": "draw",
-              "_changeIdx": 346
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 349
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 350
-            },
-            {
-              "to": "GrandCentral",
-              "who": "player",
-              "card": "Vulture",
-              "from": "RocketPad",
-              "type": "move",
-              "entityId": 28,
-              "_changeIdx": 353,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardStaged",
-              "_changeIdx": 354
-            },
-            {
-              "who": "player",
-              "card": "Agony",
-              "type": "play",
-              "entityId": 30,
-              "location": "RocketPad",
-              "_changeIdx": 357,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Agony",
-              "type": "cardStaged",
-              "_changeIdx": 358
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "play",
-              "entityId": 38,
-              "location": "RocketPad",
-              "_changeIdx": 362,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "cardStaged",
-              "_changeIdx": 363
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 370,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 374
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "play",
-              "entityId": 22,
-              "location": "RocketPad",
-              "_changeIdx": 375,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "Nebula",
-              "newPower": 10,
-              "oldPower": 8,
-              "_changeIdx": 382,
-              "cardEntityId": 17
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 386,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 15
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardResolved",
-              "_changeIdx": 389
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 392,
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 15
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "power",
-              "source": "Vulture",
-              "newPower": 11,
-              "oldPower": 7,
-              "_changeIdx": 396,
-              "cardEntityId": 28
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 400,
-              "playerPower": 11,
-              "locationIndex": 0,
-              "opponentPower": 15
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "cost": 5,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 22,
-              "_changeIdx": 403,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "cardRevealed",
-              "_changeIdx": 404
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 406,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "power",
-              "source": "BlackPanther",
-              "newPower": 10,
-              "oldPower": 5,
-              "_changeIdx": 410,
-              "cardEntityId": 22
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 414,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 14
-            },
-            {
-              "who": "player",
-              "card": "Agony",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 30,
-              "_changeIdx": 417,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 420,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 14
-            },
-            {
-              "who": "player",
-              "card": "Agony",
-              "type": "cardResolved",
-              "_changeIdx": 423
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 38,
-              "_changeIdx": 424,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "power",
-              "source": "HydraStomper",
-              "newPower": 4,
-              "oldPower": 3,
-              "_changeIdx": 429,
-              "cardEntityId": 38
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 432,
-              "playerPower": 8,
-              "locationIndex": 1,
-              "opponentPower": 14
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "cardResolved",
-              "_changeIdx": 435
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "power",
-              "source": "Agony",
-              "newPower": 6,
-              "oldPower": 4,
-              "_changeIdx": 438,
-              "cardEntityId": 38
-            },
-            {
-              "who": "player",
-              "card": "Agony",
-              "from": "RocketPad",
-              "type": "setaside",
-              "_changeIdx": 443
-            },
-            {
-              "who": "opponent",
-              "card": "Swarm",
-              "type": "play",
-              "entityId": 19,
-              "location": "GrandCentral",
-              "_changeIdx": 454,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "FastballSpecial",
-              "type": "play",
-              "entityId": 39,
-              "location": "GrandCentral",
-              "_changeIdx": 456,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Swarm",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 19,
-              "_changeIdx": 459,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Swarm",
-              "type": "cardRevealed",
-              "_changeIdx": 460
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 462,
-              "playerPower": 11,
-              "locationIndex": 0,
-              "opponentPower": 18
-            },
-            {
-              "who": "player",
-              "card": "FastballSpecial",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 39,
-              "_changeIdx": 466,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "destroyed",
-              "_changeIdx": 470,
-              "fromLocation": "GrandCentral"
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 473,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 18
-            },
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "source": "FastballSpecial",
-              "newPower": -1,
-              "oldPower": 10,
-              "_changeIdx": 476,
-              "cardEntityId": 17
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 480,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "who": "player",
-              "card": "FastballSpecial",
-              "type": "removed",
-              "_changeIdx": 484
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 487
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 7
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 8,
-              "opponentPower": 14
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        122
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "type": "cubePreview",
-              "_changeIdx": 490,
-              "cubeValueNextTurn": 2
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 492
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 494
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 496
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 33,
-              "_changeIdx": 499,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "draw",
-              "_changeIdx": 500
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 503
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 504
-            },
-            {
-              "who": "opponent",
-              "type": "snap",
-              "cubeValue": 4,
-              "_changeIdx": 507
-            },
-            {
-              "type": "cubePreview",
-              "_changeIdx": 507,
-              "cubeValueNextTurn": 4
             }
           ],
           "snapEvent": null,
@@ -6237,90 +3331,67 @@
               "opponentPower": 0
             },
             {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
+              "winner": "player",
+              "playerPower": 6,
+              "opponentPower": 4
             }
           ]
         },
-        126
+        65
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 13857,
-  "opp_sp": 5096,
+  "opp_cl": 10051,
+  "opp_sp": 4979,
   "bracket": null,
-  "match_id": "13502541-6598-4e75-8152-38555c17eae7",
-  "opp_name": "NotaBot",
+  "match_id": "dfffa5e6-0e4e-4a33-9aec-aef5499f1228",
+  "opp_name": "CrispProfesor",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "GrandCentral",
-    "RocketPad",
-    "ZennLa"
-  ],
+  "locations": [],
   "player_cl": 11557,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
-  "opp_avatar": {
-    "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Gambit",
-    "ArtVariantDefId": "Gambit_06"
-  },
+  "opp_avatar": null,
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": null,
   "player_name": "SmokeFisher",
-  "current_turn": 7,
-  "match_result": "retreat",
-  "match_status": "complete",
-  "opp_clan_tag": "IAM",
+  "current_turn": 5,
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_clan_tag": "UNI",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": null,
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "Nebula",
-    "ColleenWing",
-    "Wolverine",
-    "Gambit",
-    "ArnimZola",
-    "Ironheart",
-    "BlackPanther",
-    "Swarm"
+    "KittyPryde",
+    "RedWolfFracturedFrontier",
+    "Angela"
   ],
-  "last_updated_at": "2026-10-09T12:46:11.26+00:00",
+  "last_updated_at": "2026-10-09T12:47:21.236+00:00",
   "opp_played_cards": [
-    "Wolverine"
+    "KittyPryde"
   ],
   "player_deck_cards": [
-    "StrangeSupreme",
+    "Venom",
+    "HydraStomper",
     "MultipleMan",
     "GhostSpider",
-    "ThePhoenixForce",
-    "IronFist",
-    "Venom",
-    "Vulture",
-    "Agony",
-    "FastballSpecial",
     "MadameWeb",
-    "Hulkbuster",
-    "HydraStomper"
+    "Agony",
+    "Hulkbuster"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "Nebula",
-    "ColleenWing",
-    "Wolverine",
-    "Gambit",
-    "ArnimZola",
-    "Ironheart",
-    "BlackPanther",
-    "Swarm"
+    "KittyPryde",
+    "RedWolfFracturedFrontier",
+    "Angela"
   ],
   "conquest_round_index": null
 }
