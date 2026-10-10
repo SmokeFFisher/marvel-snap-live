@@ -43,25 +43,25 @@
           },
           "h": [
             {
-              "cost": 3,
+              "cost": 1,
               "power": 2,
-              "baseCost": 3,
+              "baseCost": 1,
               "basePower": 2,
-              "cardDefId": "Magik"
+              "cardDefId": "NicoMinoru"
             },
             {
-              "cost": 4,
-              "power": 5,
-              "baseCost": 4,
-              "basePower": 5,
-              "cardDefId": "Supergiant"
+              "cost": 2,
+              "power": 4,
+              "baseCost": 2,
+              "basePower": 4,
+              "cardDefId": "InvisibleWoman"
             },
             {
-              "cost": 6,
-              "power": 6,
-              "baseCost": 6,
-              "basePower": 6,
-              "cardDefId": "Hela"
+              "cost": 7,
+              "power": 12,
+              "baseCost": 7,
+              "basePower": 12,
+              "cardDefId": "Skaar"
             }
           ],
           "n": {
@@ -70,7 +70,7 @@
           },
           "r": {
             "player": 9,
-            "opponent": 9
+            "opponent": 15
           },
           "x": {
             "player": [],
@@ -85,12 +85,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             }
@@ -105,7 +105,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "IslandPrison",
+              "to": "MirrorDimension",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -122,7 +122,7 @@
                 {
                   "location": [
                     0,
-                    "IslandPrison"
+                    "MirrorDimension"
                   ],
                   "revealed": [
                     0,
@@ -138,32 +138,13 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 24,
-              "drawReveal": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
           "label": "Override",
           "events": [
             {
               "who": "player",
               "card": "NicoMinoru",
               "type": "abilityOverride",
-              "overrideAbility": "Spell02NicoMinoru"
+              "overrideAbility": "Spell05NicoMinoru"
             }
           ]
         },
@@ -176,22 +157,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Skaar",
-              "cost": 7,
+              "card": "IronMan",
+              "cost": 5,
               "type": "reveal",
-              "power": 12,
-              "entityId": 19,
+              "power": 0,
+              "entityId": 38,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Skaar",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "IronMan",
               "type": "draw"
             }
           ]
@@ -214,6 +195,31 @@
             2,
             4,
             {
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    5
+                  ],
+                  "power": [
+                    0,
+                    0
+                  ],
+                  "baseCost": [
+                    0,
+                    5
+                  ],
+                  "basePower": [
+                    0,
+                    0
+                  ],
+                  "cardDefId": [
+                    0,
+                    "IronMan"
+                  ]
+                }
+              ],
               "3": [
                 0,
                 {
@@ -235,7 +241,7 @@
               ],
               "opponent": [
                 0,
-                8
+                14
               ]
             }
           ]
@@ -263,7 +269,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
           ]
@@ -287,16 +293,207 @@
       [
         {
           "_v": 2,
+          "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "type": "play",
+              "entityId": 43,
+              "location": "MirrorDimension",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": null,
+                          "power": null,
+                          "baseCost": null,
+                          "entityId": 43,
+                          "basePower": null,
+                          "cardDefId": null,
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 43,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            1
+                          ],
+                          "power": [
+                            0,
+                            1
+                          ],
+                          "baseCost": [
+                            0,
+                            1
+                          ],
+                          "basePower": [
+                            0,
+                            1
+                          ],
+                          "cardDefId": [
+                            0,
+                            "MindStone"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MirrorDimension",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 1
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ],
+          "r": [
+            1,
+            {
+              "opponent": [
+                0,
+                12
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
           "turn": 2,
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             }
@@ -311,7 +508,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Tva",
+              "to": "TaLo",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -334,7 +531,7 @@
                 {
                   "location": [
                     0,
-                    "Tva"
+                    "TaLo"
                   ],
                   "revealed": [
                     0,
@@ -363,25 +560,41 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Draw",
+          "label": "Override",
           "events": [
             {
               "who": "player",
-              "card": "Crystal",
-              "cost": 3,
+              "card": "NicoMinoru",
+              "type": "abilityOverride",
+              "overrideAbility": "Spell07NicoMinoru"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
+              "who": "player",
+              "card": "Modok",
+              "cost": 5,
               "type": "reveal",
-              "power": 6,
-              "entityId": 18,
+              "power": 7,
+              "entityId": 33,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Crystal",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "Modok",
               "type": "draw"
             }
           ]
@@ -396,7 +609,7 @@
               ],
               "opponent": [
                 0,
-                5
+                6
               ]
             }
           ],
@@ -404,95 +617,28 @@
             2,
             5,
             {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Crystal"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Magik"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Supergiant"
-                  ]
-                }
-              ],
               "3": [
                 1,
                 {
                   "cost": [
                     0,
-                    6
+                    5
                   ],
                   "power": [
                     0,
-                    6
+                    7
                   ],
                   "baseCost": [
                     0,
-                    6
+                    5
                   ],
                   "basePower": [
                     0,
-                    6
+                    7
                   ],
                   "cardDefId": [
                     0,
-                    "Hela"
+                    "Modok"
                   ]
                 }
               ],
@@ -517,7 +663,7 @@
               ],
               "opponent": [
                 0,
-                7
+                11
               ]
             }
           ]
@@ -527,1026 +673,6 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 2,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "GreatPortal",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "GreatPortal"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "SheHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 47,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 27,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "InvisibleWoman"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Crystal"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Magik"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Supergiant"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "5": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 10,
-                  "baseCost": 6,
-                  "basePower": 10,
-                  "cardDefId": "SheHulk"
-                }
-              ],
-              "6": [
-                0,
-                {
-                  "cost": 7,
-                  "power": 12,
-                  "baseCost": 7,
-                  "basePower": 12,
-                  "cardDefId": "Skaar"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "play",
-              "entityId": 20,
-              "location": "Tva",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 2,
-                          "baseCost": 3,
-                          "entityId": 20,
-                          "basePower": 2,
-                          "cardDefId": "Magik",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Supergiant"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wave",
-              "type": "play",
-              "entityId": 32,
-              "location": "IslandPrison",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 32,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Tva",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "Limbo",
-              "from": "Tva",
-              "type": "location",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "Limbo"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Extra Turn",
-          "events": [
-            {
-              "type": "totalTurnsChanged",
-              "totalTurns": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wave",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            6
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Wave"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wave",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "IslandPrison",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            6,
-            {
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Supergiant"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Modok",
-              "cost": 5,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 25,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Modok",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Modok"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "6": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 5,
-                  "baseCost": 4,
-                  "basePower": 5,
-                  "cardDefId": "Supergiant"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
           "label": "Turn Winner",
           "events": [
             {
@@ -1561,7 +687,7 @@
       [
         {
           "_v": 2,
-          "turn": 4,
+          "turn": 2,
           "label": "Initiative",
           "events": [
             {
@@ -1575,1073 +701,16 @@
       [
         {
           "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Supergiant",
-              "type": "play",
-              "entityId": 21,
-              "location": "IslandPrison",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 5,
-                          "baseCost": 4,
-                          "entityId": 21,
-                          "basePower": 5,
-                          "cardDefId": "Supergiant",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Supergiant",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ProfessorX",
-              "type": "play",
-              "entityId": 29,
-              "location": "IslandPrison",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 29,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ProfessorX",
-              "cost": 5,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 29,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ProfessorX"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ProfessorX",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "IslandPrison",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Supergiant",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "IslandPrison",
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Supergiant",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            6,
-            {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Modok"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Death",
-              "cost": 8,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 16,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "6": [
-                0,
-                {
-                  "cost": 8,
-                  "power": 12,
-                  "baseCost": 8,
-                  "basePower": 12,
-                  "cardDefId": "Death"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "play",
-              "entityId": 18,
-              "location": "Limbo",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 6,
-                          "baseCost": 3,
-                          "entityId": 18,
-                          "basePower": 6,
-                          "cardDefId": "Crystal",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Modok"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "GhostRider",
-              "type": "play",
-              "entityId": 30,
-              "location": "Limbo",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 30,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            6,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Modok"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 26,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "IronLad"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Modok"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "6": [
-                0,
-                {
-                  "cost": 8,
-                  "power": 12,
-                  "baseCost": 8,
-                  "basePower": 12,
-                  "cardDefId": "Death"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
+          "turn": 2,
           "label": "Play",
           "events": [
             {
               "who": "player",
               "card": "InvisibleWoman",
               "type": "play",
-              "entityId": 27,
-              "location": "GreatPortal",
-              "locationIndex": 2
+              "entityId": 36,
+              "location": "TaLo",
+              "locationIndex": 1
             }
           ]
         },
@@ -2650,7 +719,7 @@
             2,
             3,
             {
-              "2": [
+              "1": [
                 1,
                 {
                   "playerCards": [
@@ -2663,7 +732,7 @@
                           "cost": 2,
                           "power": 4,
                           "baseCost": 2,
-                          "entityId": 27,
+                          "entityId": 36,
                           "basePower": 4,
                           "cardDefId": "InvisibleWoman",
                           "arrivalSeq": 0
@@ -2680,1389 +749,6 @@
             {
               "player": [
                 0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "IronLad"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Modok"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "play",
-              "entityId": 26,
-              "location": "Limbo",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 7,
-                          "baseCost": 4,
-                          "entityId": 26,
-                          "basePower": 7,
-                          "cardDefId": "IronLad",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Modok"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Daredevil",
-              "type": "play",
-              "entityId": 37,
-              "location": "Limbo",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "type": "play",
-              "entityId": 33,
-              "location": "Limbo",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 37,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 33,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Daredevil",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 37,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Daredevil"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Daredevil",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 33,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            6
-                          ],
-                          "cardDefId": [
-                            0,
-                            "LadySif"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 38,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Odin",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 10,
-                      "cardDefId": "Odin"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 27,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "playerPower": 4,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 26,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Limbo",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Override",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "abilityOverride",
-              "overrideAbility": "Spell02NicoMinoru"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "overrideAbility": [
-                            0,
-                            "Spell02NicoMinoru"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            5,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Modok"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "NicoMinoru"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Modok"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "5": [
-                0,
-                {
-                  "cost": 8,
-                  "power": 12,
-                  "baseCost": 8,
-                  "basePower": 12,
-                  "cardDefId": "Death"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ],
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Modok",
-              "type": "play",
-              "entityId": 25,
-              "location": "GreatPortal",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 7,
-                          "baseCost": 5,
-                          "entityId": 25,
-                          "basePower": 7,
-                          "cardDefId": "Modok",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Modok",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "play",
-              "entityId": 24,
-              "location": "Limbo",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 2,
-                          "baseCost": 1,
-                          "entityId": 24,
-                          "basePower": 2,
-                          "cardDefId": "NicoMinoru",
-                          "arrivalSeq": 3,
-                          "overrideAbility": "Spell02NicoMinoru"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
                 4
               ]
             }
@@ -4071,511 +757,7 @@
             2,
             4,
             {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
               "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 7,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Jubilee",
-              "type": "play",
-              "entityId": 34,
-              "location": "Limbo",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 34,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 24,
-              "drawReveal": false,
-              "overrideAbility": "Spell02NicoMinoru"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "playerPower": 11,
-              "locationIndex": 1,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "destroyed",
-              "fromLocation": "Limbo"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 2,
-                      "cardDefId": "NicoMinoru"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Limbo",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            4,
-            {
-              "2": [
-                1,
-                {
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "cost": 6,
-              "type": "reveal",
-              "power": 20,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ],
-              "4": [
-                0,
-                {
-                  "cost": 7,
-                  "power": 12,
-                  "baseCost": 7,
-                  "basePower": 12,
-                  "cardDefId": "Skaar"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 17,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "0": [
                 1,
                 {
                   "cost": [
@@ -4600,37 +782,20 @@
                   ]
                 }
               ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
               "2": [
                 1,
                 {
                   "power": [
                     0,
-                    20
+                    7
                   ],
                   "basePower": [
                     0,
-                    20
+                    7
                   ],
                   "cardDefId": [
                     0,
-                    "Infinaut"
+                    "Modok"
                   ]
                 }
               ],
@@ -4639,44 +804,483 @@
                 {
                   "cost": [
                     0,
-                    6
+                    7
                   ],
                   "power": [
                     0,
-                    10
+                    12
                   ],
                   "baseCost": [
                     0,
-                    6
+                    7
                   ],
                   "basePower": [
                     0,
-                    10
+                    12
                   ],
                   "cardDefId": [
                     0,
-                    "SheHulk"
+                    "Skaar"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Staged",
+          "events": [
+            {
+              "who": "player",
+              "card": "InvisibleWoman",
+              "type": "cardStaged"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "End Turn",
+          "events": [
+            {
+              "turn": 2,
+              "type": "endTurn"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Play",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "TheCollector",
+              "type": "play",
+              "entityId": 26,
+              "location": "TaLo",
+              "locationIndex": 1
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": null,
+                          "power": null,
+                          "baseCost": null,
+                          "entityId": 26,
+                          "basePower": null,
+                          "cardDefId": null,
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "TheCollector",
+              "cost": 2,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 26,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            2
+                          ],
+                          "power": [
+                            0,
+                            3
+                          ],
+                          "baseCost": [
+                            0,
+                            2
+                          ],
+                          "basePower": [
+                            0,
+                            3
+                          ],
+                          "cardDefId": [
+                            0,
+                            "TheCollector"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "TheCollector",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "TaLo",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 3
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "InvisibleWoman",
+              "cost": 2,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 36,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "TaLo",
+              "playerPower": 4,
+              "locationIndex": 1,
+              "opponentPower": 3
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "InvisibleWoman",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Power",
+          "events": [
+            {
+              "who": "player",
+              "card": "Skaar",
+              "type": "power",
+              "source": "TaLo",
+              "newPower": 13,
+              "oldPower": 12,
+              "cardEntityId": 28
+            }
+          ]
+        },
+        {
+          "h": [
+            2,
+            4,
+            {
+              "3": [
+                1,
+                {
+                  "power": [
+                    0,
+                    13
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Energy",
+          "events": [
+            {
+              "who": "opponent",
+              "type": "energy",
+              "energy": 3
+            },
+            {
+              "who": "player",
+              "type": "energy",
+              "energy": 3
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Location",
+          "events": [
+            {
+              "to": "GreatWeb",
+              "from": "RevealOn2",
+              "type": "location",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "location": [
+                    0,
+                    "GreatWeb"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Override",
+          "events": [
+            {
+              "who": "player",
+              "card": "NicoMinoru",
+              "type": "abilityOverride",
+              "overrideAbility": "Spell02NicoMinoru"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "cost": 3,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 31,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                5
+              ],
+              "opponent": [
+                0,
+                6
+              ]
+            }
+          ],
+          "h": [
+            2,
+            5,
+            {
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    3
+                  ],
+                  "power": [
+                    0,
+                    2
+                  ],
+                  "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Magik"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "power": [
+                    0,
+                    0
+                  ],
+                  "basePower": [
+                    0,
+                    0
+                  ],
+                  "cardDefId": [
+                    0,
+                    "IronMan"
+                  ]
+                }
+              ],
+              "3": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    5
+                  ],
+                  "power": [
+                    0,
+                    7
+                  ],
+                  "baseCost": [
+                    0,
+                    5
+                  ],
+                  "basePower": [
+                    0,
+                    7
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Modok"
                   ]
                 }
               ],
               "4": [
-                1,
-                {
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ],
-              "5": [
                 0,
                 {
                   "cost": 7,
-                  "power": 12,
+                  "power": 13,
                   "baseCost": 7,
                   "basePower": 12,
                   "cardDefId": "Skaar"
@@ -4689,235 +1293,11 @@
             {
               "player": [
                 0,
-                0
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Jubilee",
-              "cost": 4,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 34,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            1
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            1
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Jubilee"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Jubilee",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Crystal",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 18,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            6,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SheHulk"
-                  ]
-                }
+                6
               ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
               "opponent": [
                 0,
-                5
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "opponent": [
-                0,
-                1
+                10
               ]
             }
           ]
@@ -4926,486 +1306,28 @@
       [
         {
           "_v": 2,
-          "turn": 7,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "destroyed",
-              "fromLocation": "Limbo"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            7
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "entityId": [
-                            0,
-                            26
-                          ],
-                          "basePower": [
-                            0,
-                            7
-                          ],
-                          "cardDefId": [
-                            0,
-                            "IronLad"
-                          ],
-                          "overrideAbility": [
-                            0,
-                            "Spell02NicoMinoru"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "player": [
-                2,
-                2,
-                {
-                  "0": [
-                    1,
-                    {
-                      "cost": [
-                        0,
-                        3
-                      ],
-                      "power": [
-                        0,
-                        6
-                      ],
-                      "cardDefId": [
-                        0,
-                        "Crystal"
-                      ]
-                    }
-                  ],
-                  "1": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 2,
-                      "cardDefId": "NicoMinoru"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            6,
-            {
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hela"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    20
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    20
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Infinaut"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Modok",
-              "cost": 5,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 25,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "discarded"
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "discarded"
-            },
-            {
-              "who": "player",
-              "card": "SheHulk",
-              "type": "discarded"
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "discarded"
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "discarded"
-            },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                0
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                6,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 12,
-                      "cardDefId": "Death"
-                    }
-                  ],
-                  "1": [
-                    0,
-                    {
-                      "cost": 5,
-                      "power": 0,
-                      "cardDefId": "IronMan"
-                    }
-                  ],
-                  "2": [
-                    0,
-                    {
-                      "cost": 7,
-                      "power": 12,
-                      "cardDefId": "Skaar"
-                    }
-                  ],
-                  "3": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 20,
-                      "cardDefId": "Infinaut"
-                    }
-                  ],
-                  "4": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 6,
-                      "cardDefId": "Hela"
-                    }
-                  ],
-                  "5": [
-                    0,
-                    {
-                      "cost": 5,
-                      "power": 10,
-                      "cardDefId": "SheHulk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            0,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Modok",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "GhostRider",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "GhostRider"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "GhostRider",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
+          "turn": 3,
           "label": "Turn Winner",
           "events": [
             {
-              "tie": false,
+              "tie": true,
               "type": "turnWinner",
-              "winner": "opponent"
+              "winner": null
             }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Initiative",
+          "events": [
+            {
+              "who": "player",
+              "type": "initiative"
+            }
           ]
         },
         {}
@@ -5445,158 +1367,116 @@
       [
         {
           "turn": 1,
-          "plays": [],
+          "plays": [
+            {
+              "card": "MindStone",
+              "isPlayer": false,
+              "location": "MirrorDimension",
+              "locationIndex": 0
+            }
+          ],
           "energy": {
             "player": 1,
             "opponent": 1
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 67
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 69
+              "_changeIdx": 78
             },
             {
-              "to": "IslandPrison",
+              "who": "player",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 80
+            },
+            {
+              "to": "MirrorDimension",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 72,
+              "_changeIdx": 83,
               "locationIndex": 0
             },
             {
               "who": "player",
               "card": "NicoMinoru",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 24,
-              "_changeIdx": 77,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
               "type": "abilityOverride",
-              "_changeIdx": 80,
-              "overrideAbility": "Spell02NicoMinoru"
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "cost": 7,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 19,
-              "_changeIdx": 84,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "draw",
-              "_changeIdx": 85
+              "_changeIdx": 89,
+              "overrideAbility": "Spell05NicoMinoru"
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 89
+              "_changeIdx": 94
+            },
+            {
+              "who": "player",
+              "card": "IronMan",
+              "cost": 5,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 38,
+              "_changeIdx": 97,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "IronMan",
+              "type": "draw",
+              "_changeIdx": 98
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 92
+              "_changeIdx": 101
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative",
-              "_changeIdx": 93
+              "_changeIdx": 102
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 97
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        5
-      ],
-      [
-        {
-          "turn": 2,
-          "plays": [],
-          "energy": {
-            "player": 2,
-            "opponent": 2
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 101
+              "_changeIdx": 106
             },
             {
               "who": "opponent",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 103
+              "card": "MindStone",
+              "type": "play",
+              "entityId": 43,
+              "location": "MirrorDimension",
+              "_changeIdx": 107,
+              "locationIndex": 0
             },
             {
-              "to": "Tva",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 106,
-              "locationIndex": 1
-            },
-            {
-              "to": "RevealOn2",
-              "from": "RevealOn3",
-              "type": "location",
-              "_changeIdx": 110,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Crystal",
-              "cost": 3,
+              "who": "opponent",
+              "card": "MindStone",
+              "cost": 1,
               "type": "reveal",
-              "power": 6,
-              "entityId": 18,
-              "_changeIdx": 113,
-              "drawReveal": true
+              "power": 1,
+              "entityId": 43,
+              "_changeIdx": 110,
+              "drawReveal": false
             },
             {
-              "who": "player",
-              "card": "Crystal",
-              "type": "draw",
-              "_changeIdx": 114
+              "who": "opponent",
+              "card": "MindStone",
+              "type": "cardRevealed",
+              "_changeIdx": 111
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MirrorDimension",
+              "_changeIdx": 113,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 1
             },
             {
               "who": "opponent",
@@ -5605,28 +1485,18 @@
               "_changeIdx": 117
             },
             {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
               "_changeIdx": 120
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 121
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 125
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 1
             },
             {
               "winner": null,
@@ -5640,468 +1510,274 @@
             }
           ]
         },
-        11
+        12
+      ],
+      [
+        {
+          "turn": 2,
+          "plays": [
+            {
+              "card": "InvisibleWoman",
+              "isPlayer": true,
+              "location": "TaLo",
+              "locationIndex": 1
+            },
+            {
+              "card": "TheCollector",
+              "isPlayer": false,
+              "location": "TaLo",
+              "locationIndex": 1
+            }
+          ],
+          "energy": {
+            "player": 2,
+            "opponent": 2
+          },
+          "events": [
+            {
+              "who": "opponent",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 127
+            },
+            {
+              "who": "player",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 129
+            },
+            {
+              "to": "TaLo",
+              "from": "RevealOn2",
+              "type": "location",
+              "_changeIdx": 132,
+              "locationIndex": 1
+            },
+            {
+              "to": "RevealOn2",
+              "from": "RevealOn3",
+              "type": "location",
+              "_changeIdx": 136,
+              "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "NicoMinoru",
+              "type": "abilityOverride",
+              "_changeIdx": 142,
+              "overrideAbility": "Spell07NicoMinoru"
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 146
+            },
+            {
+              "who": "player",
+              "card": "Modok",
+              "cost": 5,
+              "type": "reveal",
+              "power": 7,
+              "entityId": 33,
+              "_changeIdx": 149,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Modok",
+              "type": "draw",
+              "_changeIdx": 150
+            },
+            {
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "opponent",
+              "_changeIdx": 153
+            },
+            {
+              "who": "opponent",
+              "type": "initiative",
+              "_changeIdx": 154
+            },
+            {
+              "who": "player",
+              "card": "InvisibleWoman",
+              "type": "play",
+              "entityId": 36,
+              "location": "TaLo",
+              "_changeIdx": 157,
+              "locationIndex": 1
+            },
+            {
+              "who": "player",
+              "card": "InvisibleWoman",
+              "type": "cardStaged",
+              "_changeIdx": 158
+            },
+            {
+              "turn": 2,
+              "type": "endTurn",
+              "_changeIdx": 162
+            },
+            {
+              "who": "opponent",
+              "card": "TheCollector",
+              "type": "play",
+              "entityId": 26,
+              "location": "TaLo",
+              "_changeIdx": 163,
+              "locationIndex": 1
+            },
+            {
+              "who": "opponent",
+              "card": "TheCollector",
+              "cost": 2,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 26,
+              "_changeIdx": 167,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "TheCollector",
+              "type": "cardRevealed",
+              "_changeIdx": 168
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "TaLo",
+              "_changeIdx": 170,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 3
+            },
+            {
+              "who": "player",
+              "card": "InvisibleWoman",
+              "cost": 2,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 36,
+              "_changeIdx": 173,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "TaLo",
+              "_changeIdx": 176,
+              "playerPower": 4,
+              "locationIndex": 1,
+              "opponentPower": 3
+            },
+            {
+              "who": "player",
+              "card": "InvisibleWoman",
+              "type": "cardResolved",
+              "_changeIdx": 179
+            },
+            {
+              "who": "player",
+              "card": "Skaar",
+              "type": "power",
+              "source": "TaLo",
+              "newPower": 13,
+              "oldPower": 12,
+              "_changeIdx": 182,
+              "cardEntityId": 28
+            }
+          ],
+          "snapEvent": null,
+          "locationPower": [
+            {
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
+            },
+            {
+              "winner": "player",
+              "playerPower": 4,
+              "opponentPower": 3
+            },
+            {
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        29
       ],
       [
         {
           "turn": 3,
-          "plays": [
-            {
-              "card": "Magik",
-              "isPlayer": true,
-              "location": "Limbo",
-              "locationIndex": 1
-            },
-            {
-              "card": "Wave",
-              "isPlayer": false,
-              "location": "IslandPrison",
-              "locationIndex": 0
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 3,
             "opponent": 3
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 129
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 131
+              "_changeIdx": 188
             },
             {
-              "to": "GreatPortal",
+              "who": "player",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 190
+            },
+            {
+              "to": "GreatWeb",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 135,
+              "_changeIdx": 193,
               "locationIndex": 2
             },
             {
               "who": "player",
-              "card": "SheHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 47,
-              "_changeIdx": 139,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 27,
-              "_changeIdx": 149,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "draw",
-              "_changeIdx": 150
+              "card": "NicoMinoru",
+              "type": "abilityOverride",
+              "_changeIdx": 199,
+              "overrideAbility": "Spell02NicoMinoru"
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 153
+              "_changeIdx": 203
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "cost": 3,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 31,
+              "_changeIdx": 206,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "type": "draw",
+              "_changeIdx": 207
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 156
+              "_changeIdx": 211
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 157
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "play",
-              "entityId": 20,
-              "location": "Tva",
-              "_changeIdx": 160,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "cardStaged",
-              "_changeIdx": 161
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 165
-            },
-            {
-              "who": "opponent",
-              "card": "Wave",
-              "type": "play",
-              "entityId": 32,
-              "location": "IslandPrison",
-              "_changeIdx": 166,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 20,
-              "_changeIdx": 170,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Tva",
-              "_changeIdx": 173,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "to": "Limbo",
-              "from": "Tva",
-              "type": "location",
-              "_changeIdx": 177,
-              "locationIndex": 1
-            },
-            {
-              "type": "totalTurnsChanged",
-              "_changeIdx": 181,
-              "totalTurns": 7
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "cardResolved",
-              "_changeIdx": 183
-            },
-            {
-              "who": "opponent",
-              "card": "Wave",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "_changeIdx": 184,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Wave",
-              "type": "cardRevealed",
-              "_changeIdx": 185
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "IslandPrison",
-              "_changeIdx": 187,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 6
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 6
-            },
-            {
-              "winner": "player",
-              "playerPower": 2,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        32
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "Supergiant",
-              "isPlayer": true,
-              "location": "IslandPrison",
-              "locationIndex": 0
-            },
-            {
-              "card": "ProfessorX",
-              "isPlayer": false,
-              "location": "IslandPrison",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 214
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 216
-            },
-            {
-              "who": "player",
-              "card": "Modok",
-              "cost": 5,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 25,
-              "_changeIdx": 218,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Modok",
-              "type": "draw",
-              "_changeIdx": 219
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 232
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 235
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 236
-            },
-            {
-              "who": "player",
-              "card": "Supergiant",
-              "type": "play",
-              "entityId": 21,
-              "location": "IslandPrison",
-              "_changeIdx": 239,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Supergiant",
-              "type": "cardStaged",
-              "_changeIdx": 240
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 254
-            },
-            {
-              "who": "opponent",
-              "card": "ProfessorX",
-              "type": "play",
-              "entityId": 29,
-              "location": "IslandPrison",
-              "_changeIdx": 255,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "ProfessorX",
-              "cost": 5,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 29,
-              "_changeIdx": 259,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ProfessorX",
-              "type": "cardRevealed",
-              "_changeIdx": 260
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "IslandPrison",
-              "_changeIdx": 263,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 8
-            },
-            {
-              "who": "player",
-              "card": "Supergiant",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 21,
-              "_changeIdx": 266,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "IslandPrison",
-              "_changeIdx": 268,
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 8
-            },
-            {
-              "who": "player",
-              "card": "Supergiant",
-              "type": "cardResolved",
-              "_changeIdx": 279
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 5,
-              "opponentPower": 8
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        40
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "Crystal",
-              "isPlayer": true,
-              "location": "Limbo",
-              "locationIndex": 1
-            },
-            {
-              "card": "GhostRider",
-              "isPlayer": false,
-              "location": "Limbo",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 299
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 301
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "cost": 8,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 16,
-              "_changeIdx": 303,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "draw",
-              "_changeIdx": 304
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 308
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 311
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 312
-            },
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "play",
-              "entityId": 18,
-              "location": "Limbo",
-              "_changeIdx": 315,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "cardStaged",
-              "_changeIdx": 316
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 328
-            },
-            {
-              "who": "opponent",
-              "card": "GhostRider",
-              "type": "play",
-              "entityId": 30,
-              "location": "Limbo",
-              "_changeIdx": 329,
-              "locationIndex": 1
+              "_changeIdx": 212
             }
           ],
           "snapEvent": null,
@@ -6123,699 +1799,39 @@
             }
           ]
         },
-        54
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "InvisibleWoman",
-              "isPlayer": true,
-              "location": "GreatPortal",
-              "locationIndex": 2
-            },
-            {
-              "card": "IronLad",
-              "isPlayer": true,
-              "location": "Limbo",
-              "locationIndex": 1
-            },
-            {
-              "card": "Daredevil",
-              "isPlayer": false,
-              "location": "Limbo",
-              "locationIndex": 1
-            },
-            {
-              "card": "LadySif",
-              "isPlayer": false,
-              "location": "Limbo",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 343
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 345
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 26,
-              "_changeIdx": 347,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "draw",
-              "_changeIdx": 348
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 351
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 354
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 355
-            },
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "play",
-              "entityId": 27,
-              "location": "GreatPortal",
-              "_changeIdx": 358,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "cardStaged",
-              "_changeIdx": 359
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "play",
-              "entityId": 26,
-              "location": "Limbo",
-              "_changeIdx": 362,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardStaged",
-              "_changeIdx": 363
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 372
-            },
-            {
-              "who": "opponent",
-              "card": "Daredevil",
-              "type": "play",
-              "entityId": 37,
-              "location": "Limbo",
-              "_changeIdx": 373,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "type": "play",
-              "entityId": 33,
-              "location": "Limbo",
-              "_changeIdx": 376,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Daredevil",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 37,
-              "_changeIdx": 381,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Daredevil",
-              "type": "cardRevealed",
-              "_changeIdx": 382
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "_changeIdx": 384,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 3
-            },
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 33,
-              "_changeIdx": 387,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "type": "cardRevealed",
-              "_changeIdx": 388
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "_changeIdx": 390,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "opponent",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 38,
-              "_changeIdx": 394,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Odin",
-              "type": "discarded",
-              "_changeIdx": 395
-            },
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 27,
-              "_changeIdx": 399,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "_changeIdx": 402,
-              "playerPower": 4,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "cardResolved",
-              "_changeIdx": 405
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 26,
-              "_changeIdx": 406,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Limbo",
-              "_changeIdx": 408,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "abilityOverride",
-              "_changeIdx": 413,
-              "overrideAbility": "Spell02NicoMinoru"
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardResolved",
-              "_changeIdx": 425
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 432
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 9,
-              "opponentPower": 9
-            },
-            {
-              "winner": "player",
-              "playerPower": 4,
-              "opponentPower": 0
-            }
-          ]
-        },
-        79
-      ],
-      [
-        {
-          "turn": 7,
-          "plays": [
-            {
-              "card": "Modok",
-              "isPlayer": true,
-              "location": "GreatPortal",
-              "locationIndex": 2
-            },
-            {
-              "card": "NicoMinoru",
-              "isPlayer": true,
-              "location": "Limbo",
-              "locationIndex": 1
-            },
-            {
-              "card": "Jubilee",
-              "isPlayer": false,
-              "location": "Limbo",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 7,
-            "opponent": 7
-          },
-          "events": [
-            {
-              "type": "cubePreview",
-              "_changeIdx": 434,
-              "cubeValueNextTurn": 2
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 436
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 438
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "draw",
-              "_changeIdx": 441
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 445
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 448
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 449
-            },
-            {
-              "who": "player",
-              "card": "Modok",
-              "type": "play",
-              "entityId": 25,
-              "location": "GreatPortal",
-              "_changeIdx": 452,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Modok",
-              "type": "cardStaged",
-              "_changeIdx": 453
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "play",
-              "entityId": 24,
-              "location": "Limbo",
-              "_changeIdx": 456,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "cardStaged",
-              "_changeIdx": 457
-            },
-            {
-              "turn": 7,
-              "type": "endTurn",
-              "_changeIdx": 472
-            },
-            {
-              "who": "opponent",
-              "card": "Jubilee",
-              "type": "play",
-              "entityId": 34,
-              "location": "Limbo",
-              "_changeIdx": 473,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 24,
-              "_changeIdx": 478,
-              "drawReveal": false,
-              "overrideAbility": "Spell02NicoMinoru"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "_changeIdx": 482,
-              "playerPower": 11,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "cardResolved",
-              "_changeIdx": 489
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "destroyed",
-              "_changeIdx": 492,
-              "fromLocation": "Limbo"
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Limbo",
-              "_changeIdx": 498,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "cost": 6,
-              "type": "reveal",
-              "power": 20,
-              "entityId": 22,
-              "_changeIdx": 501,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "draw",
-              "_changeIdx": 502
-            },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 17,
-              "_changeIdx": 505,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "draw",
-              "_changeIdx": 506
-            },
-            {
-              "who": "opponent",
-              "card": "Jubilee",
-              "cost": 4,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 34,
-              "_changeIdx": 512,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Jubilee",
-              "type": "cardRevealed",
-              "_changeIdx": 513
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "_changeIdx": 515,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 10
-            },
-            {
-              "who": "player",
-              "card": "Crystal",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 18,
-              "_changeIdx": 532,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "_changeIdx": 534,
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 10
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 539
-            },
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "cardResolved",
-              "_changeIdx": 543
-            },
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "destroyed",
-              "_changeIdx": 546,
-              "fromLocation": "Limbo"
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "_changeIdx": 553,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 10
-            },
-            {
-              "who": "player",
-              "card": "Modok",
-              "cost": 5,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 25,
-              "_changeIdx": 558,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "_changeIdx": 560,
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "discarded",
-              "_changeIdx": 565
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "discarded",
-              "_changeIdx": 570
-            },
-            {
-              "who": "player",
-              "card": "SheHulk",
-              "type": "discarded",
-              "_changeIdx": 575
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "discarded",
-              "_changeIdx": 580
-            },
-            {
-              "who": "player",
-              "card": "Infinaut",
-              "type": "discarded",
-              "_changeIdx": 584
-            },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "discarded",
-              "_changeIdx": 588
-            },
-            {
-              "who": "player",
-              "card": "Modok",
-              "type": "cardResolved",
-              "_changeIdx": 592
-            },
-            {
-              "who": "opponent",
-              "card": "GhostRider",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "_changeIdx": 593,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "GhostRider",
-              "type": "cardRevealed",
-              "_changeIdx": 594
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "_changeIdx": 596,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 15
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 600
-            }
-          ],
-          "snapEvent": {
-            "cubeValue": 2,
-            "totalSnaps": 1
-          },
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 9,
-              "opponentPower": 15
-            },
-            {
-              "winner": "player",
-              "playerPower": 11,
-              "opponentPower": 0
-            }
-          ]
-        },
-        113
+        33
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 14027,
-  "opp_sp": null,
+  "opp_cl": 11359,
+  "opp_sp": 4609,
   "bracket": null,
-  "match_id": "82377928-3d01-4972-bf93-d309e0a74519",
-  "opp_name": "Marcello74",
+  "match_id": "e37c863d-8fb0-41ed-8f5a-3db0c6587256",
+  "opp_name": "Lucassng",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "IslandPrison",
-    "Limbo",
-    "GreatPortal"
-  ],
+  "locations": [],
   "player_cl": 11614,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Wolverine",
-    "ArtVariantDefId": "Wolverine_18"
+    "CardDefId": "Carnage",
+    "ArtVariantDefId": "Carnage_14"
   },
   "opp_health": null,
-  "opp_is_bot": true,
+  "opp_is_bot": false,
   "mode_detail": null,
   "player_name": "SmokeFisher",
-  "current_turn": 8,
-  "match_result": "loss",
-  "match_status": "complete",
-  "opp_clan_tag": null,
+  "current_turn": 4,
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_clan_tag": "DES",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
     "CardDefId": "SpiderPunk"
@@ -6823,39 +1839,24 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "Wave",
-    "ProfessorX",
-    "Daredevil",
-    "LadySif",
-    "Odin",
-    "Jubilee",
-    "GhostRider"
+    "Thanos",
+    "TheCollector"
   ],
-  "last_updated_at": "2026-10-10T22:23:57.679+00:00",
+  "last_updated_at": "2026-10-10T22:25:20.884+00:00",
   "opp_played_cards": [],
   "player_deck_cards": [
-    "Infinaut",
-    "Hela",
-    "Death",
-    "Skaar",
     "InvisibleWoman",
-    "Magik",
-    "Supergiant",
-    "Crystal",
-    "IronMan",
-    "IronLad",
+    "Skaar",
     "NicoMinoru",
-    "Modok"
+    "IronMan",
+    "Modok",
+    "Magik"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "Wave",
-    "ProfessorX",
-    "Daredevil",
-    "LadySif",
-    "Odin",
-    "Jubilee",
-    "GhostRider"
+    "Thanos",
+    "MindStone",
+    "TheCollector"
   ],
   "conquest_round_index": null
 }
