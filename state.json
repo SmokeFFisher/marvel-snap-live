@@ -43,25 +43,28 @@
           },
           "h": [
             {
-              "cost": 2,
-              "power": 2,
-              "baseCost": 2,
-              "basePower": 2,
-              "cardDefId": "Forge"
-            },
-            {
-              "cost": 2,
-              "power": 3,
-              "baseCost": 2,
-              "basePower": 3,
-              "cardDefId": "ToxieDoxie"
-            },
-            {
               "cost": 3,
               "power": 2,
               "baseCost": 3,
               "basePower": 2,
               "cardDefId": "HumanTorchFirstSteps"
+            },
+            {
+              "cost": 3,
+              "power": 2,
+              "augments": [
+                "OnRevealNewLocationAugment"
+              ],
+              "baseCost": 3,
+              "basePower": 2,
+              "cardDefId": "Maverick"
+            },
+            {
+              "cost": 3,
+              "power": 4,
+              "baseCost": 3,
+              "basePower": 4,
+              "cardDefId": "Nakia"
             }
           ],
           "n": {
@@ -105,7 +108,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "StarkTower",
+              "to": "CastleBlackstone",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -122,7 +125,7 @@
                 {
                   "location": [
                     0,
-                    "StarkTower"
+                    "CastleBlackstone"
                   ],
                   "revealed": [
                     0,
@@ -146,7 +149,7 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 25,
+              "entityId": 20,
               "drawReveal": true
             },
             {
@@ -199,42 +202,35 @@
               "1": [
                 1,
                 {
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
                   "cardDefId": [
                     0,
-                    "Forge"
+                    "HumanTorchFirstSteps"
                   ]
-                }
+                },
+                [
+                  "augments"
+                ]
               ],
               "2": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    2
-                  ],
                   "power": [
                     0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
                     2
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "OnRevealNewLocationAugment"
+                    ]
                   ],
                   "basePower": [
                     0,
-                    3
+                    2
                   ],
                   "cardDefId": [
                     0,
-                    "ToxieDoxie"
+                    "Maverick"
                   ]
                 }
               ],
@@ -242,10 +238,10 @@
                 0,
                 {
                   "cost": 3,
-                  "power": 2,
+                  "power": 4,
                   "baseCost": 3,
-                  "basePower": 2,
-                  "cardDefId": "HumanTorchFirstSteps"
+                  "basePower": 4,
+                  "cardDefId": "Nakia"
                 }
               ]
             }
@@ -273,7 +269,7 @@
           "events": [
             {
               "type": "vpContested",
-              "locationIndex": 0
+              "locationIndex": 2
             }
           ]
         },
@@ -289,8 +285,8 @@
               "who": "player",
               "card": "AmericaChavez",
               "type": "play",
-              "entityId": 25,
-              "location": "StarkTower",
+              "entityId": 20,
+              "location": "CastleBlackstone",
               "locationIndex": 0
             }
           ]
@@ -313,7 +309,7 @@
                           "cost": 1,
                           "power": 2,
                           "baseCost": 1,
-                          "entityId": 25,
+                          "entityId": 20,
                           "basePower": 2,
                           "cardDefId": "AmericaChavez",
                           "arrivalSeq": 0
@@ -343,59 +339,52 @@
                 {
                   "cost": [
                     0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Forge"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
                     3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ToxieDoxie"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    2
                   ],
                   "baseCost": [
                     0,
                     3
-                  ],
-                  "basePower": [
-                    0,
-                    2
                   ],
                   "cardDefId": [
                     0,
                     "HumanTorchFirstSteps"
                   ]
                 }
+              ],
+              "1": [
+                1,
+                {
+                  "augments": [
+                    0,
+                    [
+                      "OnRevealNewLocationAugment"
+                    ]
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Maverick"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "power": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    4
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Nakia"
+                  ]
+                },
+                [
+                  "augments"
+                ]
               ]
             }
           ]
@@ -442,7 +431,7 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 25,
+              "entityId": 20,
               "drawReveal": false
             }
           ]
@@ -458,7 +447,7 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "StarkTower",
+              "location": "CastleBlackstone",
               "playerPower": 2,
               "locationIndex": 0,
               "opponentPower": 0
@@ -489,9 +478,9 @@
           "label": "Turn Winner",
           "events": [
             {
-              "tie": false,
+              "tie": true,
               "type": "turnWinner",
-              "winner": "player"
+              "winner": null
             }
           ]
         },
@@ -519,7 +508,7 @@
           "events": [
             {
               "type": "vpScores",
-              "playerPoints": 1,
+              "playerPoints": 0,
               "opponentPoints": 0
             }
           ]
@@ -535,7 +524,7 @@
             {
               "who": "player",
               "type": "energy",
-              "energy": 2
+              "energy": 3
             },
             {
               "who": "opponent",
@@ -553,16 +542,10 @@
           "label": "Location",
           "events": [
             {
-              "to": "Sakaar",
+              "to": "GreatPortal",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
-            },
-            {
-              "to": "RevealOn2",
-              "from": "RevealOn3",
-              "type": "location",
-              "locationIndex": 2
             }
           ]
         },
@@ -576,20 +559,7 @@
                 {
                   "location": [
                     0,
-                    "Sakaar"
-                  ],
-                  "revealed": [
-                    0,
-                    true
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "RevealOn2"
+                    "GreatPortal"
                   ],
                   "revealed": [
                     0,
@@ -609,16 +579,106 @@
           "events": [
             {
               "who": "player",
-              "card": "Forge",
+              "card": "Destroyer",
+              "cost": 6,
+              "type": "reveal",
+              "power": 18,
+              "entityId": 44,
+              "drawReveal": true
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                4
+              ]
+            }
+          ],
+          "h": [
+            2,
+            4,
+            {
+              "3": [
+                0,
+                {
+                  "cost": 6,
+                  "power": 18,
+                  "baseCost": 6,
+                  "basePower": 18,
+                  "cardDefId": "Destroyer"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Location",
+          "events": [
+            {
+              "to": "RevealOn2",
+              "from": "RevealOn3",
+              "type": "location",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "location": [
+                    0,
+                    "RevealOn2"
+                  ],
+                  "revealed": [
+                    0,
+                    true
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "AwesomeAndy",
               "cost": 2,
               "type": "reveal",
-              "power": 5,
-              "entityId": 26,
+              "power": 9,
+              "entityId": 17,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Forge",
+              "card": "AwesomeAndy",
               "type": "draw"
             },
             {
@@ -634,36 +694,19 @@
             {
               "player": [
                 0,
-                4
+                5
               ],
               "opponent": [
                 0,
-                5
+                6
               ]
             }
           ],
           "h": [
             2,
-            4,
+            5,
             {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Forge"
-                  ]
-                }
-              ],
-              "2": [
+              "0": [
                 1,
                 {
                   "cost": [
@@ -672,7 +715,7 @@
                   ],
                   "power": [
                     0,
-                    3
+                    9
                   ],
                   "baseCost": [
                     0,
@@ -684,18 +727,78 @@
                   ],
                   "cardDefId": [
                     0,
-                    "ToxieDoxie"
+                    "AwesomeAndy"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "cardDefId": [
+                    0,
+                    "HumanTorchFirstSteps"
+                  ]
+                },
+                [
+                  "augments"
+                ]
+              ],
+              "2": [
+                1,
+                {
+                  "power": [
+                    0,
+                    2
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "OnRevealNewLocationAugment"
+                    ]
+                  ],
+                  "basePower": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Maverick"
                   ]
                 }
               ],
               "3": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    3
+                  ],
+                  "power": [
+                    0,
+                    4
+                  ],
+                  "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    4
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Nakia"
+                  ]
+                }
+              ],
+              "4": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 2,
-                  "baseCost": 3,
-                  "basePower": 2,
-                  "cardDefId": "HumanTorchFirstSteps"
+                  "cost": 6,
+                  "power": 18,
+                  "baseCost": 6,
+                  "basePower": 18,
+                  "cardDefId": "Destroyer"
                 }
               ]
             }
@@ -723,7 +826,7 @@
           "events": [
             {
               "type": "vpContested",
-              "locationIndex": 2
+              "locationIndex": 0
             }
           ]
         },
@@ -737,11 +840,11 @@
           "events": [
             {
               "who": "player",
-              "card": "ToxieDoxie",
+              "card": "Nakia",
               "type": "play",
-              "entityId": 24,
-              "location": "RevealOn2",
-              "locationIndex": 2
+              "entityId": 19,
+              "location": "CastleBlackstone",
+              "locationIndex": 0
             }
           ]
         },
@@ -750,23 +853,23 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "playerCards": [
                     2,
-                    1,
+                    2,
                     {
-                      "0": [
+                      "1": [
                         0,
                         {
-                          "cost": 2,
-                          "power": 3,
-                          "baseCost": 2,
-                          "entityId": 24,
-                          "basePower": 3,
-                          "cardDefId": "ToxieDoxie",
-                          "arrivalSeq": 0
+                          "cost": 3,
+                          "power": 4,
+                          "baseCost": 3,
+                          "entityId": 19,
+                          "basePower": 4,
+                          "cardDefId": "Nakia",
+                          "arrivalSeq": 1
                         }
                       ]
                     }
@@ -780,36 +883,36 @@
             {
               "player": [
                 0,
-                3
+                4
               ]
             }
           ],
           "h": [
             2,
-            3,
+            4,
             {
-              "2": [
+              "3": [
                 1,
                 {
                   "cost": [
                     0,
-                    3
+                    6
                   ],
                   "power": [
                     0,
-                    2
+                    18
                   ],
                   "baseCost": [
                     0,
-                    3
+                    6
                   ],
                   "basePower": [
                     0,
-                    2
+                    18
                   ],
                   "cardDefId": [
                     0,
-                    "HumanTorchFirstSteps"
+                    "Destroyer"
                   ]
                 }
               ]
@@ -825,7 +928,7 @@
           "events": [
             {
               "who": "player",
-              "card": "ToxieDoxie",
+              "card": "Nakia",
               "type": "cardStaged"
             }
           ]
@@ -854,10 +957,10 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Surge",
+              "card": "JeffTheBabyDolphin",
               "type": "play",
-              "entityId": 32,
-              "location": "StarkTower",
+              "entityId": 27,
+              "location": "CastleBlackstone",
               "locationIndex": 0
             }
           ]
@@ -880,7 +983,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 32,
+                          "entityId": 27,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -897,7 +1000,7 @@
             {
               "opponent": [
                 0,
-                4
+                5
               ]
             }
           ]
@@ -911,11 +1014,11 @@
           "events": [
             {
               "who": "player",
-              "card": "ToxieDoxie",
-              "cost": 2,
+              "card": "Nakia",
+              "cost": 3,
               "type": "reveal",
-              "power": 3,
-              "entityId": 24,
+              "power": 4,
+              "entityId": 19,
               "drawReveal": false
             }
           ]
@@ -931,9 +1034,9 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "RevealOn2",
-              "playerPower": 3,
-              "locationIndex": 2,
+              "location": "CastleBlackstone",
+              "playerPower": 6,
+              "locationIndex": 0,
               "opponentPower": 0
             }
           ]
@@ -948,35 +1051,67 @@
           "events": [
             {
               "who": "player",
-              "card": "Forge",
+              "card": "HumanTorchFirstSteps",
               "type": "power",
-              "source": "ToxieDoxie",
-              "newPower": 4,
+              "source": "Nakia",
+              "newPower": 3,
+              "oldPower": 2,
+              "cardEntityId": 21
+            },
+            {
+              "who": "player",
+              "card": "Maverick",
+              "type": "power",
+              "source": "Nakia",
+              "newPower": 3,
               "oldPower": 2,
               "cardEntityId": 18
             },
             {
               "who": "player",
-              "card": "HumanTorchFirstSteps",
+              "card": "Destroyer",
               "type": "power",
-              "source": "ToxieDoxie",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 22
+              "source": "Nakia",
+              "newPower": 19,
+              "oldPower": 18,
+              "cardEntityId": 44
+            },
+            {
+              "who": "player",
+              "card": "AwesomeAndy",
+              "type": "power",
+              "source": "AwesomeAndy",
+              "sources": [
+                "AwesomeAndy",
+                "AmericaChavez",
+                "Nakia"
+              ],
+              "newPower": 10,
+              "oldPower": 9,
+              "cardEntityId": 17
             }
           ]
         },
         {
           "h": [
             2,
-            3,
+            4,
             {
               "0": [
                 1,
                 {
                   "power": [
                     0,
-                    4
+                    10
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "power": [
+                    0,
+                    3
                   ]
                 }
               ],
@@ -985,7 +1120,16 @@
                 {
                   "power": [
                     0,
-                    4
+                    3
+                  ]
+                }
+              ],
+              "3": [
+                1,
+                {
+                  "power": [
+                    0,
+                    19
                   ]
                 }
               ]
@@ -1001,7 +1145,7 @@
           "events": [
             {
               "who": "player",
-              "card": "ToxieDoxie",
+              "card": "Nakia",
               "type": "cardResolved"
             }
           ]
@@ -1016,11 +1160,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Surge",
+              "card": "JeffTheBabyDolphin",
               "cost": 2,
               "type": "reveal",
-              "power": 1,
-              "entityId": 32,
+              "power": 3,
+              "entityId": 27,
               "drawReveal": false
             }
           ]
@@ -1046,7 +1190,7 @@
                           ],
                           "power": [
                             0,
-                            1
+                            3
                           ],
                           "baseCost": [
                             0,
@@ -1054,11 +1198,11 @@
                           ],
                           "basePower": [
                             0,
-                            1
+                            2
                           ],
                           "cardDefId": [
                             0,
-                            "Surge"
+                            "JeffTheBabyDolphin"
                           ]
                         }
                       ]
@@ -1078,7 +1222,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Surge",
+              "card": "JeffTheBabyDolphin",
               "type": "cardRevealed"
             }
           ]
@@ -1094,256 +1238,10 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "StarkTower",
-              "playerPower": 2,
+              "location": "CastleBlackstone",
+              "playerPower": 6,
               "locationIndex": 0,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 26,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "SuperiorSpiderMan",
-              "type": "play",
-              "entityId": 37,
-              "location": "Sakaar",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 5,
-                          "baseCost": 2,
-                          "entityId": 26,
-                          "basePower": 2,
-                          "cardDefId": "Forge",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 37,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "HumanTorchFirstSteps"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 26,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SuperiorSpiderMan",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 37,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            4
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            4
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SuperiorSpiderMan"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SuperiorSpiderMan",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 4
+              "opponentPower": 3
             }
           ]
         },
@@ -1386,7 +1284,7 @@
           "events": [
             {
               "type": "vpScores",
-              "playerPoints": 5,
+              "playerPoints": 2,
               "opponentPoints": 0
             }
           ]
@@ -1402,7 +1300,7 @@
             {
               "who": "player",
               "type": "energy",
-              "energy": 3
+              "energy": 4
             },
             {
               "who": "opponent",
@@ -1420,7 +1318,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "TaLo",
+              "to": "NewYork",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -1437,7 +1335,7 @@
                 {
                   "location": [
                     0,
-                    "TaLo"
+                    "NewYork"
                   ]
                 }
               ]
@@ -1453,16 +1351,16 @@
           "events": [
             {
               "who": "player",
-              "card": "AwesomeAndy",
+              "card": "Forge",
               "cost": 2,
               "type": "reveal",
-              "power": 6,
-              "entityId": 20,
+              "power": 2,
+              "entityId": 26,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "AwesomeAndy",
+              "card": "Forge",
               "type": "draw"
             },
             {
@@ -1478,39 +1376,26 @@
             {
               "player": [
                 0,
-                3
+                5
               ],
               "opponent": [
                 0,
-                4
+                6
               ]
             }
           ],
           "h": [
             2,
-            3,
+            5,
             {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "AwesomeAndy"
-                  ]
-                }
-              ],
               "1": [
                 1,
                 {
                   "cost": [
+                    0,
+                    2
+                  ],
+                  "power": [
                     0,
                     2
                   ],
@@ -1525,707 +1410,18 @@
                 }
               ],
               "2": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 4,
-                  "baseCost": 3,
-                  "basePower": 2,
-                  "cardDefId": "HumanTorchFirstSteps"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "play",
-              "entityId": 20,
-              "location": "Sakaar",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
                 1,
                 {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 6,
-                          "baseCost": 2,
-                          "entityId": 20,
-                          "basePower": 3,
-                          "cardDefId": "AwesomeAndy",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Forge"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
                   "cardDefId": [
                     0,
                     "HumanTorchFirstSteps"
                   ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ToxieDoxie",
-              "type": "play",
-              "entityId": 28,
-              "location": "StarkTower",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 28,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "power",
-              "source": "AwesomeAndy",
-              "sources": [
-                "AwesomeAndy",
-                "Forge"
+                },
+                [
+                  "augments"
+                ]
               ],
-              "newPower": 8,
-              "oldPower": 6,
-              "cardEntityId": 20
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "cost": 2,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 13,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ToxieDoxie",
-              "cost": 2,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 28,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ToxieDoxie"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ToxieDoxie",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 5,
-              "oldPower": 4,
-              "cardEntityId": 22
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            2,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 9,
-              "opponentPoints": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 23,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "JeffTheBabyDolphin"
-                  ]
-                }
-              ],
-              "2": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 5,
-                  "baseCost": 3,
-                  "basePower": 2,
-                  "cardDefId": "HumanTorchFirstSteps"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "type": "play",
-              "entityId": 23,
-              "location": "TaLo",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 4,
-                          "baseCost": 2,
-                          "entityId": 23,
-                          "basePower": 2,
-                          "cardDefId": "JeffTheBabyDolphin",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "1": [
+              "3": [
                 1,
                 {
                   "cost": [
@@ -2234,1161 +1430,50 @@
                   ],
                   "power": [
                     0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
                     3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "HumanTorchFirstSteps"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 18,
-              "location": "TaLo",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 4,
-                          "baseCost": 2,
-                          "entityId": 18,
-                          "basePower": 2,
-                          "cardDefId": "Forge",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "HumanTorchFirstSteps"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 29,
-              "location": "StarkTower",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "play",
-              "entityId": 33,
-              "location": "TaLo",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 29,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 33,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Ability",
-          "events": [
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "activated",
-              "isActivated": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "power",
-              "source": "AwesomeAndy",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ToxieDoxie",
-              "type": "power",
-              "source": "AwesomeAndy",
-              "newPower": 5,
-              "oldPower": 3,
-              "cardEntityId": 24
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 23,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "playerPower": 9,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "power",
-              "source": "JeffTheBabyDolphin",
-              "newPower": 5,
-              "oldPower": 4,
-              "cardEntityId": 18
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 18,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "playerPower": 14,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 29,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Forge"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 33,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Lasher"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 33
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "playerPower": 14,
-              "locationIndex": 2,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 6,
-              "oldPower": 5,
-              "cardEntityId": 22
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 14,
-              "opponentPoints": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Phastos",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 17,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Phastos",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "1": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 4,
-                  "augments": [
-                    "MoveableAugment"
-                  ],
-                  "baseCost": 3,
-                  "basePower": 4,
-                  "cardDefId": "Phastos"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "play",
-              "entityId": 22,
-              "location": "Sakaar",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 6,
-                          "baseCost": 3,
-                          "entityId": 22,
-                          "basePower": 2,
-                          "cardDefId": "HumanTorchFirstSteps",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    4
                   ],
                   "augments": [
                     0,
                     [
-                      "MoveableAugment"
+                      "OnRevealNewLocationAugment"
                     ]
+                  ],
+                  "baseCost": [
+                    0,
+                    3
                   ],
                   "basePower": [
                     0,
-                    4
+                    2
                   ],
                   "cardDefId": [
                     0,
-                    "Phastos"
+                    "Maverick"
                   ]
                 }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "play",
-              "entityId": 36,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "play",
-              "entityId": 30,
-              "location": "Sakaar",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
+              ],
+              "4": [
+                0,
                 {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "augments": [
-                            "DestroyLowestAugment"
-                          ],
-                          "baseCost": null,
-                          "entityId": 36,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 30,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
+                  "cost": 6,
+                  "power": 19,
+                  "baseCost": 6,
+                  "basePower": 18,
+                  "cardDefId": "Destroyer"
                 }
               ]
             }
           ],
-          "c": [
+          "r": [
             1,
             {
+              "player": [
+                0,
+                5
+              ],
               "opponent": [
                 0,
-                1
+                5
               ]
             }
           ]
@@ -3397,980 +1482,13 @@
       [
         {
           "_v": 2,
-          "turn": 5,
-          "label": "Power",
+          "turn": 3,
+          "label": "Contested",
           "events": [
             {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 8,
-              "oldPower": 6,
-              "cardEntityId": 22
+              "type": "vpContested",
+              "locationIndex": 1
             }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "cost": 3,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "cost": 3,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            7
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "CaptainCarter"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SuperiorSpiderMan",
-              "type": "destroyed",
-              "fromLocation": "Sakaar"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ],
-                          "augments": [
-                            0,
-                            [
-                              "DestroyLowestAugment"
-                            ]
-                          ],
-                          "entityId": [
-                            0,
-                            36
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "CaptainCarter"
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            null
-                          ],
-                          "power": [
-                            0,
-                            null
-                          ],
-                          "baseCost": [
-                            0,
-                            null
-                          ],
-                          "entityId": [
-                            0,
-                            30
-                          ],
-                          "basePower": [
-                            0,
-                            null
-                          ],
-                          "cardDefId": [
-                            0,
-                            null
-                          ]
-                        },
-                        [
-                          "augments"
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 3,
-                      "power": 4,
-                      "cardDefId": "SuperiorSpiderMan"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "power",
-              "source": "Surge",
-              "sources": [
-                "Surge",
-                "ToxieDoxie",
-                "TaLo",
-                "TaLo",
-                "CaptainCarter"
-              ],
-              "newPower": 12,
-              "oldPower": 7,
-              "cardEntityId": 36
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            12
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 12
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Ability",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "activated",
-              "isActivated": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ToxieDoxie",
-              "type": "power",
-              "source": "Lasher",
-              "newPower": 1,
-              "oldPower": 5,
-              "cardEntityId": 24
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "cost": 2,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Angela"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "power",
-              "source": "StarkTower",
-              "newPower": 6,
-              "oldPower": 4,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Surge",
-              "type": "power",
-              "source": "StarkTower",
-              "newPower": 3,
-              "oldPower": 1,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ToxieDoxie",
-              "type": "power",
-              "source": "ToxieDoxie",
-              "sources": [
-                "ToxieDoxie",
-                "StarkTower"
-              ],
-              "newPower": 8,
-              "oldPower": 6,
-              "cardEntityId": 28
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 13
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "power",
-              "source": "StarkTower",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 29
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Phastos",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 5,
-              "oldPower": 4,
-              "cardEntityId": 17
-            },
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "power",
-              "source": "HumanTorchFirstSteps",
-              "newPower": 9,
-              "oldPower": 8,
-              "cardEntityId": 22
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            9
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "playerPower": 22,
-              "locationIndex": 1,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 20,
-              "opponentPoints": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -4414,7 +1532,7 @@
             {
               "card": "AmericaChavez",
               "isPlayer": true,
-              "location": "StarkTower",
+              "location": "CastleBlackstone",
               "locationIndex": 0
             }
           ],
@@ -4427,19 +1545,19 @@
               "who": "player",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 68
+              "_changeIdx": 66
             },
             {
               "who": "opponent",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 70
+              "_changeIdx": 68
             },
             {
-              "to": "StarkTower",
+              "to": "CastleBlackstone",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 73,
+              "_changeIdx": 71,
               "locationIndex": 0
             },
             {
@@ -4448,7 +1566,7 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 25,
+              "entityId": 20,
               "_changeIdx": 76,
               "drawReveal": true
             },
@@ -4467,14 +1585,14 @@
             {
               "type": "vpContested",
               "_changeIdx": 84,
-              "locationIndex": 0
+              "locationIndex": 2
             },
             {
               "who": "player",
               "card": "AmericaChavez",
               "type": "play",
-              "entityId": 25,
-              "location": "StarkTower",
+              "entityId": 20,
+              "location": "CastleBlackstone",
               "_changeIdx": 87,
               "locationIndex": 0
             },
@@ -4487,7 +1605,7 @@
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 92
+              "_changeIdx": 91
             },
             {
               "who": "player",
@@ -4495,15 +1613,15 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 25,
-              "_changeIdx": 94,
+              "entityId": 20,
+              "_changeIdx": 93,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "StarkTower",
-              "_changeIdx": 96,
+              "location": "CastleBlackstone",
+              "_changeIdx": 95,
               "playerPower": 2,
               "locationIndex": 0,
               "opponentPower": 0
@@ -4512,23 +1630,23 @@
               "who": "player",
               "card": "AmericaChavez",
               "type": "cardResolved",
-              "_changeIdx": 101
+              "_changeIdx": 100
             },
             {
-              "tie": false,
+              "tie": true,
               "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 103
+              "winner": null,
+              "_changeIdx": 102
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 104
+              "_changeIdx": 103
             },
             {
               "type": "vpScores",
-              "_changeIdx": 105,
-              "playerPoints": 1,
+              "_changeIdx": 104,
+              "playerPoints": 0,
               "opponentPoints": 0
             }
           ],
@@ -4558,384 +1676,163 @@
           "turn": 2,
           "plays": [
             {
-              "card": "ToxieDoxie",
+              "card": "Nakia",
               "isPlayer": true,
-              "location": "TaLo",
-              "locationIndex": 2
-            },
-            {
-              "card": "Surge",
-              "isPlayer": false,
-              "location": "StarkTower",
+              "location": "CastleBlackstone",
               "locationIndex": 0
             },
             {
-              "card": "Forge",
-              "isPlayer": true,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "card": "SuperiorSpiderMan",
+              "card": "JeffTheBabyDolphin",
               "isPlayer": false,
-              "location": "Sakaar",
-              "locationIndex": 1
+              "location": "CastleBlackstone",
+              "locationIndex": 0
             }
           ],
           "energy": {
-            "player": 2,
+            "player": 3,
             "opponent": 2
           },
           "events": [
             {
               "who": "player",
               "type": "energy",
-              "energy": 2,
-              "_changeIdx": 108
+              "energy": 3,
+              "_changeIdx": 107
             },
             {
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 110
+              "_changeIdx": 109
             },
             {
-              "to": "Sakaar",
+              "to": "GreatPortal",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 113,
+              "_changeIdx": 116,
               "locationIndex": 1
+            },
+            {
+              "who": "player",
+              "card": "Destroyer",
+              "cost": 6,
+              "type": "reveal",
+              "power": 18,
+              "entityId": 44,
+              "_changeIdx": 120,
+              "drawReveal": true
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 117,
+              "_changeIdx": 129,
               "locationIndex": 2
             },
             {
               "who": "player",
-              "card": "Forge",
+              "card": "AwesomeAndy",
               "cost": 2,
               "type": "reveal",
-              "power": 5,
-              "entityId": 26,
-              "_changeIdx": 120,
+              "power": 9,
+              "entityId": 17,
+              "_changeIdx": 132,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Forge",
+              "card": "AwesomeAndy",
               "type": "draw",
-              "_changeIdx": 121
+              "_changeIdx": 133
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 124
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 128,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "ToxieDoxie",
-              "type": "play",
-              "entityId": 24,
-              "location": "RevealOn2",
-              "_changeIdx": 131,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "ToxieDoxie",
-              "type": "cardStaged",
-              "_changeIdx": 132
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
               "_changeIdx": 136
             },
             {
-              "who": "opponent",
-              "card": "Surge",
-              "type": "play",
-              "entityId": 32,
-              "location": "StarkTower",
-              "_changeIdx": 137,
+              "type": "vpContested",
+              "_changeIdx": 140,
               "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "ToxieDoxie",
-              "cost": 2,
+              "card": "Nakia",
+              "type": "play",
+              "entityId": 19,
+              "location": "CastleBlackstone",
+              "_changeIdx": 143,
+              "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "Nakia",
+              "type": "cardStaged",
+              "_changeIdx": 144
+            },
+            {
+              "turn": 2,
+              "type": "endTurn",
+              "_changeIdx": 148
+            },
+            {
+              "who": "opponent",
+              "card": "JeffTheBabyDolphin",
+              "type": "play",
+              "entityId": 27,
+              "location": "CastleBlackstone",
+              "_changeIdx": 149,
+              "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "Nakia",
+              "cost": 3,
               "type": "reveal",
-              "power": 3,
-              "entityId": 24,
-              "_changeIdx": 141,
+              "power": 4,
+              "entityId": 19,
+              "_changeIdx": 153,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "RevealOn2",
-              "_changeIdx": 143,
-              "playerPower": 3,
-              "locationIndex": 2,
+              "location": "CastleBlackstone",
+              "_changeIdx": 155,
+              "playerPower": 6,
+              "locationIndex": 0,
               "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "power",
-              "source": "ToxieDoxie",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 147,
-              "cardEntityId": 18
             },
             {
               "who": "player",
               "card": "HumanTorchFirstSteps",
               "type": "power",
-              "source": "ToxieDoxie",
-              "newPower": 4,
+              "source": "Nakia",
+              "newPower": 3,
               "oldPower": 2,
-              "_changeIdx": 150,
-              "cardEntityId": 22
-            },
-            {
-              "who": "player",
-              "card": "ToxieDoxie",
-              "type": "cardResolved",
-              "_changeIdx": 158
-            },
-            {
-              "who": "opponent",
-              "card": "Surge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 32,
               "_changeIdx": 159,
-              "drawReveal": false
+              "cardEntityId": 21
             },
             {
-              "who": "opponent",
-              "card": "Surge",
-              "type": "cardRevealed",
-              "_changeIdx": 160
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "StarkTower",
+              "who": "player",
+              "card": "Maverick",
+              "type": "power",
+              "source": "Nakia",
+              "newPower": 3,
+              "oldPower": 2,
               "_changeIdx": 162,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 1
+              "cardEntityId": 18
             },
             {
               "who": "player",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 26,
-              "location": "Sakaar",
-              "_changeIdx": 170,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "SuperiorSpiderMan",
-              "type": "play",
-              "entityId": 37,
-              "location": "Sakaar",
-              "_changeIdx": 173,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 26,
-              "_changeIdx": 177,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 179,
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "SuperiorSpiderMan",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 37,
-              "_changeIdx": 188,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "SuperiorSpiderMan",
-              "type": "cardRevealed",
-              "_changeIdx": 189
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 191,
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 195
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 196
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 197,
-              "playerPoints": 5,
-              "opponentPoints": 0
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 2,
-              "opponentPower": 1
-            },
-            {
-              "winner": "player",
-              "playerPower": 5,
-              "opponentPower": 4
-            },
-            {
-              "winner": "player",
-              "playerPower": 3,
-              "opponentPower": 0
-            }
-          ]
-        },
-        32
-      ],
-      [
-        {
-          "turn": 3,
-          "plays": [
-            {
-              "card": "AwesomeAndy",
-              "isPlayer": true,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "card": "ToxieDoxie",
-              "isPlayer": false,
-              "location": "StarkTower",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 3,
-            "opponent": 3
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 201
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 203
-            },
-            {
-              "to": "TaLo",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 206,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "cost": 2,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 20,
-              "_changeIdx": 210,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "draw",
-              "_changeIdx": 211
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 214
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 218,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "play",
-              "entityId": 20,
-              "location": "Sakaar",
-              "_changeIdx": 221,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "cardStaged",
-              "_changeIdx": 222
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 228
-            },
-            {
-              "who": "opponent",
-              "card": "ToxieDoxie",
-              "type": "play",
-              "entityId": 28,
-              "location": "StarkTower",
-              "_changeIdx": 230,
-              "locationIndex": 0
+              "card": "Destroyer",
+              "type": "power",
+              "source": "Nakia",
+              "newPower": 19,
+              "oldPower": 18,
+              "_changeIdx": 165,
+              "cardEntityId": 44
             },
             {
               "who": "player",
@@ -4944,102 +1841,74 @@
               "source": "AwesomeAndy",
               "sources": [
                 "AwesomeAndy",
-                "Forge"
+                "AmericaChavez",
+                "Nakia"
               ],
-              "newPower": 8,
-              "oldPower": 6,
-              "_changeIdx": 235,
-              "cardEntityId": 20
+              "newPower": 10,
+              "oldPower": 9,
+              "_changeIdx": 168,
+              "cardEntityId": 17
             },
             {
               "who": "player",
-              "card": "AwesomeAndy",
+              "card": "Nakia",
+              "type": "cardResolved",
+              "_changeIdx": 172
+            },
+            {
+              "who": "opponent",
+              "card": "JeffTheBabyDolphin",
               "cost": 2,
               "type": "reveal",
-              "power": 8,
-              "entityId": 20,
-              "_changeIdx": 240,
+              "power": 3,
+              "entityId": 27,
+              "_changeIdx": 173,
               "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "JeffTheBabyDolphin",
+              "type": "cardRevealed",
+              "_changeIdx": 174
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 242,
-              "playerPower": 13,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "cardResolved",
-              "_changeIdx": 245
-            },
-            {
-              "who": "opponent",
-              "card": "ToxieDoxie",
-              "cost": 2,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 28,
-              "_changeIdx": 246,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ToxieDoxie",
-              "type": "cardRevealed",
-              "_changeIdx": 247
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "_changeIdx": 249,
-              "playerPower": 2,
+              "location": "CastleBlackstone",
+              "_changeIdx": 176,
+              "playerPower": 6,
               "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 5,
-              "oldPower": 4,
-              "_changeIdx": 260,
-              "cardEntityId": 22
+              "opponentPower": 3
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "player",
-              "_changeIdx": 264
+              "_changeIdx": 180
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 265
+              "_changeIdx": 181
             },
             {
               "type": "vpScores",
-              "_changeIdx": 266,
-              "playerPoints": 9,
-              "opponentPoints": 1
+              "_changeIdx": 182,
+              "playerPoints": 2,
+              "opponentPoints": 0
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
-              "playerPower": 2,
-              "opponentPower": 7
+              "winner": "player",
+              "playerPower": 6,
+              "opponentPower": 3
             },
             {
-              "winner": "player",
-              "playerPower": 13,
-              "opponentPower": 4
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -5048,345 +1917,70 @@
             }
           ]
         },
-        53
+        28
       ],
       [
         {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "JeffTheBabyDolphin",
-              "isPlayer": true,
-              "location": "TaLo",
-              "locationIndex": 2
-            },
-            {
-              "card": "Forge",
-              "isPlayer": true,
-              "location": "TaLo",
-              "locationIndex": 2
-            },
-            {
-              "card": "Forge",
-              "isPlayer": false,
-              "location": "StarkTower",
-              "locationIndex": 0
-            },
-            {
-              "card": "Lasher",
-              "isPlayer": false,
-              "location": "TaLo",
-              "locationIndex": 2
-            }
-          ],
+          "turn": 3,
+          "plays": [],
           "energy": {
             "player": 4,
-            "opponent": 5
+            "opponent": 3
           },
           "events": [
             {
               "who": "player",
               "type": "energy",
               "energy": 4,
-              "_changeIdx": 270
+              "_changeIdx": 186
             },
             {
               "who": "opponent",
               "type": "energy",
-              "energy": 5,
-              "_changeIdx": 272
+              "energy": 3,
+              "_changeIdx": 188
+            },
+            {
+              "to": "NewYork",
+              "from": "RevealOn2",
+              "type": "location",
+              "_changeIdx": 195,
+              "locationIndex": 2
             },
             {
               "who": "player",
-              "card": "JeffTheBabyDolphin",
+              "card": "Forge",
               "cost": 2,
               "type": "reveal",
-              "power": 4,
-              "entityId": 23,
-              "_changeIdx": 281,
+              "power": 2,
+              "entityId": 26,
+              "_changeIdx": 198,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "JeffTheBabyDolphin",
+              "card": "Forge",
               "type": "draw",
-              "_changeIdx": 282
+              "_changeIdx": 199
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 285
+              "_changeIdx": 202
             },
             {
               "type": "vpContested",
-              "_changeIdx": 289,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "cardStaged",
-              "_changeIdx": 293
-            },
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "type": "play",
-              "entityId": 23,
-              "location": "TaLo",
-              "_changeIdx": 296,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "type": "cardStaged",
-              "_changeIdx": 297
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 18,
-              "location": "TaLo",
-              "_changeIdx": 300,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "cardStaged",
-              "_changeIdx": 301
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 310
-            },
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 29,
-              "location": "StarkTower",
-              "_changeIdx": 312,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "play",
-              "entityId": 33,
-              "location": "TaLo",
-              "_changeIdx": 315,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "cardResolved",
-              "_changeIdx": 322
-            },
-            {
-              "who": "player",
-              "card": "AwesomeAndy",
-              "type": "activated",
-              "_changeIdx": 323,
-              "isActivated": true
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "power",
-              "source": "AwesomeAndy",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 325,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "_changeIdx": 328,
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "who": "player",
-              "card": "ToxieDoxie",
-              "type": "power",
-              "source": "AwesomeAndy",
-              "newPower": 5,
-              "oldPower": 3,
-              "_changeIdx": 331,
-              "cardEntityId": 24
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "_changeIdx": 334,
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 23,
-              "_changeIdx": 338,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "_changeIdx": 340,
-              "playerPower": 9,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "JeffTheBabyDolphin",
-              "type": "cardResolved",
-              "_changeIdx": 343
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "power",
-              "source": "JeffTheBabyDolphin",
-              "newPower": 5,
-              "oldPower": 4,
-              "_changeIdx": 346,
-              "cardEntityId": 18
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 18,
-              "_changeIdx": 350,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "_changeIdx": 352,
-              "playerPower": 14,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "cardResolved",
-              "_changeIdx": 361
-            },
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 29,
-              "_changeIdx": 362,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "cardRevealed",
-              "_changeIdx": 363
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "_changeIdx": 365,
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 33,
-              "_changeIdx": 373,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 374,
-              "cardEntityId": 33
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "cardRevealed",
-              "_changeIdx": 378
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "_changeIdx": 380,
-              "playerPower": 14,
-              "locationIndex": 2,
-              "opponentPower": 4
-            },
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 6,
-              "oldPower": 5,
-              "_changeIdx": 387,
-              "cardEntityId": 22
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 391
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 392
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 393,
-              "playerPoints": 14,
-              "opponentPoints": 2
+              "_changeIdx": 206,
+              "locationIndex": 1
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
-              "playerPower": 4,
-              "opponentPower": 9
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -5394,441 +1988,25 @@
               "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 14,
-              "opponentPower": 4
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             }
           ]
         },
-        87
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "HumanTorchFirstSteps",
-              "isPlayer": true,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "card": "CaptainCarter",
-              "isPlayer": false,
-              "location": "Sakaar",
-              "locationIndex": 1
-            },
-            {
-              "card": "Angela",
-              "isPlayer": false,
-              "location": "Sakaar",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 397
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 399
-            },
-            {
-              "who": "player",
-              "card": "Phastos",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 17,
-              "_changeIdx": 407,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Phastos",
-              "type": "draw",
-              "_changeIdx": 408
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 411
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 415,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "play",
-              "entityId": 22,
-              "location": "Sakaar",
-              "_changeIdx": 418,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "cardStaged",
-              "_changeIdx": 419
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 428
-            },
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "play",
-              "entityId": 36,
-              "location": "Sakaar",
-              "_changeIdx": 430,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "play",
-              "entityId": 30,
-              "location": "Sakaar",
-              "_changeIdx": 433,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 8,
-              "oldPower": 6,
-              "_changeIdx": 438,
-              "cardEntityId": 22
-            },
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "cost": 3,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 22,
-              "_changeIdx": 443,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 445,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "cardResolved",
-              "_changeIdx": 448
-            },
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "cost": 3,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 36,
-              "_changeIdx": 449,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "cardRevealed",
-              "_changeIdx": 450
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 452,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "who": "opponent",
-              "card": "SuperiorSpiderMan",
-              "type": "destroyed",
-              "_changeIdx": 457,
-              "fromLocation": "Sakaar"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 460,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 7
-            },
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "power",
-              "source": "Surge",
-              "sources": [
-                "Surge",
-                "ToxieDoxie",
-                "TaLo",
-                "TaLo",
-                "CaptainCarter"
-              ],
-              "newPower": 12,
-              "oldPower": 7,
-              "_changeIdx": 463,
-              "cardEntityId": 36
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 466,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 12
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "activated",
-              "_changeIdx": 476,
-              "isActivated": true
-            },
-            {
-              "who": "player",
-              "card": "ToxieDoxie",
-              "type": "power",
-              "source": "Lasher",
-              "newPower": 1,
-              "oldPower": 5,
-              "_changeIdx": 478,
-              "cardEntityId": 24
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "_changeIdx": 482,
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 4
-            },
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "cost": 2,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "_changeIdx": 485,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "cardRevealed",
-              "_changeIdx": 486
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 488,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 17
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "power",
-              "source": "StarkTower",
-              "newPower": 6,
-              "oldPower": 4,
-              "_changeIdx": 493,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "_changeIdx": 496,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "who": "opponent",
-              "card": "Surge",
-              "type": "power",
-              "source": "StarkTower",
-              "newPower": 3,
-              "oldPower": 1,
-              "_changeIdx": 499,
-              "cardEntityId": 32
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "_changeIdx": 502,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 11
-            },
-            {
-              "who": "opponent",
-              "card": "ToxieDoxie",
-              "type": "power",
-              "source": "ToxieDoxie",
-              "sources": [
-                "ToxieDoxie",
-                "StarkTower"
-              ],
-              "newPower": 8,
-              "oldPower": 6,
-              "_changeIdx": 505,
-              "cardEntityId": 28
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "_changeIdx": 508,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 13
-            },
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "power",
-              "source": "StarkTower",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 511,
-              "cardEntityId": 29
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkTower",
-              "_changeIdx": 514,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 15
-            },
-            {
-              "who": "player",
-              "card": "Phastos",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 5,
-              "oldPower": 4,
-              "_changeIdx": 521,
-              "cardEntityId": 17
-            },
-            {
-              "who": "player",
-              "card": "HumanTorchFirstSteps",
-              "type": "power",
-              "source": "HumanTorchFirstSteps",
-              "newPower": 9,
-              "oldPower": 8,
-              "_changeIdx": 526,
-              "cardEntityId": 22
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Sakaar",
-              "_changeIdx": 529,
-              "playerPower": 22,
-              "locationIndex": 1,
-              "opponentPower": 17
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 533
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 534
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 535,
-              "playerPoints": 20,
-              "opponentPoints": 4
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 537
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 6,
-              "opponentPower": 15
-            },
-            {
-              "winner": "player",
-              "playerPower": 22,
-              "opponentPower": 17
-            },
-            {
-              "winner": "player",
-              "playerPower": 10,
-              "opponentPower": 4
-            }
-          ]
-        },
-        123
+        36
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 5864,
-  "opp_sp": null,
+  "opp_cl": 31248,
+  "opp_sp": 7075,
   "bracket": null,
-  "match_id": "54d1814e-5c02-486b-bfa8-17314bb4a735",
-  "opp_name": "NachtWächter",
+  "match_id": "ba86e5a2-0788-47ac-aac5-e5b137635940",
+  "opp_name": "assa",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "StarkTower",
-    "Sakaar",
-    "TaLo"
-  ],
+  "locations": [],
   "player_cl": 11589,
   "player_sp": 4875,
   "turn_data": null,
@@ -5980,20 +2158,20 @@
   },
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Beast",
-    "ArtVariantDefId": "Beast_04"
+    "CardDefId": "Selene",
+    "ArtVariantDefId": "Selene_06"
   },
   "opp_health": null,
-  "opp_is_bot": true,
+  "opp_is_bot": false,
   "mode_detail": "Draft",
   "player_name": "SmokeFisher",
-  "current_turn": 6,
-  "match_result": "win",
-  "match_status": "complete",
-  "opp_clan_tag": "314",
+  "current_turn": 4,
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_clan_tag": "RTP",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
     "CardDefId": "GhostTheFirstRider"
@@ -6001,38 +2179,21 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "Surge",
-    "SuperiorSpiderMan",
-    "ToxieDoxie",
-    "Forge",
-    "Lasher",
-    "CaptainCarter",
-    "Angela"
+    "JeffTheBabyDolphin"
   ],
-  "last_updated_at": "2026-10-10T11:43:35.264+00:00",
+  "last_updated_at": "2026-10-10T11:44:59.909+00:00",
   "opp_played_cards": [],
   "player_deck_cards": [
-    "HumanTorchFirstSteps",
-    "Forge",
-    "AmericaChavez",
-    "ToxieDoxie",
     "Nakia",
-    "AwesomeAndy",
-    "Forge",
-    "AwesomeAndy",
+    "HumanTorchFirstSteps",
     "Maverick",
-    "JeffTheBabyDolphin",
-    "Phastos"
+    "AmericaChavez",
+    "AwesomeAndy",
+    "Forge"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "Surge",
-    "SuperiorSpiderMan",
-    "ToxieDoxie",
-    "Forge",
-    "Lasher",
-    "CaptainCarter",
-    "Angela"
+    "JeffTheBabyDolphin"
   ],
   "conquest_round_index": null
 }
