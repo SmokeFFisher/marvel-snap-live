@@ -44,24 +44,24 @@
           "h": [
             {
               "cost": 1,
-              "power": 1,
-              "baseCost": 1,
-              "basePower": 1,
-              "cardDefId": "KittyPryde"
-            },
-            {
-              "cost": 2,
-              "power": 3,
-              "baseCost": 2,
-              "basePower": 3,
-              "cardDefId": "Angela"
-            },
-            {
-              "cost": 4,
               "power": 2,
-              "baseCost": 4,
+              "baseCost": 1,
               "basePower": 2,
-              "cardDefId": "Wong"
+              "cardDefId": "NicoMinoru"
+            },
+            {
+              "cost": 3,
+              "power": 3,
+              "baseCost": 3,
+              "basePower": 3,
+              "cardDefId": "Chameleon"
+            },
+            {
+              "cost": 3,
+              "power": 1,
+              "baseCost": 3,
+              "basePower": 1,
+              "cardDefId": "Mystique"
             }
           ],
           "n": {
@@ -85,12 +85,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             }
@@ -105,7 +105,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Ego",
+              "to": "SewerSystem",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -122,7 +122,7 @@
                 {
                   "location": [
                     0,
-                    "Ego"
+                    "SewerSystem"
                   ],
                   "revealed": [
                     0,
@@ -138,32 +138,13 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 24,
-              "drawReveal": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
           "label": "Override",
           "events": [
             {
               "who": "player",
               "card": "NicoMinoru",
               "type": "abilityOverride",
-              "overrideAbility": "Spell05NicoMinoru"
+              "overrideAbility": "Spell01NicoMinoru"
             }
           ]
         },
@@ -176,22 +157,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "JoaquinTorres",
-              "cost": 2,
+              "card": "KittyPryde",
+              "cost": 1,
               "type": "reveal",
-              "power": 3,
-              "entityId": 18,
+              "power": 1,
+              "entityId": 32,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "JoaquinTorres",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "KittyPryde",
               "type": "draw"
             }
           ]
@@ -214,20 +195,54 @@
             2,
             4,
             {
-              "2": [
+              "0": [
+                1,
+                {
+                  "power": [
+                    0,
+                    1
+                  ],
+                  "basePower": [
+                    0,
+                    1
+                  ],
+                  "cardDefId": [
+                    0,
+                    "KittyPryde"
+                  ]
+                }
+              ],
+              "1": [
                 1,
                 {
                   "cost": [
                     0,
-                    2
+                    1
                   ],
                   "power": [
                     0,
-                    3
+                    2
                   ],
                   "baseCost": [
                     0,
+                    1
+                  ],
+                  "basePower": [
+                    0,
                     2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "NicoMinoru"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "power": [
+                    0,
+                    3
                   ],
                   "basePower": [
                     0,
@@ -235,18 +250,18 @@
                   ],
                   "cardDefId": [
                     0,
-                    "JoaquinTorres"
+                    "Chameleon"
                   ]
                 }
               ],
               "3": [
                 0,
                 {
-                  "cost": 4,
-                  "power": 2,
-                  "baseCost": 4,
-                  "basePower": 2,
-                  "cardDefId": "Wong"
+                  "cost": 3,
+                  "power": 1,
+                  "baseCost": 3,
+                  "basePower": 1,
+                  "cardDefId": "Mystique"
                 }
               ]
             }
@@ -288,7 +303,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
           ]
@@ -305,9 +320,9 @@
               "who": "player",
               "card": "KittyPryde",
               "type": "play",
-              "entityId": 23,
-              "location": "RevealOn3",
-              "locationIndex": 2
+              "entityId": 32,
+              "location": "SewerSystem",
+              "locationIndex": 0
             }
           ]
         },
@@ -316,7 +331,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "playerCards": [
@@ -329,7 +344,7 @@
                           "cost": 1,
                           "power": 1,
                           "baseCost": 1,
-                          "entityId": 23,
+                          "entityId": 32,
                           "basePower": 1,
                           "cardDefId": "KittyPryde",
                           "arrivalSeq": 0
@@ -357,59 +372,59 @@
               "0": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    2
-                  ],
                   "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
                     0,
                     2
                   ],
                   "basePower": [
                     0,
-                    3
+                    2
                   ],
                   "cardDefId": [
                     0,
-                    "Angela"
+                    "NicoMinoru"
                   ]
                 }
               ],
               "1": [
                 1,
                 {
+                  "cost": [
+                    0,
+                    3
+                  ],
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
                   "cardDefId": [
                     0,
-                    "JoaquinTorres"
+                    "Chameleon"
                   ]
                 }
               ],
               "2": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    4
-                  ],
                   "power": [
                     0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    4
+                    1
                   ],
                   "basePower": [
                     0,
-                    2
+                    1
                   ],
                   "cardDefId": [
                     0,
-                    "Wong"
+                    "Mystique"
                   ]
                 }
               ]
@@ -454,11 +469,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Sunspot",
+              "card": "Nebula",
               "type": "play",
-              "entityId": 37,
-              "location": "RevealOn3",
-              "locationIndex": 2
+              "entityId": 20,
+              "location": "RevealOn2",
+              "locationIndex": 1
             }
           ]
         },
@@ -467,7 +482,7 @@
             2,
             3,
             {
-              "2": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
@@ -480,7 +495,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 37,
+                          "entityId": 20,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -510,13 +525,32 @@
           "label": "Reveal",
           "events": [
             {
-              "who": "opponent",
-              "card": "Sunspot",
+              "who": "player",
+              "card": "KittyPryde",
               "cost": 1,
               "type": "reveal",
-              "power": 0,
-              "entityId": 37,
+              "power": 1,
+              "entityId": 32,
               "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Power",
+          "events": [
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "power",
+              "source": "SewerSystem",
+              "newPower": 0,
+              "oldPower": 1,
+              "cardEntityId": 32
             }
           ]
         },
@@ -525,35 +559,19 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
-                  "opponentCards": [
+                  "playerCards": [
                     2,
                     1,
                     {
                       "0": [
                         1,
                         {
-                          "cost": [
-                            0,
-                            1
-                          ],
                           "power": [
                             0,
                             0
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Sunspot"
                           ]
                         }
                       ]
@@ -564,58 +582,6 @@
             }
           ]
         }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 23,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RevealOn3",
-              "playerPower": 1,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
       ],
       [
         {
@@ -635,16 +601,111 @@
       [
         {
           "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Nebula",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 20,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            1
+                          ],
+                          "power": [
+                            0,
+                            1
+                          ],
+                          "baseCost": [
+                            0,
+                            1
+                          ],
+                          "basePower": [
+                            0,
+                            1
+                          ],
+                          "cardDefId": [
+                            0,
+                            "Nebula"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Nebula",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "RevealOn2",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 1
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
           "turn": 2,
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             }
@@ -659,7 +720,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Lechuguilla",
+              "to": "ReedsLab",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -682,7 +743,7 @@
                 {
                   "location": [
                     0,
-                    "Lechuguilla"
+                    "ReedsLab"
                   ],
                   "revealed": [
                     0,
@@ -722,7 +783,34 @@
             }
           ]
         },
-        {}
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -733,9 +821,9 @@
             {
               "who": "player",
               "card": "KittyPryde",
-              "from": "RevealOn2",
+              "from": "SewerSystem",
               "type": "bounce",
-              "entityId": 23
+              "entityId": 32
             }
           ]
         },
@@ -744,7 +832,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "playerCards": [
@@ -772,15 +860,7 @@
               "0": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    1
-                  ],
                   "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
                     0,
                     1
                   ],
@@ -797,26 +877,34 @@
               "1": [
                 1,
                 {
+                  "cost": [
+                    0,
+                    1
+                  ],
+                  "power": [
+                    0,
+                    2
+                  ],
+                  "baseCost": [
+                    0,
+                    1
+                  ],
+                  "basePower": [
+                    0,
+                    2
+                  ],
                   "cardDefId": [
                     0,
-                    "Angela"
+                    "NicoMinoru"
                   ]
                 }
               ],
               "2": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    2
-                  ],
                   "power": [
                     0,
                     3
-                  ],
-                  "baseCost": [
-                    0,
-                    2
                   ],
                   "basePower": [
                     0,
@@ -824,18 +912,18 @@
                   ],
                   "cardDefId": [
                     0,
-                    "JoaquinTorres"
+                    "Chameleon"
                   ]
                 }
               ],
               "3": [
                 0,
                 {
-                  "cost": 4,
-                  "power": 2,
-                  "baseCost": 4,
-                  "basePower": 2,
-                  "cardDefId": "Wong"
+                  "cost": 3,
+                  "power": 1,
+                  "baseCost": 3,
+                  "basePower": 1,
+                  "cardDefId": "Mystique"
                 }
               ]
             }
@@ -863,34 +951,15 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "RevealOn2",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
           "label": "Power",
           "events": [
             {
               "who": "player",
               "card": "KittyPryde",
               "type": "power",
-              "source": "KittyPryde",
               "newPower": 2,
               "oldPower": 1,
-              "cardEntityId": 23
+              "cardEntityId": 32
             }
           ]
         },
@@ -916,25 +985,41 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Draw",
+          "label": "Override",
           "events": [
             {
               "who": "player",
-              "card": "Frigga",
-              "cost": 3,
+              "card": "NicoMinoru",
+              "type": "abilityOverride",
+              "overrideAbility": "Spell03NicoMinoru"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
+              "who": "player",
+              "card": "Wong",
+              "cost": 4,
               "type": "reveal",
-              "power": 3,
-              "entityId": 22,
+              "power": 2,
+              "entityId": 35,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Frigga",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "Wong",
               "type": "draw"
             }
           ]
@@ -957,31 +1042,6 @@
             2,
             5,
             {
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Frigga"
-                  ]
-                }
-              ],
               "4": [
                 0,
                 {
@@ -1016,9 +1076,9 @@
           "label": "Turn Winner",
           "events": [
             {
-              "tie": true,
+              "tie": false,
               "type": "turnWinner",
-              "winner": null
+              "winner": "opponent"
             }
           ]
         },
@@ -1031,137 +1091,8 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Angela",
-              "type": "play",
-              "entityId": 26,
-              "location": "Lechuguilla",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 3,
-                          "baseCost": 2,
-                          "entityId": 26,
-                          "basePower": 3,
-                          "cardDefId": "Angela",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "JoaquinTorres"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Frigga"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Wong"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Angela",
-              "type": "cardStaged"
             }
           ]
         },
@@ -1206,14 +1137,14 @@
             {
               "card": "KittyPryde",
               "isPlayer": true,
-              "location": "RevealOn2",
-              "locationIndex": 2
+              "location": "SewerSystem",
+              "locationIndex": 0
             },
             {
-              "card": "Sunspot",
+              "card": "Nebula",
               "isPlayer": false,
-              "location": "RevealOn2",
-              "locationIndex": 2
+              "location": "ReedsLab",
+              "locationIndex": 1
             }
           ],
           "energy": {
@@ -1222,118 +1153,36 @@
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 67
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 1,
               "_changeIdx": 69
             },
             {
-              "to": "Ego",
+              "who": "player",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 71
+            },
+            {
+              "to": "SewerSystem",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 72,
+              "_changeIdx": 74,
               "locationIndex": 0
             },
             {
               "who": "player",
               "card": "NicoMinoru",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 24,
-              "_changeIdx": 77,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
               "type": "abilityOverride",
-              "_changeIdx": 80,
-              "overrideAbility": "Spell05NicoMinoru"
-            },
-            {
-              "who": "player",
-              "card": "JoaquinTorres",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 18,
-              "_changeIdx": 84,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "JoaquinTorres",
-              "type": "draw",
-              "_changeIdx": 85
+              "_changeIdx": 81,
+              "overrideAbility": "Spell01NicoMinoru"
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 88
-            },
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 91
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 92
-            },
-            {
-              "who": "player",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 23,
-              "location": "RevealOn3",
-              "_changeIdx": 95,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "KittyPryde",
-              "type": "cardStaged",
-              "_changeIdx": 98
-            },
-            {
-              "turn": 1,
-              "type": "endTurn",
-              "_changeIdx": 109
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "play",
-              "entityId": 37,
-              "location": "RevealOn3",
-              "_changeIdx": 110,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 37,
-              "_changeIdx": 114,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "cardRevealed",
-              "_changeIdx": 115
+              "_changeIdx": 85
             },
             {
               "who": "player",
@@ -1341,24 +1190,106 @@
               "cost": 1,
               "type": "reveal",
               "power": 1,
-              "entityId": 23,
-              "_changeIdx": 117,
+              "entityId": 32,
+              "_changeIdx": 88,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "draw",
+              "_changeIdx": 89
+            },
+            {
+              "tie": true,
+              "type": "turnWinner",
+              "winner": null,
+              "_changeIdx": 92
+            },
+            {
+              "who": "player",
+              "type": "initiative",
+              "_changeIdx": 93
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "play",
+              "entityId": 32,
+              "location": "SewerSystem",
+              "_changeIdx": 96,
+              "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "cardStaged",
+              "_changeIdx": 97
+            },
+            {
+              "turn": 1,
+              "type": "endTurn",
+              "_changeIdx": 100
+            },
+            {
+              "who": "opponent",
+              "card": "Nebula",
+              "type": "play",
+              "entityId": 20,
+              "location": "RevealOn2",
+              "_changeIdx": 101,
+              "locationIndex": 1
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 32,
+              "_changeIdx": 105,
               "drawReveal": false
             },
             {
-              "type": "score",
-              "winner": "player",
-              "location": "RevealOn3",
-              "_changeIdx": 119,
-              "playerPower": 1,
-              "locationIndex": 2,
-              "opponentPower": 0
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "power",
+              "source": "SewerSystem",
+              "newPower": 0,
+              "oldPower": 1,
+              "_changeIdx": 107,
+              "cardEntityId": 32
             },
             {
               "who": "player",
               "card": "KittyPryde",
               "type": "cardResolved",
-              "_changeIdx": 122
+              "_changeIdx": 111
+            },
+            {
+              "who": "opponent",
+              "card": "Nebula",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 20,
+              "_changeIdx": 112,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Nebula",
+              "type": "cardRevealed",
+              "_changeIdx": 113
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "RevealOn2",
+              "_changeIdx": 115,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 1
             }
           ],
           "snapEvent": null,
@@ -1369,59 +1300,52 @@
               "opponentPower": 0
             },
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 1
             },
             {
-              "winner": "player",
-              "playerPower": 1,
+              "winner": null,
+              "playerPower": 0,
               "opponentPower": 0
             }
           ]
         },
-        12
+        14
       ],
       [
         {
           "turn": 2,
-          "plays": [
-            {
-              "card": "Angela",
-              "isPlayer": true,
-              "location": "Lechuguilla",
-              "locationIndex": 1
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 2,
             "opponent": 2
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 126
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 128
+              "_changeIdx": 121
             },
             {
-              "to": "Lechuguilla",
+              "who": "player",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 123
+            },
+            {
+              "to": "ReedsLab",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 131,
+              "_changeIdx": 126,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 135,
+              "_changeIdx": 133,
               "locationIndex": 2
             },
             {
@@ -1430,15 +1354,15 @@
               "cost": 1,
               "type": "resetCard",
               "power": 1,
-              "_changeIdx": 141
+              "_changeIdx": 138
             },
             {
               "who": "player",
               "card": "KittyPryde",
-              "from": "RevealOn2",
+              "from": "SewerSystem",
               "type": "bounce",
-              "entityId": 23,
-              "_changeIdx": 142
+              "entityId": 32,
+              "_changeIdx": 139
             },
             {
               "who": "player",
@@ -1446,74 +1370,56 @@
               "cost": 1,
               "type": "resetCard",
               "power": 1,
-              "_changeIdx": 145
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "RevealOn2",
-              "_changeIdx": 146,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 0
+              "_changeIdx": 142
             },
             {
               "who": "player",
               "card": "KittyPryde",
               "type": "power",
-              "source": "KittyPryde",
               "newPower": 2,
               "oldPower": 1,
-              "_changeIdx": 150,
-              "cardEntityId": 23
+              "_changeIdx": 145,
+              "cardEntityId": 32
             },
             {
               "who": "player",
-              "card": "Frigga",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 22,
-              "_changeIdx": 155,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Frigga",
-              "type": "draw",
-              "_changeIdx": 156
+              "card": "NicoMinoru",
+              "type": "abilityOverride",
+              "_changeIdx": 153,
+              "overrideAbility": "Spell03NicoMinoru"
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 160
+              "_changeIdx": 157
             },
             {
-              "tie": true,
+              "who": "player",
+              "card": "Wong",
+              "cost": 4,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 35,
+              "_changeIdx": 160,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Wong",
+              "type": "draw",
+              "_changeIdx": 161
+            },
+            {
+              "tie": false,
               "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 163
+              "winner": "opponent",
+              "_changeIdx": 166
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 164
-            },
-            {
-              "who": "player",
-              "card": "Angela",
-              "type": "play",
-              "entityId": 26,
-              "location": "Lechuguilla",
-              "_changeIdx": 168,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Angela",
-              "type": "cardStaged",
-              "_changeIdx": 171
+              "_changeIdx": 167
             }
           ],
           "snapEvent": null,
@@ -1535,16 +1441,16 @@
             }
           ]
         },
-        27
+        24
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 6404,
-  "opp_sp": null,
+  "opp_cl": 21204,
+  "opp_sp": 4770,
   "bracket": null,
-  "match_id": "9b26347a-5019-4847-90f2-4b4a966ef4e5",
-  "opp_name": "Torello",
+  "match_id": "f2c0ad50-82d8-4715-bf47-e18a42fe013e",
+  "opp_name": "babino",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
   "locations": [],
@@ -1554,16 +1460,17 @@
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "TheCollector"
+    "CardDefId": "Nebula",
+    "ArtVariantDefId": "Nebula_01"
   },
   "opp_health": null,
-  "opp_is_bot": true,
+  "opp_is_bot": false,
   "mode_detail": null,
   "player_name": "SmokeFisher",
   "current_turn": 3,
   "match_result": null,
   "match_status": "in_progress",
-  "opp_clan_tag": null,
+  "opp_clan_tag": "GRE",
   "owner_status": "live",
   "next_match_id": null,
   "opp_retreated": null,
@@ -1571,21 +1478,20 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "Sunspot"
+    "Nebula"
   ],
-  "last_updated_at": "2026-10-11T15:13:20.439+00:00",
+  "last_updated_at": "2026-10-11T15:14:16.743+00:00",
   "opp_played_cards": [],
   "player_deck_cards": [
-    "Angela",
-    "KittyPryde",
-    "Wong",
     "NicoMinoru",
-    "JoaquinTorres",
-    "Frigga"
+    "Chameleon",
+    "Mystique",
+    "KittyPryde",
+    "Wong"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "Sunspot"
+    "Nebula"
   ],
   "conquest_round_index": null
 }
