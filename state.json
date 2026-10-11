@@ -45,12 +45,16 @@
             {
               "cost": 1,
               "power": 3,
-              "augments": [
-                "MoveLeaveCopyAugment"
-              ],
               "baseCost": 1,
               "basePower": 3,
-              "cardDefId": "GhostSpider"
+              "cardDefId": "Vulture"
+            },
+            {
+              "cost": 2,
+              "power": 2,
+              "baseCost": 2,
+              "basePower": 2,
+              "cardDefId": "MrSinister"
             },
             {
               "cost": 3,
@@ -58,13 +62,6 @@
               "baseCost": 3,
               "basePower": 3,
               "cardDefId": "SpiderPunk"
-            },
-            {
-              "cost": 4,
-              "power": 9,
-              "baseCost": 4,
-              "basePower": 6,
-              "cardDefId": "EnSabahNur"
             }
           ],
           "n": {
@@ -72,8 +69,8 @@
             "opponent": []
           },
           "r": {
-            "player": 7,
-            "opponent": 7
+            "player": 8,
+            "opponent": 8
           },
           "x": {
             "player": [],
@@ -88,12 +85,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             }
@@ -108,7 +105,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "AsgardBesieged",
+              "to": "StarlightCitadel",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -125,7 +122,7 @@
                 {
                   "location": [
                     0,
-                    "AsgardBesieged"
+                    "StarlightCitadel"
                   ],
                   "revealed": [
                     0,
@@ -144,22 +141,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "Topaz",
               "cost": 2,
               "type": "reveal",
               "power": 4,
-              "entityId": 16,
+              "entityId": 28,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "MultipleMan",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "Topaz",
               "type": "draw"
             }
           ]
@@ -182,7 +179,7 @@
             2,
             4,
             {
-              "1": [
+              "2": [
                 1,
                 {
                   "cost": [
@@ -192,6 +189,12 @@
                   "power": [
                     0,
                     4
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "CostsLessIfMoveAugment"
+                    ]
                   ],
                   "baseCost": [
                     0,
@@ -203,7 +206,155 @@
                   ],
                   "cardDefId": [
                     0,
-                    "MultipleMan"
+                    "Topaz"
+                  ]
+                }
+              ],
+              "3": [
+                0,
+                {
+                  "cost": 3,
+                  "power": 3,
+                  "baseCost": 3,
+                  "basePower": 3,
+                  "cardDefId": "SpiderPunk"
+                }
+              ]
+            }
+          ],
+          "r": [
+            1,
+            {
+              "player": [
+                0,
+                7
+              ],
+              "opponent": [
+                0,
+                7
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Contested",
+          "events": [
+            {
+              "type": "vpContested",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "player",
+              "card": "Vulture",
+              "type": "play",
+              "entityId": 30,
+              "location": "RevealOn3",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 3,
+                          "baseCost": 1,
+                          "entityId": 30,
+                          "basePower": 3,
+                          "cardDefId": "Vulture",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                3
+              ]
+            }
+          ],
+          "h": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    2
+                  ],
+                  "power": [
+                    0,
+                    2
+                  ],
+                  "baseCost": [
+                    0,
+                    2
+                  ],
+                  "basePower": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "MrSinister"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "power": [
+                    0,
+                    4
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "CostsLessIfMoveAugment"
+                    ]
+                  ],
+                  "basePower": [
+                    0,
+                    4
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Topaz"
                   ]
                 }
               ],
@@ -230,30 +381,10 @@
                     0,
                     "SpiderPunk"
                   ]
-                }
-              ],
-              "3": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 9,
-                  "baseCost": 4,
-                  "basePower": 6,
-                  "cardDefId": "EnSabahNur"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
+                },
+                [
+                  "augments"
+                ]
               ]
             }
           ]
@@ -263,11 +394,12 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Contested",
+          "label": "Staged",
           "events": [
             {
-              "type": "vpContested",
-              "locationIndex": 1
+              "who": "player",
+              "card": "Vulture",
+              "type": "cardStaged"
             }
           ]
         },
@@ -291,12 +423,64 @@
         {
           "_v": 2,
           "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "Vulture",
+              "cost": 1,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 30,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "RevealOn3",
+              "playerPower": 3,
+              "locationIndex": 2,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "Vulture",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
           "label": "Turn Winner",
           "events": [
             {
-              "tie": true,
+              "tie": false,
               "type": "turnWinner",
-              "winner": null
+              "winner": "player"
             }
           ]
         },
@@ -309,7 +493,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
           ]
@@ -324,7 +508,7 @@
           "events": [
             {
               "type": "vpScores",
-              "playerPoints": 0,
+              "playerPoints": 1,
               "opponentPoints": 0
             }
           ]
@@ -338,12 +522,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             }
@@ -358,7 +542,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "SacredTimeline",
+              "to": "MoshPit",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -381,7 +565,7 @@
                 {
                   "location": [
                     0,
-                    "SacredTimeline"
+                    "MoshPit"
                   ],
                   "revealed": [
                     0,
@@ -413,22 +597,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "DoctorStrange",
-              "cost": 2,
+              "card": "EnSabahNur",
+              "cost": 4,
               "type": "reveal",
-              "power": 4,
-              "entityId": 25,
+              "power": 9,
+              "entityId": 34,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "DoctorStrange",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "EnSabahNur",
               "type": "draw"
             }
           ]
@@ -439,7 +623,7 @@
             {
               "player": [
                 0,
-                5
+                4
               ],
               "opponent": [
                 0,
@@ -449,68 +633,9 @@
           ],
           "h": [
             2,
-            5,
+            4,
             {
-              "1": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "DoctorStrange"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "MultipleMan"
-                  ]
-                }
-              ],
               "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SpiderPunk"
-                  ]
-                }
-              ],
-              "4": [
                 0,
                 {
                   "cost": 4,
@@ -527,11 +652,11 @@
             {
               "player": [
                 0,
-                5
+                6
               ],
               "opponent": [
                 0,
-                5
+                6
               ]
             }
           ]
@@ -559,11 +684,11 @@
           "events": [
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "Topaz",
               "type": "play",
-              "entityId": 16,
-              "location": "RevealOn2",
-              "locationIndex": 2
+              "entityId": 28,
+              "location": "StarlightCitadel",
+              "locationIndex": 0
             }
           ]
         },
@@ -572,7 +697,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "playerCards": [
@@ -584,10 +709,13 @@
                         {
                           "cost": 2,
                           "power": 4,
+                          "augments": [
+                            "CostsLessIfMoveAugment"
+                          ],
                           "baseCost": 2,
-                          "entityId": 16,
+                          "entityId": 28,
                           "basePower": 4,
-                          "cardDefId": "MultipleMan",
+                          "cardDefId": "Topaz",
                           "arrivalSeq": 0
                         }
                       ]
@@ -602,15 +730,15 @@
             {
               "player": [
                 0,
-                4
+                3
               ]
             }
           ],
           "h": [
             2,
-            4,
+            3,
             {
-              "2": [
+              "1": [
                 1,
                 {
                   "cost": [
@@ -633,9 +761,12 @@
                     0,
                     "SpiderPunk"
                   ]
-                }
+                },
+                [
+                  "augments"
+                ]
               ],
-              "3": [
+              "2": [
                 1,
                 {
                   "cost": [
@@ -672,7 +803,7 @@
           "events": [
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "Topaz",
               "type": "cardStaged"
             }
           ]
@@ -701,11 +832,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "JeffTheBabyDolphin",
+              "card": "ShadowlandsDaredevil",
               "type": "play",
-              "entityId": 33,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
+              "entityId": 24,
+              "location": "MoshPit",
+              "locationIndex": 1
             }
           ]
         },
@@ -714,7 +845,7 @@
             2,
             3,
             {
-              "0": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
@@ -727,7 +858,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 33,
+                          "entityId": 24,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -757,12 +888,64 @@
           "label": "Reveal",
           "events": [
             {
-              "who": "opponent",
-              "card": "JeffTheBabyDolphin",
+              "who": "player",
+              "card": "Topaz",
               "cost": 2,
               "type": "reveal",
-              "power": 2,
-              "entityId": 33,
+              "power": 4,
+              "entityId": 28,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "StarlightCitadel",
+              "playerPower": 4,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "Topaz",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "cost": 2,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 24,
               "drawReveal": false
             }
           ]
@@ -772,7 +955,7 @@
             2,
             3,
             {
-              "0": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
@@ -788,7 +971,7 @@
                           ],
                           "power": [
                             0,
-                            2
+                            3
                           ],
                           "baseCost": [
                             0,
@@ -796,11 +979,11 @@
                           ],
                           "basePower": [
                             0,
-                            2
+                            3
                           ],
                           "cardDefId": [
                             0,
-                            "JeffTheBabyDolphin"
+                            "ShadowlandsDaredevil"
                           ]
                         }
                       ]
@@ -820,7 +1003,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "JeffTheBabyDolphin",
+              "card": "ShadowlandsDaredevil",
               "type": "cardRevealed"
             }
           ]
@@ -836,10 +1019,10 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "AsgardBesieged",
+              "location": "MoshPit",
               "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 2
+              "locationIndex": 1,
+              "opponentPower": 3
             }
           ]
         },
@@ -849,20 +1032,94 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Reveal",
+          "label": "Draw",
           "events": [
             {
-              "who": "player",
-              "card": "MultipleMan",
-              "cost": 2,
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
               "type": "reveal",
-              "power": 4,
-              "entityId": 16,
-              "drawReveal": false
+              "power": 6,
+              "entityId": 44,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 45,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 46,
+              "drawReveal": true
             }
           ]
         },
-        {}
+        {
+          "r": [
+            1,
+            {
+              "opponent": [
+                0,
+                9
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "source": "MoshPit",
+              "newPower": 4,
+              "oldPower": 3,
+              "cardEntityId": 24
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -872,26 +1129,11 @@
           "events": [
             {
               "type": "score",
-              "winner": "player",
-              "location": "RevealOn2",
-              "playerPower": 4,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "MultipleMan",
-              "type": "cardResolved"
+              "winner": "opponent",
+              "location": "MoshPit",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 4
             }
           ]
         },
@@ -906,7 +1148,7 @@
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent"
+              "winner": "player"
             }
           ]
         },
@@ -919,7 +1161,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
           ]
@@ -934,8 +1176,8 @@
           "events": [
             {
               "type": "vpScores",
-              "playerPoints": 1,
-              "opponentPoints": 2
+              "playerPoints": 4,
+              "opponentPoints": 1
             }
           ]
         },
@@ -948,14 +1190,14 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            },
-            {
               "who": "opponent",
               "type": "energy",
-              "energy": 4
+              "energy": 3
+            },
+            {
+              "who": "player",
+              "type": "energy",
+              "energy": 3
             }
           ]
         },
@@ -968,7 +1210,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "TinkerersWorkshop",
+              "to": "FracturedFrontier",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -985,7 +1227,7 @@
                 {
                   "location": [
                     0,
-                    "TinkerersWorkshop"
+                    "FracturedFrontier"
                   ]
                 }
               ]
@@ -1000,20 +1242,6 @@
           "label": "Draw",
           "events": [
             {
-              "who": "player",
-              "card": "Nightcrawler",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 22,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "type": "draw"
-            },
-            {
               "who": "opponent",
               "card": null,
               "type": "draw"
@@ -1024,59 +1252,129 @@
           "c": [
             1,
             {
-              "player": [
-                0,
-                5
-              ],
               "opponent": [
                 0,
                 5
               ]
             }
           ],
-          "h": [
+          "r": [
+            1,
+            {
+              "opponent": [
+                0,
+                8
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "source": "ShadowlandsDaredevil",
+              "newPower": 6,
+              "oldPower": 4,
+              "cardEntityId": 24
+            }
+          ]
+        },
+        {
+          "b": [
             2,
-            5,
+            3,
             {
               "1": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Nightcrawler"
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            6
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
-              ],
-              "2": [
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MoshPit",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 6
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "DoctorStrange",
+              "cost": 2,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 31,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "DoctorStrange",
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                4
+              ]
+            }
+          ],
+          "h": [
+            2,
+            4,
+            {
+              "0": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    2
-                  ],
                   "power": [
                     0,
                     4
-                  ],
-                  "baseCost": [
-                    0,
-                    2
                   ],
                   "basePower": [
                     0,
@@ -1088,7 +1386,32 @@
                   ]
                 }
               ],
-              "3": [
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    2
+                  ],
+                  "power": [
+                    0,
+                    2
+                  ],
+                  "baseCost": [
+                    0,
+                    2
+                  ],
+                  "basePower": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "MrSinister"
+                  ]
+                }
+              ],
+              "2": [
                 1,
                 {
                   "cost": [
@@ -1113,7 +1436,7 @@
                   ]
                 }
               ],
-              "4": [
+              "3": [
                 0,
                 {
                   "cost": 4,
@@ -1130,11 +1453,7 @@
             {
               "player": [
                 0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
+                5
               ]
             }
           ]
@@ -1152,7 +1471,23 @@
             }
           ]
         },
-        {}
+        {
+          "h": [
+            2,
+            4,
+            {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -1164,9 +1499,9 @@
               "who": "player",
               "card": "SpiderPunk",
               "type": "play",
-              "entityId": 20,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
+              "entityId": 27,
+              "location": "StarlightCitadel",
+              "locationIndex": 0
             }
           ]
         },
@@ -1175,7 +1510,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "playerCards": [
@@ -1188,7 +1523,7 @@
                           "cost": 3,
                           "power": 3,
                           "baseCost": 3,
-                          "entityId": 20,
+                          "entityId": 27,
                           "basePower": 3,
                           "cardDefId": "SpiderPunk",
                           "arrivalSeq": 1
@@ -1205,15 +1540,15 @@
             {
               "player": [
                 0,
-                4
+                3
               ]
             }
           ],
           "h": [
             2,
-            4,
+            3,
             {
-              "3": [
+              "2": [
                 1,
                 {
                   "cost": [
@@ -1265,11 +1600,11 @@
           "events": [
             {
               "who": "player",
-              "card": "GhostSpider",
+              "card": "DoctorStrange",
               "type": "play",
-              "entityId": 17,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
+              "entityId": 31,
+              "location": "FracturedFrontier",
+              "locationIndex": 2
             }
           ]
         },
@@ -1278,26 +1613,23 @@
             2,
             3,
             {
-              "0": [
+              "2": [
                 1,
                 {
                   "playerCards": [
                     2,
-                    1,
+                    2,
                     {
-                      "0": [
+                      "1": [
                         0,
                         {
-                          "cost": 1,
-                          "power": 3,
-                          "augments": [
-                            "MoveLeaveCopyAugment"
-                          ],
-                          "baseCost": 1,
-                          "entityId": 17,
-                          "basePower": 3,
-                          "cardDefId": "GhostSpider",
-                          "arrivalSeq": 0
+                          "cost": 0,
+                          "power": 4,
+                          "baseCost": 2,
+                          "entityId": 31,
+                          "basePower": 4,
+                          "cardDefId": "DoctorStrange",
+                          "arrivalSeq": 1
                         }
                       ]
                     }
@@ -1311,27 +1643,15 @@
             {
               "player": [
                 0,
-                3
+                2
               ]
             }
           ],
           "h": [
             2,
-            3,
+            2,
             {
               "0": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Nightcrawler"
-                  ]
-                },
-                [
-                  "augments"
-                ]
-              ],
-              "1": [
                 1,
                 {
                   "cost": [
@@ -1340,23 +1660,19 @@
                   ],
                   "power": [
                     0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
                     2
                   ],
                   "basePower": [
                     0,
-                    4
+                    2
                   ],
                   "cardDefId": [
                     0,
-                    "DoctorStrange"
+                    "MrSinister"
                   ]
                 }
               ],
-              "2": [
+              "1": [
                 1,
                 {
                   "cost": [
@@ -1393,7 +1709,7 @@
           "events": [
             {
               "who": "player",
-              "card": "GhostSpider",
+              "card": "DoctorStrange",
               "type": "cardStaged"
             }
           ]
@@ -1412,7 +1728,34 @@
             }
           ]
         },
-        {}
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            2
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -1422,19 +1765,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Lasher",
+              "card": "ScarletWitchQueenOfChaos",
               "type": "play",
-              "entityId": 26,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Psylocke",
-              "type": "play",
-              "entityId": 31,
-              "location": "SacredTimeline",
-              "locationIndex": 1
+              "entityId": 20,
+              "location": "FracturedFrontier",
+              "locationIndex": 2
             }
           ]
         },
@@ -1443,30 +1778,7 @@
             2,
             3,
             {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 26,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
+              "2": [
                 1,
                 {
                   "opponentCards": [
@@ -1479,7 +1791,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 31,
+                          "entityId": 20,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -1496,7 +1808,7 @@
             {
               "opponent": [
                 0,
-                3
+                4
               ]
             }
           ]
@@ -1509,13 +1821,65 @@
           "label": "Reveal",
           "events": [
             {
-              "who": "opponent",
-              "card": "Lasher",
-              "cost": 2,
+              "who": "player",
+              "card": "SpiderPunk",
+              "cost": 3,
               "type": "reveal",
-              "power": 2,
-              "entityId": 26,
+              "power": 3,
+              "entityId": 27,
               "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "StarlightCitadel",
+              "playerPower": 7,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "SpiderPunk",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Move",
+          "events": [
+            {
+              "to": "MoshPit",
+              "who": "player",
+              "card": "SpiderPunk",
+              "from": "StarlightCitadel",
+              "type": "move",
+              "entityId": 27,
+              "locationIndex": 1
             }
           ]
         },
@@ -1527,32 +1891,125 @@
               "0": [
                 1,
                 {
-                  "opponentCards": [
+                  "playerCards": [
                     2,
+                    1,
+                    {}
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "playerCards": [
                     2,
+                    1,
                     {
-                      "1": [
+                      "0": [
+                        0,
+                        {
+                          "cost": 3,
+                          "power": 3,
+                          "baseCost": 3,
+                          "entityId": 27,
+                          "basePower": 3,
+                          "cardDefId": "SpiderPunk",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "StarlightCitadel",
+              "playerPower": 4,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MoshPit",
+              "playerPower": 3,
+              "locationIndex": 1,
+              "opponentPower": 6
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "source": "SpiderPunk",
+              "newPower": 4,
+              "oldPower": 6,
+              "cardEntityId": 24
+            },
+            {
+              "who": "player",
+              "card": "SpiderPunk",
+              "type": "power",
+              "source": "SpiderPunk",
+              "newPower": 5,
+              "oldPower": 3,
+              "cardEntityId": 27
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
                         1,
                         {
-                          "cost": [
-                            0,
-                            2
-                          ],
                           "power": [
                             0,
-                            2
-                          ],
-                          "baseCost": [
+                            5
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
                             0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Lasher"
+                            4
                           ]
                         }
                       ]
@@ -1568,16 +2025,71 @@
         {
           "_v": 2,
           "turn": 3,
-          "label": "Power",
+          "label": "Score",
           "events": [
             {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "power",
-              "source": "JeffTheBabyDolphin",
-              "newPower": 3,
-              "oldPower": 2,
-              "cardEntityId": 26
+              "type": "score",
+              "winner": "player",
+              "location": "MoshPit",
+              "playerPower": 5,
+              "locationIndex": 1,
+              "opponentPower": 4
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "DoctorStrange",
+              "cost": 2,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 31,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "FracturedFrontier",
+              "playerPower": 7,
+              "locationIndex": 2,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Move",
+          "events": [
+            {
+              "to": "FracturedFrontier",
+              "who": "player",
+              "card": "SpiderPunk",
+              "from": "MoshPit",
+              "type": "move",
+              "entityId": 27,
+              "locationIndex": 2
             }
           ]
         },
@@ -1586,19 +2098,135 @@
             2,
             3,
             {
-              "0": [
+              "1": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    0,
+                    {}
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    3,
+                    {
+                      "2": [
+                        0,
+                        {
+                          "cost": 3,
+                          "power": 5,
+                          "baseCost": 3,
+                          "entityId": 27,
+                          "basePower": 3,
+                          "cardDefId": "SpiderPunk",
+                          "arrivalSeq": 2
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MoshPit",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 4
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "FracturedFrontier",
+              "playerPower": 12,
+              "locationIndex": 2,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "DoctorStrange",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ScarletWitchQueenOfChaos",
+              "cost": 3,
+              "type": "reveal",
+              "power": 7,
+              "entityId": 20,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
+                      "0": [
                         1,
                         {
-                          "power": [
+                          "cost": [
                             0,
                             3
+                          ],
+                          "power": [
+                            0,
+                            7
+                          ],
+                          "baseCost": [
+                            0,
+                            3
+                          ],
+                          "basePower": [
+                            0,
+                            4
+                          ],
+                          "cardDefId": [
+                            0,
+                            "ScarletWitchQueenOfChaos"
                           ]
                         }
                       ]
@@ -1618,7 +2246,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Lasher",
+              "card": "ScarletWitchQueenOfChaos",
               "type": "cardRevealed"
             }
           ]
@@ -1633,11 +2261,11 @@
           "events": [
             {
               "type": "score",
-              "winner": "opponent",
-              "location": "AsgardBesieged",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 5
+              "winner": "player",
+              "location": "FracturedFrontier",
+              "playerPower": 12,
+              "locationIndex": 2,
+              "opponentPower": 7
             }
           ]
         },
@@ -1647,16 +2275,16 @@
         {
           "_v": 2,
           "turn": 3,
-          "label": "Reveal",
+          "label": "Power",
           "events": [
             {
               "who": "opponent",
-              "card": "Psylocke",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 31,
-              "drawReveal": false
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "source": "MoshPit",
+              "newPower": 5,
+              "oldPower": 4,
+              "cardEntityId": 24
             }
           ]
         },
@@ -1675,284 +2303,6 @@
                       "0": [
                         1,
                         {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Psylocke"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Psylocke",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SacredTimeline",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 7,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostSpider",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 17,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "AsgardBesieged",
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Move",
-          "events": [
-            {
-              "to": "AsgardBesieged",
-              "who": "player",
-              "card": "SpiderPunk",
-              "from": "TinkerersWorkshop",
-              "type": "move",
-              "entityId": 20,
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 3,
-                          "baseCost": 3,
-                          "entityId": 20,
-                          "basePower": 3,
-                          "cardDefId": "SpiderPunk",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 5
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 4,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "power",
-              "source": "SpiderPunk",
-              "newPower": 1,
-              "oldPower": 3,
-              "cardEntityId": 26
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "source": "SpiderPunk",
-              "newPower": 5,
-              "oldPower": 3,
-              "cardEntityId": 20
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
                           "power": [
                             0,
                             5
@@ -1960,21 +2310,6 @@
                         }
                       ]
                     }
-                  ],
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            1
-                          ]
-                        }
-                      ]
-                    }
                   ]
                 }
               ]
@@ -1990,178 +2325,11 @@
           "events": [
             {
               "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostSpider",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Destroyer",
-              "cost": 6,
-              "type": "reveal",
-              "power": 18,
-              "entityId": 42,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 18,
-                          "baseCost": 6,
-                          "entityId": 42,
-                          "basePower": 18,
-                          "cardDefId": "Destroyer",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "Destroyer",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 26,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "player",
-              "card": "MultipleMan",
-              "type": "destroyed",
-              "fromLocation": "TinkerersWorkshop"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 2,
-                      "power": 4,
-                      "cardDefId": "MultipleMan"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "TinkerersWorkshop",
+              "winner": "opponent",
+              "location": "MoshPit",
               "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 0
+              "locationIndex": 1,
+              "opponentPower": 5
             }
           ]
         },
@@ -2176,7 +2344,7 @@
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent"
+              "winner": "player"
             }
           ]
         },
@@ -2189,7 +2357,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
           ]
@@ -2204,8 +2372,8 @@
           "events": [
             {
               "type": "vpScores",
-              "playerPoints": 2,
-              "opponentPoints": 3
+              "playerPoints": 8,
+              "opponentPoints": 2
             }
           ]
         },
@@ -2218,14 +2386,14 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 4
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
-              "energy": 5
+              "energy": 4
             }
           ]
         },
@@ -2238,22 +2406,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Vulture",
+              "card": "IronFist",
               "cost": 1,
               "type": "reveal",
               "power": 3,
-              "entityId": 19,
+              "entityId": 35,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Vulture",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "IronFist",
               "type": "draw"
             }
           ]
@@ -2264,69 +2432,75 @@
             {
               "player": [
                 0,
-                4
+                3
               ],
               "opponent": [
                 0,
-                4
+                6
               ]
             }
           ],
           "h": [
             2,
-            4,
+            3,
             {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    1
+                  ],
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "SidekickAugment"
+                    ]
+                  ],
+                  "baseCost": [
+                    0,
+                    1
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "IronFist"
+                  ]
+                }
+              ],
               "1": [
                 1,
                 {
                   "cost": [
                     0,
-                    1
+                    2
                   ],
                   "power": [
                     0,
-                    3
+                    2
                   ],
                   "baseCost": [
                     0,
-                    1
+                    2
                   ],
                   "basePower": [
                     0,
-                    3
+                    2
                   ],
                   "cardDefId": [
                     0,
-                    "Vulture"
+                    "MrSinister"
                   ]
                 }
               ],
               "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DoctorStrange"
-                  ]
-                }
-              ],
-              "3": [
                 0,
                 {
                   "cost": 4,
@@ -2343,11 +2517,11 @@
             {
               "player": [
                 0,
-                3
+                4
               ],
               "opponent": [
                 0,
-                3
+                7
               ]
             }
           ]
@@ -2363,1853 +2537,6 @@
               "type": "vpContested",
               "locationIndex": 0
             }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "EnSabahNur",
-              "type": "play",
-              "entityId": 23,
-              "location": "SacredTimeline",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 9,
-                          "baseCost": 4,
-                          "entityId": 23,
-                          "basePower": 6,
-                          "cardDefId": "EnSabahNur",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "EnSabahNur",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wong",
-              "type": "play",
-              "entityId": 35,
-              "location": "SacredTimeline",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 35,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wong",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 35,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Wong"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wong",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Event",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Psylocke",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SacredTimeline",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "EnSabahNur",
-              "cost": 4,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 23,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SacredTimeline",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "EnSabahNur",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 7,
-              "opponentPoints": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 18,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 2,
-                  "baseCost": 2,
-                  "basePower": 2,
-                  "cardDefId": "MrSinister"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ],
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Move",
-          "events": [
-            {
-              "to": "SacredTimeline",
-              "who": "player",
-              "card": "SpiderPunk",
-              "from": "AsgardBesieged",
-              "type": "move",
-              "entityId": 20,
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            18
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "entityId": [
-                            0,
-                            42
-                          ],
-                          "basePower": [
-                            0,
-                            18
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Destroyer"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 5,
-                          "baseCost": 3,
-                          "entityId": 20,
-                          "basePower": 3,
-                          "cardDefId": "SpiderPunk",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "play",
-              "entityId": 18,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 2,
-                          "baseCost": 2,
-                          "entityId": 18,
-                          "basePower": 2,
-                          "cardDefId": "MrSinister",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "type": "play",
-              "entityId": 22,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 3,
-                          "baseCost": 1,
-                          "entityId": 22,
-                          "basePower": 3,
-                          "cardDefId": "Nightcrawler",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Vulture"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DoctorStrange"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "play",
-              "entityId": 19,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 3,
-                          "baseCost": 1,
-                          "entityId": 19,
-                          "basePower": 3,
-                          "cardDefId": "Vulture",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DoctorStrange"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 21,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "play",
-              "entityId": 32,
-              "location": "SacredTimeline",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 32,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SacredTimeline",
-              "playerPower": 14,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wong",
-              "type": "power",
-              "source": "SpiderPunk",
-              "newPower": 0,
-              "oldPower": 2,
-              "cardEntityId": 35
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "source": "SpiderPunk",
-              "newPower": 7,
-              "oldPower": 5,
-              "cardEntityId": 20
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            0
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SacredTimeline",
-              "playerPower": 16,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 18,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 2,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 43,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 2,
-                          "baseCost": 2,
-                          "entityId": 43,
-                          "basePower": 2,
-                          "cardDefId": "SinisterClone",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 4,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 24,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 19,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 27,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "cost": 4,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            8
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Gwenpool"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SacredTimeline",
-              "playerPower": 16,
-              "locationIndex": 1,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Transform",
-          "events": [
-            {
-              "to": "ApocalypseCelestialsChosen",
-              "who": "player",
-              "from": "EnSabahNur",
-              "type": "morph",
-              "cardEntityId": 23
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "basePower": [
-                            0,
-                            9
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ApocalypseCelestialsChosen"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
-              "type": "resetCard",
-              "power": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "shuffle"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "entityId": [
-                            0,
-                            43
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SinisterClone"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 2,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Topaz",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 21,
-              "drawReveal": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Topaz",
-              "type": "play",
-              "entityId": 21,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 4,
-                          "augments": [
-                            "CostsLessIfMoveAugment"
-                          ],
-                          "baseCost": 2,
-                          "entityId": 21,
-                          "basePower": 4,
-                          "cardDefId": "Topaz",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Topaz",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 15,
-              "opponentPoints": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Vulture",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 24,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Vulture"
-                  ]
-                }
-              ],
-              "1": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 4,
-                  "baseCost": 2,
-                  "basePower": 4,
-                  "cardDefId": "DoctorStrange"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ],
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Stake Raised",
-          "events": [
-            {
-              "who": "player",
-              "type": "vpStakeRaise"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -4249,78 +2576,125 @@
       [
         {
           "turn": 1,
-          "plays": [],
+          "plays": [
+            {
+              "card": "Vulture",
+              "isPlayer": true,
+              "location": "FracturedFrontier",
+              "locationIndex": 2
+            }
+          ],
           "energy": {
             "player": 1,
             "opponent": 1
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 81
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 83
+              "_changeIdx": 94
             },
             {
-              "to": "AsgardBesieged",
+              "who": "player",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 96
+            },
+            {
+              "to": "StarlightCitadel",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 87,
+              "_changeIdx": 100,
               "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "MultipleMan",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 16,
-              "_changeIdx": 99,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "MultipleMan",
-              "type": "draw",
-              "_changeIdx": 100
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 104
+              "_changeIdx": 112
+            },
+            {
+              "who": "player",
+              "card": "Topaz",
+              "cost": 2,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 28,
+              "_changeIdx": 118,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Topaz",
+              "type": "draw",
+              "_changeIdx": 119
             },
             {
               "type": "vpContested",
-              "_changeIdx": 111,
-              "locationIndex": 1
+              "_changeIdx": 128,
+              "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "Vulture",
+              "type": "play",
+              "entityId": 30,
+              "location": "RevealOn3",
+              "_changeIdx": 132,
+              "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "Vulture",
+              "type": "cardStaged",
+              "_changeIdx": 133
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 118
+              "_changeIdx": 140
             },
             {
-              "tie": true,
+              "who": "player",
+              "card": "Vulture",
+              "cost": 1,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 30,
+              "_changeIdx": 143,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "RevealOn3",
+              "_changeIdx": 146,
+              "playerPower": 3,
+              "locationIndex": 2,
+              "opponentPower": 0
+            },
+            {
+              "who": "player",
+              "card": "Vulture",
+              "type": "cardResolved",
+              "_changeIdx": 149
+            },
+            {
+              "tie": false,
               "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 128
+              "winner": "player",
+              "_changeIdx": 159
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative",
-              "_changeIdx": 129
+              "_changeIdx": 160
             },
             {
               "type": "vpScores",
-              "_changeIdx": 130,
-              "playerPoints": 0,
+              "_changeIdx": 161,
+              "playerPoints": 1,
               "opponentPoints": 0
             }
           ],
@@ -4337,29 +2711,29 @@
               "opponentPower": 0
             },
             {
-              "winner": null,
-              "playerPower": 0,
+              "winner": "player",
+              "playerPower": 3,
               "opponentPower": 0
             }
           ]
         },
-        3
+        5
       ],
       [
         {
           "turn": 2,
           "plays": [
             {
-              "card": "MultipleMan",
+              "card": "Topaz",
               "isPlayer": true,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
+              "location": "StarlightCitadel",
+              "locationIndex": 0
             },
             {
-              "card": "JeffTheBabyDolphin",
+              "card": "ShadowlandsDaredevil",
               "isPlayer": false,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
+              "location": "MoshPit",
+              "locationIndex": 1
             }
           ],
           "energy": {
@@ -4368,175 +2742,224 @@
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 133
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 135
+              "_changeIdx": 164
             },
             {
-              "to": "SacredTimeline",
+              "who": "player",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 166
+            },
+            {
+              "to": "MoshPit",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 139,
+              "_changeIdx": 170,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 148,
+              "_changeIdx": 177,
               "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "DoctorStrange",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 25,
-              "_changeIdx": 158,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "DoctorStrange",
-              "type": "draw",
-              "_changeIdx": 159
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 164
+              "_changeIdx": 188
+            },
+            {
+              "who": "player",
+              "card": "EnSabahNur",
+              "cost": 4,
+              "type": "reveal",
+              "power": 9,
+              "entityId": 34,
+              "_changeIdx": 194,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "EnSabahNur",
+              "type": "draw",
+              "_changeIdx": 195
             },
             {
               "type": "vpContested",
-              "_changeIdx": 171,
+              "_changeIdx": 205,
               "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "Topaz",
               "type": "play",
-              "entityId": 16,
-              "location": "RevealOn2",
-              "_changeIdx": 176,
-              "locationIndex": 2
+              "entityId": 28,
+              "location": "StarlightCitadel",
+              "_changeIdx": 211,
+              "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "Topaz",
               "type": "cardStaged",
-              "_changeIdx": 177
+              "_changeIdx": 212
             },
             {
               "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 188
+              "_changeIdx": 221
             },
             {
               "who": "opponent",
-              "card": "JeffTheBabyDolphin",
+              "card": "ShadowlandsDaredevil",
               "type": "play",
-              "entityId": 33,
-              "location": "AsgardBesieged",
-              "_changeIdx": 189,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "JeffTheBabyDolphin",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 33,
-              "_changeIdx": 196,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "JeffTheBabyDolphin",
-              "type": "cardRevealed",
-              "_changeIdx": 197
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "AsgardBesieged",
-              "_changeIdx": 200,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 2
+              "entityId": 24,
+              "location": "MoshPit",
+              "_changeIdx": 222,
+              "locationIndex": 1
             },
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "Topaz",
               "cost": 2,
               "type": "reveal",
               "power": 4,
-              "entityId": 16,
-              "_changeIdx": 210,
+              "entityId": 28,
+              "_changeIdx": 227,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "RevealOn2",
-              "_changeIdx": 213,
+              "location": "StarlightCitadel",
+              "_changeIdx": 231,
               "playerPower": 4,
-              "locationIndex": 2,
+              "locationIndex": 0,
               "opponentPower": 0
             },
             {
               "who": "player",
-              "card": "MultipleMan",
+              "card": "Topaz",
               "type": "cardResolved",
-              "_changeIdx": 216
+              "_changeIdx": 234
+            },
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "cost": 2,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 24,
+              "_changeIdx": 236,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "cardRevealed",
+              "_changeIdx": 237
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MoshPit",
+              "_changeIdx": 240,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 3
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 44,
+              "_changeIdx": 246,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 45,
+              "_changeIdx": 249,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 46,
+              "_changeIdx": 252,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "source": "MoshPit",
+              "newPower": 4,
+              "oldPower": 3,
+              "_changeIdx": 264,
+              "cardEntityId": 24
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MoshPit",
+              "_changeIdx": 269,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 4
             },
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 229
+              "winner": "player",
+              "_changeIdx": 277
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative",
-              "_changeIdx": 230
+              "_changeIdx": 278
             },
             {
               "type": "vpScores",
-              "_changeIdx": 231,
-              "playerPoints": 1,
-              "opponentPoints": 2
+              "_changeIdx": 279,
+              "playerPoints": 4,
+              "opponentPoints": 1
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
+              "winner": "player",
+              "playerPower": 4,
+              "opponentPower": 0
+            },
+            {
               "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 2
+              "opponentPower": 4
             },
             {
               "winner": null,
               "playerPower": 0,
               "opponentPower": 0
-            },
-            {
-              "winner": "player",
-              "playerPower": 4,
-              "opponentPower": 0
             }
           ]
         },
-        17
+        29
       ],
       [
         {
@@ -4545,191 +2968,135 @@
             {
               "card": "SpiderPunk",
               "isPlayer": true,
-              "location": "TinkerersWorkshop",
+              "location": "StarlightCitadel",
+              "locationIndex": 0
+            },
+            {
+              "card": "DoctorStrange",
+              "isPlayer": true,
+              "location": "FracturedFrontier",
               "locationIndex": 2
             },
             {
-              "card": "GhostSpider",
-              "isPlayer": true,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
-            },
-            {
-              "card": "Lasher",
+              "card": "ScarletWitchQueenOfChaos",
               "isPlayer": false,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
-            },
-            {
-              "card": "Psylocke",
-              "isPlayer": false,
-              "location": "SacredTimeline",
-              "locationIndex": 1
+              "location": "FracturedFrontier",
+              "locationIndex": 2
             }
           ],
           "energy": {
-            "player": 4,
-            "opponent": 4
+            "player": 3,
+            "opponent": 3
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 235
-            },
-            {
               "who": "opponent",
               "type": "energy",
-              "energy": 4,
-              "_changeIdx": 237
+              "energy": 3,
+              "_changeIdx": 283
             },
             {
-              "to": "TinkerersWorkshop",
+              "who": "player",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 285
+            },
+            {
+              "to": "FracturedFrontier",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 244,
+              "_changeIdx": 289,
               "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 22,
-              "_changeIdx": 263,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "type": "draw",
-              "_changeIdx": 264
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 268
+              "_changeIdx": 302
+            },
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "source": "ShadowlandsDaredevil",
+              "newPower": 6,
+              "oldPower": 4,
+              "_changeIdx": 308,
+              "cardEntityId": 24
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MoshPit",
+              "_changeIdx": 313,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 6
+            },
+            {
+              "who": "player",
+              "card": "DoctorStrange",
+              "cost": 2,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 31,
+              "_changeIdx": 316,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "DoctorStrange",
+              "type": "draw",
+              "_changeIdx": 317
             },
             {
               "type": "vpContested",
-              "_changeIdx": 275,
+              "_changeIdx": 334,
               "locationIndex": 2
             },
             {
               "who": "player",
               "card": "SpiderPunk",
               "type": "play",
-              "entityId": 20,
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 283,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardStaged",
-              "_changeIdx": 284
-            },
-            {
-              "who": "player",
-              "card": "GhostSpider",
-              "type": "play",
-              "entityId": 17,
-              "location": "AsgardBesieged",
-              "_changeIdx": 290,
+              "entityId": 27,
+              "location": "StarlightCitadel",
+              "_changeIdx": 339,
               "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "GhostSpider",
+              "card": "SpiderPunk",
               "type": "cardStaged",
-              "_changeIdx": 291
+              "_changeIdx": 340
+            },
+            {
+              "who": "player",
+              "card": "DoctorStrange",
+              "type": "play",
+              "entityId": 31,
+              "location": "FracturedFrontier",
+              "_changeIdx": 346,
+              "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "DoctorStrange",
+              "type": "cardStaged",
+              "_changeIdx": 347
             },
             {
               "turn": 3,
               "type": "endTurn",
-              "_changeIdx": 301
+              "_changeIdx": 364
             },
             {
               "who": "opponent",
-              "card": "Lasher",
+              "card": "ScarletWitchQueenOfChaos",
               "type": "play",
-              "entityId": 26,
-              "location": "AsgardBesieged",
-              "_changeIdx": 303,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Psylocke",
-              "type": "play",
-              "entityId": 31,
-              "location": "SacredTimeline",
-              "_changeIdx": 306,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 26,
-              "_changeIdx": 316,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "power",
-              "source": "JeffTheBabyDolphin",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 317,
-              "cardEntityId": 26
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "cardRevealed",
-              "_changeIdx": 322
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "AsgardBesieged",
-              "_changeIdx": 325,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 5
-            },
-            {
-              "who": "opponent",
-              "card": "Psylocke",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 31,
-              "_changeIdx": 335,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Psylocke",
-              "type": "cardRevealed",
-              "_changeIdx": 336
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SacredTimeline",
-              "_changeIdx": 339,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 2
+              "entityId": 20,
+              "location": "FracturedFrontier",
+              "_changeIdx": 366,
+              "locationIndex": 2
             },
             {
               "who": "player",
@@ -4737,81 +3104,62 @@
               "cost": 3,
               "type": "reveal",
               "power": 3,
-              "entityId": 20,
-              "_changeIdx": 354,
+              "entityId": 27,
+              "_changeIdx": 372,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 357,
+              "location": "StarlightCitadel",
+              "_changeIdx": 375,
               "playerPower": 7,
-              "locationIndex": 2,
+              "locationIndex": 0,
               "opponentPower": 0
             },
             {
               "who": "player",
               "card": "SpiderPunk",
               "type": "cardResolved",
-              "_changeIdx": 360
+              "_changeIdx": 378
             },
             {
+              "to": "MoshPit",
               "who": "player",
-              "card": "GhostSpider",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 17,
-              "_changeIdx": 368,
-              "drawReveal": false
+              "card": "SpiderPunk",
+              "from": "StarlightCitadel",
+              "type": "move",
+              "entityId": 27,
+              "_changeIdx": 381,
+              "locationIndex": 1
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "StarlightCitadel",
+              "_changeIdx": 388,
+              "playerPower": 4,
+              "locationIndex": 0,
+              "opponentPower": 0
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "AsgardBesieged",
-              "_changeIdx": 372,
+              "location": "MoshPit",
+              "_changeIdx": 391,
               "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 5
-            },
-            {
-              "to": "AsgardBesieged",
-              "who": "player",
-              "card": "SpiderPunk",
-              "from": "TinkerersWorkshop",
-              "type": "move",
-              "entityId": 20,
-              "_changeIdx": 377,
-              "locationIndex": 0
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 383,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 5
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 386,
-              "playerPower": 4,
-              "locationIndex": 2,
-              "opponentPower": 0
+              "locationIndex": 1,
+              "opponentPower": 6
             },
             {
               "who": "opponent",
-              "card": "Lasher",
+              "card": "ShadowlandsDaredevil",
               "type": "power",
               "source": "SpiderPunk",
-              "newPower": 1,
-              "oldPower": 3,
-              "_changeIdx": 395,
-              "cardEntityId": 26
+              "newPower": 4,
+              "oldPower": 6,
+              "_changeIdx": 396,
+              "cardEntityId": 24
             },
             {
               "who": "player",
@@ -4820,266 +3168,201 @@
               "source": "SpiderPunk",
               "newPower": 5,
               "oldPower": 3,
-              "_changeIdx": 398,
-              "cardEntityId": 20
+              "_changeIdx": 399,
+              "cardEntityId": 27
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "AsgardBesieged",
+              "location": "MoshPit",
               "_changeIdx": 404,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 3
+              "playerPower": 5,
+              "locationIndex": 1,
+              "opponentPower": 4
             },
             {
               "who": "player",
-              "card": "GhostSpider",
-              "type": "cardResolved",
-              "_changeIdx": 409
-            },
-            {
-              "who": "player",
-              "card": "Destroyer",
-              "cost": 6,
+              "card": "DoctorStrange",
+              "cost": 2,
               "type": "reveal",
-              "power": 18,
-              "entityId": 42,
-              "_changeIdx": 417,
+              "power": 4,
+              "entityId": 31,
+              "_changeIdx": 410,
               "drawReveal": false
             },
             {
-              "who": "player",
-              "card": "Destroyer",
-              "type": "cardRevealed",
-              "_changeIdx": 423
-            },
-            {
               "type": "score",
               "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 426,
-              "playerPower": 26,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "MultipleMan",
-              "type": "destroyed",
-              "_changeIdx": 432,
-              "fromLocation": "TinkerersWorkshop"
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 436,
-              "playerPower": 0,
+              "location": "FracturedFrontier",
+              "_changeIdx": 414,
+              "playerPower": 7,
               "locationIndex": 2,
               "opponentPower": 0
             },
             {
-              "tie": false,
-              "type": "turnWinner",
+              "to": "FracturedFrontier",
+              "who": "player",
+              "card": "SpiderPunk",
+              "from": "MoshPit",
+              "type": "move",
+              "entityId": 27,
+              "_changeIdx": 419,
+              "locationIndex": 2
+            },
+            {
+              "type": "score",
               "winner": "opponent",
-              "_changeIdx": 450
+              "location": "MoshPit",
+              "_changeIdx": 428,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 4
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "FracturedFrontier",
+              "_changeIdx": 431,
+              "playerPower": 12,
+              "locationIndex": 2,
+              "opponentPower": 0
+            },
+            {
+              "who": "player",
+              "card": "DoctorStrange",
+              "type": "cardResolved",
+              "_changeIdx": 441
             },
             {
               "who": "opponent",
+              "card": "ScarletWitchQueenOfChaos",
+              "cost": 3,
+              "type": "reveal",
+              "power": 7,
+              "entityId": 20,
+              "_changeIdx": 445,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "ScarletWitchQueenOfChaos",
+              "type": "cardRevealed",
+              "_changeIdx": 446
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "FracturedFrontier",
+              "_changeIdx": 449,
+              "playerPower": 12,
+              "locationIndex": 2,
+              "opponentPower": 7
+            },
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "source": "MoshPit",
+              "newPower": 5,
+              "oldPower": 4,
+              "_changeIdx": 460,
+              "cardEntityId": 24
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MoshPit",
+              "_changeIdx": 465,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 5
+            },
+            {
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "player",
+              "_changeIdx": 473
+            },
+            {
+              "who": "player",
               "type": "initiative",
-              "_changeIdx": 451
+              "_changeIdx": 474
             },
             {
               "type": "vpScores",
-              "_changeIdx": 452,
-              "playerPoints": 2,
-              "opponentPoints": 3
+              "_changeIdx": 475,
+              "playerPoints": 8,
+              "opponentPoints": 2
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
               "winner": "player",
-              "playerPower": 26,
-              "opponentPower": 3
+              "playerPower": 4,
+              "opponentPower": 0
             },
             {
               "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 2
+              "opponentPower": 5
             },
             {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
+              "winner": "player",
+              "playerPower": 12,
+              "opponentPower": 7
             }
           ]
         },
-        56
+        62
       ],
       [
         {
           "turn": 4,
-          "plays": [
-            {
-              "card": "EnSabahNur",
-              "isPlayer": true,
-              "location": "SacredTimeline",
-              "locationIndex": 1
-            },
-            {
-              "card": "Wong",
-              "isPlayer": false,
-              "location": "SacredTimeline",
-              "locationIndex": 1
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 4,
-            "opponent": 5
+            "opponent": 4
           },
           "events": [
+            {
+              "who": "opponent",
+              "type": "energy",
+              "energy": 4,
+              "_changeIdx": 479
+            },
             {
               "who": "player",
               "type": "energy",
               "energy": 4,
-              "_changeIdx": 456
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 458
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 19,
-              "_changeIdx": 472,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "draw",
-              "_changeIdx": 473
+              "_changeIdx": 481
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 477
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 484,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "EnSabahNur",
-              "type": "play",
-              "entityId": 23,
-              "location": "SacredTimeline",
-              "_changeIdx": 491,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "EnSabahNur",
-              "type": "cardStaged",
               "_changeIdx": 492
             },
             {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 503
-            },
-            {
-              "who": "opponent",
-              "card": "Wong",
-              "type": "play",
-              "entityId": 35,
-              "location": "SacredTimeline",
-              "_changeIdx": 505,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Wong",
-              "cost": 4,
+              "who": "player",
+              "card": "IronFist",
+              "cost": 1,
               "type": "reveal",
-              "power": 2,
+              "power": 3,
               "entityId": 35,
-              "_changeIdx": 514,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Wong",
-              "type": "cardRevealed",
-              "_changeIdx": 515
-            },
-            {
-              "who": "opponent",
-              "card": "Psylocke",
-              "type": "doubleTrigger",
-              "_changeIdx": 519
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SacredTimeline",
-              "_changeIdx": 521,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 4
+              "_changeIdx": 498,
+              "drawReveal": true
             },
             {
               "who": "player",
-              "card": "EnSabahNur",
-              "cost": 4,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 23,
-              "_changeIdx": 531,
-              "drawReveal": false
+              "card": "IronFist",
+              "type": "draw",
+              "_changeIdx": 499
             },
             {
-              "type": "score",
-              "winner": "player",
-              "location": "SacredTimeline",
-              "_changeIdx": 534,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "player",
-              "card": "EnSabahNur",
-              "type": "cardResolved",
-              "_changeIdx": 537
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 547
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 548
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 549,
-              "playerPoints": 7,
-              "opponentPoints": 3
+              "type": "vpContested",
+              "_changeIdx": 510,
+              "locationIndex": 0
             }
           ],
           "snapEvent": null,
@@ -5090,9 +3373,9 @@
               "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 9,
-              "opponentPower": 4
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -5102,537 +3385,18 @@
           ]
         },
         68
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "MrSinister",
-              "isPlayer": true,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            },
-            {
-              "card": "Nightcrawler",
-              "isPlayer": true,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
-            },
-            {
-              "card": "Vulture",
-              "isPlayer": true,
-              "location": "AsgardBesieged",
-              "locationIndex": 0
-            },
-            {
-              "card": "Gwenpool",
-              "isPlayer": false,
-              "location": "SacredTimeline",
-              "locationIndex": 1
-            },
-            {
-              "card": "Topaz",
-              "isPlayer": true,
-              "location": "TinkerersWorkshop",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 553
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 555
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 18,
-              "_changeIdx": 562,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "draw",
-              "_changeIdx": 563
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 568
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 575,
-              "locationIndex": 1
-            },
-            {
-              "to": "SacredTimeline",
-              "who": "player",
-              "card": "SpiderPunk",
-              "from": "AsgardBesieged",
-              "type": "move",
-              "entityId": 20,
-              "_changeIdx": 581,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardStaged",
-              "_changeIdx": 582
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "play",
-              "entityId": 18,
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 587,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "cardStaged",
-              "_changeIdx": 588
-            },
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "type": "play",
-              "entityId": 22,
-              "location": "AsgardBesieged",
-              "_changeIdx": 594,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "type": "cardStaged",
-              "_changeIdx": 595
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "play",
-              "entityId": 19,
-              "location": "AsgardBesieged",
-              "_changeIdx": 599,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardStaged",
-              "_changeIdx": 600
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 609,
-              "playerPower": 21,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 613
-            },
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "play",
-              "entityId": 32,
-              "location": "SacredTimeline",
-              "_changeIdx": 615,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardResolved",
-              "_changeIdx": 623
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SacredTimeline",
-              "_changeIdx": 625,
-              "playerPower": 14,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "opponent",
-              "card": "Wong",
-              "type": "power",
-              "source": "SpiderPunk",
-              "newPower": 0,
-              "oldPower": 2,
-              "_changeIdx": 633,
-              "cardEntityId": 35
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "source": "SpiderPunk",
-              "newPower": 7,
-              "oldPower": 5,
-              "_changeIdx": 636,
-              "cardEntityId": 20
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SacredTimeline",
-              "_changeIdx": 641,
-              "playerPower": 16,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 18,
-              "_changeIdx": 649,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 653,
-              "playerPower": 2,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 43,
-              "_changeIdx": 659,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "type": "cardRevealed",
-              "_changeIdx": 667
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 669,
-              "playerPower": 4,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "cardResolved",
-              "_changeIdx": 676
-            },
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 22,
-              "_changeIdx": 684,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 687,
-              "playerPower": 24,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "Nightcrawler",
-              "type": "cardResolved",
-              "_changeIdx": 690
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 19,
-              "_changeIdx": 698,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 701,
-              "playerPower": 27,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "cardResolved",
-              "_changeIdx": 704
-            },
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "cost": 4,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 32,
-              "_changeIdx": 712,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "cardRevealed",
-              "_changeIdx": 713
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SacredTimeline",
-              "_changeIdx": 716,
-              "playerPower": 16,
-              "locationIndex": 1,
-              "opponentPower": 10
-            },
-            {
-              "to": "ApocalypseCelestialsChosen",
-              "who": "player",
-              "from": "EnSabahNur",
-              "type": "morph",
-              "_changeIdx": 739,
-              "cardEntityId": 23
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
-              "type": "resetCard",
-              "power": 2,
-              "_changeIdx": 745
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "shuffle",
-              "_changeIdx": 746
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 749,
-              "playerPower": 2,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Topaz",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 21,
-              "_changeIdx": 752,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Topaz",
-              "type": "play",
-              "entityId": 21,
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 753,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Topaz",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 21,
-              "_changeIdx": 757,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TinkerersWorkshop",
-              "_changeIdx": 759,
-              "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 764
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 765
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 766,
-              "playerPoints": 15,
-              "opponentPoints": 3
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 27,
-              "opponentPower": 3
-            },
-            {
-              "winner": "player",
-              "playerPower": 16,
-              "opponentPower": 10
-            },
-            {
-              "winner": "player",
-              "playerPower": 6,
-              "opponentPower": 0
-            }
-          ]
-        },
-        116
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 770
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 772
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 24,
-              "_changeIdx": 774,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Vulture",
-              "type": "draw",
-              "_changeIdx": 775
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 778
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 782,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "type": "vpStakeRaise",
-              "_changeIdx": 786
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        123
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 45992,
-  "opp_sp": 6877,
+  "opp_cl": 11231,
+  "opp_sp": 5540,
   "bracket": null,
-  "match_id": "09bab5bc-e447-463f-a1da-a3fda23beb17",
-  "opp_name": "Brisse",
+  "match_id": "4ffd11b3-a708-4159-a762-5f1a51213d25",
+  "opp_name": "RobinExile",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "AsgardBesieged",
-    "SacredTimeline",
-    "TinkerersWorkshop"
-  ],
+  "locations": [],
   "player_cl": 11681,
   "player_sp": 4875,
   "turn_data": null,
@@ -5647,7 +3411,8 @@
       "Vulture",
       "MrSinister",
       "Topaz",
-      "EnSabahNur"
+      "EnSabahNur",
+      "IronFist"
     ],
     "entities": [
       {
@@ -5765,25 +3530,38 @@
         "mutations": [
           "Mutation_Power_3"
         ]
+      },
+      {
+        "cost": 1,
+        "zone": 1,
+        "defId": "IronFist",
+        "power": 3,
+        "augments": [
+          "SidekickAugment"
+        ],
+        "baseCost": 1,
+        "entityId": 44,
+        "basePower": 3,
+        "mutations": []
       }
     ]
   },
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Hawkeye",
-    "ArtVariantDefId": "Hawkeye_05"
+    "CardDefId": "TheCollector",
+    "ArtVariantDefId": "TheCollector_06"
   },
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": "Draft",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
-  "match_result": "win",
-  "match_status": "complete",
-  "opp_clan_tag": "SWE",
+  "current_turn": 5,
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_clan_tag": "TNZ",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": true,
+  "opp_retreated": null,
   "player_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
     "CardDefId": "GhostTheFirstRider"
@@ -5791,33 +3569,25 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "JeffTheBabyDolphin",
-    "Lasher",
-    "Psylocke",
-    "Wong",
-    "Gwenpool"
+    "ShadowlandsDaredevil",
+    "ScarletWitchQueenOfChaos"
   ],
-  "last_updated_at": "2026-10-11T18:53:07.612+00:00",
+  "last_updated_at": "2026-10-11T18:54:10.13+00:00",
   "opp_played_cards": [],
   "player_deck_cards": [
     "SpiderPunk",
-    "Nightcrawler",
-    "DoctorStrange",
-    "Vulture",
-    "MultipleMan",
-    "GhostSpider",
-    "Vulture",
     "MrSinister",
+    "Vulture",
     "Topaz",
-    "EnSabahNur"
+    "EnSabahNur",
+    "DoctorStrange",
+    "IronFist"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "JeffTheBabyDolphin",
-    "Lasher",
-    "Psylocke",
-    "Wong",
-    "Gwenpool"
+    "ShadowlandsDaredevil",
+    "Demon",
+    "ScarletWitchQueenOfChaos"
   ],
   "conquest_round_index": null
 }
