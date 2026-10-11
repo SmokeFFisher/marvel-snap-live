@@ -50,21 +50,21 @@
               "cardDefId": "AmericaChavez"
             },
             {
+              "cost": 1,
+              "power": 2,
+              "augments": [
+                "StartInHandAugment"
+              ],
+              "baseCost": 1,
+              "basePower": 2,
+              "cardDefId": "AmericaChavez"
+            },
+            {
               "cost": 2,
               "power": 2,
               "baseCost": 2,
               "basePower": 2,
               "cardDefId": "Forge"
-            },
-            {
-              "cost": 3,
-              "power": 0,
-              "augments": [
-                "ShiftRightAugment"
-              ],
-              "baseCost": 3,
-              "basePower": 0,
-              "cardDefId": "Ironheart"
             }
           ],
           "n": {
@@ -88,12 +88,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             }
@@ -108,7 +108,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "GrandCentral",
+              "to": "Panoptichron",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -125,7 +125,7 @@
                 {
                   "location": [
                     0,
-                    "GrandCentral"
+                    "Panoptichron"
                   ],
                   "revealed": [
                     0,
@@ -144,22 +144,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "AmericaChavez",
-              "cost": 1,
+              "card": "Okoye",
+              "cost": 2,
               "type": "reveal",
-              "power": 2,
-              "entityId": 17,
+              "power": 3,
+              "entityId": 34,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "AmericaChavez",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "Okoye",
               "type": "draw"
             }
           ]
@@ -182,62 +182,14 @@
             2,
             4,
             {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "AmericaChavez"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Forge"
-                  ]
-                },
-                [
-                  "augments"
-                ]
-              ],
               "3": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 0,
-                  "augments": [
-                    "ShiftRightAugment"
-                  ],
-                  "baseCost": 3,
-                  "basePower": 0,
-                  "cardDefId": "Ironheart"
+                  "cost": 2,
+                  "power": 3,
+                  "baseCost": 2,
+                  "basePower": 3,
+                  "cardDefId": "Okoye"
                 }
               ]
             }
@@ -265,7 +217,7 @@
           "events": [
             {
               "type": "vpContested",
-              "locationIndex": 1
+              "locationIndex": 0
             }
           ]
         },
@@ -281,9 +233,9 @@
               "who": "player",
               "card": "AmericaChavez",
               "type": "play",
-              "entityId": 19,
-              "location": "RevealOn2",
-              "locationIndex": 1
+              "entityId": 32,
+              "location": "Panoptichron",
+              "locationIndex": 0
             }
           ]
         },
@@ -292,7 +244,7 @@
             2,
             3,
             {
-              "1": [
+              "0": [
                 1,
                 {
                   "playerCards": [
@@ -304,8 +256,11 @@
                         {
                           "cost": 1,
                           "power": 2,
+                          "augments": [
+                            "StartInHandAugment"
+                          ],
                           "baseCost": 1,
-                          "entityId": 19,
+                          "entityId": 32,
                           "basePower": 2,
                           "cardDefId": "AmericaChavez",
                           "arrivalSeq": 0
@@ -345,36 +300,25 @@
                     0,
                     "Forge"
                   ]
-                }
+                },
+                [
+                  "augments"
+                ]
               ],
               "2": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    3
-                  ],
                   "power": [
-                    0,
-                    0
-                  ],
-                  "augments": [
-                    0,
-                    [
-                      "ShiftRightAugment"
-                    ]
-                  ],
-                  "baseCost": [
                     0,
                     3
                   ],
                   "basePower": [
                     0,
-                    0
+                    3
                   ],
                   "cardDefId": [
                     0,
-                    "Ironheart"
+                    "Okoye"
                   ]
                 }
               ]
@@ -415,158 +359,6 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 32,
-              "location": "RevealOn2",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 32,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            1
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            1
-                          ],
-                          "cardDefId": [
-                            0,
-                            "KittyPryde"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RevealOn2",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
           "label": "Reveal",
           "events": [
             {
@@ -575,7 +367,7 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 19,
+              "entityId": 32,
               "drawReveal": false
             }
           ]
@@ -591,10 +383,10 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "RevealOn2",
+              "location": "Panoptichron",
               "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 1
+              "locationIndex": 0,
+              "opponentPower": 0
             }
           ]
         },
@@ -666,12 +458,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             }
@@ -686,7 +478,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "AuntMays",
+              "to": "CelestialCircuit",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -709,7 +501,7 @@
                 {
                   "location": [
                     0,
-                    "AuntMays"
+                    "CelestialCircuit"
                   ],
                   "revealed": [
                     0,
@@ -738,139 +530,25 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Bounce",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "AuntMays",
-              "type": "bounce",
-              "entityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "source": "KittyPryde",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Okoye",
-              "cost": 2,
+              "card": "Gwenpool",
+              "cost": 4,
               "type": "reveal",
-              "power": 6,
-              "entityId": 22,
+              "power": 8,
+              "entityId": 33,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Okoye",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "Gwenpool",
               "type": "draw"
             }
           ]
@@ -893,45 +571,17 @@
             2,
             4,
             {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Okoye"
-                  ]
-                },
-                [
-                  "augments"
-                ]
-              ],
               "3": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 0,
+                  "cost": 4,
+                  "power": 8,
                   "augments": [
-                    "ShiftRightAugment"
+                    "LureAugment"
                   ],
-                  "baseCost": 3,
-                  "basePower": 0,
-                  "cardDefId": "Ironheart"
+                  "baseCost": 4,
+                  "basePower": 5,
+                  "cardDefId": "Gwenpool"
                 }
               ]
             }
@@ -959,7 +609,7 @@
           "events": [
             {
               "type": "vpContested",
-              "locationIndex": 0
+              "locationIndex": 2
             }
           ]
         },
@@ -975,9 +625,9 @@
               "who": "player",
               "card": "Okoye",
               "type": "play",
-              "entityId": 22,
-              "location": "GrandCentral",
-              "locationIndex": 0
+              "entityId": 34,
+              "location": "RevealOn2",
+              "locationIndex": 2
             }
           ]
         },
@@ -986,7 +636,7 @@
             2,
             3,
             {
-              "0": [
+              "2": [
                 1,
                 {
                   "playerCards": [
@@ -997,9 +647,9 @@
                         0,
                         {
                           "cost": 2,
-                          "power": 6,
+                          "power": 3,
                           "baseCost": 2,
-                          "entityId": 22,
+                          "entityId": 34,
                           "basePower": 3,
                           "cardDefId": "Okoye",
                           "arrivalSeq": 0
@@ -1029,29 +679,29 @@
                 {
                   "cost": [
                     0,
-                    3
+                    4
                   ],
                   "power": [
                     0,
-                    0
+                    8
                   ],
                   "augments": [
                     0,
                     [
-                      "ShiftRightAugment"
+                      "LureAugment"
                     ]
                   ],
                   "baseCost": [
                     0,
-                    3
+                    4
                   ],
                   "basePower": [
                     0,
-                    0
+                    5
                   ],
                   "cardDefId": [
                     0,
-                    "Ironheart"
+                    "Gwenpool"
                   ]
                 }
               ]
@@ -1096,17 +746,9 @@
           "events": [
             {
               "who": "opponent",
-              "card": "KittyPryde",
+              "card": "Chamber",
               "type": "play",
-              "entityId": 32,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "TheHunger",
-              "type": "play",
-              "entityId": 35,
+              "entityId": 19,
               "location": "RevealOn2",
               "locationIndex": 2
             }
@@ -1117,29 +759,6 @@
             2,
             3,
             {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 2,
-                          "baseCost": 1,
-                          "entityId": 32,
-                          "basePower": 1,
-                          "cardDefId": "KittyPryde",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
               "2": [
                 1,
                 {
@@ -1153,7 +772,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 35,
+                          "entityId": 19,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -1170,7 +789,7 @@
             {
               "opponent": [
                 0,
-                3
+                4
               ]
             }
           ]
@@ -1187,8 +806,8 @@
               "card": "Okoye",
               "cost": 2,
               "type": "reveal",
-              "power": 6,
-              "entityId": 22,
+              "power": 3,
+              "entityId": 34,
               "drawReveal": false
             }
           ]
@@ -1204,9 +823,9 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "GrandCentral",
-              "playerPower": 6,
-              "locationIndex": 0,
+              "location": "RevealOn2",
+              "playerPower": 3,
+              "locationIndex": 2,
               "opponentPower": 0
             }
           ]
@@ -1236,48 +855,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
+              "card": "Chamber",
+              "cost": 2,
               "type": "reveal",
-              "power": 2,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "TheHunger",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 35,
+              "power": 1,
+              "entityId": 19,
               "drawReveal": false
             }
           ]
@@ -1299,23 +881,23 @@
                         {
                           "cost": [
                             0,
-                            1
+                            2
                           ],
                           "power": [
                             0,
-                            0
+                            1
                           ],
                           "baseCost": [
                             0,
-                            1
+                            2
                           ],
                           "basePower": [
                             0,
-                            0
+                            1
                           ],
                           "cardDefId": [
                             0,
-                            "TheHunger"
+                            "Chamber"
                           ]
                         }
                       ]
@@ -1335,117 +917,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "TheHunger",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 44,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 0,
-                          "baseCost": 0,
-                          "entityId": 44,
-                          "basePower": 0,
-                          "cardDefId": "ZombieHorde",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheHunger",
-              "newPower": 3,
-              "oldPower": 0,
-              "cardEntityId": 44
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
+              "card": "Chamber",
               "type": "cardRevealed"
             }
           ]
@@ -1461,65 +933,14 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "GrandCentral",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 5
+              "location": "RevealOn2",
+              "playerPower": 3,
+              "locationIndex": 2,
+              "opponentPower": 1
             }
           ]
         },
         {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "TheHunger",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 0,
-                      "cardDefId": "TheHunger"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
       ],
       [
         {
@@ -1572,12 +993,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 3
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 3
             }
@@ -1592,7 +1013,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Vormir",
+              "to": "AsteroidM",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -1609,184 +1030,13 @@
                 {
                   "location": [
                     0,
-                    "Vormir"
+                    "AsteroidM"
                   ]
                 }
               ]
             }
           ]
         }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "basePower": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Bounce",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "GrandCentral",
-              "type": "bounce",
-              "entityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            0
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            0
-                          ],
-                          "entityId": [
-                            0,
-                            44
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ZombieHorde"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "source": "KittyPryde",
-              "newPower": 3,
-              "oldPower": 2,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {}
       ],
       [
         {
@@ -1795,22 +1045,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
+              "card": "Namora",
+              "cost": 5,
               "type": "reveal",
-              "power": 3,
-              "entityId": 20,
+              "power": 12,
+              "entityId": 31,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "MrSinister",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "Namora",
               "type": "draw"
             }
           ]
@@ -1833,45 +1083,14 @@
             2,
             4,
             {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "MrSinister"
-                  ]
-                },
-                [
-                  "augments"
-                ]
-              ],
               "3": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 0,
-                  "augments": [
-                    "ShiftRightAugment"
-                  ],
-                  "baseCost": 3,
-                  "basePower": 0,
-                  "cardDefId": "Ironheart"
+                  "cost": 5,
+                  "power": 12,
+                  "baseCost": 5,
+                  "basePower": 7,
+                  "cardDefId": "Namora"
                 }
               ]
             }
@@ -1899,3883 +1118,8 @@
           "events": [
             {
               "type": "vpContested",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Ironheart",
-              "type": "play",
-              "entityId": 25,
-              "location": "GrandCentral",
               "locationIndex": 0
             }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 0,
-                          "augments": [
-                            "ShiftRightAugment"
-                          ],
-                          "baseCost": 3,
-                          "entityId": 25,
-                          "basePower": 0,
-                          "cardDefId": "Ironheart",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Ironheart",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "play",
-              "entityId": 33,
-              "location": "AuntMays",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 33,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Ironheart",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 25,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "power",
-              "source": "Ironheart",
-              "newPower": 5,
-              "oldPower": 2,
-              "cardEntityId": 19
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Okoye",
-              "type": "power",
-              "source": "AmericaChavez",
-              "sources": [
-                "AmericaChavez",
-                "Ironheart"
-              ],
-              "newPower": 9,
-              "oldPower": 6,
-              "cardEntityId": 22
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            9
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "playerPower": 9,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Okoye",
-              "type": "power",
-              "source": "Ironheart",
-              "newPower": 10,
-              "oldPower": 9,
-              "cardEntityId": 22
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            10
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "playerPower": 10,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Move",
-          "events": [
-            {
-              "to": "AuntMays",
-              "who": "player",
-              "card": "Okoye",
-              "from": "GrandCentral",
-              "type": "move",
-              "entityId": 22,
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "augments": [
-                            0,
-                            [
-                              "ShiftRightAugment"
-                            ]
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "entityId": [
-                            0,
-                            25
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Ironheart"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 10,
-                          "baseCost": 2,
-                          "entityId": 22,
-                          "basePower": 3,
-                          "cardDefId": "Okoye",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Ironheart",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 33,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "CaptainCarter"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "power",
-              "source": "AuntMays",
-              "newPower": 5,
-              "oldPower": 2,
-              "cardEntityId": 33
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Move",
-          "events": [
-            {
-              "to": "Vormir",
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "from": "AuntMays",
-              "type": "move",
-              "entityId": 33,
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 5,
-                          "baseCost": 3,
-                          "entityId": 33,
-                          "basePower": 2,
-                          "cardDefId": "CaptainCarter",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Vormir",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 7,
-              "opponentPoints": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "AmericaChavez"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Forge"
-                  ]
-                }
-              ],
-              "3": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 3,
-                  "baseCost": 2,
-                  "basePower": 2,
-                  "cardDefId": "MrSinister"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 17,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 2,
-                          "baseCost": 1,
-                          "entityId": 17,
-                          "basePower": 2,
-                          "cardDefId": "AmericaChavez",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Forge"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "MrSinister"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 21,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 3,
-                          "baseCost": 1,
-                          "entityId": 21,
-                          "basePower": 2,
-                          "cardDefId": "AmericaChavez",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Forge"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "MrSinister"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 26,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 2,
-                          "baseCost": 2,
-                          "entityId": 26,
-                          "basePower": 2,
-                          "cardDefId": "Forge",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "MrSinister"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Starhawk",
-              "type": "play",
-              "entityId": 27,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieMisterFantastic",
-              "type": "play",
-              "entityId": 31,
-              "location": "AuntMays",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 27,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 31,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 17,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 26,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Starhawk",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 27,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Starhawk"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Starhawk",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "power",
-              "source": "Starhawk",
-              "newPower": 6,
-              "oldPower": 5,
-              "cardEntityId": 33
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Vormir",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieMisterFantastic",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 31,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ZombieMisterFantastic"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieMisterFantastic",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "ZombieMisterFantastic",
-              "newPower": 5,
-              "oldPower": 3,
-              "cardEntityId": 44
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 8,
-              "opponentPoints": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "cost": 3,
-              "type": "reveal",
-              "power": 18,
-              "entityId": 24,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "1": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 18,
-                  "augments": [
-                    "AddPowerToDeckAugment"
-                  ],
-                  "baseCost": 3,
-                  "basePower": 5,
-                  "cardDefId": "SebastianShaw"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Stake Raised",
-          "events": [
-            {
-              "who": "player",
-              "type": "vpStakeRaise"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "play",
-              "entityId": 24,
-              "location": "AuntMays",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 18,
-                          "augments": [
-                            "AddPowerToDeckAugment"
-                          ],
-                          "baseCost": 3,
-                          "entityId": 24,
-                          "basePower": 5,
-                          "cardDefId": "SebastianShaw",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "play",
-              "entityId": 20,
-              "location": "AuntMays",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 3,
-                          "baseCost": 2,
-                          "entityId": 20,
-                          "basePower": 2,
-                          "cardDefId": "MrSinister",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                0
-              ]
-            }
-          ],
-          "h": [
-            2,
-            0,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 32,
-              "location": "Vormir",
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieScarletWitch",
-              "type": "play",
-              "entityId": 34,
-              "location": "Vormir",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 3,
-                          "baseCost": 1,
-                          "entityId": 32,
-                          "basePower": 2,
-                          "cardDefId": "KittyPryde",
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 34,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "power",
-              "source": "SebastianShaw",
-              "newPower": 20,
-              "oldPower": 18,
-              "cardEntityId": 24
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "power",
-              "source": "Okoye",
-              "sources": [
-                "Okoye",
-                "SebastianShaw",
-                "AmericaChavez",
-                "SebastianShaw",
-                "AmericaChavez",
-                "SebastianShaw",
-                "Forge"
-              ],
-              "newPower": 22,
-              "oldPower": 20,
-              "cardEntityId": 24
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            22
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "cost": 3,
-              "type": "reveal",
-              "power": 22,
-              "entityId": 24,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 37,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "power",
-              "source": "AuntMays",
-              "newPower": 25,
-              "oldPower": 22,
-              "cardEntityId": 24
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            25
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 40,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "power",
-              "source": "SebastianShaw",
-              "newPower": 27,
-              "oldPower": 25,
-              "cardEntityId": 24
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            27
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 42,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Move",
-          "events": [
-            {
-              "to": "Vormir",
-              "who": "player",
-              "card": "SebastianShaw",
-              "from": "AuntMays",
-              "type": "move",
-              "entityId": 24,
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "entityId": [
-                            0,
-                            20
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "MrSinister"
-                          ]
-                        },
-                        [
-                          "augments"
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 27,
-                          "augments": [
-                            "AddPowerToDeckAugment"
-                          ],
-                          "baseCost": 3,
-                          "entityId": 24,
-                          "basePower": 5,
-                          "cardDefId": "SebastianShaw",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vormir",
-              "playerPower": 27,
-              "locationIndex": 2,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 18,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 45,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 3,
-                          "baseCost": 2,
-                          "entityId": 45,
-                          "basePower": 2,
-                          "cardDefId": "SinisterClone",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "basePower": [
-                            0,
-                            1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vormir",
-              "playerPower": 27,
-              "locationIndex": 2,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "destroyed",
-              "fromLocation": "Vormir"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            null
-                          ],
-                          "power": [
-                            0,
-                            null
-                          ],
-                          "baseCost": [
-                            0,
-                            null
-                          ],
-                          "entityId": [
-                            0,
-                            34
-                          ],
-                          "basePower": [
-                            0,
-                            null
-                          ],
-                          "cardDefId": [
-                            0,
-                            null
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 3,
-                      "cardDefId": "KittyPryde"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vormir",
-              "playerPower": 27,
-              "locationIndex": 2,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieScarletWitch",
-              "cost": 3,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 34,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            7
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            4
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ZombieScarletWitch"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieScarletWitch",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vormir",
-              "playerPower": 27,
-              "locationIndex": 2,
-              "opponentPower": 13
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "play",
-              "entityId": 37,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "augments": [
-                            "QuickDrawPowerAugment"
-                          ],
-                          "baseCost": null,
-                          "entityId": 37,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 37,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            4
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            4
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ZombieGiantMan"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 12
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "ZombieGiantMan",
-              "newPower": 7,
-              "oldPower": 5,
-              "cardEntityId": 44
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 14
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "source": "ZombieGiantMan",
-              "newPower": 11,
-              "oldPower": 4,
-              "cardEntityId": 37
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            11
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 15,
-              "opponentPoints": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gwenpool",
-              "cost": 4,
-              "type": "reveal",
-              "power": 28,
-              "entityId": 18,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Gwenpool",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ],
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 28,
-                  "augments": [
-                    "LureAugment"
-                  ],
-                  "baseCost": 4,
-                  "basePower": 5,
-                  "cardDefId": "Gwenpool"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ],
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SpiderWoman",
-              "type": "play",
-              "entityId": 36,
-              "location": "AuntMays",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 36,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SpiderWoman",
-              "cost": 5,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            11
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            8
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SpiderWoman"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SpiderWoman",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 13
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "power",
-              "source": "SpiderWoman",
-              "newPower": 4,
-              "oldPower": 5,
-              "cardEntityId": 19
-            },
-            {
-              "who": "player",
-              "card": "Okoye",
-              "type": "power",
-              "source": "SpiderWoman",
-              "newPower": 9,
-              "oldPower": 10,
-              "cardEntityId": 22
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "power",
-              "source": "Okoye",
-              "sources": [
-                "Okoye",
-                "SpiderWoman"
-              ],
-              "newPower": 2,
-              "oldPower": 3,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "type": "power",
-              "source": "MrSinister",
-              "sources": [
-                "MrSinister",
-                "SpiderWoman"
-              ],
-              "newPower": 2,
-              "oldPower": 3,
-              "cardEntityId": 45
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            9
-                          ]
-                        }
-                      ],
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ],
-                      "3": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 17,
-              "locationIndex": 1,
-              "opponentPower": 13
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Ability",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieMisterFantastic",
-              "type": "activated",
-              "isActivated": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "ZombieMisterFantastic",
-              "newPower": 8,
-              "oldPower": 7,
-              "cardEntityId": 44
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 22
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 22,
-              "opponentPoints": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -5819,14 +1163,8 @@
             {
               "card": "AmericaChavez",
               "isPlayer": true,
-              "location": "AuntMays",
-              "locationIndex": 1
-            },
-            {
-              "card": "KittyPryde",
-              "isPlayer": false,
-              "location": "AuntMays",
-              "locationIndex": 1
+              "location": "Panoptichron",
+              "locationIndex": 0
             }
           ],
           "energy": {
@@ -5835,104 +1173,70 @@
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 67
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 69
+              "_changeIdx": 73
             },
             {
-              "to": "GrandCentral",
+              "who": "player",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 75
+            },
+            {
+              "to": "Panoptichron",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 72,
+              "_changeIdx": 78,
               "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 17,
-              "_changeIdx": 75,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "draw",
-              "_changeIdx": 76
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 79
+              "_changeIdx": 82
+            },
+            {
+              "who": "player",
+              "card": "Okoye",
+              "cost": 2,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 34,
+              "_changeIdx": 85,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Okoye",
+              "type": "draw",
+              "_changeIdx": 86
             },
             {
               "type": "vpContested",
-              "_changeIdx": 83,
-              "locationIndex": 1
+              "_changeIdx": 90,
+              "locationIndex": 0
             },
             {
               "who": "player",
               "card": "AmericaChavez",
               "type": "play",
-              "entityId": 19,
-              "location": "RevealOn2",
-              "_changeIdx": 86,
-              "locationIndex": 1
+              "entityId": 32,
+              "location": "Panoptichron",
+              "_changeIdx": 93,
+              "locationIndex": 0
             },
             {
               "who": "player",
               "card": "AmericaChavez",
               "type": "cardStaged",
-              "_changeIdx": 87
+              "_changeIdx": 94
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 90
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 32,
-              "location": "RevealOn2",
-              "_changeIdx": 91,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 32,
-              "_changeIdx": 95,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "cardRevealed",
-              "_changeIdx": 96
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RevealOn2",
-              "_changeIdx": 98,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 1
+              "_changeIdx": 98
             },
             {
               "who": "player",
@@ -5940,39 +1244,39 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 19,
-              "_changeIdx": 101,
+              "entityId": 32,
+              "_changeIdx": 100,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "RevealOn2",
-              "_changeIdx": 103,
+              "location": "Panoptichron",
+              "_changeIdx": 102,
               "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 1
+              "locationIndex": 0,
+              "opponentPower": 0
             },
             {
               "who": "player",
               "card": "AmericaChavez",
               "type": "cardResolved",
-              "_changeIdx": 108
+              "_changeIdx": 107
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "player",
-              "_changeIdx": 110
+              "_changeIdx": 109
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 111
+              "_changeIdx": 110
             },
             {
               "type": "vpScores",
-              "_changeIdx": 112,
+              "_changeIdx": 111,
               "playerPoints": 1,
               "opponentPoints": 0
             }
@@ -5980,14 +1284,14 @@
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
-              "playerPower": 0,
+              "winner": "player",
+              "playerPower": 2,
               "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 2,
-              "opponentPower": 1
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -5996,7 +1300,7 @@
             }
           ]
         },
-        9
+        5
       ],
       [
         {
@@ -6005,19 +1309,13 @@
             {
               "card": "Okoye",
               "isPlayer": true,
-              "location": "GrandCentral",
-              "locationIndex": 0
+              "location": "AsteroidM",
+              "locationIndex": 2
             },
             {
-              "card": "KittyPryde",
+              "card": "Chamber",
               "isPlayer": false,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            },
-            {
-              "card": "TheHunger",
-              "isPlayer": false,
-              "location": "Vormir",
+              "location": "AsteroidM",
               "locationIndex": 2
             }
           ],
@@ -6027,137 +1325,85 @@
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 115
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 117
+              "_changeIdx": 114
             },
             {
-              "to": "AuntMays",
+              "who": "player",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 116
+            },
+            {
+              "to": "CelestialCircuit",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 120,
+              "_changeIdx": 119,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 125,
+              "_changeIdx": 123,
               "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 1,
-              "_changeIdx": 130
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "AuntMays",
-              "type": "bounce",
-              "entityId": 32,
-              "_changeIdx": 131
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 1,
-              "_changeIdx": 134
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 135,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "source": "KittyPryde",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 139,
-              "cardEntityId": 32
-            },
-            {
-              "who": "player",
-              "card": "Okoye",
-              "cost": 2,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 22,
-              "_changeIdx": 144,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Okoye",
-              "type": "draw",
-              "_changeIdx": 145
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 148
+              "_changeIdx": 126
+            },
+            {
+              "who": "player",
+              "card": "Gwenpool",
+              "cost": 4,
+              "type": "reveal",
+              "power": 8,
+              "entityId": 33,
+              "_changeIdx": 129,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Gwenpool",
+              "type": "draw",
+              "_changeIdx": 130
             },
             {
               "type": "vpContested",
-              "_changeIdx": 152,
-              "locationIndex": 0
+              "_changeIdx": 134,
+              "locationIndex": 2
             },
             {
               "who": "player",
               "card": "Okoye",
               "type": "play",
-              "entityId": 22,
-              "location": "GrandCentral",
-              "_changeIdx": 155,
-              "locationIndex": 0
+              "entityId": 34,
+              "location": "RevealOn2",
+              "_changeIdx": 137,
+              "locationIndex": 2
             },
             {
               "who": "player",
               "card": "Okoye",
               "type": "cardStaged",
-              "_changeIdx": 156
+              "_changeIdx": 138
             },
             {
               "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 160
+              "_changeIdx": 143
             },
             {
               "who": "opponent",
-              "card": "KittyPryde",
+              "card": "Chamber",
               "type": "play",
-              "entityId": 32,
-              "location": "GrandCentral",
-              "_changeIdx": 161,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "TheHunger",
-              "type": "play",
-              "entityId": 35,
+              "entityId": 19,
               "location": "RevealOn2",
-              "_changeIdx": 164,
+              "_changeIdx": 144,
               "locationIndex": 2
             },
             {
@@ -6165,116 +1411,65 @@
               "card": "Okoye",
               "cost": 2,
               "type": "reveal",
-              "power": 6,
-              "entityId": 22,
-              "_changeIdx": 168,
+              "power": 3,
+              "entityId": 34,
+              "_changeIdx": 148,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "GrandCentral",
-              "_changeIdx": 170,
-              "playerPower": 6,
-              "locationIndex": 0,
+              "location": "RevealOn2",
+              "_changeIdx": 150,
+              "playerPower": 3,
+              "locationIndex": 2,
               "opponentPower": 0
             },
             {
               "who": "player",
               "card": "Okoye",
               "type": "cardResolved",
-              "_changeIdx": 175
+              "_changeIdx": 155
             },
             {
               "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
+              "card": "Chamber",
+              "cost": 2,
               "type": "reveal",
-              "power": 2,
-              "entityId": 32,
-              "_changeIdx": 176,
+              "power": 1,
+              "entityId": 19,
+              "_changeIdx": 156,
               "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Chamber",
+              "type": "cardRevealed",
+              "_changeIdx": 157
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "GrandCentral",
-              "_changeIdx": 178,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "TheHunger",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 35,
-              "_changeIdx": 181,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "TheHunger",
-              "type": "cardRevealed",
-              "_changeIdx": 182
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 44,
-              "_changeIdx": 186,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheHunger",
-              "newPower": 3,
-              "oldPower": 0,
-              "_changeIdx": 188,
-              "cardEntityId": 44
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "cardRevealed",
-              "_changeIdx": 191
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "_changeIdx": 192,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 5
-            },
-            {
-              "who": "opponent",
-              "card": "TheHunger",
-              "type": "removed",
-              "_changeIdx": 197
+              "location": "RevealOn2",
+              "_changeIdx": 159,
+              "playerPower": 3,
+              "locationIndex": 2,
+              "opponentPower": 1
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "player",
-              "_changeIdx": 200
+              "_changeIdx": 163
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 201
+              "_changeIdx": 164
             },
             {
               "type": "vpScores",
-              "_changeIdx": 202,
+              "_changeIdx": 165,
               "playerPoints": 4,
               "opponentPoints": 0
             }
@@ -6282,1419 +1477,91 @@
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "player",
-              "playerPower": 6,
-              "opponentPower": 5
-            },
-            {
-              "winner": "player",
-              "playerPower": 2,
+              "winner": null,
+              "playerPower": 0,
               "opponentPower": 0
             },
             {
               "winner": null,
               "playerPower": 0,
               "opponentPower": 0
+            },
+            {
+              "winner": "player",
+              "playerPower": 3,
+              "opponentPower": 1
             }
           ]
         },
-        42
+        25
       ],
       [
         {
           "turn": 3,
-          "plays": [
-            {
-              "card": "Ironheart",
-              "isPlayer": true,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            },
-            {
-              "card": "CaptainCarter",
-              "isPlayer": false,
-              "location": "AuntMays",
-              "locationIndex": 1
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 3,
             "opponent": 3
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 206
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 208
+              "_changeIdx": 169
             },
             {
-              "to": "Vormir",
+              "who": "player",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 171
+            },
+            {
+              "to": "AsteroidM",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 211,
+              "_changeIdx": 174,
               "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 2,
-              "_changeIdx": 221
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "GrandCentral",
-              "type": "bounce",
-              "entityId": 32,
-              "_changeIdx": 222
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 2,
-              "_changeIdx": 225
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "_changeIdx": 226,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "source": "KittyPryde",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 230,
-              "cardEntityId": 32
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 20,
-              "_changeIdx": 235,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "draw",
-              "_changeIdx": 236
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 240
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 244,
-              "locationIndex": 1
+              "_changeIdx": 178
             },
             {
               "who": "player",
-              "card": "Ironheart",
-              "type": "play",
-              "entityId": 25,
-              "location": "GrandCentral",
-              "_changeIdx": 247,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Ironheart",
-              "type": "cardStaged",
-              "_changeIdx": 248
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 253
-            },
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "play",
-              "entityId": 33,
-              "location": "AuntMays",
-              "_changeIdx": 255,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Ironheart",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 25,
-              "_changeIdx": 259,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "power",
-              "source": "Ironheart",
-              "newPower": 5,
-              "oldPower": 2,
-              "_changeIdx": 262,
-              "cardEntityId": 19
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 265,
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Okoye",
-              "type": "power",
-              "source": "AmericaChavez",
-              "sources": [
-                "AmericaChavez",
-                "Ironheart"
-              ],
-              "newPower": 9,
-              "oldPower": 6,
-              "_changeIdx": 268,
-              "cardEntityId": 22
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "_changeIdx": 271,
-              "playerPower": 9,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "Okoye",
-              "type": "power",
-              "source": "Ironheart",
-              "newPower": 10,
-              "oldPower": 9,
-              "_changeIdx": 276,
-              "cardEntityId": 22
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "_changeIdx": 279,
-              "playerPower": 10,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "to": "AuntMays",
-              "who": "player",
-              "card": "Okoye",
-              "from": "GrandCentral",
-              "type": "move",
-              "entityId": 22,
-              "_changeIdx": 282,
-              "locationIndex": 1
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 288,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 291,
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Ironheart",
-              "type": "cardResolved",
-              "_changeIdx": 295
-            },
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 33,
-              "_changeIdx": 296,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "cardRevealed",
-              "_changeIdx": 297
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 299,
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "power",
-              "source": "AuntMays",
-              "newPower": 5,
-              "oldPower": 2,
-              "_changeIdx": 304,
-              "cardEntityId": 33
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 307,
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 5
-            },
-            {
-              "to": "Vormir",
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "from": "AuntMays",
-              "type": "move",
-              "entityId": 33,
-              "_changeIdx": 310,
-              "locationIndex": 2
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 315,
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Vormir",
-              "_changeIdx": 318,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 5
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 323
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 324
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 325,
-              "playerPoints": 7,
-              "opponentPoints": 2
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 3
-            },
-            {
-              "winner": "player",
-              "playerPower": 15,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 5
-            }
-          ]
-        },
-        74
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "AmericaChavez",
-              "isPlayer": true,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            },
-            {
-              "card": "AmericaChavez",
-              "isPlayer": true,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            },
-            {
-              "card": "Forge",
-              "isPlayer": true,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            },
-            {
-              "card": "Starhawk",
-              "isPlayer": false,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            },
-            {
-              "card": "ZombieMisterFantastic",
-              "isPlayer": false,
-              "location": "AuntMays",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 329
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 331
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "_changeIdx": 333,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "draw",
-              "_changeIdx": 334
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 337
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 341,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 17,
-              "location": "GrandCentral",
-              "_changeIdx": 344,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "cardStaged",
-              "_changeIdx": 345
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 21,
-              "location": "GrandCentral",
-              "_changeIdx": 348,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "cardStaged",
-              "_changeIdx": 349
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 26,
-              "location": "GrandCentral",
-              "_changeIdx": 353,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "cardStaged",
-              "_changeIdx": 354
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 362
-            },
-            {
-              "who": "opponent",
-              "card": "Starhawk",
-              "type": "play",
-              "entityId": 27,
-              "location": "GrandCentral",
-              "_changeIdx": 364,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieMisterFantastic",
-              "type": "play",
-              "entityId": 31,
-              "location": "AuntMays",
-              "_changeIdx": 367,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 17,
-              "_changeIdx": 373,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 375,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "cardResolved",
-              "_changeIdx": 380
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "_changeIdx": 381,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "_changeIdx": 383,
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "cardResolved",
-              "_changeIdx": 388
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 26,
-              "_changeIdx": 389,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "_changeIdx": 391,
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "Forge",
-              "type": "cardResolved",
-              "_changeIdx": 400
-            },
-            {
-              "who": "opponent",
-              "card": "Starhawk",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 27,
-              "_changeIdx": 401,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Starhawk",
-              "type": "cardRevealed",
-              "_changeIdx": 402
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GrandCentral",
-              "_changeIdx": 404,
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 6
-            },
-            {
-              "who": "opponent",
-              "card": "CaptainCarter",
-              "type": "power",
-              "source": "Starhawk",
-              "newPower": 6,
-              "oldPower": 5,
-              "_changeIdx": 408,
-              "cardEntityId": 33
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Vormir",
-              "_changeIdx": 411,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 6
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieMisterFantastic",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 31,
-              "_changeIdx": 415,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieMisterFantastic",
-              "type": "cardRevealed",
-              "_changeIdx": 416
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 418,
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "ZombieMisterFantastic",
-              "newPower": 5,
-              "oldPower": 3,
-              "_changeIdx": 422,
-              "cardEntityId": 44
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 425,
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 8
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 430
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 431
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 432,
-              "playerPoints": 8,
-              "opponentPoints": 7
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 7,
-              "opponentPower": 8
-            },
-            {
-              "winner": "player",
-              "playerPower": 15,
-              "opponentPower": 2
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 6
-            }
-          ]
-        },
-        107
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "SebastianShaw",
-              "isPlayer": true,
-              "location": "AuntMays",
-              "locationIndex": 1
-            },
-            {
-              "card": "MrSinister",
-              "isPlayer": true,
-              "location": "AuntMays",
-              "locationIndex": 1
-            },
-            {
-              "card": "KittyPryde",
-              "isPlayer": false,
-              "location": "Vormir",
-              "locationIndex": 2
-            },
-            {
-              "card": "ZombieScarletWitch",
-              "isPlayer": false,
-              "location": "Vormir",
-              "locationIndex": 2
-            },
-            {
-              "card": "ZombieGiantMan",
-              "isPlayer": false,
-              "location": "GrandCentral",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 436
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 438
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "cost": 3,
-              "type": "reveal",
-              "power": 18,
-              "entityId": 24,
-              "_changeIdx": 441,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "draw",
-              "_changeIdx": 442
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 445
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 449,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "type": "vpStakeRaise",
-              "_changeIdx": 452
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "play",
-              "entityId": 24,
-              "location": "AuntMays",
-              "_changeIdx": 454,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "cardStaged",
-              "_changeIdx": 455
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "play",
-              "entityId": 20,
-              "location": "AuntMays",
-              "_changeIdx": 459,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "cardStaged",
-              "_changeIdx": 460
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 466
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 32,
-              "location": "Vormir",
-              "_changeIdx": 467,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieScarletWitch",
-              "type": "play",
-              "entityId": 34,
-              "location": "Vormir",
-              "_changeIdx": 470,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "power",
-              "source": "SebastianShaw",
-              "newPower": 20,
-              "oldPower": 18,
-              "_changeIdx": 476,
-              "cardEntityId": 24
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "power",
-              "source": "Okoye",
-              "sources": [
-                "Okoye",
-                "SebastianShaw",
-                "AmericaChavez",
-                "SebastianShaw",
-                "AmericaChavez",
-                "SebastianShaw",
-                "Forge"
-              ],
-              "newPower": 22,
-              "oldPower": 20,
-              "_changeIdx": 480,
-              "cardEntityId": 24
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "cost": 3,
-              "type": "reveal",
-              "power": 22,
-              "entityId": 24,
-              "_changeIdx": 486,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 488,
-              "playerPower": 37,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "cardResolved",
-              "_changeIdx": 493
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "power",
-              "source": "AuntMays",
-              "newPower": 25,
-              "oldPower": 22,
-              "_changeIdx": 496,
-              "cardEntityId": 24
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 499,
-              "playerPower": 40,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "SebastianShaw",
-              "type": "power",
-              "source": "SebastianShaw",
-              "newPower": 27,
-              "oldPower": 25,
-              "_changeIdx": 503,
-              "cardEntityId": 24
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 507,
-              "playerPower": 42,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "to": "Vormir",
-              "who": "player",
-              "card": "SebastianShaw",
-              "from": "AuntMays",
-              "type": "move",
-              "entityId": 24,
-              "_changeIdx": 510,
-              "locationIndex": 2
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 516,
-              "playerPower": 15,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vormir",
-              "_changeIdx": 519,
-              "playerPower": 27,
-              "locationIndex": 2,
-              "opponentPower": 6
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 20,
-              "_changeIdx": 523,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 526,
-              "playerPower": 18,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 45,
-              "_changeIdx": 531,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "type": "cardRevealed",
-              "_changeIdx": 533
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 534,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "cardResolved",
-              "_changeIdx": 538
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 32,
-              "_changeIdx": 540,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vormir",
-              "_changeIdx": 542,
-              "playerPower": 27,
-              "locationIndex": 2,
-              "opponentPower": 9
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "destroyed",
-              "_changeIdx": 547,
-              "fromLocation": "Vormir"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vormir",
-              "_changeIdx": 550,
-              "playerPower": 27,
-              "locationIndex": 2,
-              "opponentPower": 6
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieScarletWitch",
-              "cost": 3,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 34,
-              "_changeIdx": 554,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieScarletWitch",
-              "type": "cardRevealed",
-              "_changeIdx": 555
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Vormir",
-              "_changeIdx": 557,
-              "playerPower": 27,
-              "locationIndex": 2,
-              "opponentPower": 13
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "play",
-              "entityId": 37,
-              "location": "GrandCentral",
-              "_changeIdx": 562,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
+              "card": "Namora",
               "cost": 5,
               "type": "reveal",
-              "power": 4,
-              "entityId": 37,
-              "_changeIdx": 564,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "cardRevealed",
-              "_changeIdx": 565
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 567,
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 12
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "ZombieGiantMan",
-              "newPower": 7,
-              "oldPower": 5,
-              "_changeIdx": 571,
-              "cardEntityId": 44
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 574,
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 14
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "source": "ZombieGiantMan",
-              "newPower": 11,
-              "oldPower": 4,
-              "_changeIdx": 577,
-              "cardEntityId": 37
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 580,
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 21
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 585
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 586
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 587,
-              "playerPoints": 15,
-              "opponentPoints": 9
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 7,
-              "opponentPower": 21
-            },
-            {
-              "winner": "player",
-              "playerPower": 21,
-              "opponentPower": 2
-            },
-            {
-              "winner": "player",
-              "playerPower": 27,
-              "opponentPower": 13
-            }
-          ]
-        },
-        151
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "SpiderWoman",
-              "isPlayer": false,
-              "location": "AuntMays",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 590
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 592
-            },
-            {
-              "who": "player",
-              "card": "Gwenpool",
-              "cost": 4,
-              "type": "reveal",
-              "power": 28,
-              "entityId": 18,
-              "_changeIdx": 595,
+              "power": 12,
+              "entityId": 31,
+              "_changeIdx": 181,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Gwenpool",
+              "card": "Namora",
               "type": "draw",
-              "_changeIdx": 596
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 599
+              "_changeIdx": 182
             },
             {
               "type": "vpContested",
-              "_changeIdx": 604,
-              "locationIndex": 1
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 611
-            },
-            {
-              "who": "opponent",
-              "card": "SpiderWoman",
-              "type": "play",
-              "entityId": 36,
-              "location": "AuntMays",
-              "_changeIdx": 613,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "SpiderWoman",
-              "cost": 5,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 36,
-              "_changeIdx": 616,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "SpiderWoman",
-              "type": "cardRevealed",
-              "_changeIdx": 617
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 619,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 13
-            },
-            {
-              "who": "player",
-              "card": "AmericaChavez",
-              "type": "power",
-              "source": "SpiderWoman",
-              "newPower": 4,
-              "oldPower": 5,
-              "_changeIdx": 623,
-              "cardEntityId": 19
-            },
-            {
-              "who": "player",
-              "card": "Okoye",
-              "type": "power",
-              "source": "SpiderWoman",
-              "newPower": 9,
-              "oldPower": 10,
-              "_changeIdx": 626,
-              "cardEntityId": 22
-            },
-            {
-              "who": "player",
-              "card": "MrSinister",
-              "type": "power",
-              "source": "Okoye",
-              "sources": [
-                "Okoye",
-                "SpiderWoman"
-              ],
-              "newPower": 2,
-              "oldPower": 3,
-              "_changeIdx": 629,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "SinisterClone",
-              "type": "power",
-              "source": "MrSinister",
-              "sources": [
-                "MrSinister",
-                "SpiderWoman"
-              ],
-              "newPower": 2,
-              "oldPower": 3,
-              "_changeIdx": 632,
-              "cardEntityId": 45
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 636,
-              "playerPower": 17,
-              "locationIndex": 1,
-              "opponentPower": 13
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieMisterFantastic",
-              "type": "activated",
-              "_changeIdx": 640,
-              "isActivated": true
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "ZombieMisterFantastic",
-              "newPower": 8,
-              "oldPower": 7,
-              "_changeIdx": 642,
-              "cardEntityId": 44
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 645,
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 22
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 650
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 651
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 652,
-              "playerPoints": 22,
-              "opponentPoints": 11
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 654
+              "_changeIdx": 187,
+              "locationIndex": 0
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
-              "playerPower": 7,
-              "opponentPower": 22
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 17,
-              "opponentPower": 13
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -7703,23 +1570,19 @@
             }
           ]
         },
-        167
+        33
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 28560,
-  "opp_sp": 5840,
+  "opp_cl": 4251,
+  "opp_sp": 4026,
   "bracket": null,
-  "match_id": "4ed3b0ba-39c9-4f5d-a0e3-b48109e4a5c2",
-  "opp_name": "Cyrus",
+  "match_id": "6f20f537-bf83-4212-87c3-e973d3f40b75",
+  "opp_name": "XVII",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "GrandCentral",
-    "AuntMays",
-    "Vormir"
-  ],
+  "locations": [],
   "player_cl": 11693,
   "player_sp": 4875,
   "turn_data": null,
@@ -7776,7 +1639,9 @@
         "zone": 1,
         "defId": "AmericaChavez",
         "power": 2,
-        "augments": [],
+        "augments": [
+          "StartInHandAugment"
+        ],
         "baseCost": 1,
         "entityId": 23,
         "basePower": 2,
@@ -7871,20 +1736,20 @@
   },
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "CaptainMarvel",
-    "ArtVariantDefId": "CaptainMarvel_09"
+    "CardDefId": "ArnimZola",
+    "ArtVariantDefId": "ArnimZola_08"
   },
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": "Draft",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
-  "match_result": "win",
-  "match_status": "complete",
-  "opp_clan_tag": "OWI",
+  "current_turn": 4,
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_clan_tag": "NWA",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
     "CardDefId": "GhostTheFirstRider"
@@ -7892,43 +1757,20 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "KittyPryde",
-    "TheHunger",
-    "CaptainCarter",
-    "Starhawk",
-    "ZombieMisterFantastic",
-    "ZombieScarletWitch",
-    "ZombieGiantMan",
-    "SpiderWoman"
+    "Chamber"
   ],
-  "last_updated_at": "2026-10-11T19:39:59.475+00:00",
-  "opp_played_cards": [
-    "KittyPryde"
-  ],
+  "last_updated_at": "2026-10-11T19:41:08.733+00:00",
+  "opp_played_cards": [],
   "player_deck_cards": [
-    "MrSinister",
-    "AmericaChavez",
-    "Okoye",
     "AmericaChavez",
     "Forge",
-    "SebastianShaw",
-    "Maverick",
-    "AmericaChavez",
-    "Ironheart",
-    "Namora",
-    "Gwenpool"
+    "Okoye",
+    "Gwenpool",
+    "Namora"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "KittyPryde",
-    "TheHunger",
-    "ZombieHorde",
-    "CaptainCarter",
-    "Starhawk",
-    "ZombieMisterFantastic",
-    "ZombieScarletWitch",
-    "ZombieGiantMan",
-    "SpiderWoman"
+    "Chamber"
   ],
   "conquest_round_index": null
 }
