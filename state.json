@@ -43,18 +43,18 @@
           },
           "h": [
             {
-              "cost": 3,
-              "power": 1,
-              "baseCost": 3,
-              "basePower": 1,
-              "cardDefId": "Storm"
-            },
-            {
               "cost": 4,
               "power": 6,
               "baseCost": 4,
               "basePower": 6,
               "cardDefId": "Doom2099"
+            },
+            {
+              "cost": 4,
+              "power": 3,
+              "baseCost": 4,
+              "basePower": 3,
+              "cardDefId": "ShangChi"
             },
             {
               "cost": 5,
@@ -85,12 +85,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             }
@@ -105,7 +105,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "FogwellsGym",
+              "to": "FracturedFrontier",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -122,7 +122,7 @@
                 {
                   "location": [
                     0,
-                    "FogwellsGym"
+                    "FracturedFrontier"
                   ],
                   "revealed": [
                     0,
@@ -141,22 +141,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Hobgoblin",
-              "cost": 5,
+              "card": "Magik",
+              "cost": 3,
               "type": "reveal",
-              "power": -8,
-              "entityId": 21,
+              "power": 2,
+              "entityId": 29,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Hobgoblin",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "Magik",
               "type": "draw"
             }
           ]
@@ -179,20 +179,70 @@
             2,
             4,
             {
-              "2": [
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    3
+                  ],
+                  "power": [
+                    0,
+                    2
+                  ],
+                  "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Magik"
+                  ]
+                }
+              ],
+              "1": [
                 1,
                 {
                   "power": [
                     0,
-                    -8
+                    6
                   ],
                   "basePower": [
                     0,
-                    -8
+                    6
                   ],
                   "cardDefId": [
                     0,
-                    "Hobgoblin"
+                    "Doom2099"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "ShangChi"
                   ]
                 }
               ],
@@ -236,7 +286,23 @@
             }
           ]
         },
-        {}
+        {
+          "h": [
+            2,
+            4,
+            {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -245,8 +311,182 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Snap",
+          "events": [
+            {
+              "who": "opponent",
+              "type": "snap",
+              "cubeValue": 2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Cubes",
+          "events": [
+            {
+              "type": "cubePreview",
+              "cubeValueNextTurn": 2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "player",
+              "card": "Magik",
+              "type": "play",
+              "entityId": 29,
+              "location": "FracturedFrontier",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 2,
+                          "baseCost": 3,
+                          "entityId": 29,
+                          "basePower": 2,
+                          "cardDefId": "Magik",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                3
+              ]
+            }
+          ],
+          "h": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    6
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    6
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Doom2099"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "ShangChi"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    5
+                  ],
+                  "power": [
+                    0,
+                    7
+                  ],
+                  "baseCost": [
+                    0,
+                    5
+                  ],
+                  "basePower": [
+                    0,
+                    7
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Legion"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Staged",
+          "events": [
+            {
+              "who": "player",
+              "card": "Magik",
+              "type": "cardStaged"
             }
           ]
         },
@@ -264,6 +504,131 @@
             }
           ]
         },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "Magik",
+              "cost": 3,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 29,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "FracturedFrontier",
+              "playerPower": 2,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Location",
+          "events": [
+            {
+              "to": "Limbo",
+              "from": "FracturedFrontier",
+              "type": "location",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "location": [
+                    0,
+                    "Limbo"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Extra Turn",
+          "events": [
+            {
+              "type": "totalTurnsChanged",
+              "totalTurns": 7
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "Magik",
+              "type": "cardResolved"
+            }
+          ]
+        },
         {}
       ],
       [
@@ -273,12 +638,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             }
@@ -293,7 +658,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "EternityRange",
+              "to": "SakaarGrandPrix",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -316,7 +681,7 @@
                 {
                   "location": [
                     0,
-                    "EternityRange"
+                    "SakaarGrandPrix"
                   ],
                   "revealed": [
                     0,
@@ -348,22 +713,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Zabu",
-              "cost": 1,
+              "card": "NegasonicTeenageWarhead",
+              "cost": 4,
               "type": "reveal",
-              "power": 1,
-              "entityId": 18,
+              "power": 4,
+              "entityId": 28,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Zabu",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "NegasonicTeenageWarhead",
               "type": "draw"
             }
           ]
@@ -374,7 +739,7 @@
             {
               "player": [
                 0,
-                5
+                4
               ],
               "opponent": [
                 0,
@@ -384,47 +749,22 @@
           ],
           "h": [
             2,
-            5,
+            4,
             {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Zabu"
-                  ]
-                }
-              ],
               "1": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    3
-                  ],
                   "power": [
                     0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    3
+                    4
                   ],
                   "basePower": [
                     0,
-                    1
+                    4
                   ],
                   "cardDefId": [
                     0,
-                    "Storm"
+                    "NegasonicTeenageWarhead"
                   ]
                 }
               ],
@@ -437,7 +777,7 @@
                   ],
                   "power": [
                     0,
-                    6
+                    3
                   ],
                   "baseCost": [
                     0,
@@ -445,32 +785,15 @@
                   ],
                   "basePower": [
                     0,
-                    6
+                    3
                   ],
                   "cardDefId": [
                     0,
-                    "Doom2099"
+                    "ShangChi"
                   ]
                 }
               ],
               "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    -8
-                  ],
-                  "basePower": [
-                    0,
-                    -8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hobgoblin"
-                  ]
-                }
-              ],
-              "4": [
                 0,
                 {
                   "cost": 5,
@@ -504,3384 +827,6 @@
           "label": "Turn Winner",
           "events": [
             {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "play",
-              "entityId": 18,
-              "location": "EternityRange",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 1,
-                          "baseCost": 1,
-                          "entityId": 18,
-                          "basePower": 1,
-                          "cardDefId": "Zabu",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Storm"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Doom2099"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    -8
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    -8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hobgoblin"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Legion"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 2,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "play",
-              "entityId": 38,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 38,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 38,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Scorpion"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Legion",
-              "type": "power",
-              "source": "Scorpion",
-              "newPower": 6,
-              "oldPower": 7,
-              "cardEntityId": 22
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "source": "Scorpion",
-              "newPower": 5,
-              "oldPower": 6,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "Storm",
-              "type": "power",
-              "source": "Scorpion",
-              "newPower": 0,
-              "oldPower": 1,
-              "cardEntityId": 25
-            },
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "type": "power",
-              "source": "Scorpion",
-              "newPower": -9,
-              "oldPower": -8,
-              "cardEntityId": 21
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            4,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    0
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    -9
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Zabu",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 18,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 1,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "TheDeadlands",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "TheDeadlands"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 3,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 27,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "IronLad"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Storm"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Doom2099"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    -9
-                  ],
-                  "basePower": [
-                    0,
-                    -8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hobgoblin"
-                  ]
-                }
-              ],
-              "4": [
-                0,
-                {
-                  "cost": 5,
-                  "power": 6,
-                  "baseCost": 5,
-                  "basePower": 7,
-                  "cardDefId": "Legion"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Storm",
-              "type": "play",
-              "entityId": 25,
-              "location": "EternityRange",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 0,
-                          "baseCost": 3,
-                          "entityId": 25,
-                          "basePower": 1,
-                          "cardDefId": "Storm",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Doom2099"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    -9
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    -8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hobgoblin"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Legion"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Storm",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "play",
-              "entityId": 32,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 32,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Bishop"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Storm",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 25,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "Flooding",
-              "from": "EternityRange",
-              "type": "location",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "Flooding"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Storm",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 46,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 0,
-                          "baseCost": 0,
-                          "entityId": 46,
-                          "basePower": 0,
-                          "cardDefId": "ZombieHorde",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheDeadlands",
-              "newPower": 1,
-              "oldPower": 0,
-              "cardEntityId": 46
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 47,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 0,
-                          "baseCost": 0,
-                          "entityId": 47,
-                          "basePower": 0,
-                          "cardDefId": "ZombieHorde",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheDeadlands",
-              "newPower": 1,
-              "oldPower": 0,
-              "cardEntityId": 47
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 1,
-              "locationIndex": 0,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Flooding",
-              "playerPower": 1,
-              "locationIndex": 1,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 23,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ShangChi"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Doom2099"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    -9
-                  ],
-                  "basePower": [
-                    0,
-                    -8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hobgoblin"
-                  ]
-                }
-              ],
-              "4": [
-                0,
-                {
-                  "cost": 5,
-                  "power": 6,
-                  "baseCost": 5,
-                  "basePower": 7,
-                  "cardDefId": "Legion"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "play",
-              "entityId": 20,
-              "location": "Flooding",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 5,
-                          "baseCost": 4,
-                          "entityId": 20,
-                          "basePower": 6,
-                          "cardDefId": "Doom2099",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    -9
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    -8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hobgoblin"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Legion"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "play",
-              "entityId": 35,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 35,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 35,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Angela"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 1,
-              "locationIndex": 0,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "power",
-              "source": "Bishop",
-              "newPower": 3,
-              "oldPower": 2,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 1,
-              "locationIndex": 0,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooding",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Location",
-          "events": [
-            {
-              "to": "Flooded",
-              "from": "Flooding",
-              "type": "location",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "Flooded"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheDeadlands",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 46
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheDeadlands",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 47
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooded",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 48,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 0,
-                          "baseCost": 4,
-                          "entityId": 48,
-                          "basePower": 0,
-                          "cardDefId": "DoomBot2099",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 6,
-              "oldPower": 5,
-              "cardEntityId": 20
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooded",
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "cost": 6,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 17,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "4": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 5,
-                  "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "type": "play",
-              "entityId": 21,
-              "location": "TheDeadlands",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": -9,
-                          "baseCost": 5,
-                          "entityId": 21,
-                          "basePower": -8,
-                          "cardDefId": "Hobgoblin",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Legion"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "type": "play",
-              "entityId": 34,
-              "location": "TheDeadlands",
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "play",
-              "entityId": 39,
-              "location": "TheDeadlands",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 34,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ],
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 39,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 34,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Okoye"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheDeadlands",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "power",
-              "source": "Bishop",
-              "newPower": 4,
-              "oldPower": 3,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Magik"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheDeadlands",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Location",
-          "events": [
-            {
-              "to": "Limbo",
-              "from": "TheDeadlands",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "Limbo"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Extra Turn",
-          "events": [
-            {
-              "type": "totalTurnsChanged",
-              "totalTurns": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "power",
-              "source": "Bishop",
-              "newPower": 5,
-              "oldPower": 4,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "cost": 5,
-              "type": "reveal",
-              "power": -9,
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "playerPower": -9,
-              "locationIndex": 2,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Steal",
-          "events": [
-            {
-              "to": "opponent",
-              "card": "Hobgoblin",
-              "from": "player",
-              "type": "steal"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    0,
-                    {}
-                  ],
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": -9,
-                          "baseCost": 5,
-                          "entityId": 21,
-                          "basePower": -8,
-                          "cardDefId": "Hobgoblin",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": -4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 49,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 0,
-                          "baseCost": 4,
-                          "entityId": 49,
-                          "basePower": 0,
-                          "cardDefId": "DoomBot2099",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 1,
-              "oldPower": 0,
-              "cardEntityId": 49
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 7,
-              "oldPower": 6,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 1,
-              "oldPower": 0,
-              "cardEntityId": 48
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ]
-                        }
-                      ],
-                      "3": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 11
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooded",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 16,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "NegasonicTeenageWarhead"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ShangChi"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Legion"
-                  ]
-                }
-              ],
-              "4": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 5,
-                  "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
               "tie": false,
               "type": "turnWinner",
               "winner": "player"
@@ -3893,1061 +838,13 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 2,
           "label": "Initiative",
           "events": [
             {
               "who": "player",
               "type": "initiative"
             }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "type": "play",
-              "entityId": 16,
-              "location": "Limbo",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 4,
-                          "baseCost": 4,
-                          "entityId": 16,
-                          "basePower": 4,
-                          "cardDefId": "NegasonicTeenageWarhead",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ShangChi"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Legion"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "play",
-              "entityId": 29,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 29,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "cost": 4,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 16,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "playerPower": 4,
-              "locationIndex": 2,
-              "opponentPower": -4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 29,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "IronMan"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 22
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "power",
-              "source": "Bishop",
-              "newPower": 6,
-              "oldPower": 5,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 24
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "power",
-              "source": "Angela",
-              "newPower": 4,
-              "oldPower": 3,
-              "cardEntityId": 35
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 26
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 50,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 0,
-                          "baseCost": 4,
-                          "entityId": 50,
-                          "basePower": 0,
-                          "cardDefId": "DoomBot2099",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 7,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "newPower": 1,
-              "oldPower": 0,
-              "cardEntityId": 50
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "newPower": 7,
-              "oldPower": 6,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 49
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 8,
-              "oldPower": 7,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 48
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "sources": [
-                "DoomBot2099",
-                "DoomBot2099"
-              ],
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 50
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ],
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ],
-                      "3": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 26
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooded",
-              "playerPower": 11,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 19,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Magik"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ShangChi"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Legion"
-                  ]
-                }
-              ],
-              "4": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 5,
-                  "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ],
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "play",
-              "entityId": 17,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 5,
-                          "baseCost": 6,
-                          "entityId": 17,
-                          "basePower": 5,
-                          "cardDefId": "DrDoom",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 7,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "cardStaged"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -4987,75 +884,148 @@
       [
         {
           "turn": 1,
-          "plays": [],
+          "plays": [
+            {
+              "card": "Magik",
+              "isPlayer": true,
+              "location": "Limbo",
+              "locationIndex": 0
+            }
+          ],
           "energy": {
             "player": 1,
             "opponent": 1
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 66
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 68
+              "_changeIdx": 67
             },
             {
-              "to": "FogwellsGym",
+              "who": "player",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 69
+            },
+            {
+              "to": "FracturedFrontier",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 71,
+              "_changeIdx": 72,
               "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "cost": 5,
-              "type": "reveal",
-              "power": -8,
-              "entityId": 21,
-              "_changeIdx": 74,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "type": "draw",
-              "_changeIdx": 75
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 78
+              "_changeIdx": 77
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "cost": 3,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 29,
+              "_changeIdx": 80,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "type": "draw",
+              "_changeIdx": 81
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 81
+              "_changeIdx": 90
+            },
+            {
+              "who": "player",
+              "type": "initiative",
+              "_changeIdx": 91
             },
             {
               "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 82
+              "type": "snap",
+              "cubeValue": 2,
+              "_changeIdx": 94
+            },
+            {
+              "type": "cubePreview",
+              "_changeIdx": 94,
+              "cubeValueNextTurn": 2
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "type": "play",
+              "entityId": 29,
+              "location": "FracturedFrontier",
+              "_changeIdx": 95,
+              "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "type": "cardStaged",
+              "_changeIdx": 96
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 86
+              "_changeIdx": 103
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "cost": 3,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 29,
+              "_changeIdx": 106,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "FracturedFrontier",
+              "_changeIdx": 109,
+              "playerPower": 2,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "to": "Limbo",
+              "from": "FracturedFrontier",
+              "type": "location",
+              "_changeIdx": 113,
+              "locationIndex": 0
+            },
+            {
+              "type": "totalTurnsChanged",
+              "_changeIdx": 117,
+              "totalTurns": 7
+            },
+            {
+              "who": "player",
+              "card": "Magik",
+              "type": "cardResolved",
+              "_changeIdx": 119
             }
           ],
-          "snapEvent": null,
+          "snapEvent": {
+            "cubeValue": 2,
+            "totalSnaps": 1
+          },
           "locationPower": [
             {
-              "winner": null,
-              "playerPower": 0,
+              "winner": "player",
+              "playerPower": 2,
               "opponentPower": 0
             },
             {
@@ -5070,1173 +1040,48 @@
             }
           ]
         },
-        3
+        13
       ],
       [
         {
           "turn": 2,
-          "plays": [
-            {
-              "card": "Zabu",
-              "isPlayer": true,
-              "location": "Flooded",
-              "locationIndex": 1
-            },
-            {
-              "card": "Scorpion",
-              "isPlayer": false,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 2,
             "opponent": 2
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 90
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 92
+              "_changeIdx": 123
             },
             {
-              "to": "EternityRange",
+              "who": "player",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 125
+            },
+            {
+              "to": "SakaarGrandPrix",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 95,
+              "_changeIdx": 128,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 99,
+              "_changeIdx": 132,
               "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 18,
-              "_changeIdx": 102,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "draw",
-              "_changeIdx": 103
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 106
-            },
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 109
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 110
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "play",
-              "entityId": 18,
-              "location": "EternityRange",
-              "_changeIdx": 113,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "cardStaged",
-              "_changeIdx": 114
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 118
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "play",
-              "entityId": 38,
-              "location": "FogwellsGym",
-              "_changeIdx": 119,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 38,
-              "_changeIdx": 123,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "cardRevealed",
-              "_changeIdx": 124
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 126,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "Legion",
-              "type": "power",
-              "source": "Scorpion",
-              "newPower": 6,
-              "oldPower": 7,
-              "_changeIdx": 130,
-              "cardEntityId": 22
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "source": "Scorpion",
-              "newPower": 5,
-              "oldPower": 6,
-              "_changeIdx": 133,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "Storm",
-              "type": "power",
-              "source": "Scorpion",
-              "newPower": 0,
-              "oldPower": 1,
-              "_changeIdx": 136,
-              "cardEntityId": 25
-            },
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "type": "power",
-              "source": "Scorpion",
-              "newPower": -9,
-              "oldPower": -8,
-              "_changeIdx": 139,
-              "cardEntityId": 21
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 18,
-              "_changeIdx": 143,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 145,
-              "playerPower": 1,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "cardResolved",
-              "_changeIdx": 150
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 3
-            },
-            {
-              "winner": "player",
-              "playerPower": 1,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        19
-      ],
-      [
-        {
-          "turn": 3,
-          "plays": [
-            {
-              "card": "Storm",
-              "isPlayer": true,
-              "location": "Flooded",
-              "locationIndex": 1
-            },
-            {
-              "card": "Bishop",
-              "isPlayer": false,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 3,
-            "opponent": 3
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 155
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 157
-            },
-            {
-              "to": "TheDeadlands",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 160,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 3,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 27,
-              "_changeIdx": 163,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "draw",
-              "_changeIdx": 164
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 167
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 170
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 171
-            },
-            {
-              "who": "player",
-              "card": "Storm",
-              "type": "play",
-              "entityId": 25,
-              "location": "EternityRange",
-              "_changeIdx": 174,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Storm",
-              "type": "cardStaged",
-              "_changeIdx": 175
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 181
-            },
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "play",
-              "entityId": 32,
-              "location": "FogwellsGym",
-              "_changeIdx": 182,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 32,
-              "_changeIdx": 186,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "cardRevealed",
-              "_changeIdx": 187
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 189,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 5
-            },
-            {
-              "who": "player",
-              "card": "Storm",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 25,
-              "_changeIdx": 192,
-              "drawReveal": false
-            },
-            {
-              "to": "Flooding",
-              "from": "EternityRange",
-              "type": "location",
-              "_changeIdx": 196,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Storm",
-              "type": "cardResolved",
-              "_changeIdx": 200
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 46,
-              "_changeIdx": 204,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheDeadlands",
-              "newPower": 1,
-              "oldPower": 0,
-              "_changeIdx": 206,
-              "cardEntityId": 46
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 47,
-              "_changeIdx": 210,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheDeadlands",
-              "newPower": 1,
-              "oldPower": 0,
-              "_changeIdx": 212,
-              "cardEntityId": 47
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "cardRevealed",
-              "_changeIdx": 215
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 216,
-              "playerPower": 1,
-              "locationIndex": 0,
-              "opponentPower": 5
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "cardRevealed",
-              "_changeIdx": 219
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Flooding",
-              "_changeIdx": 220,
-              "playerPower": 1,
-              "locationIndex": 1,
-              "opponentPower": 1
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 1,
-              "opponentPower": 5
-            },
-            {
-              "winner": null,
-              "playerPower": 1,
-              "opponentPower": 1
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        41
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "Doom2099",
-              "isPlayer": true,
-              "location": "Flooded",
-              "locationIndex": 1
-            },
-            {
-              "card": "Angela",
-              "isPlayer": false,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 226
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 228
-            },
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 23,
-              "_changeIdx": 230,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "type": "draw",
-              "_changeIdx": 231
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 235
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 238
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 239
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "play",
-              "entityId": 20,
-              "location": "Flooding",
-              "_changeIdx": 242,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "cardStaged",
-              "_changeIdx": 243
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 248
-            },
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "play",
-              "entityId": 35,
-              "location": "FogwellsGym",
-              "_changeIdx": 249,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 35,
-              "_changeIdx": 253,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "cardRevealed",
-              "_changeIdx": 254
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 256,
-              "playerPower": 1,
-              "locationIndex": 0,
-              "opponentPower": 8
-            },
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "power",
-              "source": "Bishop",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 260,
-              "cardEntityId": 32
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 264,
-              "playerPower": 1,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 20,
-              "_changeIdx": 267,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooding",
-              "_changeIdx": 269,
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 1
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "cardResolved",
-              "_changeIdx": 272
-            },
-            {
-              "to": "Flooded",
-              "from": "Flooding",
-              "type": "location",
-              "_changeIdx": 275,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheDeadlands",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 281,
-              "cardEntityId": 46
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "source": "TheDeadlands",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 284,
-              "cardEntityId": 47
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 288,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooded",
-              "_changeIdx": 291,
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 48,
-              "_changeIdx": 296,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "cardRevealed",
-              "_changeIdx": 298
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 6,
-              "oldPower": 5,
-              "_changeIdx": 299,
-              "cardEntityId": 20
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooded",
-              "_changeIdx": 303,
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 2,
-              "opponentPower": 9
-            },
-            {
-              "winner": "player",
-              "playerPower": 7,
-              "opponentPower": 2
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        67
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "Hobgoblin",
-              "isPlayer": true,
-              "location": "Limbo",
-              "locationIndex": 2
-            },
-            {
-              "card": "Okoye",
-              "isPlayer": false,
-              "location": "Limbo",
-              "locationIndex": 2
-            },
-            {
-              "card": "Magik",
-              "isPlayer": false,
-              "location": "Limbo",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 309
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 311
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "cost": 6,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 17,
-              "_changeIdx": 313,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "draw",
-              "_changeIdx": 314
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 317
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 320
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 321
-            },
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "type": "play",
-              "entityId": 21,
-              "location": "TheDeadlands",
-              "_changeIdx": 324,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "type": "cardStaged",
-              "_changeIdx": 325
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 332
-            },
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "type": "play",
-              "entityId": 34,
-              "location": "TheDeadlands",
-              "_changeIdx": 333,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "play",
-              "entityId": 39,
-              "location": "TheDeadlands",
-              "_changeIdx": 336,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 34,
-              "_changeIdx": 340,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "type": "cardRevealed",
-              "_changeIdx": 341
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheDeadlands",
-              "_changeIdx": 343,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 3
-            },
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "power",
-              "source": "Bishop",
-              "newPower": 4,
-              "oldPower": 3,
-              "_changeIdx": 349,
-              "cardEntityId": 32
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 353,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 10
-            },
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 39,
-              "_changeIdx": 356,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Magik",
-              "type": "cardRevealed",
-              "_changeIdx": 357
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheDeadlands",
-              "_changeIdx": 360,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 5
-            },
-            {
-              "to": "Limbo",
-              "from": "TheDeadlands",
-              "type": "location",
-              "_changeIdx": 364,
-              "locationIndex": 2
-            },
-            {
-              "type": "totalTurnsChanged",
-              "_changeIdx": 368,
-              "totalTurns": 7
-            },
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "power",
-              "source": "Bishop",
-              "newPower": 5,
-              "oldPower": 4,
-              "_changeIdx": 371,
-              "cardEntityId": 32
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 375,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "cost": 5,
-              "type": "reveal",
-              "power": -9,
-              "entityId": 21,
-              "_changeIdx": 378,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Limbo",
-              "_changeIdx": 380,
-              "playerPower": -9,
-              "locationIndex": 2,
-              "opponentPower": 5
-            },
-            {
-              "to": "opponent",
-              "card": "Hobgoblin",
-              "from": "player",
-              "type": "steal",
-              "_changeIdx": 384
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "_changeIdx": 389,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": -4
-            },
-            {
-              "who": "player",
-              "card": "Hobgoblin",
-              "type": "cardResolved",
-              "_changeIdx": 392
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 49,
-              "_changeIdx": 396,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "cardRevealed",
-              "_changeIdx": 398
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 1,
-              "oldPower": 0,
-              "_changeIdx": 400,
-              "cardEntityId": 49
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 7,
-              "oldPower": 6,
-              "_changeIdx": 402,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 1,
-              "oldPower": 0,
-              "_changeIdx": 403,
-              "cardEntityId": 48
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 411,
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 11
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooded",
-              "_changeIdx": 414,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 3,
-              "opponentPower": 11
-            },
-            {
-              "winner": "player",
-              "playerPower": 9,
-              "opponentPower": 2
-            },
-            {
-              "winner": "player",
-              "playerPower": 0,
-              "opponentPower": -4
-            }
-          ]
-        },
-        96
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "NegasonicTeenageWarhead",
-              "isPlayer": true,
-              "location": "Limbo",
-              "locationIndex": 2
-            },
-            {
-              "card": "IronMan",
-              "isPlayer": false,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 420
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 422
-            },
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 16,
-              "_changeIdx": 424,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "type": "draw",
-              "_changeIdx": 425
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 428
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 431
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 432
-            },
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "type": "play",
-              "entityId": 16,
-              "location": "Limbo",
-              "_changeIdx": 435,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "type": "cardStaged",
-              "_changeIdx": 436
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 447
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "play",
-              "entityId": 29,
-              "location": "FogwellsGym",
-              "_changeIdx": 448,
-              "locationIndex": 0
+              "_changeIdx": 135
             },
             {
               "who": "player",
@@ -6244,299 +1089,26 @@
               "cost": 4,
               "type": "reveal",
               "power": 4,
-              "entityId": 16,
-              "_changeIdx": 452,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Limbo",
-              "_changeIdx": 456,
-              "playerPower": 4,
-              "locationIndex": 2,
-              "opponentPower": -4
-            },
-            {
-              "who": "player",
-              "card": "NegasonicTeenageWarhead",
-              "type": "cardResolved",
-              "_changeIdx": 459
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 29,
-              "_changeIdx": 460,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "cardRevealed",
-              "_changeIdx": 461
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 464,
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 22
-            },
-            {
-              "who": "opponent",
-              "card": "Bishop",
-              "type": "power",
-              "source": "Bishop",
-              "newPower": 6,
-              "oldPower": 5,
-              "_changeIdx": 468,
-              "cardEntityId": 32
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 472,
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 24
-            },
-            {
-              "who": "opponent",
-              "card": "Angela",
-              "type": "power",
-              "source": "Angela",
-              "newPower": 4,
-              "oldPower": 3,
-              "_changeIdx": 476,
-              "cardEntityId": 35
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 480,
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 26
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 50,
-              "_changeIdx": 486,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "cardRevealed",
-              "_changeIdx": 488
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 7,
-              "_changeIdx": 489,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "newPower": 1,
-              "oldPower": 0,
-              "_changeIdx": 491,
-              "cardEntityId": 50
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "newPower": 7,
-              "oldPower": 6,
-              "_changeIdx": 493,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 495,
-              "cardEntityId": 49
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 8,
-              "oldPower": 7,
-              "_changeIdx": 497,
-              "cardEntityId": 20
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 498,
-              "cardEntityId": 48
-            },
-            {
-              "who": "player",
-              "card": "DoomBot2099",
-              "type": "power",
-              "source": "DoomBot2099",
-              "sources": [
-                "DoomBot2099",
-                "DoomBot2099"
-              ],
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 499,
-              "cardEntityId": 50
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "FogwellsGym",
-              "_changeIdx": 509,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 26
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Flooded",
-              "_changeIdx": 512,
-              "playerPower": 11,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 516
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 6,
-              "opponentPower": 26
-            },
-            {
-              "winner": "player",
-              "playerPower": 11,
-              "opponentPower": 2
-            },
-            {
-              "winner": "player",
-              "playerPower": 4,
-              "opponentPower": -4
-            }
-          ]
-        },
-        118
-      ],
-      [
-        {
-          "turn": 7,
-          "plays": [
-            {
-              "card": "DrDoom",
-              "isPlayer": true,
-              "location": "FogwellsGym",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 7,
-            "opponent": 7
-          },
-          "events": [
-            {
-              "type": "cubePreview",
-              "_changeIdx": 519,
-              "cubeValueNextTurn": 2
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 521
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 523
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 19,
-              "_changeIdx": 525,
+              "entityId": 28,
+              "_changeIdx": 138,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Magik",
+              "card": "NegasonicTeenageWarhead",
               "type": "draw",
-              "_changeIdx": 526
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 529
+              "_changeIdx": 139
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "player",
-              "_changeIdx": 532
+              "_changeIdx": 142
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 533
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "play",
-              "entityId": 17,
-              "location": "FogwellsGym",
-              "_changeIdx": 536,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "cardStaged",
-              "_changeIdx": 537
+              "_changeIdx": 143
             }
           ],
           "snapEvent": null,
@@ -6558,79 +1130,53 @@
             }
           ]
         },
-        126
+        18
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 12800,
-  "opp_sp": null,
+  "opp_cl": 15731,
+  "opp_sp": 5253,
   "bracket": null,
-  "match_id": "86d06882-9ea9-400c-ab06-f63419aab08f",
-  "opp_name": "Klausner",
+  "match_id": "20f2cef3-9e47-4fab-92fc-886718117513",
+  "opp_name": "Mark Rod",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "FogwellsGym",
-    "Flooded",
-    "Limbo"
-  ],
+  "locations": [],
   "player_cl": 11694,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Kraven",
-    "ArtVariantDefId": "Kraven_04"
+    "CardDefId": "CaptainMarvel",
+    "ArtVariantDefId": "CaptainMarvel_13"
   },
   "opp_health": null,
-  "opp_is_bot": true,
+  "opp_is_bot": false,
   "mode_detail": null,
   "player_name": "SmokeFisher",
-  "current_turn": 8,
-  "match_result": "win",
-  "match_status": "complete",
+  "current_turn": 3,
+  "match_result": null,
+  "match_status": "in_progress",
   "opp_clan_tag": null,
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": true,
+  "opp_retreated": null,
   "player_avatar": null,
   "player_health": null,
   "wild_boosters": null,
-  "opp_deck_cards": [
-    "Scorpion",
-    "Bishop",
-    "Angela",
-    "Okoye",
-    "Magik",
-    "IronMan"
-  ],
-  "last_updated_at": "2026-10-11T23:05:26.728+00:00",
+  "opp_deck_cards": null,
+  "last_updated_at": "2026-10-11T23:08:20.891+00:00",
   "opp_played_cards": [],
   "player_deck_cards": [
-    "ShangChi",
-    "Psylocke",
-    "GreenGoblin",
-    "NegasonicTeenageWarhead",
-    "Storm",
-    "DrDoom",
-    "IronLad",
-    "Legion",
-    "Zabu",
     "Doom2099",
-    "Hobgoblin",
-    "Magik"
+    "ShangChi",
+    "Legion",
+    "Magik",
+    "NegasonicTeenageWarhead"
   ],
   "booster_card_def_id": null,
-  "opponent_cards_seen": [
-    "Scorpion",
-    "Bishop",
-    "ZombieHorde",
-    "Angela",
-    "Okoye",
-    "Magik",
-    "IronMan"
-  ],
+  "opponent_cards_seen": [],
   "conquest_round_index": null
 }
