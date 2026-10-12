@@ -50,21 +50,24 @@
               "cardDefId": "AmericaChavez"
             },
             {
-              "cost": 3,
-              "power": 4,
-              "baseCost": 3,
-              "basePower": 4,
-              "cardDefId": "SuperiorSpiderMan"
+              "cost": 4,
+              "power": 1,
+              "augments": [
+                "QuickDrawPowerAugment"
+              ],
+              "baseCost": 4,
+              "basePower": 1,
+              "cardDefId": "Jubilee"
             },
             {
-              "cost": 3,
-              "power": 6,
+              "cost": 4,
+              "power": 3,
               "augments": [
-                "AddPowerToDeckAugment"
+                "ShiftRightAugment"
               ],
-              "baseCost": 3,
-              "basePower": 6,
-              "cardDefId": "Wave"
+              "baseCost": 4,
+              "basePower": 3,
+              "cardDefId": "Stick"
             }
           ],
           "n": {
@@ -88,12 +91,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             }
@@ -108,7 +111,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "EternityRange",
+              "to": "WhiteHotRoom",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -125,7 +128,7 @@
                 {
                   "location": [
                     0,
-                    "EternityRange"
+                    "WhiteHotRoom"
                   ],
                   "revealed": [
                     0,
@@ -144,22 +147,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "DrDoom",
-              "cost": 6,
+              "card": "Odin",
+              "cost": 5,
               "type": "reveal",
-              "power": 5,
-              "entityId": 30,
+              "power": 10,
+              "entityId": 24,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "DrDoom",
+              "card": "Odin",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -185,11 +188,11 @@
               "3": [
                 0,
                 {
-                  "cost": 6,
-                  "power": 5,
+                  "cost": 5,
+                  "power": 10,
                   "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
+                  "basePower": 10,
+                  "cardDefId": "Odin"
                 }
               ]
             }
@@ -217,7 +220,7 @@
           "events": [
             {
               "type": "vpContested",
-              "locationIndex": 2
+              "locationIndex": 0
             }
           ]
         },
@@ -233,9 +236,9 @@
               "who": "player",
               "card": "AmericaChavez",
               "type": "play",
-              "entityId": 39,
-              "location": "RevealOn3",
-              "locationIndex": 2
+              "entityId": 18,
+              "location": "WhiteHotRoom",
+              "locationIndex": 0
             }
           ]
         },
@@ -244,7 +247,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "playerCards": [
@@ -257,7 +260,7 @@
                           "cost": 1,
                           "power": 2,
                           "baseCost": 1,
-                          "entityId": 39,
+                          "entityId": 18,
                           "basePower": 2,
                           "cardDefId": "AmericaChavez",
                           "arrivalSeq": 0
@@ -287,23 +290,29 @@
                 {
                   "cost": [
                     0,
-                    3
+                    4
                   ],
                   "power": [
                     0,
-                    4
+                    1
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "QuickDrawPowerAugment"
+                    ]
                   ],
                   "baseCost": [
                     0,
-                    3
+                    4
                   ],
                   "basePower": [
                     0,
-                    4
+                    1
                   ],
                   "cardDefId": [
                     0,
-                    "SuperiorSpiderMan"
+                    "Jubilee"
                   ]
                 }
               ],
@@ -312,21 +321,25 @@
                 {
                   "power": [
                     0,
-                    6
+                    3
                   ],
                   "augments": [
-                    0,
-                    [
-                      "AddPowerToDeckAugment"
-                    ]
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        "ShiftRightAugment"
+                      ]
+                    }
                   ],
                   "basePower": [
                     0,
-                    6
+                    3
                   ],
                   "cardDefId": [
                     0,
-                    "Wave"
+                    "Stick"
                   ]
                 }
               ],
@@ -335,11 +348,11 @@
                 {
                   "cost": [
                     0,
-                    6
+                    5
                   ],
                   "power": [
                     0,
-                    5
+                    10
                   ],
                   "baseCost": [
                     0,
@@ -347,11 +360,11 @@
                   ],
                   "basePower": [
                     0,
-                    5
+                    10
                   ],
                   "cardDefId": [
                     0,
-                    "DrDoom"
+                    "Odin"
                   ]
                 },
                 [
@@ -395,63 +408,6 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 21,
-              "location": "RevealOn3",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 21,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
           "label": "Reveal",
           "events": [
             {
@@ -460,7 +416,7 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 39,
+              "entityId": 18,
               "drawReveal": false
             }
           ]
@@ -476,9 +432,9 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "RevealOn3",
+              "location": "WhiteHotRoom",
               "playerPower": 2,
-              "locationIndex": 2,
+              "locationIndex": 0,
               "opponentPower": 0
             }
           ]
@@ -504,107 +460,12 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "AmericaChavez"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "RevealOn3",
-              "playerPower": 2,
-              "locationIndex": 2,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
           "label": "Turn Winner",
           "events": [
             {
-              "tie": true,
+              "tie": false,
               "type": "turnWinner",
-              "winner": null
+              "winner": "player"
             }
           ]
         },
@@ -632,7 +493,7 @@
           "events": [
             {
               "type": "vpScores",
-              "playerPoints": 0,
+              "playerPoints": 1,
               "opponentPoints": 0
             }
           ]
@@ -646,12 +507,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             }
@@ -666,7 +527,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Shadowland",
+              "to": "CelestialBurialGround",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -683,7 +544,7 @@
                 {
                   "location": [
                     0,
-                    "Shadowland"
+                    "CelestialBurialGround"
                   ],
                   "revealed": [
                     0,
@@ -699,72 +560,174 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Reveal",
+          "label": "Discarded",
           "events": [
             {
               "who": "player",
-              "card": "Ninja",
-              "cost": 1,
-              "type": "reveal",
-              "power": -2,
-              "entityId": 46,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Ninja",
-              "cost": 1,
-              "type": "reveal",
-              "power": -2,
-              "entityId": 47,
-              "drawReveal": false
+              "card": "Jubilee",
+              "type": "discarded"
             }
           ]
         },
         {
-          "b": [
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                2
+              ]
+            }
+          ],
+          "d": [
+            1,
+            {
+              "player": [
+                2,
+                1,
+                {
+                  "0": [
+                    0,
+                    {
+                      "cost": 4,
+                      "power": 1,
+                      "augments": [
+                        "QuickDrawPowerAugment"
+                      ],
+                      "cardDefId": "Jubilee"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "h": [
+            2,
+            2,
+            {
+              "0": [
+                1,
+                {
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "augments": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        "ShiftRightAugment"
+                      ]
+                    }
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Stick"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    5
+                  ],
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    6
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Odin"
+                  ]
+                },
+                [
+                  "augments"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "Warpath",
+              "cost": 4,
+              "type": "reveal",
+              "power": 5,
+              "entityId": 46,
+              "drawReveal": true
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                3
+              ]
+            }
+          ],
+          "h": [
             2,
             3,
             {
               "1": [
                 1,
                 {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": -2,
-                          "baseCost": 1,
-                          "entityId": 46,
-                          "basePower": -2,
-                          "cardDefId": "Ninja",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
+                  "cost": [
+                    0,
+                    4
                   ],
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": -2,
-                          "baseCost": 1,
-                          "entityId": 47,
-                          "basePower": -2,
-                          "cardDefId": "Ninja",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
+                  "power": [
+                    0,
+                    5
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    5
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Warpath"
                   ]
+                }
+              ],
+              "2": [
+                0,
+                {
+                  "cost": 5,
+                  "power": 10,
+                  "baseCost": 6,
+                  "basePower": 10,
+                  "cardDefId": "Odin"
                 }
               ]
             }
@@ -775,45 +738,16 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "Ninja",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Shadowland",
-              "playerPower": -2,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
+          "label": "Reveal",
           "events": [
             {
               "who": "opponent",
-              "card": "Ninja",
-              "type": "cardRevealed"
+              "card": "CaptainCarter",
+              "cost": 3,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 33,
+              "drawReveal": false
             }
           ]
         },
@@ -823,19 +757,48 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Score",
+          "label": "Discarded",
           "events": [
             {
-              "type": "score",
-              "winner": null,
-              "location": "Shadowland",
-              "playerPower": -2,
-              "locationIndex": 1,
-              "opponentPower": -2
+              "who": "opponent",
+              "card": "CaptainCarter",
+              "type": "discarded"
             }
           ]
         },
-        {}
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                3
+              ]
+            }
+          ],
+          "d": [
+            1,
+            {
+              "opponent": [
+                2,
+                1,
+                {
+                  "0": [
+                    0,
+                    {
+                      "cost": 3,
+                      "power": 2,
+                      "augments": [
+                        "AllyPowerAugment"
+                      ],
+                      "cardDefId": "CaptainCarter"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -870,6 +833,15 @@
                 }
               ]
             }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                4
+              ]
+            }
           ]
         }
       ],
@@ -880,22 +852,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "BlackPanther",
-              "cost": 5,
+              "card": "KittyPryde",
+              "cost": 1,
               "type": "reveal",
-              "power": 11,
-              "entityId": 36,
+              "power": 4,
+              "entityId": 20,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "BlackPanther",
+              "card": "KittyPryde",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -910,7 +882,7 @@
               ],
               "opponent": [
                 0,
-                4
+                5
               ]
             }
           ],
@@ -918,35 +890,90 @@
             2,
             4,
             {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    1
+                  ],
+                  "power": [
+                    0,
+                    4
+                  ],
+                  "baseCost": [
+                    0,
+                    1
+                  ],
+                  "basePower": [
+                    0,
+                    1
+                  ],
+                  "cardDefId": [
+                    0,
+                    "KittyPryde"
+                  ]
+                },
+                [
+                  "augments"
+                ]
+              ],
+              "1": [
+                1,
+                {
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "ShiftRightAugment"
+                    ]
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Stick"
+                  ]
+                }
+              ],
               "2": [
                 1,
                 {
                   "cost": [
                     0,
-                    5
+                    4
                   ],
                   "power": [
                     0,
-                    11
+                    5
                   ],
                   "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
                     0,
                     5
                   ],
                   "cardDefId": [
                     0,
-                    "BlackPanther"
+                    "Warpath"
                   ]
                 }
               ],
               "3": [
                 0,
                 {
-                  "cost": 6,
-                  "power": 5,
+                  "cost": 5,
+                  "power": 10,
                   "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
+                  "basePower": 10,
+                  "cardDefId": "Odin"
                 }
               ]
             }
@@ -984,91 +1011,15 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 2,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Initiative",
+          "label": "Play",
           "events": [
             {
               "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 0,
-              "opponentPoints": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "Subterranea",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
+              "card": "KittyPryde",
+              "type": "play",
+              "entityId": 20,
+              "location": "CelestialBurialGround",
+              "locationIndex": 1
             }
           ]
         },
@@ -1077,65 +1028,45 @@
             2,
             3,
             {
-              "2": [
+              "1": [
                 1,
                 {
-                  "location": [
-                    0,
-                    "Subterranea"
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 4,
+                          "baseCost": 1,
+                          "entityId": 20,
+                          "basePower": 1,
+                          "cardDefId": "KittyPryde",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
             }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Stick",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 29,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Stick",
-              "type": "draw"
-            }
-          ]
-        },
-        {
+          ],
           "c": [
             1,
             {
               "player": [
                 0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
+                3
               ]
             }
           ],
           "h": [
             2,
-            5,
+            3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "cost": [
@@ -1166,7 +1097,27 @@
                   ]
                 }
               ],
-              "3": [
+              "1": [
+                1,
+                {
+                  "power": [
+                    0,
+                    5
+                  ],
+                  "basePower": [
+                    0,
+                    5
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Warpath"
+                  ]
+                },
+                [
+                  "augments"
+                ]
+              ],
+              "2": [
                 1,
                 {
                   "cost": [
@@ -1175,26 +1126,747 @@
                   ],
                   "power": [
                     0,
-                    11
+                    10
                   ],
                   "baseCost": [
+                    0,
+                    6
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Odin"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Staged",
+          "events": [
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "cardStaged"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "End Turn",
+          "events": [
+            {
+              "turn": 2,
+              "type": "endTurn"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Play",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Goose",
+              "type": "play",
+              "entityId": 36,
+              "location": "CelestialBurialGround",
+              "locationIndex": 1
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": null,
+                          "power": null,
+                          "augments": [
+                            "AllyPowerAugment"
+                          ],
+                          "baseCost": null,
+                          "entityId": 36,
+                          "basePower": null,
+                          "cardDefId": null,
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                4
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 20,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "CelestialBurialGround",
+              "playerPower": 4,
+              "locationIndex": 1,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Goose",
+              "cost": 2,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 36,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            2
+                          ],
+                          "power": [
+                            0,
+                            2
+                          ],
+                          "baseCost": [
+                            0,
+                            2
+                          ],
+                          "basePower": [
+                            0,
+                            2
+                          ],
+                          "cardDefId": [
+                            0,
+                            "Goose"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Goose",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "CelestialBurialGround",
+              "playerPower": 4,
+              "locationIndex": 1,
+              "opponentPower": 2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Turn Winner",
+          "events": [
+            {
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "player"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Initiative",
+          "events": [
+            {
+              "who": "player",
+              "type": "initiative"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Points",
+          "events": [
+            {
+              "type": "vpScores",
+              "playerPoints": 4,
+              "opponentPoints": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Energy",
+          "events": [
+            {
+              "who": "player",
+              "type": "energy",
+              "energy": 3
+            },
+            {
+              "who": "opponent",
+              "type": "energy",
+              "energy": 3
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Location",
+          "events": [
+            {
+              "to": "VibraniumMines",
+              "from": "RevealOn2",
+              "type": "location",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "location": [
+                    0,
+                    "VibraniumMines"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Reset",
+          "events": [
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 4
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "basePower": [
+                            0,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Bounce",
+          "events": [
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "from": "CelestialBurialGround",
+              "type": "bounce",
+              "entityId": 20
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    0,
+                    {}
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                4
+              ]
+            }
+          ],
+          "h": [
+            2,
+            4,
+            {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    1
+                  ],
+                  "power": [
+                    0,
+                    4
+                  ],
+                  "baseCost": [
+                    0,
+                    1
+                  ],
+                  "basePower": [
+                    0,
+                    4
+                  ],
+                  "cardDefId": [
+                    0,
+                    "KittyPryde"
+                  ]
+                },
+                [
+                  "augments"
+                ]
+              ],
+              "1": [
+                1,
+                {
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "ShiftRightAugment"
+                    ]
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Stick"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    5
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
                     0,
                     5
                   ],
                   "cardDefId": [
                     0,
-                    "BlackPanther"
+                    "Warpath"
+                  ]
+                }
+              ],
+              "3": [
+                0,
+                {
+                  "cost": 5,
+                  "power": 10,
+                  "baseCost": 6,
+                  "basePower": 10,
+                  "cardDefId": "Odin"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Reset",
+          "events": [
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 4
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "CelestialBurialGround",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Power",
+          "events": [
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "power",
+              "source": "AmericaChavez",
+              "sources": [
+                "AmericaChavez",
+                "KittyPryde"
+              ],
+              "newPower": 5,
+              "oldPower": 4,
+              "cardEntityId": 20
+            }
+          ]
+        },
+        {
+          "h": [
+            2,
+            4,
+            {
+              "0": [
+                1,
+                {
+                  "power": [
+                    0,
+                    5
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "Wave",
+              "cost": 3,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 25,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Wave",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                5
+              ],
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ],
+          "h": [
+            2,
+            5,
+            {
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    3
+                  ],
+                  "power": [
+                    0,
+                    6
+                  ],
+                  "augments": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        "AddPowerToDeckAugment"
+                      ]
+                    }
+                  ],
+                  "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    6
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Wave"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "ShiftRightAugment"
+                    ]
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Stick"
+                  ]
+                }
+              ],
+              "3": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    5
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    5
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Warpath"
                   ]
                 }
               ],
               "4": [
                 0,
                 {
-                  "cost": 6,
-                  "power": 5,
+                  "cost": 5,
+                  "power": 10,
                   "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
+                  "basePower": 10,
+                  "cardDefId": "Odin"
                 }
               ]
             }
@@ -1204,11 +1876,11 @@
             {
               "player": [
                 0,
-                10
+                6
               ],
               "opponent": [
                 0,
-                10
+                6
               ]
             }
           ]
@@ -1222,21 +1894,7 @@
           "events": [
             {
               "type": "vpContested",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Stake Raised",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "vpStakeRaise"
+              "locationIndex": 0
             }
           ]
         },
@@ -1252,9 +1910,9 @@
               "who": "player",
               "card": "Wave",
               "type": "play",
-              "entityId": 31,
-              "location": "Subterranea",
-              "locationIndex": 2
+              "entityId": 25,
+              "location": "WhiteHotRoom",
+              "locationIndex": 0
             }
           ]
         },
@@ -1263,7 +1921,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "playerCards": [
@@ -1279,7 +1937,7 @@
                             "AddPowerToDeckAugment"
                           ],
                           "baseCost": 3,
-                          "entityId": 31,
+                          "entityId": 25,
                           "basePower": 6,
                           "cardDefId": "Wave",
                           "arrivalSeq": 1
@@ -1342,15 +2000,7 @@
               "2": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    5
-                  ],
                   "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
                     0,
                     5
                   ],
@@ -1360,7 +2010,7 @@
                   ],
                   "cardDefId": [
                     0,
-                    "BlackPanther"
+                    "Warpath"
                   ]
                 },
                 [
@@ -1372,19 +2022,23 @@
                 {
                   "cost": [
                     0,
-                    6
+                    5
                   ],
                   "power": [
                     0,
-                    5
+                    10
                   ],
                   "baseCost": [
                     0,
                     6
                   ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
                   "cardDefId": [
                     0,
-                    "DrDoom"
+                    "Odin"
                   ]
                 }
               ]
@@ -1429,11 +2083,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "SebastianShaw",
+              "card": "Shanna",
               "type": "play",
-              "entityId": 20,
-              "location": "Subterranea",
-              "locationIndex": 2
+              "entityId": 32,
+              "location": "WhiteHotRoom",
+              "locationIndex": 0
             }
           ]
         },
@@ -1442,26 +2096,26 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
+                      "0": [
                         0,
                         {
                           "cost": null,
                           "power": null,
                           "augments": [
-                            "SidekickAugment"
+                            "DoubleOnRevealAugment"
                           ],
                           "baseCost": null,
-                          "entityId": 20,
+                          "entityId": 32,
                           "basePower": null,
                           "cardDefId": null,
-                          "arrivalSeq": 1
+                          "arrivalSeq": 0
                         }
                       ]
                     }
@@ -1493,7 +2147,7 @@
               "cost": 3,
               "type": "reveal",
               "power": 6,
-              "entityId": 31,
+              "entityId": 25,
               "drawReveal": false
             }
           ]
@@ -1509,10 +2163,10 @@
             {
               "type": "score",
               "winner": "player",
-              "location": "Subterranea",
+              "location": "WhiteHotRoom",
               "playerPower": 8,
-              "locationIndex": 2,
-              "opponentPower": 2
+              "locationIndex": 0,
+              "opponentPower": 0
             }
           ]
         },
@@ -1541,19 +2195,19 @@
                 {
                   "power": [
                     0,
-                    11
+                    10
                   ],
                   "baseCost": [
                     0,
-                    5
+                    6
                   ],
                   "basePower": [
                     0,
-                    5
+                    10
                   ],
                   "cardDefId": [
                     0,
-                    "BlackPanther"
+                    "Odin"
                   ]
                 },
                 [
@@ -1563,21 +2217,23 @@
               "2": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    4
-                  ],
                   "power": [
                     0,
-                    5
+                    3
                   ],
-                  "baseCost": [
+                  "augments": [
                     0,
-                    6
+                    [
+                      "ShiftRightAugment"
+                    ]
+                  ],
+                  "basePower": [
+                    0,
+                    3
                   ],
                   "cardDefId": [
                     0,
-                    "DrDoom"
+                    "Stick"
                   ]
                 }
               ],
@@ -1590,13 +2246,7 @@
                   ],
                   "power": [
                     0,
-                    3
-                  ],
-                  "augments": [
-                    0,
-                    [
-                      "ShiftRightAugment"
-                    ]
+                    5
                   ],
                   "baseCost": [
                     0,
@@ -1604,11 +2254,11 @@
                   ],
                   "basePower": [
                     0,
-                    3
+                    5
                   ],
                   "cardDefId": [
                     0,
-                    "Stick"
+                    "Warpath"
                   ]
                 }
               ]
@@ -1624,11 +2274,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "SebastianShaw",
+              "card": "Shanna",
               "cost": 3,
               "type": "reveal",
-              "power": 10,
-              "entityId": 20,
+              "power": 6,
+              "entityId": 32,
               "drawReveal": false
             }
           ]
@@ -1638,14 +2288,14 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
+                      "0": [
                         1,
                         {
                           "cost": [
@@ -1654,7 +2304,7 @@
                           ],
                           "power": [
                             0,
-                            10
+                            6
                           ],
                           "baseCost": [
                             0,
@@ -1662,11 +2312,11 @@
                           ],
                           "basePower": [
                             0,
-                            5
+                            4
                           ],
                           "cardDefId": [
                             0,
-                            "SebastianShaw"
+                            "Shanna"
                           ]
                         }
                       ]
@@ -1686,7 +2336,265 @@
           "events": [
             {
               "who": "opponent",
-              "card": "SebastianShaw",
+              "card": "Shanna",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Event",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Shanna",
+              "type": "doubleTrigger"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "WhiteHotRoom",
+              "playerPower": 8,
+              "locationIndex": 0,
+              "opponentPower": 6
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "SpiderHam",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 48,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Snowguard",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 49,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Selene",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 50,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 1,
+                          "baseCost": 1,
+                          "entityId": 48,
+                          "basePower": 1,
+                          "cardDefId": "SpiderHam",
+                          "arrivalSeq": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 2,
+                          "baseCost": 1,
+                          "entityId": 49,
+                          "basePower": 2,
+                          "cardDefId": "Snowguard",
+                          "arrivalSeq": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 2,
+                          "baseCost": 1,
+                          "entityId": 50,
+                          "basePower": 2,
+                          "cardDefId": "Selene",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Goose",
+              "type": "power",
+              "source": "Goose",
+              "newPower": 3,
+              "oldPower": 2,
+              "cardEntityId": 36
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    2,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "CelestialBurialGround",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 3
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "SpiderHam",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "WhiteHotRoom",
+              "playerPower": 8,
+              "locationIndex": 0,
+              "opponentPower": 7
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Snowguard",
               "type": "cardRevealed"
             }
           ]
@@ -1702,10 +2610,363 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Subterranea",
-              "playerPower": 8,
+              "location": "CelestialBurialGround",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 5
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Selene",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                6
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "VibraniumMines",
+              "playerPower": 0,
               "locationIndex": 2,
-              "opponentPower": 12
+              "opponentPower": 2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Power",
+          "events": [
+            {
+              "who": "player",
+              "card": "Stick",
+              "type": "power",
+              "source": "Selene",
+              "newPower": 0,
+              "oldPower": 3,
+              "cardEntityId": 21
+            }
+          ]
+        },
+        {
+          "h": [
+            2,
+            4,
+            {
+              "2": [
+                1,
+                {
+                  "power": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "SpiderManBrandNewDay",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 53,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Agony",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 54,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "AntMan",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 55,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    3,
+                    {
+                      "2": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 2,
+                          "baseCost": 1,
+                          "entityId": 53,
+                          "basePower": 2,
+                          "cardDefId": "SpiderManBrandNewDay",
+                          "arrivalSeq": 2
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    3,
+                    {
+                      "2": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 2,
+                          "baseCost": 1,
+                          "entityId": 54,
+                          "basePower": 2,
+                          "cardDefId": "Agony",
+                          "arrivalSeq": 2
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 1,
+                          "baseCost": 1,
+                          "entityId": 55,
+                          "basePower": 1,
+                          "cardDefId": "AntMan",
+                          "arrivalSeq": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Goose",
+              "type": "power",
+              "newPower": 4,
+              "oldPower": 3,
+              "cardEntityId": 36
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    3,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "CelestialBurialGround",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 6
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "SpiderManBrandNewDay",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "WhiteHotRoom",
+              "playerPower": 8,
+              "locationIndex": 0,
+              "opponentPower": 9
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Agony",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "CelestialBurialGround",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 8
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "AntMan",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "VibraniumMines",
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 3
             }
           ]
         },
@@ -1724,17 +2985,7 @@
             }
           ]
         },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
+        {}
       ],
       [
         {
@@ -1758,8 +3009,8 @@
           "events": [
             {
               "type": "vpScores",
-              "playerPoints": 0,
-              "opponentPoints": 4
+              "playerPoints": 4,
+              "opponentPoints": 5
             }
           ]
         },
@@ -1772,12 +3023,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 4
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 4
             }
@@ -1792,22 +3043,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
               "card": "Clea",
               "cost": 1,
               "type": "reveal",
               "power": 9,
-              "entityId": 32,
+              "entityId": 19,
               "drawReveal": true
             },
             {
               "who": "player",
               "card": "Clea",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -1822,7 +3073,7 @@
               ],
               "opponent": [
                 0,
-                6
+                7
               ]
             }
           ],
@@ -1833,10 +3084,6 @@
               "0": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    1
-                  ],
                   "power": [
                     0,
                     9
@@ -1846,10 +3093,6 @@
                     [
                       "LureAugment"
                     ]
-                  ],
-                  "baseCost": [
-                    0,
-                    1
                   ],
                   "basePower": [
                     0,
@@ -1866,15 +3109,15 @@
                 {
                   "cost": [
                     0,
-                    3
+                    1
                   ],
                   "power": [
                     0,
-                    4
+                    5
                   ],
                   "baseCost": [
                     0,
-                    3
+                    1
                   ],
                   "basePower": [
                     0,
@@ -1882,7 +3125,7 @@
                   ],
                   "cardDefId": [
                     0,
-                    "SuperiorSpiderMan"
+                    "KittyPryde"
                   ]
                 }
               ],
@@ -1891,24 +3134,7 @@
                 {
                   "power": [
                     0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "BlackPanther"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
+                    10
                   ],
                   "baseCost": [
                     0,
@@ -1916,28 +3142,48 @@
                   ],
                   "basePower": [
                     0,
-                    5
+                    10
                   ],
                   "cardDefId": [
                     0,
-                    "DrDoom"
+                    "Odin"
                   ]
                 },
                 [
                   "augments"
                 ]
+              ],
+              "3": [
+                1,
+                {
+                  "power": [
+                    0,
+                    0
+                  ],
+                  "augments": [
+                    0,
+                    [
+                      "ShiftRightAugment"
+                    ]
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Stick"
+                  ]
+                }
               ],
               "4": [
                 0,
                 {
                   "cost": 4,
-                  "power": 3,
-                  "augments": [
-                    "ShiftRightAugment"
-                  ],
+                  "power": 5,
                   "baseCost": 4,
-                  "basePower": 3,
-                  "cardDefId": "Stick"
+                  "basePower": 5,
+                  "cardDefId": "Warpath"
                 }
               ]
             }
@@ -1947,11 +3193,11 @@
             {
               "player": [
                 0,
-                9
+                5
               ],
               "opponent": [
                 0,
-                9
+                5
               ]
             }
           ]
@@ -1965,2814 +3211,8 @@
           "events": [
             {
               "type": "vpContested",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "play",
-              "entityId": 36,
-              "location": "EternityRange",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 11,
-                          "baseCost": 5,
-                          "entityId": 36,
-                          "basePower": 5,
-                          "cardDefId": "BlackPanther",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "augments": [
-                    0,
-                    [
-                      "ShiftRightAugment"
-                    ]
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Stick"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Kraven",
-              "type": "play",
-              "entityId": 56,
-              "location": "EternityRange",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "play",
-              "entityId": 22,
-              "location": "EternityRange",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 56,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ],
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 22,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Kraven",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 56,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Kraven"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Kraven",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "EternityRange",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            4
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "IronMan"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "EternityRange",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 14
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "cost": 5,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "EternityRange",
-              "playerPower": 11,
-              "locationIndex": 0,
-              "opponentPower": 14
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "source": "BlackPanther",
-              "sources": [
-                "BlackPanther",
-                "AmericaChavez"
-              ],
-              "newPower": 22,
-              "oldPower": 11,
-              "cardEntityId": 36
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            22
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 22,
-              "locationIndex": 0,
-              "opponentPower": 14
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 4,
-              "opponentPoints": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "cost": 5,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 34,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "augments": [
-                    0,
-                    [
-                      "ShiftRightAugment"
-                    ]
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Stick"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "WhiteTiger"
-                  ]
-                },
-                [
-                  "augments"
-                ]
-              ],
-              "4": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 5,
-                  "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                8
-              ],
-              "opponent": [
-                0,
-                8
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Stick",
-              "type": "play",
-              "entityId": 29,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 3,
-                          "augments": [
-                            "ShiftRightAugment"
-                          ],
-                          "baseCost": 4,
-                          "entityId": 29,
-                          "basePower": 3,
-                          "cardDefId": "Stick",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "WhiteTiger"
-                  ]
-                },
-                [
-                  "augments"
-                ]
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Stick",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Clea",
-              "type": "play",
-              "entityId": 32,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 9,
-                          "augments": [
-                            "LureAugment"
-                          ],
-                          "baseCost": 1,
-                          "entityId": 32,
-                          "basePower": 3,
-                          "cardDefId": "Clea",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SuperiorSpiderMan"
-                  ]
-                },
-                [
-                  "augments"
-                ]
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "WhiteTiger"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Clea",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JessicaJones",
-              "type": "play",
-              "entityId": 16,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "augments": [
-                            "AddPowerToDeckAugment"
-                          ],
-                          "baseCost": null,
-                          "entityId": 16,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JessicaJones",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 16,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "JessicaJones"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JessicaJones",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Subterranea",
-              "playerPower": 8,
-              "locationIndex": 2,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Stick",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 29,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Subterranea",
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "power",
-              "source": "Stick",
-              "newPower": 7,
-              "oldPower": 6,
-              "cardEntityId": 31
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Subterranea",
-              "playerPower": 12,
-              "locationIndex": 2,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Stick",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Clea",
-              "type": "power",
-              "source": "Wave",
-              "sources": [
-                "Wave",
-                "Stick"
-              ],
-              "newPower": 12,
-              "oldPower": 9,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            12
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 57,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "FlamesOfTheFaltine"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SuperiorSpiderMan"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "WhiteTiger"
-                  ]
-                }
-              ],
-              "3": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 5,
-                  "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Clea",
-              "cost": 1,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "playerPower": 24,
-              "locationIndex": 2,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Clea",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 10,
-              "opponentPoints": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 48,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Rock"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SuperiorSpiderMan"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "WhiteTiger"
-                  ]
-                }
-              ],
-              "4": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 5,
-                  "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Contested",
-          "events": [
-            {
-              "type": "vpContested",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "type": "play",
-              "entityId": 34,
-              "location": "Shadowland",
               "locationIndex": 1
             }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 1,
-                          "baseCost": 5,
-                          "entityId": 34,
-                          "basePower": 1,
-                          "cardDefId": "WhiteTiger",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "type": "play",
-              "entityId": 57,
-              "location": "EternityRange",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 0,
-                          "baseCost": 1,
-                          "entityId": 57,
-                          "basePower": 0,
-                          "cardDefId": "FlamesOfTheFaltine",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Rock"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SuperiorSpiderMan"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 27,
-              "location": "Subterranea",
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "type": "play",
-              "entityId": 19,
-              "location": "EternityRange",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "augments": [
-                            "AddPowerToDeckAugment"
-                          ],
-                          "baseCost": null,
-                          "entityId": 19,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 27,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "cost": 5,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 34,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Shadowland",
-              "playerPower": -1,
-              "locationIndex": 1,
-              "opponentPower": -2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "TigerSpirit",
-              "cost": 5,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 58,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 10,
-                          "baseCost": 5,
-                          "entityId": 58,
-                          "basePower": 10,
-                          "cardDefId": "TigerSpirit",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "TigerSpirit",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 32,
-              "locationIndex": 0,
-              "opponentPower": 14
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 57,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Kraven",
-              "type": "power",
-              "source": "FlamesOfTheFaltine",
-              "newPower": 0,
-              "oldPower": 3,
-              "cardEntityId": 56
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            0
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 32,
-              "locationIndex": 0,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            10
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "entityId": [
-                            0,
-                            58
-                          ],
-                          "basePower": [
-                            0,
-                            10
-                          ],
-                          "cardDefId": [
-                            0,
-                            "TigerSpirit"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 0,
-                      "cardDefId": "FlamesOfTheFaltine"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 27,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Forge"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "playerPower": 24,
-              "locationIndex": 2,
-              "opponentPower": 19
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 19,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "JackFlag"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 5,
-              "oldPower": 3,
-              "cardEntityId": 19
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "power",
-              "source": "IronMan",
-              "sources": [
-                "IronMan",
-                "JackFlag"
-              ],
-              "newPower": 6,
-              "oldPower": 4,
-              "cardEntityId": 22
-            },
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "type": "power",
-              "source": "JackFlag",
-              "newPower": 7,
-              "oldPower": 5,
-              "cardEntityId": 19
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ],
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 32,
-              "locationIndex": 0,
-              "opponentPower": 26
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Points",
-          "events": [
-            {
-              "type": "vpScores",
-              "playerPoints": 19,
-              "opponentPoints": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -4816,14 +3256,8 @@
             {
               "card": "AmericaChavez",
               "isPlayer": true,
-              "location": "Subterranea",
-              "locationIndex": 2
-            },
-            {
-              "card": "AmericaChavez",
-              "isPlayer": false,
-              "location": "Subterranea",
-              "locationIndex": 2
+              "location": "WhiteHotRoom",
+              "locationIndex": 0
             }
           ],
           "energy": {
@@ -4832,79 +3266,70 @@
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 74
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 76
+              "_changeIdx": 75
             },
             {
-              "to": "EternityRange",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 77
+            },
+            {
+              "to": "WhiteHotRoom",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 79,
+              "_changeIdx": 81,
               "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "Odin",
+              "cost": 5,
+              "type": "reveal",
+              "power": 10,
+              "entityId": 24,
+              "_changeIdx": 84,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Odin",
+              "type": "draw",
+              "_changeIdx": 85
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 82
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "cost": 6,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "_changeIdx": 85,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "draw",
-              "_changeIdx": 86
+              "_changeIdx": 88
             },
             {
               "type": "vpContested",
-              "_changeIdx": 90,
-              "locationIndex": 2
+              "_changeIdx": 92,
+              "locationIndex": 0
             },
             {
               "who": "player",
               "card": "AmericaChavez",
               "type": "play",
-              "entityId": 39,
-              "location": "RevealOn3",
-              "_changeIdx": 93,
-              "locationIndex": 2
+              "entityId": 18,
+              "location": "WhiteHotRoom",
+              "_changeIdx": 95,
+              "locationIndex": 0
             },
             {
               "who": "player",
               "card": "AmericaChavez",
               "type": "cardStaged",
-              "_changeIdx": 94
+              "_changeIdx": 96
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 97
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 21,
-              "location": "RevealOn3",
-              "_changeIdx": 98,
-              "locationIndex": 2
+              "_changeIdx": 99
             },
             {
               "who": "player",
@@ -4912,221 +3337,265 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 39,
-              "_changeIdx": 102,
+              "entityId": 18,
+              "_changeIdx": 101,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "RevealOn3",
-              "_changeIdx": 104,
+              "location": "WhiteHotRoom",
+              "_changeIdx": 103,
               "playerPower": 2,
-              "locationIndex": 2,
+              "locationIndex": 0,
               "opponentPower": 0
             },
             {
               "who": "player",
               "card": "AmericaChavez",
               "type": "cardResolved",
-              "_changeIdx": 109
+              "_changeIdx": 108
             },
             {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 21,
-              "_changeIdx": 110,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "cardRevealed",
-              "_changeIdx": 111
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "RevealOn3",
-              "_changeIdx": 113,
-              "playerPower": 2,
-              "locationIndex": 2,
-              "opponentPower": 2
-            },
-            {
-              "tie": true,
+              "tie": false,
               "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 119
+              "winner": "player",
+              "_changeIdx": 110
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 120
+              "_changeIdx": 111
             },
             {
               "type": "vpScores",
-              "_changeIdx": 121,
-              "playerPoints": 0,
+              "_changeIdx": 112,
+              "playerPoints": 1,
               "opponentPoints": 0
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
+              "winner": "player",
               "playerPower": 2,
-              "opponentPower": 2
+              "opponentPower": 0
+            },
+            {
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
+            },
+            {
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             }
           ]
         },
-        12
+        5
       ],
       [
         {
           "turn": 2,
-          "plays": [],
+          "plays": [
+            {
+              "card": "KittyPryde",
+              "isPlayer": true,
+              "location": "CelestialBurialGround",
+              "locationIndex": 1
+            },
+            {
+              "card": "Goose",
+              "isPlayer": false,
+              "location": "CelestialBurialGround",
+              "locationIndex": 1
+            }
+          ],
           "energy": {
             "player": 2,
             "opponent": 2
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 124
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 126
+              "_changeIdx": 115
             },
             {
-              "to": "Shadowland",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 117
+            },
+            {
+              "to": "CelestialBurialGround",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 129,
+              "_changeIdx": 121,
               "locationIndex": 1
             },
             {
               "who": "player",
-              "card": "Ninja",
-              "cost": 1,
-              "type": "reveal",
-              "power": -2,
-              "entityId": 46,
-              "_changeIdx": 133,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Ninja",
-              "cost": 1,
-              "type": "reveal",
-              "power": -2,
-              "entityId": 47,
-              "_changeIdx": 136,
-              "drawReveal": false
+              "card": "Jubilee",
+              "type": "discarded",
+              "_changeIdx": 125
             },
             {
               "who": "player",
-              "card": "Ninja",
-              "type": "cardRevealed",
-              "_changeIdx": 138
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Shadowland",
-              "_changeIdx": 139,
-              "playerPower": -2,
-              "locationIndex": 1,
-              "opponentPower": 0
+              "card": "Warpath",
+              "cost": 4,
+              "type": "reveal",
+              "power": 5,
+              "entityId": 46,
+              "_changeIdx": 129,
+              "drawReveal": true
             },
             {
               "who": "opponent",
-              "card": "Ninja",
-              "type": "cardRevealed",
-              "_changeIdx": 142
+              "card": "CaptainCarter",
+              "cost": 3,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 33,
+              "_changeIdx": 132,
+              "drawReveal": false
             },
             {
-              "type": "score",
-              "winner": null,
-              "location": "Shadowland",
-              "_changeIdx": 143,
-              "playerPower": -2,
-              "locationIndex": 1,
-              "opponentPower": -2
+              "who": "opponent",
+              "card": "CaptainCarter",
+              "type": "discarded",
+              "_changeIdx": 133
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 149,
+              "_changeIdx": 142,
               "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 20,
+              "_changeIdx": 145,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "draw",
+              "_changeIdx": 146
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 153
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "cost": 5,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 36,
-              "_changeIdx": 156,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "draw",
-              "_changeIdx": 157
+              "_changeIdx": 149
             },
             {
               "type": "vpContested",
-              "_changeIdx": 161,
+              "_changeIdx": 153,
               "locationIndex": 1
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "play",
+              "entityId": 20,
+              "location": "CelestialBurialGround",
+              "_changeIdx": 156,
+              "locationIndex": 1
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "cardStaged",
+              "_changeIdx": 157
             },
             {
               "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 167
+              "_changeIdx": 161
             },
             {
-              "tie": true,
+              "who": "opponent",
+              "card": "Goose",
+              "type": "play",
+              "entityId": 36,
+              "location": "CelestialBurialGround",
+              "_changeIdx": 162,
+              "locationIndex": 1
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 20,
+              "_changeIdx": 166,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "CelestialBurialGround",
+              "_changeIdx": 169,
+              "playerPower": 4,
+              "locationIndex": 1,
+              "opponentPower": 0
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "cardResolved",
+              "_changeIdx": 172
+            },
+            {
+              "who": "opponent",
+              "card": "Goose",
+              "cost": 2,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 36,
+              "_changeIdx": 173,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Goose",
+              "type": "cardRevealed",
+              "_changeIdx": 174
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "CelestialBurialGround",
+              "_changeIdx": 177,
+              "playerPower": 4,
+              "locationIndex": 1,
+              "opponentPower": 2
+            },
+            {
+              "tie": false,
               "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 169
+              "winner": "player",
+              "_changeIdx": 181
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 170
+              "_changeIdx": 182
             },
             {
               "type": "vpScores",
-              "_changeIdx": 171,
-              "playerPoints": 0,
+              "_changeIdx": 183,
+              "playerPoints": 4,
               "opponentPoints": 0
             }
           ],
@@ -5138,9 +3607,9 @@
               "opponentPower": 0
             },
             {
-              "winner": null,
-              "playerPower": -2,
-              "opponentPower": -2
+              "winner": "player",
+              "playerPower": 4,
+              "opponentPower": 2
             },
             {
               "winner": null,
@@ -5149,7 +3618,7 @@
             }
           ]
         },
-        26
+        30
       ],
       [
         {
@@ -5158,14 +3627,14 @@
             {
               "card": "Wave",
               "isPlayer": true,
-              "location": "Subterranea",
-              "locationIndex": 2
+              "location": "WhiteHotRoom",
+              "locationIndex": 0
             },
             {
-              "card": "SebastianShaw",
+              "card": "Shanna",
               "isPlayer": false,
-              "location": "Subterranea",
-              "locationIndex": 2
+              "location": "WhiteHotRoom",
+              "locationIndex": 0
             }
           ],
           "energy": {
@@ -5174,84 +3643,70 @@
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 175
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 177
+              "_changeIdx": 187
             },
             {
-              "to": "Subterranea",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 189
+            },
+            {
+              "to": "VibraniumMines",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 181,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 196
-            },
-            {
-              "who": "player",
-              "card": "Stick",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 29,
-              "_changeIdx": 199,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Stick",
-              "type": "draw",
-              "_changeIdx": 200
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 204,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "type": "vpStakeRaise",
-              "_changeIdx": 207
-            },
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "play",
-              "entityId": 31,
-              "location": "Subterranea",
-              "_changeIdx": 208,
+              "_changeIdx": 192,
               "locationIndex": 2
             },
             {
               "who": "player",
-              "card": "Wave",
-              "type": "cardStaged",
-              "_changeIdx": 209
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 4,
+              "_changeIdx": 197
             },
             {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 214
-            },
-            {
-              "who": "opponent",
-              "card": "SebastianShaw",
-              "type": "play",
+              "who": "player",
+              "card": "KittyPryde",
+              "from": "CelestialBurialGround",
+              "type": "bounce",
               "entityId": 20,
-              "location": "Subterranea",
-              "_changeIdx": 216,
-              "locationIndex": 2
+              "_changeIdx": 198
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 4,
+              "_changeIdx": 201
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "CelestialBurialGround",
+              "_changeIdx": 203,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 2
+            },
+            {
+              "who": "player",
+              "card": "KittyPryde",
+              "type": "power",
+              "source": "AmericaChavez",
+              "sources": [
+                "AmericaChavez",
+                "KittyPryde"
+              ],
+              "newPower": 5,
+              "oldPower": 4,
+              "_changeIdx": 207,
+              "cardEntityId": 20
             },
             {
               "who": "player",
@@ -5259,306 +3714,323 @@
               "cost": 3,
               "type": "reveal",
               "power": 6,
-              "entityId": 31,
-              "_changeIdx": 220,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 222,
-              "playerPower": 8,
-              "locationIndex": 2,
-              "opponentPower": 2
+              "entityId": 25,
+              "_changeIdx": 212,
+              "drawReveal": true
             },
             {
               "who": "player",
               "card": "Wave",
-              "type": "cardResolved",
-              "_changeIdx": 240
-            },
-            {
-              "who": "opponent",
-              "card": "SebastianShaw",
-              "cost": 3,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 20,
-              "_changeIdx": 241,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "SebastianShaw",
-              "type": "cardRevealed",
-              "_changeIdx": 242
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Subterranea",
-              "_changeIdx": 244,
-              "playerPower": 8,
-              "locationIndex": 2,
-              "opponentPower": 12
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 255
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 256
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 257,
-              "playerPoints": 0,
-              "opponentPoints": 4
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 8,
-              "opponentPower": 12
-            }
-          ]
-        },
-        47
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "BlackPanther",
-              "isPlayer": true,
-              "location": "EternityRange",
-              "locationIndex": 0
-            },
-            {
-              "card": "Kraven",
-              "isPlayer": false,
-              "location": "EternityRange",
-              "locationIndex": 0
-            },
-            {
-              "card": "IronMan",
-              "isPlayer": false,
-              "location": "EternityRange",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 261
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 263
+              "type": "draw",
+              "_changeIdx": 213
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 266
-            },
-            {
-              "who": "player",
-              "card": "Clea",
-              "cost": 1,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 32,
-              "_changeIdx": 269,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Clea",
-              "type": "draw",
-              "_changeIdx": 270
+              "_changeIdx": 216
             },
             {
               "type": "vpContested",
-              "_changeIdx": 274,
+              "_changeIdx": 220,
               "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "BlackPanther",
+              "card": "Wave",
               "type": "play",
-              "entityId": 36,
-              "location": "EternityRange",
-              "_changeIdx": 277,
+              "entityId": 25,
+              "location": "WhiteHotRoom",
+              "_changeIdx": 224,
               "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "BlackPanther",
+              "card": "Wave",
               "type": "cardStaged",
-              "_changeIdx": 278
+              "_changeIdx": 225
             },
             {
-              "turn": 4,
+              "turn": 3,
               "type": "endTurn",
-              "_changeIdx": 290
+              "_changeIdx": 232
             },
             {
               "who": "opponent",
-              "card": "Kraven",
+              "card": "Shanna",
               "type": "play",
-              "entityId": 56,
-              "location": "EternityRange",
-              "_changeIdx": 292,
+              "entityId": 32,
+              "location": "WhiteHotRoom",
+              "_changeIdx": 234,
               "locationIndex": 0
             },
             {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "play",
-              "entityId": 22,
-              "location": "EternityRange",
-              "_changeIdx": 295,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Kraven",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 56,
-              "_changeIdx": 299,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Kraven",
-              "type": "cardRevealed",
-              "_changeIdx": 300
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "EternityRange",
-              "_changeIdx": 302,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 22,
-              "_changeIdx": 305,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "cardRevealed",
-              "_changeIdx": 306
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "EternityRange",
-              "_changeIdx": 309,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 14
-            },
-            {
               "who": "player",
-              "card": "BlackPanther",
-              "cost": 5,
+              "card": "Wave",
+              "cost": 3,
               "type": "reveal",
-              "power": 11,
-              "entityId": 36,
-              "_changeIdx": 312,
+              "power": 6,
+              "entityId": 25,
+              "_changeIdx": 238,
               "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "EternityRange",
-              "_changeIdx": 315,
-              "playerPower": 11,
-              "locationIndex": 0,
-              "opponentPower": 14
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "source": "BlackPanther",
-              "sources": [
-                "BlackPanther",
-                "AmericaChavez"
-              ],
-              "newPower": 22,
-              "oldPower": 11,
-              "_changeIdx": 319,
-              "cardEntityId": 36
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 322,
-              "playerPower": 22,
+              "location": "WhiteHotRoom",
+              "_changeIdx": 240,
+              "playerPower": 8,
               "locationIndex": 0,
-              "opponentPower": 14
+              "opponentPower": 0
             },
             {
               "who": "player",
-              "card": "BlackPanther",
+              "card": "Wave",
               "type": "cardResolved",
-              "_changeIdx": 326
+              "_changeIdx": 254
+            },
+            {
+              "who": "opponent",
+              "card": "Shanna",
+              "cost": 3,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 32,
+              "_changeIdx": 255,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Shanna",
+              "type": "cardRevealed",
+              "_changeIdx": 256
+            },
+            {
+              "who": "opponent",
+              "card": "Shanna",
+              "type": "doubleTrigger",
+              "_changeIdx": 259
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "WhiteHotRoom",
+              "_changeIdx": 261,
+              "playerPower": 8,
+              "locationIndex": 0,
+              "opponentPower": 6
+            },
+            {
+              "who": "opponent",
+              "card": "SpiderHam",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 48,
+              "_changeIdx": 266,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Snowguard",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 49,
+              "_changeIdx": 269,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Selene",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 50,
+              "_changeIdx": 272,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Goose",
+              "type": "power",
+              "source": "Goose",
+              "newPower": 3,
+              "oldPower": 2,
+              "_changeIdx": 276,
+              "cardEntityId": 36
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "CelestialBurialGround",
+              "_changeIdx": 280,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 3
+            },
+            {
+              "who": "opponent",
+              "card": "SpiderHam",
+              "type": "cardRevealed",
+              "_changeIdx": 283
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "WhiteHotRoom",
+              "_changeIdx": 284,
+              "playerPower": 8,
+              "locationIndex": 0,
+              "opponentPower": 7
+            },
+            {
+              "who": "opponent",
+              "card": "Snowguard",
+              "type": "cardRevealed",
+              "_changeIdx": 287
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "CelestialBurialGround",
+              "_changeIdx": 288,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 5
+            },
+            {
+              "who": "opponent",
+              "card": "Selene",
+              "type": "cardRevealed",
+              "_changeIdx": 299
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "VibraniumMines",
+              "_changeIdx": 300,
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 2
+            },
+            {
+              "who": "player",
+              "card": "Stick",
+              "type": "power",
+              "source": "Selene",
+              "newPower": 0,
+              "oldPower": 3,
+              "_changeIdx": 304,
+              "cardEntityId": 21
+            },
+            {
+              "who": "opponent",
+              "card": "SpiderManBrandNewDay",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 53,
+              "_changeIdx": 311,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Agony",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 54,
+              "_changeIdx": 314,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "AntMan",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 55,
+              "_changeIdx": 317,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Goose",
+              "type": "power",
+              "newPower": 4,
+              "oldPower": 3,
+              "_changeIdx": 322,
+              "cardEntityId": 36
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "CelestialBurialGround",
+              "_changeIdx": 327,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 6
+            },
+            {
+              "who": "opponent",
+              "card": "SpiderManBrandNewDay",
+              "type": "cardRevealed",
+              "_changeIdx": 330
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "WhiteHotRoom",
+              "_changeIdx": 331,
+              "playerPower": 8,
+              "locationIndex": 0,
+              "opponentPower": 9
+            },
+            {
+              "who": "opponent",
+              "card": "Agony",
+              "type": "cardRevealed",
+              "_changeIdx": 334
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "CelestialBurialGround",
+              "_changeIdx": 335,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 8
+            },
+            {
+              "who": "opponent",
+              "card": "AntMan",
+              "type": "cardRevealed",
+              "_changeIdx": 338
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "VibraniumMines",
+              "_changeIdx": 339,
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 3
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "opponent",
-              "_changeIdx": 328
+              "_changeIdx": 344
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 329
+              "_changeIdx": 345
             },
             {
               "type": "vpScores",
-              "_changeIdx": 330,
+              "_changeIdx": 346,
               "playerPoints": 4,
               "opponentPoints": 5
             }
@@ -5566,653 +4038,105 @@
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "player",
-              "playerPower": 22,
-              "opponentPower": 14
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        65
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "Stick",
-              "isPlayer": true,
-              "location": "Subterranea",
-              "locationIndex": 2
-            },
-            {
-              "card": "Clea",
-              "isPlayer": true,
-              "location": "Subterranea",
-              "locationIndex": 2
-            },
-            {
-              "card": "JessicaJones",
-              "isPlayer": false,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 334
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 336
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 343
-            },
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "cost": 5,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 34,
-              "_changeIdx": 346,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "type": "draw",
-              "_changeIdx": 347
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 351,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Stick",
-              "type": "play",
-              "entityId": 29,
-              "location": "Subterranea",
-              "_changeIdx": 355,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Stick",
-              "type": "cardStaged",
-              "_changeIdx": 356
-            },
-            {
-              "who": "player",
-              "card": "Clea",
-              "type": "play",
-              "entityId": 32,
-              "location": "Subterranea",
-              "_changeIdx": 359,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Clea",
-              "type": "cardStaged",
-              "_changeIdx": 360
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 367
-            },
-            {
-              "who": "opponent",
-              "card": "JessicaJones",
-              "type": "play",
-              "entityId": 16,
-              "location": "Subterranea",
-              "_changeIdx": 369,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "JessicaJones",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 16,
-              "_changeIdx": 374,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "JessicaJones",
-              "type": "cardRevealed",
-              "_changeIdx": 375
-            },
-            {
-              "type": "score",
               "winner": "opponent",
-              "location": "Subterranea",
-              "_changeIdx": 377,
               "playerPower": 8,
-              "locationIndex": 2,
-              "opponentPower": 17
+              "opponentPower": 9
             },
             {
-              "who": "player",
-              "card": "Stick",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 29,
-              "_changeIdx": 385,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
               "winner": "opponent",
-              "location": "Subterranea",
-              "_changeIdx": 387,
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 17
-            },
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "power",
-              "source": "Stick",
-              "newPower": 7,
-              "oldPower": 6,
-              "_changeIdx": 396,
-              "cardEntityId": 31
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Subterranea",
-              "_changeIdx": 399,
-              "playerPower": 12,
-              "locationIndex": 2,
-              "opponentPower": 17
-            },
-            {
-              "who": "player",
-              "card": "Stick",
-              "type": "cardResolved",
-              "_changeIdx": 404
-            },
-            {
-              "who": "player",
-              "card": "Clea",
-              "type": "power",
-              "source": "Wave",
-              "sources": [
-                "Wave",
-                "Stick"
-              ],
-              "newPower": 12,
-              "oldPower": 9,
-              "_changeIdx": 406,
-              "cardEntityId": 32
-            },
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 57,
-              "_changeIdx": 411,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Clea",
-              "cost": 1,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 32,
-              "_changeIdx": 417,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 419,
-              "playerPower": 24,
-              "locationIndex": 2,
-              "opponentPower": 17
-            },
-            {
-              "who": "player",
-              "card": "Clea",
-              "type": "cardResolved",
-              "_changeIdx": 425
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 427
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 428
-            },
-            {
-              "type": "vpScores",
-              "_changeIdx": 429,
-              "playerPoints": 10,
-              "opponentPoints": 5
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
               "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "player",
-              "playerPower": 24,
-              "opponentPower": 17
-            }
-          ]
-        },
-        89
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "WhiteTiger",
-              "isPlayer": true,
-              "location": "Shadowland",
-              "locationIndex": 1
-            },
-            {
-              "card": "FlamesOfTheFaltine",
-              "isPlayer": true,
-              "location": "EternityRange",
-              "locationIndex": 0
-            },
-            {
-              "card": "Forge",
-              "isPlayer": false,
-              "location": "Subterranea",
-              "locationIndex": 2
-            },
-            {
-              "card": "JackFlag",
-              "isPlayer": false,
-              "location": "EternityRange",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 433
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 435
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 437
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 48,
-              "_changeIdx": 440,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "type": "draw",
-              "_changeIdx": 441
-            },
-            {
-              "type": "vpContested",
-              "_changeIdx": 445,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "type": "play",
-              "entityId": 34,
-              "location": "Shadowland",
-              "_changeIdx": 451,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "type": "cardStaged",
-              "_changeIdx": 452
-            },
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "type": "play",
-              "entityId": 57,
-              "location": "EternityRange",
-              "_changeIdx": 455,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "type": "cardStaged",
-              "_changeIdx": 456
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 464
-            },
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 27,
-              "location": "Subterranea",
-              "_changeIdx": 466,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "type": "play",
-              "entityId": 19,
-              "location": "EternityRange",
-              "_changeIdx": 469,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "cost": 5,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 34,
-              "_changeIdx": 474,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Shadowland",
-              "_changeIdx": 476,
-              "playerPower": -1,
-              "locationIndex": 1,
-              "opponentPower": -2
-            },
-            {
-              "who": "player",
-              "card": "TigerSpirit",
-              "cost": 5,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 58,
-              "_changeIdx": 481,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "TigerSpirit",
-              "type": "cardRevealed",
-              "_changeIdx": 483
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 484,
-              "playerPower": 32,
-              "locationIndex": 0,
-              "opponentPower": 14
-            },
-            {
-              "who": "player",
-              "card": "WhiteTiger",
-              "type": "cardResolved",
-              "_changeIdx": 488
-            },
-            {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 57,
-              "_changeIdx": 489,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Kraven",
-              "type": "power",
-              "source": "FlamesOfTheFaltine",
-              "newPower": 0,
-              "oldPower": 3,
-              "_changeIdx": 492,
-              "cardEntityId": 56
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 496,
-              "playerPower": 32,
-              "locationIndex": 0,
               "opponentPower": 8
             },
             {
-              "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "type": "cardResolved",
-              "_changeIdx": 499
-            },
+              "winner": "opponent",
+              "playerPower": 0,
+              "opponentPower": 3
+            }
+          ]
+        },
+        67
+      ],
+      [
+        {
+          "turn": 4,
+          "plays": [],
+          "energy": {
+            "player": 4,
+            "opponent": 4
+          },
+          "events": [
             {
               "who": "player",
-              "card": "FlamesOfTheFaltine",
-              "type": "removed",
-              "_changeIdx": 501
+              "type": "energy",
+              "energy": 4,
+              "_changeIdx": 350
             },
             {
               "who": "opponent",
-              "card": "Forge",
-              "cost": 2,
+              "type": "energy",
+              "energy": 4,
+              "_changeIdx": 352
+            },
+            {
+              "who": "player",
+              "card": "Clea",
+              "cost": 1,
               "type": "reveal",
-              "power": 2,
-              "entityId": 27,
-              "_changeIdx": 504,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "cardRevealed",
-              "_changeIdx": 505
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 507,
-              "playerPower": 24,
-              "locationIndex": 2,
-              "opponentPower": 19
-            },
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
+              "power": 9,
               "entityId": 19,
-              "_changeIdx": 515,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 5,
-              "oldPower": 3,
-              "_changeIdx": 516,
-              "cardEntityId": 19
-            },
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "type": "cardRevealed",
-              "_changeIdx": 520
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "power",
-              "source": "IronMan",
-              "sources": [
-                "IronMan",
-                "JackFlag"
-              ],
-              "newPower": 6,
-              "oldPower": 4,
-              "_changeIdx": 522,
-              "cardEntityId": 22
-            },
-            {
-              "who": "opponent",
-              "card": "JackFlag",
-              "type": "power",
-              "source": "JackFlag",
-              "newPower": 7,
-              "oldPower": 5,
-              "_changeIdx": 526,
-              "cardEntityId": 19
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 529,
-              "playerPower": 32,
-              "locationIndex": 0,
-              "opponentPower": 26
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 535
+              "_changeIdx": 354,
+              "drawReveal": true
             },
             {
               "who": "player",
-              "type": "initiative",
-              "_changeIdx": 536
+              "card": "Clea",
+              "type": "draw",
+              "_changeIdx": 355
             },
             {
-              "type": "vpScores",
-              "_changeIdx": 537,
-              "playerPoints": 19,
-              "opponentPoints": 5
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 358
             },
             {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 540
+              "type": "vpContested",
+              "_changeIdx": 362,
+              "locationIndex": 1
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "player",
-              "playerPower": 32,
-              "opponentPower": 26
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": -1,
-              "opponentPower": -2
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 24,
-              "opponentPower": 19
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             }
           ]
         },
-        122
+        79
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 36891,
-  "opp_sp": 6636,
+  "opp_cl": 16728,
+  "opp_sp": 6298,
   "bracket": null,
-  "match_id": "960c0020-3d25-4be8-bd41-18301aee68ec",
-  "opp_name": "Kavehti",
+  "match_id": "cb55bd2a-da0b-41a5-9d37-15aa44ed46fa",
+  "opp_name": "Thanos again right?",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "EternityRange",
-    "Shadowland",
-    "Subterranea"
-  ],
+  "locations": [],
   "player_cl": 11696,
   "player_sp": 4875,
   "turn_data": null,
@@ -6233,7 +4157,7 @@
     ],
     "entities": [
       {
-        "cost": 6,
+        "cost": 5,
         "zone": 1,
         "defId": "Odin",
         "power": 10,
@@ -6241,7 +4165,9 @@
         "baseCost": 6,
         "entityId": 14,
         "basePower": 10,
-        "mutations": []
+        "mutations": [
+          "Mutation_Cost_Neg1"
+        ]
       },
       {
         "cost": 4,
@@ -6380,20 +4306,20 @@
   },
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "SquirrelGirl",
-    "ArtVariantDefId": "SquirrelGirl_07"
+    "CardDefId": "HowardTheDuck",
+    "ArtVariantDefId": "HowardTheDuck_11"
   },
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": "Draft",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
-  "match_result": "win",
-  "match_status": "complete",
-  "opp_clan_tag": "AOW",
+  "current_turn": 5,
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_clan_tag": "FFS",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
     "CardDefId": "GhostTheFirstRider"
@@ -6401,39 +4327,32 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "AmericaChavez",
-    "SebastianShaw",
-    "IronMan",
-    "JessicaJones",
-    "Forge",
-    "JackFlag"
+    "CaptainCarter",
+    "Goose",
+    "Shanna"
   ],
-  "last_updated_at": "2026-10-12T12:07:13.428+00:00",
+  "last_updated_at": "2026-10-12T12:09:15.783+00:00",
   "opp_played_cards": [],
   "player_deck_cards": [
-    "Odin",
-    "Jubilee",
-    "WhiteTiger",
-    "KittyPryde",
-    "DrDoom",
-    "Phastos",
-    "SuperiorSpiderMan",
     "AmericaChavez",
-    "Wave",
-    "BlackPanther",
     "Stick",
+    "Jubilee",
+    "Odin",
+    "KittyPryde",
+    "Wave",
     "Clea"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "AmericaChavez",
-    "Ninja",
-    "SebastianShaw",
-    "Kraven",
-    "IronMan",
-    "JessicaJones",
-    "Forge",
-    "JackFlag"
+    "CaptainCarter",
+    "Goose",
+    "Shanna",
+    "SpiderHam",
+    "Snowguard",
+    "Selene",
+    "SpiderManBrandNewDay",
+    "Agony",
+    "AntMan"
   ],
   "conquest_round_index": null
 }
