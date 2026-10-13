@@ -43,11 +43,18 @@
           },
           "h": [
             {
-              "cost": 1,
-              "power": 2,
-              "baseCost": 1,
-              "basePower": 2,
-              "cardDefId": "NicoMinoru"
+              "cost": 3,
+              "power": 5,
+              "baseCost": 3,
+              "basePower": 5,
+              "cardDefId": "CorvusGlaive"
+            },
+            {
+              "cost": 5,
+              "power": 8,
+              "baseCost": 5,
+              "basePower": 8,
+              "cardDefId": "Blink"
             },
             {
               "cost": 6,
@@ -62,13 +69,6 @@
               "baseCost": 6,
               "basePower": 10,
               "cardDefId": "Eson"
-            },
-            {
-              "cost": 7,
-              "power": 12,
-              "baseCost": 7,
-              "basePower": 12,
-              "cardDefId": "Skaar"
             }
           ],
           "n": {
@@ -112,7 +112,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "ValleyOfTheHand",
+              "to": "MonsterIsland",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -129,7 +129,7 @@
                 {
                   "location": [
                     0,
-                    "ValleyOfTheHand"
+                    "MonsterIsland"
                   ],
                   "revealed": [
                     0,
@@ -145,13 +145,174 @@
         {
           "_v": 2,
           "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Monster",
+              "cost": 6,
+              "type": "reveal",
+              "power": 10,
+              "entityId": 47,
+              "drawReveal": false
+            },
+            {
+              "who": "player",
+              "card": "Monster",
+              "cost": 6,
+              "type": "reveal",
+              "power": 10,
+              "entityId": 48,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 6,
+                          "power": 10,
+                          "baseCost": 6,
+                          "entityId": 48,
+                          "basePower": 10,
+                          "cardDefId": "Monster",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 6,
+                          "power": 10,
+                          "baseCost": 6,
+                          "entityId": 47,
+                          "basePower": 10,
+                          "cardDefId": "Monster",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Monster",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MonsterIsland",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 10
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "player",
+              "card": "Monster",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": null,
+              "location": "MonsterIsland",
+              "playerPower": 10,
+              "locationIndex": 0,
+              "opponentPower": 10
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "NicoMinoru",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 22,
+              "drawReveal": true
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
           "label": "Override",
           "events": [
             {
               "who": "player",
               "card": "NicoMinoru",
               "type": "abilityOverride",
-              "overrideAbility": "Spell06NicoMinoru"
+              "overrideAbility": "Spell04NicoMinoru"
             }
           ]
         },
@@ -169,7 +330,7 @@
               "cost": 8,
               "type": "reveal",
               "power": 12,
-              "entityId": 20,
+              "entityId": 25,
               "drawReveal": true
             },
             {
@@ -251,396 +412,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "play",
-              "entityId": 21,
-              "location": "ValleyOfTheHand",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 2,
-                          "baseCost": 1,
-                          "entityId": 21,
-                          "basePower": 2,
-                          "cardDefId": "NicoMinoru",
-                          "arrivalSeq": 0,
-                          "overrideAbility": "Spell06NicoMinoru"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "AgathaHarkness"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Eson"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 1,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 21,
-              "drawReveal": false,
-              "overrideAbility": "Spell06NicoMinoru"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "ValleyOfTheHand",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 2
-            },
-            {
               "who": "opponent",
-              "type": "energy",
-              "energy": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Location",
-          "events": [
-            {
-              "to": "TimeTheater",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 1
-            },
-            {
-              "to": "RevealOn2",
-              "from": "RevealOn3",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "TimeTheater"
-                  ],
-                  "revealed": [
-                    0,
-                    true
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "RevealOn2"
-                  ],
-                  "revealed": [
-                    0,
-                    true
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Death",
-              "cost": 8,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 48,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "4": [
-                0,
-                {
-                  "cost": 8,
-                  "power": 12,
-                  "baseCost": 8,
-                  "basePower": 12,
-                  "cardDefId": "Death"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
               "type": "initiative"
             }
           ]
@@ -682,14 +454,7 @@
       [
         {
           "turn": 1,
-          "plays": [
-            {
-              "card": "NicoMinoru",
-              "isPlayer": true,
-              "location": "ValleyOfTheHand",
-              "locationIndex": 0
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 1,
             "opponent": 1
@@ -699,80 +464,70 @@
               "who": "player",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 86
+              "_changeIdx": 82
             },
             {
               "who": "opponent",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 88
+              "_changeIdx": 84
             },
             {
-              "to": "ValleyOfTheHand",
+              "to": "MonsterIsland",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 91,
+              "_changeIdx": 87,
               "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "abilityOverride",
-              "_changeIdx": 97,
-              "overrideAbility": "Spell06NicoMinoru"
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "cost": 8,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 20,
-              "_changeIdx": 101,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "draw",
-              "_changeIdx": 102
             },
             {
               "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 107
+              "card": "Monster",
+              "cost": 6,
+              "type": "reveal",
+              "power": 10,
+              "entityId": 47,
+              "_changeIdx": 92,
+              "drawReveal": false
             },
             {
-              "tie": true,
-              "type": "turnWinner",
+              "who": "player",
+              "card": "Monster",
+              "cost": 6,
+              "type": "reveal",
+              "power": 10,
+              "entityId": 48,
+              "_changeIdx": 95,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Monster",
+              "type": "cardRevealed",
+              "_changeIdx": 97
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "MonsterIsland",
+              "_changeIdx": 98,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 10
+            },
+            {
+              "who": "player",
+              "card": "Monster",
+              "type": "cardRevealed",
+              "_changeIdx": 101
+            },
+            {
+              "type": "score",
               "winner": null,
-              "_changeIdx": 110
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 111
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "play",
-              "entityId": 21,
-              "location": "ValleyOfTheHand",
-              "_changeIdx": 114,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "NicoMinoru",
-              "type": "cardStaged",
-              "_changeIdx": 115
-            },
-            {
-              "turn": 1,
-              "type": "endTurn",
-              "_changeIdx": 121
+              "location": "MonsterIsland",
+              "_changeIdx": 102,
+              "playerPower": 10,
+              "locationIndex": 0,
+              "opponentPower": 10
             },
             {
               "who": "player",
@@ -780,82 +535,16 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 21,
-              "_changeIdx": 123,
-              "drawReveal": false,
-              "overrideAbility": "Spell06NicoMinoru"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "ValleyOfTheHand",
-              "_changeIdx": 127,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 0
+              "entityId": 22,
+              "_changeIdx": 108,
+              "drawReveal": true
             },
             {
               "who": "player",
               "card": "NicoMinoru",
-              "type": "cardResolved",
-              "_changeIdx": 137
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 2,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        7
-      ],
-      [
-        {
-          "turn": 2,
-          "plays": [],
-          "energy": {
-            "player": 2,
-            "opponent": 2
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 142
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 144
-            },
-            {
-              "to": "TimeTheater",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 147,
-              "locationIndex": 1
-            },
-            {
-              "to": "RevealOn2",
-              "from": "RevealOn3",
-              "type": "location",
-              "_changeIdx": 151,
-              "locationIndex": 2
+              "type": "abilityOverride",
+              "_changeIdx": 111,
+              "overrideAbility": "Spell04NicoMinoru"
             },
             {
               "who": "player",
@@ -863,28 +552,40 @@
               "cost": 8,
               "type": "reveal",
               "power": 12,
-              "entityId": 48,
-              "_changeIdx": 156,
+              "entityId": 25,
+              "_changeIdx": 115,
               "drawReveal": true
             },
             {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 169
+              "who": "player",
+              "card": "Death",
+              "type": "draw",
+              "_changeIdx": 116
             },
             {
-              "who": "player",
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 121
+            },
+            {
+              "tie": true,
+              "type": "turnWinner",
+              "winner": null,
+              "_changeIdx": 124
+            },
+            {
+              "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 170
+              "_changeIdx": 125
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
               "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
+              "playerPower": 10,
+              "opponentPower": 10
             },
             {
               "winner": null,
@@ -898,16 +599,16 @@
             }
           ]
         },
-        16
+        10
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 13306,
-  "opp_sp": 6399,
+  "opp_cl": 8770,
+  "opp_sp": 4085,
   "bracket": null,
-  "match_id": "b0af9bc2-ecc4-42b3-9254-61b85452c77f",
-  "opp_name": "DarkSoul23",
+  "match_id": "101df88a-3834-4e08-97f2-f632830f784e",
+  "opp_name": "Gilly",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
   "locations": [],
@@ -917,17 +618,17 @@
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "ShouLao",
-    "ArtVariantDefId": "ShouLao_08"
+    "CardDefId": "BlackWidow",
+    "ArtVariantDefId": "BlackWidow_21"
   },
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": null,
   "player_name": "SmokeFisher",
-  "current_turn": 3,
+  "current_turn": 2,
   "match_result": null,
   "match_status": "in_progress",
-  "opp_clan_tag": "999",
+  "opp_clan_tag": "BSS",
   "owner_status": "live",
   "next_match_id": null,
   "opp_retreated": null,
@@ -935,16 +636,19 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": null,
-  "last_updated_at": "2026-10-13T18:10:16.116+00:00",
+  "last_updated_at": "2026-10-13T18:11:21.103+00:00",
   "opp_played_cards": [],
   "player_deck_cards": [
     "AgathaHarkness",
+    "CorvusGlaive",
+    "Blink",
     "Eson",
     "NicoMinoru",
-    "Skaar",
     "Death"
   ],
   "booster_card_def_id": null,
-  "opponent_cards_seen": [],
+  "opponent_cards_seen": [
+    "Monster"
+  ],
   "conquest_round_index": null
 }
