@@ -59,17 +59,17 @@
             },
             {
               "cost": 6,
-              "power": 10,
+              "power": 6,
               "baseCost": 6,
-              "basePower": 10,
-              "cardDefId": "Odin"
+              "basePower": 6,
+              "cardDefId": "Hela"
             },
             {
-              "cost": 7,
-              "power": 12,
-              "baseCost": 7,
-              "basePower": 12,
-              "cardDefId": "Skaar"
+              "cost": 5,
+              "power": 8,
+              "baseCost": 5,
+              "basePower": 8,
+              "cardDefId": "Blink"
             }
           ],
           "n": {
@@ -113,7 +113,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "PetAvengersMansion",
+              "to": "WhiteHotRoom",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -130,7 +130,7 @@
                 {
                   "location": [
                     0,
-                    "PetAvengersMansion"
+                    "WhiteHotRoom"
                   ],
                   "revealed": [
                     0,
@@ -155,16 +155,16 @@
             },
             {
               "who": "player",
-              "card": "Eson",
-              "cost": 6,
+              "card": "DoctorOctopusFracturedFrontier",
+              "cost": 2,
               "type": "reveal",
-              "power": 10,
+              "power": 2,
               "entityId": 30,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Eson",
+              "card": "DoctorOctopusFracturedFrontier",
               "type": "draw"
             }
           ]
@@ -190,11 +190,11 @@
               "4": [
                 0,
                 {
-                  "cost": 6,
-                  "power": 10,
-                  "baseCost": 6,
-                  "basePower": 10,
-                  "cardDefId": "Eson"
+                  "cost": 2,
+                  "power": 2,
+                  "baseCost": 2,
+                  "basePower": 2,
+                  "cardDefId": "DoctorOctopusFracturedFrontier"
                 }
               ]
             }
@@ -247,6 +247,83 @@
         {
           "_v": 2,
           "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "player",
+              "card": "DoctorOctopusFracturedFrontier",
+              "type": "play",
+              "entityId": 30,
+              "location": "WhiteHotRoom",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 2,
+                          "power": 2,
+                          "baseCost": 2,
+                          "entityId": 30,
+                          "basePower": 2,
+                          "cardDefId": "DoctorOctopusFracturedFrontier",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                4
+              ]
+            }
+          ],
+          "h": [
+            2,
+            4,
+            {}
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Staged",
+          "events": [
+            {
+              "who": "player",
+              "card": "DoctorOctopusFracturedFrontier",
+              "type": "cardStaged"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
           "label": "End Turn",
           "events": [
             {
@@ -265,10 +342,10 @@
           "events": [
             {
               "who": "opponent",
-              "card": "HowardTheDuck",
+              "card": "Deadpool",
               "type": "play",
-              "entityId": 22,
-              "location": "PetAvengersMansion",
+              "entityId": 19,
+              "location": "WhiteHotRoom",
               "locationIndex": 0
             }
           ]
@@ -291,7 +368,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 22,
+                          "entityId": 19,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -321,12 +398,259 @@
           "label": "Reveal",
           "events": [
             {
-              "who": "opponent",
-              "card": "HowardTheDuck",
-              "cost": 1,
+              "who": "player",
+              "card": "DoctorOctopusFracturedFrontier",
+              "cost": 2,
               "type": "reveal",
               "power": 2,
-              "entityId": 22,
+              "entityId": 30,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "WhiteHotRoom",
+              "playerPower": 2,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Event",
+          "events": [
+            {
+              "who": "player",
+              "card": "GhostRiderChampion",
+              "type": "shuffle"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                3
+              ]
+            }
+          ],
+          "h": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    5
+                  ],
+                  "power": [
+                    0,
+                    0
+                  ],
+                  "baseCost": [
+                    0,
+                    5
+                  ],
+                  "basePower": [
+                    0,
+                    0
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Skill01GhostRiderChampion"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    6
+                  ],
+                  "power": [
+                    0,
+                    6
+                  ],
+                  "baseCost": [
+                    0,
+                    6
+                  ],
+                  "basePower": [
+                    0,
+                    6
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Hela"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    5
+                  ],
+                  "power": [
+                    0,
+                    8
+                  ],
+                  "baseCost": [
+                    0,
+                    5
+                  ],
+                  "basePower": [
+                    0,
+                    8
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Blink"
+                  ]
+                }
+              ]
+            }
+          ],
+          "r": [
+            1,
+            {
+              "player": [
+                0,
+                9
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "KidOmega",
+              "cost": 2,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 51,
+              "drawReveal": true
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                4
+              ]
+            }
+          ],
+          "h": [
+            2,
+            4,
+            {
+              "3": [
+                0,
+                {
+                  "cost": 2,
+                  "power": 1,
+                  "baseCost": 2,
+                  "basePower": 1,
+                  "cardDefId": "KidOmega"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Power",
+          "events": [
+            {
+              "who": "player",
+              "card": "KidOmega",
+              "type": "power",
+              "source": "DoctorOctopusFracturedFrontier",
+              "newPower": 4,
+              "oldPower": 1,
+              "cardEntityId": 51
+            }
+          ]
+        },
+        {
+          "h": [
+            2,
+            4,
+            {
+              "3": [
+                1,
+                {
+                  "power": [
+                    0,
+                    4
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "DoctorOctopusFracturedFrontier",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Deadpool",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 19,
               "drawReveal": false
             }
           ]
@@ -352,7 +676,7 @@
                           ],
                           "power": [
                             0,
-                            2
+                            1
                           ],
                           "baseCost": [
                             0,
@@ -360,11 +684,11 @@
                           ],
                           "basePower": [
                             0,
-                            2
+                            1
                           ],
                           "cardDefId": [
                             0,
-                            "HowardTheDuck"
+                            "Deadpool"
                           ]
                         }
                       ]
@@ -384,7 +708,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "HowardTheDuck",
+              "card": "Deadpool",
               "type": "cardRevealed"
             }
           ]
@@ -399,11 +723,11 @@
           "events": [
             {
               "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "playerPower": 0,
+              "winner": "player",
+              "location": "WhiteHotRoom",
+              "playerPower": 2,
               "locationIndex": 0,
-              "opponentPower": 2
+              "opponentPower": 1
             }
           ]
         },
@@ -436,7 +760,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "KamarTaj",
+              "to": "StrangeAcademy",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -459,7 +783,7 @@
                 {
                   "location": [
                     0,
-                    "KamarTaj"
+                    "StrangeAcademy"
                   ],
                   "revealed": [
                     0,
@@ -497,16 +821,7 @@
             },
             {
               "who": "player",
-              "card": "Gambit",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 39,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
+              "card": "GhostRiderChampion",
               "type": "draw"
             }
           ]
@@ -517,7 +832,7 @@
             {
               "player": [
                 0,
-                6
+                5
               ],
               "opponent": [
                 0,
@@ -527,16 +842,16 @@
           ],
           "h": [
             2,
-            6,
+            5,
             {
-              "5": [
+              "4": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 3,
-                  "baseCost": 3,
-                  "basePower": 3,
-                  "cardDefId": "Gambit"
+                  "cost": 4,
+                  "power": 8,
+                  "baseCost": 4,
+                  "basePower": 5,
+                  "cardDefId": "GhostRiderChampion"
                 }
               ]
             }
@@ -546,7 +861,7 @@
             {
               "player": [
                 0,
-                7
+                8
               ],
               "opponent": [
                 0,
@@ -565,733 +880,6 @@
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "play",
-              "entityId": 39,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 3,
-                          "baseCost": 3,
-                          "entityId": 39,
-                          "basePower": 3,
-                          "cardDefId": "Gambit",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 2,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Phastos",
-              "type": "play",
-              "entityId": 24,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 24,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Phastos",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 24,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            4
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            4
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Phastos"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Phastos",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 10,
-                      "cardDefId": "Eson"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HowardTheDuck",
-              "type": "destroyed",
-              "fromLocation": "PetAvengersMansion"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 2,
-                      "cardDefId": "HowardTheDuck"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "PetAvengersMansion",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                2,
-                {
-                  "1": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 10,
-                      "cardDefId": "Odin"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skaar"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Phastos",
-              "type": "destroyed",
-              "fromLocation": "KamarTaj"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                2,
-                {
-                  "1": [
-                    0,
-                    {
-                      "cost": 3,
-                      "power": 4,
-                      "cardDefId": "Phastos"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "AuntMays",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "AuntMays"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 6,
-                  "baseCost": 3,
-                  "basePower": 6,
-                  "cardDefId": "LadySif"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
               "winner": "player"
             }
           ]
@@ -1301,3988 +889,13 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Initiative",
           "events": [
             {
               "who": "player",
               "type": "initiative"
             }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "play",
-              "entityId": 32,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 6,
-                          "baseCost": 3,
-                          "entityId": 32,
-                          "basePower": 6,
-                          "cardDefId": "LadySif",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "play",
-              "entityId": 26,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 26,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                3,
-                {
-                  "2": [
-                    0,
-                    {
-                      "cost": 7,
-                      "power": 12,
-                      "cardDefId": "Skaar"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 26,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Gwenpool"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedShift",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 31,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedShift",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "2": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 3,
-                  "baseCost": 2,
-                  "basePower": 3,
-                  "cardDefId": "RedShift"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "play",
-              "entityId": 34,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 5,
-                          "baseCost": 4,
-                          "entityId": 34,
-                          "basePower": 5,
-                          "cardDefId": "GhostRiderChampion",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skill01GhostRiderChampion"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "RedShift"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "play",
-              "entityId": 27,
-              "location": "AuntMays",
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 23,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 23,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 27,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 34,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 8,
-              "locationIndex": 1,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "play",
-              "entityId": 33,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 10,
-                          "baseCost": 6,
-                          "entityId": 33,
-                          "basePower": 10,
-                          "cardDefId": "Odin",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                2,
-                {
-                  "1": [
-                    1,
-                    {
-                      "cost": [
-                        0,
-                        7
-                      ],
-                      "power": [
-                        0,
-                        12
-                      ],
-                      "cardDefId": [
-                        0,
-                        "Skaar"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 33,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 18,
-              "locationIndex": 1,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                3,
-                {
-                  "2": [
-                    0,
-                    {
-                      "cost": 5,
-                      "power": 0,
-                      "cardDefId": "Skill01GhostRiderChampion"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "RedShift"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "play",
-              "entityId": 45,
-              "location": "AuntMays",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 0,
-                          "baseCost": 5,
-                          "entityId": 45,
-                          "basePower": 0,
-                          "cardDefId": "Skill01GhostRiderChampion",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                2,
-                {}
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 45,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "power",
-              "source": "Skill01GhostRiderChampion",
-              "newPower": 0,
-              "oldPower": 5,
-              "cardEntityId": 26
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "power",
-              "source": "Skill01GhostRiderChampion",
-              "newPower": 10,
-              "oldPower": 5,
-              "cardEntityId": 34
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            10
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            0
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 23,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 5,
-                      "power": 0,
-                      "cardDefId": "Skill01GhostRiderChampion"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "destroyed",
-              "fromLocation": "KamarTaj"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            null
-                          ],
-                          "power": [
-                            0,
-                            null
-                          ],
-                          "baseCost": [
-                            0,
-                            null
-                          ],
-                          "entityId": [
-                            0,
-                            23
-                          ],
-                          "basePower": [
-                            0,
-                            null
-                          ],
-                          "cardDefId": [
-                            0,
-                            null
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                3,
-                {
-                  "2": [
-                    0,
-                    {
-                      "cost": 4,
-                      "power": 0,
-                      "cardDefId": "Gwenpool"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedShift",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                0
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                3,
-                {
-                  "1": [
-                    1,
-                    {
-                      "cost": [
-                        0,
-                        2
-                      ],
-                      "power": [
-                        0,
-                        3
-                      ],
-                      "cardDefId": [
-                        0,
-                        "RedShift"
-                      ]
-                    }
-                  ],
-                  "2": [
-                    0,
-                    {
-                      "cost": 7,
-                      "power": 12,
-                      "cardDefId": "Skaar"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            0,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "play",
-              "entityId": 37,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 7,
-                          "power": 12,
-                          "baseCost": 7,
-                          "entityId": 37,
-                          "basePower": 12,
-                          "cardDefId": "Skaar",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                2,
-                {}
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skaar",
-              "cost": 7,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 37,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 27,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            12
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "IronMan"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "AuntMays",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 24
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "power",
-              "source": "Phastos",
-              "sources": [
-                "Phastos",
-                "Gwenpool",
-                "Gwenpool",
-                "Gwenpool",
-                "Gwenpool",
-                "Gwenpool",
-                "AuntMays"
-              ],
-              "newPower": 15,
-              "oldPower": 12,
-              "cardEntityId": 27
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            15
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Move",
-          "events": [
-            {
-              "to": "KamarTaj",
-              "who": "opponent",
-              "card": "IronMan",
-              "from": "AuntMays",
-              "type": "move",
-              "entityId": 27,
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 15,
-                          "baseCost": 5,
-                          "entityId": 27,
-                          "basePower": 0,
-                          "cardDefId": "IronMan",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Event",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 30
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "AuntMays",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 23,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "AmericaChavez"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 42
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "cost": 6,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 36,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 6,
-                  "baseCost": 6,
-                  "basePower": 6,
-                  "cardDefId": "Hela"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "play",
-              "entityId": 36,
-              "location": "AuntMays",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 6,
-                          "baseCost": 6,
-                          "entityId": 36,
-                          "basePower": 6,
-                          "cardDefId": "Hela",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                0
-              ]
-            }
-          ],
-          "h": [
-            2,
-            0,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "play",
-              "entityId": 16,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "type": "play",
-              "entityId": 25,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HumanTorchFirstStepsChampion",
-              "type": "play",
-              "entityId": 40,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 16,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ],
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 25,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 40,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "cost": 2,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 16,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            12
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Lasher"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 12
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 25,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            4
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "HumanTorchFirstStepsChampion"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 16
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HumanTorchFirstStepsChampion",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 40,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Skill01HumanTorchFirstStepsChampion"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HumanTorchFirstStepsChampion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HumanTorchFirstStepsChampion",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 0,
-                      "cardDefId": "Skill01HumanTorchFirstStepsChampion"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hela",
-              "cost": 6,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "play",
-              "entityId": 30,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 10,
-                          "baseCost": 6,
-                          "entityId": 30,
-                          "basePower": 10,
-                          "cardDefId": "Eson",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    1,
-                    {
-                      "cost": [
-                        0,
-                        2
-                      ],
-                      "power": [
-                        0,
-                        3
-                      ],
-                      "cardDefId": [
-                        0,
-                        "RedShift"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Eson",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 30,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "PetAvengersMansion",
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 16
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedShift",
-              "type": "play",
-              "entityId": 31,
-              "location": "AuntMays",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 3,
-                          "baseCost": 2,
-                          "entityId": 31,
-                          "basePower": 3,
-                          "cardDefId": "RedShift",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                0,
-                {}
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "RedShift",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 31,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 9,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "power",
-              "source": "AuntMays",
-              "newPower": 9,
-              "oldPower": 6,
-              "cardEntityId": 36
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            9
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Move",
-          "events": [
-            {
-              "to": "PetAvengersMansion",
-              "who": "player",
-              "card": "Hela",
-              "from": "AuntMays",
-              "type": "move",
-              "entityId": 36,
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 9,
-                          "baseCost": 6,
-                          "entityId": 36,
-                          "basePower": 6,
-                          "cardDefId": "Hela",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "entityId": [
-                            0,
-                            31
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "RedShift"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "playerPower": 25,
-              "locationIndex": 0,
-              "opponentPower": 16
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 3,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "type": "power",
-              "source": "Gwenpool",
-              "sources": [
-                "Gwenpool",
-                "HumanTorchFirstStepsChampion"
-              ],
-              "newPower": 5,
-              "oldPower": 4,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "playerPower": 25,
-              "locationIndex": 0,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 29,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ],
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 2,
-                  "baseCost": 2,
-                  "basePower": 2,
-                  "cardDefId": "DoctorOctopusFracturedFrontier"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Move",
-          "events": [
-            {
-              "to": "PetAvengersMansion",
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "from": "KamarTaj",
-              "type": "move",
-              "entityId": 34,
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 10,
-                          "baseCost": 4,
-                          "entityId": 34,
-                          "basePower": 5,
-                          "cardDefId": "GhostRiderChampion",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "entityId": [
-                            0,
-                            33
-                          ],
-                          "basePower": [
-                            0,
-                            10
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Odin"
-                          ]
-                        }
-                      ],
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            7
-                          ],
-                          "power": [
-                            0,
-                            12
-                          ],
-                          "baseCost": [
-                            0,
-                            7
-                          ],
-                          "entityId": [
-                            0,
-                            37
-                          ],
-                          "basePower": [
-                            0,
-                            12
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Skaar"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "play",
-              "entityId": 29,
-              "location": "AuntMays",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 2,
-                          "baseCost": 2,
-                          "entityId": 29,
-                          "basePower": 2,
-                          "cardDefId": "DoctorOctopusFracturedFrontier",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                0
-              ]
-            }
-          ],
-          "h": [
-            2,
-            0,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "playerPower": 25,
-              "locationIndex": 1,
-              "opponentPower": 42
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 19,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "play",
-              "entityId": 20,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 20,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 19,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                0
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "playerPower": 35,
-              "locationIndex": 0,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 29,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Ability",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "activated",
-              "isActivated": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "power",
-              "source": "Lasher",
-              "newPower": -2,
-              "oldPower": 10,
-              "cardEntityId": 30
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            -2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "playerPower": 23,
-              "locationIndex": 0,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 19,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            12
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Forge"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "playerPower": 25,
-              "locationIndex": 1,
-              "opponentPower": 66
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "cost": 5,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "BlackPanther"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 7,
-              "oldPower": 5,
-              "cardEntityId": 20
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 9,
-              "oldPower": 7,
-              "cardEntityId": 20
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            9
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "playerPower": 23,
-              "locationIndex": 0,
-              "opponentPower": 26
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "power",
-              "source": "BlackPanther",
-              "newPower": 18,
-              "oldPower": 9,
-              "cardEntityId": 20
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            18
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "playerPower": 23,
-              "locationIndex": 0,
-              "opponentPower": 35
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "type": "power",
-              "source": "HumanTorchFirstStepsChampion",
-              "newPower": 6,
-              "oldPower": 5,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "playerPower": 23,
-              "locationIndex": 0,
-              "opponentPower": 36
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -5324,9 +937,15 @@
           "turn": 1,
           "plays": [
             {
-              "card": "HowardTheDuck",
+              "card": "DoctorOctopusFracturedFrontier",
+              "isPlayer": true,
+              "location": "WhiteHotRoom",
+              "locationIndex": 0
+            },
+            {
+              "card": "Deadpool",
               "isPlayer": false,
-              "location": "PetAvengersMansion",
+              "location": "WhiteHotRoom",
               "locationIndex": 0
             }
           ],
@@ -5339,100 +958,166 @@
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 82
+              "_changeIdx": 80
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 84
+              "_changeIdx": 82
             },
             {
-              "to": "PetAvengersMansion",
+              "to": "WhiteHotRoom",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 87,
+              "_changeIdx": 85,
               "locationIndex": 0
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 91
+              "_changeIdx": 89
             },
             {
               "who": "player",
-              "card": "Eson",
-              "cost": 6,
+              "card": "DoctorOctopusFracturedFrontier",
+              "cost": 2,
               "type": "reveal",
-              "power": 10,
+              "power": 2,
               "entityId": 30,
-              "_changeIdx": 94,
+              "_changeIdx": 92,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Eson",
+              "card": "DoctorOctopusFracturedFrontier",
               "type": "draw",
-              "_changeIdx": 95
+              "_changeIdx": 93
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 99
+              "_changeIdx": 96
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 100
+              "_changeIdx": 97
+            },
+            {
+              "who": "player",
+              "card": "DoctorOctopusFracturedFrontier",
+              "type": "play",
+              "entityId": 30,
+              "location": "WhiteHotRoom",
+              "_changeIdx": 100,
+              "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "DoctorOctopusFracturedFrontier",
+              "type": "cardStaged",
+              "_changeIdx": 101
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 104
+              "_changeIdx": 105
             },
             {
               "who": "opponent",
-              "card": "HowardTheDuck",
+              "card": "Deadpool",
               "type": "play",
-              "entityId": 22,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 105,
+              "entityId": 19,
+              "location": "WhiteHotRoom",
+              "_changeIdx": 106,
               "locationIndex": 0
             },
             {
-              "who": "opponent",
-              "card": "HowardTheDuck",
-              "cost": 1,
+              "who": "player",
+              "card": "DoctorOctopusFracturedFrontier",
+              "cost": 2,
               "type": "reveal",
               "power": 2,
-              "entityId": 22,
-              "_changeIdx": 108,
+              "entityId": 30,
+              "_changeIdx": 110,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "WhiteHotRoom",
+              "_changeIdx": 112,
+              "playerPower": 2,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "who": "player",
+              "card": "GhostRiderChampion",
+              "type": "shuffle",
+              "_changeIdx": 116
+            },
+            {
+              "who": "player",
+              "card": "KidOmega",
+              "cost": 2,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 51,
+              "_changeIdx": 120,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "KidOmega",
+              "type": "power",
+              "source": "DoctorOctopusFracturedFrontier",
+              "newPower": 4,
+              "oldPower": 1,
+              "_changeIdx": 123,
+              "cardEntityId": 51
+            },
+            {
+              "who": "player",
+              "card": "DoctorOctopusFracturedFrontier",
+              "type": "cardResolved",
+              "_changeIdx": 127
+            },
+            {
+              "who": "opponent",
+              "card": "Deadpool",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 19,
+              "_changeIdx": 129,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "HowardTheDuck",
+              "card": "Deadpool",
               "type": "cardRevealed",
-              "_changeIdx": 109
+              "_changeIdx": 130
             },
             {
               "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 112,
-              "playerPower": 0,
+              "winner": "player",
+              "location": "WhiteHotRoom",
+              "_changeIdx": 132,
+              "playerPower": 2,
               "locationIndex": 0,
-              "opponentPower": 2
+              "opponentPower": 1
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 2
+              "winner": "player",
+              "playerPower": 2,
+              "opponentPower": 1
             },
             {
               "winner": null,
@@ -5446,25 +1131,12 @@
             }
           ]
         },
-        8
+        16
       ],
       [
         {
           "turn": 2,
-          "plays": [
-            {
-              "card": "Gambit",
-              "isPlayer": true,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            },
-            {
-              "card": "Phastos",
-              "isPlayer": false,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 3,
             "opponent": 3
@@ -5474,189 +1146,50 @@
               "who": "opponent",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 118
+              "_changeIdx": 138
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 120
+              "_changeIdx": 140
             },
             {
-              "to": "KamarTaj",
+              "to": "StrangeAcademy",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 124,
+              "_changeIdx": 143,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 129,
+              "_changeIdx": 147,
               "locationIndex": 2
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 132
+              "_changeIdx": 150
             },
             {
               "who": "player",
-              "card": "Gambit",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 39,
-              "_changeIdx": 135,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
+              "card": "GhostRiderChampion",
               "type": "draw",
-              "_changeIdx": 136
+              "_changeIdx": 154
             },
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 139
+              "winner": "player",
+              "_changeIdx": 157
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative",
-              "_changeIdx": 140
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "play",
-              "entityId": 39,
-              "location": "KamarTaj",
-              "_changeIdx": 143,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardStaged",
-              "_changeIdx": 144
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "doubleTrigger",
-              "_changeIdx": 149
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 152
-            },
-            {
-              "who": "opponent",
-              "card": "Phastos",
-              "type": "play",
-              "entityId": 24,
-              "location": "KamarTaj",
-              "_changeIdx": 153,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Phastos",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 24,
-              "_changeIdx": 157,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Phastos",
-              "type": "cardRevealed",
               "_changeIdx": 158
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "_changeIdx": 160,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 39,
-              "_changeIdx": 167,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "_changeIdx": 169,
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "discarded",
-              "_changeIdx": 175
-            },
-            {
-              "who": "opponent",
-              "card": "HowardTheDuck",
-              "type": "destroyed",
-              "_changeIdx": 180,
-              "fromLocation": "PetAvengersMansion"
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 182,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "discarded",
-              "_changeIdx": 188
-            },
-            {
-              "who": "opponent",
-              "card": "Phastos",
-              "type": "destroyed",
-              "_changeIdx": 192,
-              "fromLocation": "KamarTaj"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 195,
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardResolved",
-              "_changeIdx": 199
             }
           ],
           "snapEvent": null,
@@ -5667,8 +1200,8 @@
               "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 3,
+              "winner": null,
+              "playerPower": 0,
               "opponentPower": 0
             },
             {
@@ -5678,1373 +1211,40 @@
             }
           ]
         },
-        30
-      ],
-      [
-        {
-          "turn": 3,
-          "plays": [
-            {
-              "card": "LadySif",
-              "isPlayer": true,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            },
-            {
-              "card": "Gwenpool",
-              "isPlayer": false,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 203
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 205
-            },
-            {
-              "to": "AuntMays",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 208,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 211
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "_changeIdx": 214,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "draw",
-              "_changeIdx": 215
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 219
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 220
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "play",
-              "entityId": 32,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 223,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "cardStaged",
-              "_changeIdx": 224
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 229
-            },
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "play",
-              "entityId": 26,
-              "location": "KamarTaj",
-              "_changeIdx": 230,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "_changeIdx": 234,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 237,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "discarded",
-              "_changeIdx": 243
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "cardResolved",
-              "_changeIdx": 248
-            },
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 26,
-              "_changeIdx": 249,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "cardRevealed",
-              "_changeIdx": 250
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "_changeIdx": 252,
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 5
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 6,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 3,
-              "opponentPower": 5
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        46
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "GhostRiderChampion",
-              "isPlayer": true,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            },
-            {
-              "card": "IronMan",
-              "isPlayer": false,
-              "location": "AuntMays",
-              "locationIndex": 2
-            },
-            {
-              "card": "AmericaChavez",
-              "isPlayer": false,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            },
-            {
-              "card": "Odin",
-              "isPlayer": true,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            },
-            {
-              "card": "Skill01GhostRiderChampion",
-              "isPlayer": true,
-              "location": "AuntMays",
-              "locationIndex": 2
-            },
-            {
-              "card": "Skaar",
-              "isPlayer": true,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 262
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 264
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 266
-            },
-            {
-              "who": "player",
-              "card": "RedShift",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 31,
-              "_changeIdx": 269,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "RedShift",
-              "type": "draw",
-              "_changeIdx": 270
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 273
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 274
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "play",
-              "entityId": 34,
-              "location": "KamarTaj",
-              "_changeIdx": 277,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardStaged",
-              "_changeIdx": 278
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "doubleTrigger",
-              "_changeIdx": 282
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 286
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "play",
-              "entityId": 27,
-              "location": "AuntMays",
-              "_changeIdx": 287,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 23,
-              "location": "KamarTaj",
-              "_changeIdx": 290,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 34,
-              "_changeIdx": 294,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 296,
-              "playerPower": 8,
-              "locationIndex": 1,
-              "opponentPower": 5
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "play",
-              "entityId": 33,
-              "location": "KamarTaj",
-              "_changeIdx": 301,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "doubleTrigger",
-              "_changeIdx": 304
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 33,
-              "_changeIdx": 306,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 307,
-              "playerPower": 18,
-              "locationIndex": 1,
-              "opponentPower": 5
-            },
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "discarded",
-              "_changeIdx": 314
-            },
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "play",
-              "entityId": 45,
-              "location": "AuntMays",
-              "_changeIdx": 320,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 45,
-              "_changeIdx": 322,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "power",
-              "source": "Skill01GhostRiderChampion",
-              "newPower": 0,
-              "oldPower": 5,
-              "_changeIdx": 324,
-              "cardEntityId": 26
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "power",
-              "source": "Skill01GhostRiderChampion",
-              "newPower": 10,
-              "oldPower": 5,
-              "_changeIdx": 327,
-              "cardEntityId": 34
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 330,
-              "playerPower": 23,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "removed",
-              "_changeIdx": 334
-            },
-            {
-              "who": "opponent",
-              "card": "Gwenpool",
-              "type": "destroyed",
-              "_changeIdx": 338,
-              "fromLocation": "KamarTaj"
-            },
-            {
-              "who": "player",
-              "card": "RedShift",
-              "type": "discarded",
-              "_changeIdx": 344
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "play",
-              "entityId": 37,
-              "location": "KamarTaj",
-              "_changeIdx": 353,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "doubleTrigger",
-              "_changeIdx": 356
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "cost": 7,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 37,
-              "_changeIdx": 358,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 359,
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardResolved",
-              "_changeIdx": 376
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 27,
-              "_changeIdx": 377,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "cardRevealed",
-              "_changeIdx": 378
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "AuntMays",
-              "_changeIdx": 381,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 24
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "power",
-              "source": "Phastos",
-              "sources": [
-                "Phastos",
-                "Gwenpool",
-                "Gwenpool",
-                "Gwenpool",
-                "Gwenpool",
-                "Gwenpool",
-                "AuntMays"
-              ],
-              "newPower": 15,
-              "oldPower": 12,
-              "_changeIdx": 386,
-              "cardEntityId": 27
-            },
-            {
-              "to": "KamarTaj",
-              "who": "opponent",
-              "card": "IronMan",
-              "from": "AuntMays",
-              "type": "move",
-              "entityId": 27,
-              "_changeIdx": 389,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "IronMan",
-              "type": "doubleTrigger",
-              "_changeIdx": 395
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 397,
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 30
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "AuntMays",
-              "_changeIdx": 400,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 23,
-              "_changeIdx": 404,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "cardRevealed",
-              "_changeIdx": 405
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "_changeIdx": 407,
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 42
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 35,
-              "opponentPower": 42
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        86
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "Hela",
-              "isPlayer": true,
-              "location": "AuntMays",
-              "locationIndex": 2
-            },
-            {
-              "card": "Lasher",
-              "isPlayer": false,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            },
-            {
-              "card": "HumanTorchFirstStepsChampion",
-              "isPlayer": false,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            },
-            {
-              "card": "Skill01HumanTorchFirstStepsChampion",
-              "isPlayer": false,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            },
-            {
-              "card": "Eson",
-              "isPlayer": true,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            },
-            {
-              "card": "RedShift",
-              "isPlayer": true,
-              "location": "AuntMays",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 417
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 419
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 421
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "cost": 6,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 36,
-              "_changeIdx": 424,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "draw",
-              "_changeIdx": 425
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 429
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 430
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "play",
-              "entityId": 36,
-              "location": "AuntMays",
-              "_changeIdx": 433,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "cardStaged",
-              "_changeIdx": 434
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 441
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "play",
-              "entityId": 16,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 442,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "type": "play",
-              "entityId": 25,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 445,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HumanTorchFirstStepsChampion",
-              "type": "play",
-              "entityId": 40,
-              "location": "KamarTaj",
-              "_changeIdx": 448,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "cost": 2,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 16,
-              "_changeIdx": 452,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "cardRevealed",
-              "_changeIdx": 453
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 455,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 12
-            },
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 25,
-              "_changeIdx": 458,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "type": "cardRevealed",
-              "_changeIdx": 459
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 461,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 16
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HumanTorchFirstStepsChampion",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 40,
-              "_changeIdx": 464,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HumanTorchFirstStepsChampion",
-              "type": "cardRevealed",
-              "_changeIdx": 465
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HumanTorchFirstStepsChampion",
-              "type": "removed",
-              "_changeIdx": 472
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "cost": 6,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 36,
-              "_changeIdx": 475,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 477,
-              "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "play",
-              "entityId": 30,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 482,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Eson",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 30,
-              "_changeIdx": 484,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 485,
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 16
-            },
-            {
-              "who": "player",
-              "card": "RedShift",
-              "type": "play",
-              "entityId": 31,
-              "location": "AuntMays",
-              "_changeIdx": 489,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "RedShift",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 31,
-              "_changeIdx": 491,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 492,
-              "playerPower": 9,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "cardResolved",
-              "_changeIdx": 497
-            },
-            {
-              "who": "player",
-              "card": "Hela",
-              "type": "power",
-              "source": "AuntMays",
-              "newPower": 9,
-              "oldPower": 6,
-              "_changeIdx": 500,
-              "cardEntityId": 36
-            },
-            {
-              "to": "PetAvengersMansion",
-              "who": "player",
-              "card": "Hela",
-              "from": "AuntMays",
-              "type": "move",
-              "entityId": 36,
-              "_changeIdx": 503,
-              "locationIndex": 0
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 509,
-              "playerPower": 25,
-              "locationIndex": 0,
-              "opponentPower": 16
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 512,
-              "playerPower": 3,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "type": "power",
-              "source": "Gwenpool",
-              "sources": [
-                "Gwenpool",
-                "HumanTorchFirstStepsChampion"
-              ],
-              "newPower": 5,
-              "oldPower": 4,
-              "_changeIdx": 518,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 522,
-              "playerPower": 25,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 526
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 25,
-              "opponentPower": 17
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "player",
-              "playerPower": 3,
-              "opponentPower": 0
-            }
-          ]
-        },
-        118
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "DoctorOctopusFracturedFrontier",
-              "isPlayer": true,
-              "location": "AuntMays",
-              "locationIndex": 2
-            },
-            {
-              "card": "Forge",
-              "isPlayer": false,
-              "location": "KamarTaj",
-              "locationIndex": 1
-            },
-            {
-              "card": "BlackPanther",
-              "isPlayer": false,
-              "location": "PetAvengersMansion",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 7,
-            "opponent": 7
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 529
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 531
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 533
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 29,
-              "_changeIdx": 536,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "draw",
-              "_changeIdx": 537
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 541
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 542
-            },
-            {
-              "to": "PetAvengersMansion",
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "from": "KamarTaj",
-              "type": "move",
-              "entityId": 34,
-              "_changeIdx": 545,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardStaged",
-              "_changeIdx": 546
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "play",
-              "entityId": 29,
-              "location": "AuntMays",
-              "_changeIdx": 547,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "cardStaged",
-              "_changeIdx": 548
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "doubleTrigger",
-              "_changeIdx": 554
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "_changeIdx": 557,
-              "playerPower": 25,
-              "locationIndex": 1,
-              "opponentPower": 42
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 562
-            },
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "play",
-              "entityId": 19,
-              "location": "KamarTaj",
-              "_changeIdx": 563,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "play",
-              "entityId": 20,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 566,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardResolved",
-              "_changeIdx": 571
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 573,
-              "playerPower": 35,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 29,
-              "_changeIdx": 576,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AuntMays",
-              "_changeIdx": 578,
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "cardResolved",
-              "_changeIdx": 584
-            },
-            {
-              "who": "opponent",
-              "card": "Lasher",
-              "type": "activated",
-              "_changeIdx": 586,
-              "isActivated": true
-            },
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "power",
-              "source": "Lasher",
-              "newPower": -2,
-              "oldPower": 10,
-              "_changeIdx": 588,
-              "cardEntityId": 30
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 592,
-              "playerPower": 23,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "cost": 2,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 19,
-              "_changeIdx": 595,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Forge",
-              "type": "cardRevealed",
-              "_changeIdx": 596
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "KamarTaj",
-              "_changeIdx": 598,
-              "playerPower": 25,
-              "locationIndex": 1,
-              "opponentPower": 66
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "cost": 5,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 20,
-              "_changeIdx": 609,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 7,
-              "oldPower": 5,
-              "_changeIdx": 610,
-              "cardEntityId": 20
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "power",
-              "source": "Forge",
-              "newPower": 9,
-              "oldPower": 7,
-              "_changeIdx": 615,
-              "cardEntityId": 20
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "cardRevealed",
-              "_changeIdx": 619
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 621,
-              "playerPower": 23,
-              "locationIndex": 0,
-              "opponentPower": 26
-            },
-            {
-              "who": "opponent",
-              "card": "BlackPanther",
-              "type": "power",
-              "source": "BlackPanther",
-              "newPower": 18,
-              "oldPower": 9,
-              "_changeIdx": 625,
-              "cardEntityId": 20
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 629,
-              "playerPower": 23,
-              "locationIndex": 0,
-              "opponentPower": 35
-            },
-            {
-              "who": "opponent",
-              "card": "HumanTorchFirstStepsChampion",
-              "type": "power",
-              "source": "HumanTorchFirstStepsChampion",
-              "newPower": 6,
-              "oldPower": 5,
-              "_changeIdx": 634,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 638,
-              "playerPower": 23,
-              "locationIndex": 0,
-              "opponentPower": 36
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 642
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 23,
-              "opponentPower": 36
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 25,
-              "opponentPower": 66
-            },
-            {
-              "winner": "player",
-              "playerPower": 5,
-              "opponentPower": 0
-            }
-          ]
-        },
-        150
+        21
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 8605,
-  "opp_sp": 6741,
+  "opp_cl": 8480,
+  "opp_sp": 2558,
   "bracket": null,
-  "match_id": "4c0463dd-3e99-41f4-b2ad-3e7ea2114032",
-  "opp_name": "Shiron_SL",
-  "opp_team": "ChampionArena_Oct26_HumanTorchFirstSteps",
+  "match_id": "dad9bb5e-31b0-4bc2-95ce-e9c9512421cc",
+  "opp_name": "Heathkliff",
+  "opp_team": "ChampionArena_Oct26_Carnage",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "PetAvengersMansion",
-    "KamarTaj",
-    "AuntMays"
-  ],
+  "locations": [],
   "player_cl": 11856,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Skill01HumanTorchFirstStepsChampion"
+    "CardDefId": "Skill01CarnageChampion"
   },
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": "Grand Arena",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
-  "match_result": "loss",
-  "match_status": "complete",
-  "opp_champion": "HumanTorchFirstStepsChampion",
-  "opp_clan_tag": "SYS",
+  "current_turn": 3,
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_champion": "CarnageChampion",
+  "opp_clan_tag": "FET",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
     "CardDefId": "Skill01GhostRiderChampion"
@@ -7052,45 +1252,20 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "HowardTheDuck",
-    "Phastos",
-    "Gwenpool",
-    "IronMan",
-    "AmericaChavez",
-    "Lasher",
-    "HumanTorchFirstStepsChampion",
-    "Forge",
-    "BlackPanther"
+    "Deadpool"
   ],
-  "last_updated_at": "2026-10-16T13:30:44.383+00:00",
+  "last_updated_at": "2026-10-16T13:31:49.565+00:00",
   "player_champion": "GhostRiderChampion",
   "opp_played_cards": [],
   "player_deck_cards": [
     "GhostRiderChampion",
-    "Skaar",
-    "Eson",
-    "RedShift",
-    "CorvusGlaive",
-    "DoctorOctopusFracturedFrontier",
-    "Blink",
     "Hela",
-    "Death",
-    "Gambit",
-    "Odin",
-    "LadySif"
+    "Blink",
+    "DoctorOctopusFracturedFrontier"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "HowardTheDuck",
-    "Phastos",
-    "Gwenpool",
-    "IronMan",
-    "AmericaChavez",
-    "Lasher",
-    "HumanTorchFirstStepsChampion",
-    "Skill01HumanTorchFirstStepsChampion",
-    "Forge",
-    "BlackPanther"
+    "Deadpool"
   ],
   "conquest_round_index": null
 }
