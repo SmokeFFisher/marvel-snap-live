@@ -92,12 +92,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             }
@@ -112,7 +112,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Mojoworld",
+              "to": "CloningVats",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -129,7 +129,7 @@
                 {
                   "location": [
                     0,
-                    "Mojoworld"
+                    "CloningVats"
                   ],
                   "revealed": [
                     0,
@@ -148,22 +148,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "Skaar",
-              "cost": 7,
+              "card": "Hela",
+              "cost": 6,
               "type": "reveal",
-              "power": 12,
-              "entityId": 38,
+              "power": 6,
+              "entityId": 25,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Skaar",
+              "card": "Hela",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -189,11 +189,11 @@
               "4": [
                 0,
                 {
-                  "cost": 7,
-                  "power": 12,
-                  "baseCost": 7,
-                  "basePower": 12,
-                  "cardDefId": "Skaar"
+                  "cost": 6,
+                  "power": 6,
+                  "baseCost": 6,
+                  "basePower": 6,
+                  "cardDefId": "Hela"
                 }
               ]
             }
@@ -264,11 +264,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Quake",
+              "card": "Mirage",
               "type": "play",
-              "entityId": 25,
-              "location": "RevealOn2",
-              "locationIndex": 1
+              "entityId": 29,
+              "location": "CloningVats",
+              "locationIndex": 0
             }
           ]
         },
@@ -277,7 +277,7 @@
             2,
             3,
             {
-              "1": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
@@ -290,7 +290,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 25,
+                          "entityId": 29,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -321,11 +321,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Quake",
+              "card": "Mirage",
               "cost": 2,
               "type": "reveal",
               "power": 3,
-              "entityId": 25,
+              "entityId": 29,
               "drawReveal": false
             }
           ]
@@ -335,7 +335,7 @@
             2,
             3,
             {
-              "1": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
@@ -363,7 +363,7 @@
                           ],
                           "cardDefId": [
                             0,
-                            "Quake"
+                            "Mirage"
                           ]
                         }
                       ]
@@ -383,7 +383,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Quake",
+              "card": "Mirage",
               "type": "cardRevealed"
             }
           ]
@@ -399,67 +399,10 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RevealOn2",
+              "location": "CloningVats",
               "playerPower": 0,
-              "locationIndex": 1,
+              "locationIndex": 0,
               "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Shuffle",
-          "events": [
-            {
-              "type": "locationShuffle",
-              "swaps": [
-                {
-                  "to": 2,
-                  "from": 0
-                }
-              ]
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 26,
-              "drawReveal": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "source": "RedHulk",
-              "newPower": 13,
-              "oldPower": 10,
-              "cardEntityId": 26
             }
           ]
         },
@@ -472,18 +415,28 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 3
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 3
             }
           ]
         },
-        {}
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                6
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -492,16 +445,16 @@
           "label": "Location",
           "events": [
             {
+              "to": "FiskTower",
+              "from": "RevealOn2",
+              "type": "location",
+              "locationIndex": 1
+            },
+            {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
               "locationIndex": 2
-            },
-            {
-              "to": "TaLo",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 1
             }
           ]
         },
@@ -515,7 +468,7 @@
                 {
                   "location": [
                     0,
-                    "TaLo"
+                    "FiskTower"
                   ],
                   "revealed": [
                     0,
@@ -547,22 +500,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "Odin",
-              "cost": 6,
+              "card": "Blink",
+              "cost": 5,
               "type": "reveal",
-              "power": 10,
-              "entityId": 35,
+              "power": 8,
+              "entityId": 22,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Odin",
+              "card": "Blink",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -577,7 +530,7 @@
               ],
               "opponent": [
                 0,
-                5
+                7
               ]
             }
           ],
@@ -585,20 +538,54 @@
             2,
             6,
             {
-              "4": [
+              "2": [
+                1,
+                {
+                  "power": [
+                    0,
+                    8
+                  ],
+                  "basePower": [
+                    0,
+                    8
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Blink"
+                  ]
+                }
+              ],
+              "3": [
                 1,
                 {
                   "cost": [
                     0,
-                    6
+                    5
                   ],
                   "power": [
                     0,
-                    10
+                    0
                   ],
                   "baseCost": [
                     0,
-                    6
+                    5
+                  ],
+                  "basePower": [
+                    0,
+                    0
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Skill01GhostRiderChampion"
+                  ]
+                }
+              ],
+              "4": [
+                1,
+                {
+                  "power": [
+                    0,
+                    10
                   ],
                   "basePower": [
                     0,
@@ -606,18 +593,18 @@
                   ],
                   "cardDefId": [
                     0,
-                    "Odin"
+                    "Eson"
                   ]
                 }
               ],
               "5": [
                 0,
                 {
-                  "cost": 7,
-                  "power": 12,
-                  "baseCost": 7,
-                  "basePower": 12,
-                  "cardDefId": "Skaar"
+                  "cost": 6,
+                  "power": 6,
+                  "baseCost": 6,
+                  "basePower": 6,
+                  "cardDefId": "Hela"
                 }
               ]
             }
@@ -676,8 +663,8 @@
               "who": "player",
               "card": "Gambit",
               "type": "play",
-              "entityId": 28,
-              "location": "Mojoworld",
+              "entityId": 17,
+              "location": "CloningVats",
               "locationIndex": 0
             }
           ]
@@ -700,7 +687,7 @@
                           "cost": 3,
                           "power": 3,
                           "baseCost": 3,
-                          "entityId": 28,
+                          "entityId": 17,
                           "basePower": 3,
                           "cardDefId": "Gambit",
                           "arrivalSeq": 0
@@ -759,11 +746,28 @@
                   ],
                   "power": [
                     0,
-                    0
+                    8
                   ],
                   "baseCost": [
                     0,
                     5
+                  ],
+                  "basePower": [
+                    0,
+                    8
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Blink"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "power": [
+                    0,
+                    0
                   ],
                   "basePower": [
                     0,
@@ -775,7 +779,7 @@
                   ]
                 }
               ],
-              "2": [
+              "3": [
                 1,
                 {
                   "cost": [
@@ -800,37 +804,20 @@
                   ]
                 }
               ],
-              "3": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ],
               "4": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    7
-                  ],
                   "power": [
                     0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    7
+                    6
                   ],
                   "basePower": [
                     0,
-                    12
+                    6
                   ],
                   "cardDefId": [
                     0,
-                    "Skaar"
+                    "Hela"
                   ]
                 }
               ]
@@ -875,10 +862,10 @@
           "events": [
             {
               "who": "opponent",
-              "card": "FrankieRaye",
+              "card": "ZombieMisterFantastic",
               "type": "play",
-              "entityId": 19,
-              "location": "Mojoworld",
+              "entityId": 28,
+              "location": "CloningVats",
               "locationIndex": 0
             }
           ]
@@ -893,18 +880,18 @@
                 {
                   "opponentCards": [
                     2,
-                    1,
+                    2,
                     {
-                      "0": [
+                      "1": [
                         0,
                         {
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 19,
+                          "entityId": 28,
                           "basePower": null,
                           "cardDefId": null,
-                          "arrivalSeq": 0
+                          "arrivalSeq": 1
                         }
                       ]
                     }
@@ -918,7 +905,7 @@
             {
               "opponent": [
                 0,
-                4
+                6
               ]
             }
           ]
@@ -932,11 +919,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "FrankieRaye",
+              "card": "ZombieMisterFantastic",
               "cost": 2,
               "type": "reveal",
-              "power": 3,
-              "entityId": 19,
+              "power": 2,
+              "entityId": 28,
               "drawReveal": false
             }
           ]
@@ -951,9 +938,9 @@
                 {
                   "opponentCards": [
                     2,
-                    1,
+                    2,
                     {
-                      "0": [
+                      "1": [
                         1,
                         {
                           "cost": [
@@ -962,7 +949,7 @@
                           ],
                           "power": [
                             0,
-                            3
+                            2
                           ],
                           "baseCost": [
                             0,
@@ -970,11 +957,11 @@
                           ],
                           "basePower": [
                             0,
-                            3
+                            2
                           ],
                           "cardDefId": [
                             0,
-                            "FrankieRaye"
+                            "ZombieMisterFantastic"
                           ]
                         }
                       ]
@@ -994,7 +981,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "FrankieRaye",
+              "card": "ZombieMisterFantastic",
               "type": "cardRevealed"
             }
           ]
@@ -1010,10 +997,138 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Mojoworld",
+              "location": "CloningVats",
               "playerPower": 0,
               "locationIndex": 0,
-              "opponentPower": 3
+              "opponentPower": 5
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ZombieHorde",
+              "cost": 0,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 52,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 0,
+                          "power": 0,
+                          "baseCost": 0,
+                          "entityId": 52,
+                          "basePower": 0,
+                          "cardDefId": "ZombieHorde",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ZombieHorde",
+              "type": "power",
+              "source": "ZombieMisterFantastic",
+              "newPower": 2,
+              "oldPower": 0,
+              "cardEntityId": 52
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            2
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ZombieHorde",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "FiskTower",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 2
             }
           ]
         },
@@ -1031,12 +1146,22 @@
               "cost": 3,
               "type": "reveal",
               "power": 3,
-              "entityId": 28,
+              "entityId": 17,
               "drawReveal": false
             }
           ]
         },
-        {}
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                7
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -1046,11 +1171,11 @@
           "events": [
             {
               "type": "score",
-              "winner": null,
-              "location": "Mojoworld",
+              "winner": "opponent",
+              "location": "CloningVats",
               "playerPower": 3,
               "locationIndex": 0,
-              "opponentPower": 3
+              "opponentPower": 5
             }
           ]
         },
@@ -1064,7 +1189,7 @@
           "events": [
             {
               "who": "player",
-              "card": "Skaar",
+              "card": "Skill01GhostRiderChampion",
               "type": "discarded"
             }
           ]
@@ -1089,9 +1214,9 @@
                   "0": [
                     0,
                     {
-                      "cost": 7,
-                      "power": 12,
-                      "cardDefId": "Skaar"
+                      "cost": 5,
+                      "power": 0,
+                      "cardDefId": "Skill01GhostRiderChampion"
                     }
                   ]
                 }
@@ -1101,123 +1226,46 @@
           "h": [
             2,
             4,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Destroyed",
-          "events": [
             {
-              "who": "opponent",
-              "card": "FrankieRaye",
-              "type": "destroyed",
-              "fromLocation": "Mojoworld"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
+              "2": [
                 1,
                 {
-                  "opponentCards": [
-                    2,
+                  "cost": [
                     0,
-                    {}
+                    6
+                  ],
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    6
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Eson"
                   ]
                 }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 2,
-                      "power": 3,
-                      "cardDefId": "FrankieRaye"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "playerPower": 103,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 6,
-              "oldPower": 5,
-              "cardEntityId": 32
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            4,
-            {
-              "0": [
+              ],
+              "3": [
                 1,
                 {
                   "power": [
                     0,
                     6
+                  ],
+                  "basePower": [
+                    0,
+                    6
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Hela"
                   ]
                 }
               ]
@@ -1228,33 +1276,15 @@
       [
         {
           "_v": 2,
-          "turn": 3,
-          "label": "Energy",
+          "turn": 2,
+          "label": "Play",
           "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
             {
               "who": "player",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "Subterranea",
-              "from": "RevealOn2",
-              "type": "location",
+              "card": "Skill01GhostRiderChampion",
+              "type": "play",
+              "entityId": 40,
+              "location": "RevealOn2",
               "locationIndex": 2
             }
           ]
@@ -1267,484 +1297,20 @@
               "2": [
                 1,
                 {
-                  "location": [
-                    0,
-                    "Subterranea"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 58,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Rock"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "GhostRiderChampion"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skill01GhostRiderChampion"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Eson"
-                  ]
-                }
-              ],
-              "4": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 10,
-                  "baseCost": 6,
-                  "basePower": 10,
-                  "cardDefId": "Odin"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                10
-              ],
-              "opponent": [
-                0,
-                10
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "play",
-              "entityId": 32,
-              "location": "Mojoworld",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
                   "playerCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
+                      "0": [
                         0,
                         {
-                          "cost": 4,
-                          "power": 6,
-                          "baseCost": 4,
-                          "entityId": 32,
-                          "basePower": 5,
-                          "cardDefId": "GhostRiderChampion",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Skill01GhostRiderChampion"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Eson"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "play",
-              "entityId": 41,
-              "location": "TaLo",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 41,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "cost": 4,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "playerPower": 109,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "play",
-              "entityId": 38,
-              "location": "Mojoworld",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 7,
-                          "power": 12,
-                          "baseCost": 7,
-                          "entityId": 38,
-                          "basePower": 12,
-                          "cardDefId": "Skaar",
-                          "arrivalSeq": 2
+                          "cost": 5,
+                          "power": 0,
+                          "baseCost": 5,
+                          "entityId": 40,
+                          "basePower": 0,
+                          "cardDefId": "Skill01GhostRiderChampion",
+                          "arrivalSeq": 0
                         }
                       ]
                     }
@@ -1768,571 +1334,7 @@
       [
         {
           "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skaar",
-              "cost": 7,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 38,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "playerPower": 121,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 41,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Skill01HulkChampion"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 3,
-                      "power": 0,
-                      "cardDefId": "Skill01HulkChampion"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 11,
-              "oldPower": 10,
-              "cardEntityId": 33
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            4,
-            {
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    11
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "cost": 8,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 37,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "4": [
-                0,
-                {
-                  "cost": 8,
-                  "power": 12,
-                  "baseCost": 8,
-                  "basePower": 12,
-                  "cardDefId": "Death"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                9
-              ],
-              "opponent": [
-                0,
-                9
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            5,
-            {
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "play",
-              "entityId": 46,
-              "location": "Mojoworld",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 0,
-                          "baseCost": 5,
-                          "entityId": 46,
-                          "basePower": 0,
-                          "cardDefId": "Skill01GhostRiderChampion",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Eson"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    12
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "play",
-              "entityId": 26,
-              "location": "TaLo",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 13,
-                          "baseCost": 6,
-                          "entityId": 26,
-                          "basePower": 10,
-                          "cardDefId": "RedHulk",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
+          "turn": 2,
           "label": "Reveal",
           "events": [
             {
@@ -2341,7 +1343,7 @@
               "cost": 5,
               "type": "reveal",
               "power": 0,
-              "entityId": 46,
+              "entityId": 40,
               "drawReveal": false
             }
           ]
@@ -2351,26 +1353,26 @@
       [
         {
           "_v": 2,
-          "turn": 4,
+          "turn": 2,
           "label": "Power",
           "events": [
             {
               "who": "opponent",
-              "card": "Quake",
+              "card": "Mirage",
               "type": "power",
               "source": "Skill01GhostRiderChampion",
               "newPower": -2,
               "oldPower": 3,
-              "cardEntityId": 25
+              "cardEntityId": 29
             },
             {
               "who": "player",
               "card": "GhostRiderChampion",
               "type": "power",
               "source": "Skill01GhostRiderChampion",
-              "newPower": 11,
-              "oldPower": 6,
-              "cardEntityId": 32
+              "newPower": 10,
+              "oldPower": 5,
+              "cardEntityId": 16
             }
           ]
         },
@@ -2380,26 +1382,6 @@
             3,
             {
               "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            11
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
                 1,
                 {
                   "opponentCards": [
@@ -2420,28 +1402,35 @@
                 }
               ]
             }
+          ],
+          "h": [
+            2,
+            4,
+            {
+              "0": [
+                1,
+                {
+                  "power": [
+                    0,
+                    10
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
       [
         {
           "_v": 2,
-          "turn": 4,
+          "turn": 2,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "player",
-              "location": "TaLo",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": -2
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "playerPower": 126,
+              "location": "CloningVats",
+              "playerPower": 3,
               "locationIndex": 0,
               "opponentPower": 0
             }
@@ -2452,22 +1441,7 @@
       [
         {
           "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
+          "turn": 2,
           "label": "Removed",
           "events": [
             {
@@ -2482,12 +1456,12 @@
             2,
             3,
             {
-              "0": [
+              "2": [
                 1,
                 {
                   "playerCards": [
                     2,
-                    3,
+                    0,
                     {}
                   ]
                 }
@@ -2518,1982 +1492,14 @@
       [
         {
           "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 13,
-              "entityId": 26,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TaLo",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 13,
-              "oldPower": 12,
-              "cardEntityId": 37
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    13
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 36,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DoctorOctopusFracturedFrontier"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Eson"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ],
-              "4": [
-                0,
-                {
-                  "cost": 7,
-                  "power": 13,
-                  "baseCost": 8,
-                  "basePower": 12,
-                  "cardDefId": "Death"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                8
-              ],
-              "opponent": [
-                0,
-                8
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "play",
-              "entityId": 33,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 11,
-                          "baseCost": 6,
-                          "entityId": 33,
-                          "basePower": 10,
-                          "cardDefId": "Eson",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    13
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "type": "play",
-              "entityId": 22,
-              "location": "TaLo",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "JenniferKale",
-              "type": "play",
-              "entityId": 21,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 22,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 21,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Eson",
-              "cost": 6,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 33,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 13,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            13
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "basePower": [
-                            0,
-                            10
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SheHulk"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TaLo",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 24
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JenniferKale",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "JenniferKale"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JenniferKale",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 11,
-              "oldPower": 10,
-              "cardEntityId": 35
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            4,
-            {
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    11
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Rock",
-              "type": "play",
-              "entityId": 58,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 0,
-                          "baseCost": 1,
-                          "entityId": 58,
-                          "basePower": 0,
-                          "cardDefId": "Rock",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DoctorOctopusFracturedFrontier"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    13
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 58,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Blink",
-              "cost": 5,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 39,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Blink",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Blink"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ],
-              "3": [
-                0,
-                {
-                  "cost": 7,
-                  "power": 13,
-                  "baseCost": 8,
-                  "basePower": 12,
-                  "cardDefId": "Death"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "play",
-              "entityId": 36,
-              "location": "Mojoworld",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 2,
-                          "baseCost": 2,
-                          "entityId": 36,
-                          "basePower": 2,
-                          "cardDefId": "DoctorOctopusFracturedFrontier",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Blink"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    13
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Blink",
-              "type": "play",
-              "entityId": 39,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 8,
-                          "baseCost": 5,
-                          "entityId": 39,
-                          "basePower": 8,
-                          "cardDefId": "Blink",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    13
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Blink",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "type": "play",
-              "entityId": 20,
-              "location": "Subterranea",
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "type": "play",
-              "entityId": 51,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 20,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 51,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "playerPower": 128,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "shuffle"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    13
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                8
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Falcon",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 59,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Falcon"
-                  ]
-                }
-              ],
-              "1": [
-                0,
-                {
-                  "cost": 7,
-                  "power": 13,
-                  "baseCost": 8,
-                  "basePower": 12,
-                  "cardDefId": "Death"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Falcon",
-              "type": "power",
-              "source": "DoctorOctopusFracturedFrontier",
-              "newPower": 6,
-              "oldPower": 3,
-              "cardEntityId": 59
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Blink",
-              "cost": 5,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "resetCard",
-              "power": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "shuffle"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                9
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "playerPower": 126,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "play",
-              "entityId": 35,
-              "location": "Mojoworld",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 14,
-                          "baseCost": 6,
-                          "entityId": 35,
-                          "basePower": 10,
-                          "cardDefId": "Odin",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                8
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 14,
-              "entityId": 35,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "playerPower": 140,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "Falcon",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 2,
-                      "power": 6,
-                      "cardDefId": "Falcon"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    7
-                  ],
-                  "power": [
-                    0,
-                    13
-                  ],
-                  "baseCost": [
-                    0,
-                    8
-                  ],
-                  "basePower": [
-                    0,
-                    12
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Death"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
+          "turn": 2,
           "label": "Destroyed",
           "events": [
             {
               "who": "opponent",
-              "card": "JenniferKale",
+              "card": "ZombieMisterFantastic",
               "type": "destroyed",
-              "fromLocation": "Subterranea"
+              "fromLocation": "CloningVats"
             }
           ]
         },
@@ -4502,52 +1508,13 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            null
-                          ],
-                          "power": [
-                            0,
-                            null
-                          ],
-                          "baseCost": [
-                            0,
-                            null
-                          ],
-                          "entityId": [
-                            0,
-                            20
-                          ],
-                          "basePower": [
-                            0,
-                            null
-                          ],
-                          "cardDefId": [
-                            0,
-                            null
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "entityId": [
-                            0,
-                            51
-                          ]
-                        }
-                      ]
-                    }
+                    1,
+                    {}
                   ]
                 }
               ]
@@ -4558,14 +1525,14 @@
             {
               "opponent": [
                 2,
-                2,
+                1,
                 {
-                  "1": [
+                  "0": [
                     0,
                     {
                       "cost": 2,
-                      "power": 3,
-                      "cardDefId": "JenniferKale"
+                      "power": 2,
+                      "cardDefId": "ZombieMisterFantastic"
                     }
                   ]
                 }
@@ -4577,46 +1544,30 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 2,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "player",
-              "location": "Subterranea",
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 0
+              "location": "CloningVats",
+              "playerPower": 3,
+              "locationIndex": 0,
+              "opponentPower": -2
             }
           ]
         },
-        {
-          "h": [
-            2,
-            1,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        {}
       ],
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 2,
           "label": "Resolved",
           "events": [
             {
               "who": "player",
-              "card": "Blink",
+              "card": "Gambit",
               "type": "cardResolved"
             }
           ]
@@ -4626,221 +1577,185 @@
       [
         {
           "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "cost": 6,
-              "type": "reveal",
-              "power": 14,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            14
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "basePower": [
-                            0,
-                            14
-                          ],
-                          "cardDefId": [
-                            0,
-                            "HulkChampion"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 14
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 51,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            1
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Rock"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
+          "turn": 2,
+          "label": "Draw",
           "events": [
             {
               "who": "player",
-              "card": "Death",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 14,
-              "oldPower": 13,
-              "cardEntityId": 37
+              "card": "Gambit",
+              "cost": 3,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 54,
+              "drawReveal": true
             }
           ]
         },
         {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                5
+              ]
+            }
+          ],
           "h": [
             2,
-            1,
+            5,
             {
               "0": [
                 1,
                 {
+                  "cost": [
+                    0,
+                    3
+                  ],
                   "power": [
                     0,
-                    14
+                    3
+                  ],
+                  "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Gambit"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    5
+                  ],
+                  "cardDefId": [
+                    0,
+                    "GhostRiderChampion"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    5
+                  ],
+                  "power": [
+                    0,
+                    8
+                  ],
+                  "baseCost": [
+                    0,
+                    5
+                  ],
+                  "basePower": [
+                    0,
+                    8
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Blink"
+                  ]
+                }
+              ],
+              "3": [
+                1,
+                {
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Eson"
+                  ]
+                }
+              ],
+              "4": [
+                0,
+                {
+                  "cost": 6,
+                  "power": 6,
+                  "baseCost": 6,
+                  "basePower": 6,
+                  "cardDefId": "Hela"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Energy",
+          "events": [
+            {
+              "who": "player",
+              "type": "energy",
+              "energy": 4
+            },
+            {
+              "who": "opponent",
+              "type": "energy",
+              "energy": 4
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Location",
+          "events": [
+            {
+              "to": "GreatWeb",
+              "from": "RevealOn2",
+              "type": "location",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "location": [
+                    0,
+                    "GreatWeb"
                   ]
                 }
               ]
@@ -4851,7 +1766,175 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 3,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "RedShift",
+              "cost": 2,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 19,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "RedShift",
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                6
+              ]
+            }
+          ],
+          "h": [
+            2,
+            6,
+            {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    2
+                  ],
+                  "baseCost": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "RedShift"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    3
+                  ],
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Gambit"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    5
+                  ],
+                  "cardDefId": [
+                    0,
+                    "GhostRiderChampion"
+                  ]
+                }
+              ],
+              "3": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    5
+                  ],
+                  "power": [
+                    0,
+                    8
+                  ],
+                  "baseCost": [
+                    0,
+                    5
+                  ],
+                  "basePower": [
+                    0,
+                    8
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Blink"
+                  ]
+                }
+              ],
+              "4": [
+                1,
+                {
+                  "power": [
+                    0,
+                    10
+                  ],
+                  "basePower": [
+                    0,
+                    10
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Eson"
+                  ]
+                }
+              ],
+              "5": [
+                0,
+                {
+                  "cost": 6,
+                  "power": 6,
+                  "baseCost": 6,
+                  "basePower": 6,
+                  "cardDefId": "Hela"
+                }
+              ]
+            }
+          ],
+          "r": [
+            1,
+            {
+              "player": [
+                0,
+                6
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
           "label": "Turn Winner",
           "events": [
             {
@@ -4859,11 +1942,20 @@
               "type": "turnWinner",
               "winner": "player"
             }
-          ],
-          "survivingLocationIndexes": [
-            2,
-            1,
-            0
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Initiative",
+          "events": [
+            {
+              "who": "player",
+              "type": "initiative"
+            }
           ]
         },
         {}
@@ -4905,10 +1997,10 @@
           "turn": 1,
           "plays": [
             {
-              "card": "Quake",
+              "card": "Mirage",
               "isPlayer": false,
-              "location": "TaLo",
-              "locationIndex": 1
+              "location": "CloningVats",
+              "locationIndex": 0
             }
           ],
           "energy": {
@@ -4917,43 +2009,43 @@
           },
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2,
               "_changeIdx": 82
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2,
               "_changeIdx": 84
             },
             {
-              "to": "Mojoworld",
+              "to": "CloningVats",
               "from": "RevealOn1",
               "type": "location",
               "_changeIdx": 87,
               "locationIndex": 0
             },
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 91
-            },
-            {
               "who": "player",
-              "card": "Skaar",
-              "cost": 7,
+              "card": "Hela",
+              "cost": 6,
               "type": "reveal",
-              "power": 12,
-              "entityId": 38,
-              "_changeIdx": 94,
+              "power": 6,
+              "entityId": 25,
+              "_changeIdx": 90,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Skaar",
+              "card": "Hela",
+              "type": "draw",
+              "_changeIdx": 91
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw",
               "_changeIdx": 95
             },
@@ -4961,94 +2053,64 @@
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 100
+              "_changeIdx": 98
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 101
+              "_changeIdx": 99
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 105
+              "_changeIdx": 102
             },
             {
               "who": "opponent",
-              "card": "Quake",
+              "card": "Mirage",
               "type": "play",
-              "entityId": 25,
-              "location": "RevealOn2",
-              "_changeIdx": 106,
-              "locationIndex": 1
+              "entityId": 29,
+              "location": "CloningVats",
+              "_changeIdx": 103,
+              "locationIndex": 0
             },
             {
               "who": "opponent",
-              "card": "Quake",
+              "card": "Mirage",
               "cost": 2,
               "type": "reveal",
               "power": 3,
-              "entityId": 25,
-              "_changeIdx": 109,
+              "entityId": 29,
+              "_changeIdx": 106,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "Quake",
+              "card": "Mirage",
               "type": "cardRevealed",
-              "_changeIdx": 110
+              "_changeIdx": 107
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RevealOn2",
-              "_changeIdx": 112,
+              "location": "CloningVats",
+              "_changeIdx": 109,
               "playerPower": 0,
-              "locationIndex": 1,
+              "locationIndex": 0,
               "opponentPower": 3
-            },
-            {
-              "type": "locationShuffle",
-              "swaps": [
-                {
-                  "to": 2,
-                  "from": 0
-                }
-              ],
-              "_changeIdx": 116
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 26,
-              "_changeIdx": 121,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "source": "RedHulk",
-              "newPower": 13,
-              "oldPower": 10,
-              "_changeIdx": 122,
-              "cardEntityId": 26
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
               "winner": "opponent",
               "playerPower": 0,
               "opponentPower": 3
+            },
+            {
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -5057,7 +2119,7 @@
             }
           ]
         },
-        8
+        11
       ],
       [
         {
@@ -5066,14 +2128,20 @@
             {
               "card": "Gambit",
               "isPlayer": true,
-              "location": "Subterranea",
+              "location": "CloningVats",
               "locationIndex": 0
             },
             {
-              "card": "FrankieRaye",
+              "card": "ZombieMisterFantastic",
               "isPlayer": false,
-              "location": "Subterranea",
+              "location": "CloningVats",
               "locationIndex": 0
+            },
+            {
+              "card": "Skill01GhostRiderChampion",
+              "isPlayer": true,
+              "location": "GreatWeb",
+              "locationIndex": 2
             }
           ],
           "energy": {
@@ -5082,117 +2150,152 @@
           },
           "events": [
             {
+              "who": "player",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 126
+            },
+            {
               "who": "opponent",
               "type": "energy",
               "energy": 3,
               "_changeIdx": 128
             },
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 130
+              "to": "FiskTower",
+              "from": "RevealOn2",
+              "type": "location",
+              "_changeIdx": 131,
+              "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 133,
+              "_changeIdx": 135,
               "locationIndex": 2
             },
             {
-              "to": "TaLo",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 137,
-              "locationIndex": 1
+              "who": "player",
+              "card": "Blink",
+              "cost": 5,
+              "type": "reveal",
+              "power": 8,
+              "entityId": 22,
+              "_changeIdx": 138,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Blink",
+              "type": "draw",
+              "_changeIdx": 139
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 141
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 35,
-              "_changeIdx": 144,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "draw",
-              "_changeIdx": 145
+              "_changeIdx": 142
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "opponent",
-              "_changeIdx": 148
+              "_changeIdx": 145
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 149
+              "_changeIdx": 146
             },
             {
               "who": "player",
               "card": "Gambit",
               "type": "play",
-              "entityId": 28,
-              "location": "Mojoworld",
-              "_changeIdx": 152,
+              "entityId": 17,
+              "location": "CloningVats",
+              "_changeIdx": 150,
               "locationIndex": 0
             },
             {
               "who": "player",
               "card": "Gambit",
               "type": "cardStaged",
-              "_changeIdx": 153
+              "_changeIdx": 151
             },
             {
               "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 157
+              "_changeIdx": 156
             },
             {
               "who": "opponent",
-              "card": "FrankieRaye",
+              "card": "ZombieMisterFantastic",
               "type": "play",
-              "entityId": 19,
-              "location": "Mojoworld",
-              "_changeIdx": 158,
+              "entityId": 28,
+              "location": "CloningVats",
+              "_changeIdx": 157,
               "locationIndex": 0
             },
             {
               "who": "opponent",
-              "card": "FrankieRaye",
+              "card": "ZombieMisterFantastic",
               "cost": 2,
               "type": "reveal",
-              "power": 3,
-              "entityId": 19,
-              "_changeIdx": 162,
+              "power": 2,
+              "entityId": 28,
+              "_changeIdx": 161,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "FrankieRaye",
+              "card": "ZombieMisterFantastic",
               "type": "cardRevealed",
-              "_changeIdx": 163
+              "_changeIdx": 162
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Mojoworld",
-              "_changeIdx": 167,
+              "location": "CloningVats",
+              "_changeIdx": 164,
               "playerPower": 0,
               "locationIndex": 0,
-              "opponentPower": 3
+              "opponentPower": 5
+            },
+            {
+              "who": "opponent",
+              "card": "ZombieHorde",
+              "cost": 0,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 52,
+              "_changeIdx": 169,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "ZombieHorde",
+              "type": "power",
+              "source": "ZombieMisterFantastic",
+              "newPower": 2,
+              "oldPower": 0,
+              "_changeIdx": 171,
+              "cardEntityId": 52
+            },
+            {
+              "who": "opponent",
+              "card": "ZombieHorde",
+              "type": "cardRevealed",
+              "_changeIdx": 174
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "FiskTower",
+              "_changeIdx": 175,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 2
             },
             {
               "who": "player",
@@ -5200,69 +2303,123 @@
               "cost": 3,
               "type": "reveal",
               "power": 3,
-              "entityId": 28,
-              "_changeIdx": 170,
+              "entityId": 17,
+              "_changeIdx": 185,
               "drawReveal": false
             },
             {
               "type": "score",
-              "winner": null,
-              "location": "Mojoworld",
-              "_changeIdx": 172,
+              "winner": "opponent",
+              "location": "CloningVats",
+              "_changeIdx": 187,
               "playerPower": 3,
               "locationIndex": 0,
-              "opponentPower": 3
+              "opponentPower": 5
             },
             {
               "who": "player",
-              "card": "Skaar",
+              "card": "Skill01GhostRiderChampion",
               "type": "discarded",
-              "_changeIdx": 178
+              "_changeIdx": 192
+            },
+            {
+              "who": "player",
+              "card": "Skill01GhostRiderChampion",
+              "type": "play",
+              "entityId": 40,
+              "location": "RevealOn2",
+              "_changeIdx": 197,
+              "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "Skill01GhostRiderChampion",
+              "cost": 5,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 40,
+              "_changeIdx": 199,
+              "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "FrankieRaye",
-              "type": "destroyed",
-              "_changeIdx": 185,
-              "fromLocation": "Mojoworld"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "_changeIdx": 188,
-              "playerPower": 103,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardResolved",
-              "_changeIdx": 192
+              "card": "Mirage",
+              "type": "power",
+              "source": "Skill01GhostRiderChampion",
+              "newPower": -2,
+              "oldPower": 3,
+              "_changeIdx": 201,
+              "cardEntityId": 29
             },
             {
               "who": "player",
               "card": "GhostRiderChampion",
               "type": "power",
-              "source": "TaLo",
-              "newPower": 6,
+              "source": "Skill01GhostRiderChampion",
+              "newPower": 10,
               "oldPower": 5,
-              "_changeIdx": 195,
-              "cardEntityId": 32
+              "_changeIdx": 204,
+              "cardEntityId": 16
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "CloningVats",
+              "_changeIdx": 207,
+              "playerPower": 3,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "who": "player",
+              "card": "Skill01GhostRiderChampion",
+              "type": "removed",
+              "_changeIdx": 211
+            },
+            {
+              "who": "opponent",
+              "card": "ZombieMisterFantastic",
+              "type": "destroyed",
+              "_changeIdx": 215,
+              "fromLocation": "CloningVats"
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "CloningVats",
+              "_changeIdx": 217,
+              "playerPower": 3,
+              "locationIndex": 0,
+              "opponentPower": -2
+            },
+            {
+              "who": "player",
+              "card": "Gambit",
+              "type": "cardResolved",
+              "_changeIdx": 221
+            },
+            {
+              "who": "player",
+              "card": "Gambit",
+              "cost": 3,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 54,
+              "_changeIdx": 226,
+              "drawReveal": true
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
               "winner": "player",
-              "playerPower": 103,
-              "opponentPower": 0
+              "playerPower": 3,
+              "opponentPower": -2
             },
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 2
             },
             {
               "winner": null,
@@ -5271,1037 +2428,69 @@
             }
           ]
         },
-        32
+        38
       ],
       [
         {
           "turn": 3,
-          "plays": [
-            {
-              "card": "GhostRiderChampion",
-              "isPlayer": true,
-              "location": "Subterranea",
-              "locationIndex": 0
-            },
-            {
-              "card": "Skill01HulkChampion",
-              "isPlayer": false,
-              "location": "TaLo",
-              "locationIndex": 1
-            },
-            {
-              "card": "Skaar",
-              "isPlayer": true,
-              "location": "Subterranea",
-              "locationIndex": 0
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 4,
             "opponent": 4
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 201
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 4,
-              "_changeIdx": 203
+              "_changeIdx": 234
             },
             {
-              "to": "Subterranea",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 4,
+              "_changeIdx": 236
+            },
+            {
+              "to": "GreatWeb",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 206,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 220
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 58,
-              "_changeIdx": 223,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "type": "draw",
-              "_changeIdx": 224
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 228
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 229
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "play",
-              "entityId": 32,
-              "location": "Mojoworld",
-              "_changeIdx": 232,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardStaged",
-              "_changeIdx": 233
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 238
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "play",
-              "entityId": 41,
-              "location": "TaLo",
               "_changeIdx": 239,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "cost": 4,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "_changeIdx": 243,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "_changeIdx": 245,
-              "playerPower": 109,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "type": "play",
-              "entityId": 38,
-              "location": "Mojoworld",
-              "_changeIdx": 250,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Skaar",
-              "cost": 7,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 38,
-              "_changeIdx": 252,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "_changeIdx": 253,
-              "playerPower": 121,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "cardResolved",
-              "_changeIdx": 257
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 41,
-              "_changeIdx": 258,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "cardRevealed",
-              "_changeIdx": 259
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "removed",
-              "_changeIdx": 264
-            },
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 11,
-              "oldPower": 10,
-              "_changeIdx": 268,
-              "cardEntityId": 33
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 121,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        51
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "Skill01GhostRiderChampion",
-              "isPlayer": true,
-              "location": "Subterranea",
-              "locationIndex": 0
-            },
-            {
-              "card": "RedHulk",
-              "isPlayer": false,
-              "location": "TaLo",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 274
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 276
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 278
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "cost": 8,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 37,
-              "_changeIdx": 281,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "draw",
-              "_changeIdx": 282
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 290
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 291
-            },
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "play",
-              "entityId": 46,
-              "location": "Mojoworld",
-              "_changeIdx": 294,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "cardStaged",
-              "_changeIdx": 295
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 301
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "play",
-              "entityId": 26,
-              "location": "TaLo",
-              "_changeIdx": 302,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 46,
-              "_changeIdx": 306,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Quake",
-              "type": "power",
-              "source": "Skill01GhostRiderChampion",
-              "newPower": -2,
-              "oldPower": 3,
-              "_changeIdx": 309,
-              "cardEntityId": 25
-            },
-            {
-              "who": "player",
-              "card": "GhostRiderChampion",
-              "type": "power",
-              "source": "Skill01GhostRiderChampion",
-              "newPower": 11,
-              "oldPower": 6,
-              "_changeIdx": 312,
-              "cardEntityId": 32
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "TaLo",
-              "_changeIdx": 315,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": -2
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "_changeIdx": 318,
-              "playerPower": 126,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "cardResolved",
-              "_changeIdx": 322
-            },
-            {
-              "who": "player",
-              "card": "Skill01GhostRiderChampion",
-              "type": "removed",
-              "_changeIdx": 324
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 13,
-              "entityId": 26,
-              "_changeIdx": 327,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TaLo",
-              "_changeIdx": 329,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 13,
-              "oldPower": 12,
-              "_changeIdx": 334,
-              "cardEntityId": 37
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 126,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 11
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        67
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "Eson",
-              "isPlayer": true,
-              "location": "Mojoworld",
-              "locationIndex": 2
-            },
-            {
-              "card": "SheHulk",
-              "isPlayer": false,
-              "location": "TaLo",
-              "locationIndex": 1
-            },
-            {
-              "card": "JenniferKale",
-              "isPlayer": false,
-              "location": "Mojoworld",
-              "locationIndex": 2
-            },
-            {
-              "card": "Rock",
-              "isPlayer": true,
-              "location": "Mojoworld",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 341
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 343
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 345
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 36,
-              "_changeIdx": 348,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "draw",
-              "_changeIdx": 349
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 352
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 353
-            },
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "play",
-              "entityId": 33,
-              "location": "Subterranea",
-              "_changeIdx": 356,
               "locationIndex": 2
             },
             {
               "who": "player",
-              "card": "Eson",
-              "type": "cardStaged",
-              "_changeIdx": 357
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 363
-            },
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "type": "play",
-              "entityId": 22,
-              "location": "TaLo",
-              "_changeIdx": 364,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "JenniferKale",
-              "type": "play",
-              "entityId": 21,
-              "location": "Subterranea",
-              "_changeIdx": 367,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Eson",
-              "cost": 6,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 33,
-              "_changeIdx": 371,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 374,
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Eson",
-              "type": "cardResolved",
-              "_changeIdx": 377
-            },
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 13,
-              "entityId": 22,
-              "_changeIdx": 378,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "type": "cardRevealed",
-              "_changeIdx": 379
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TaLo",
-              "_changeIdx": 382,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 24
-            },
-            {
-              "who": "opponent",
-              "card": "JenniferKale",
+              "card": "RedShift",
               "cost": 2,
               "type": "reveal",
               "power": 3,
-              "entityId": 21,
-              "_changeIdx": 385,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "JenniferKale",
-              "type": "cardRevealed",
-              "_changeIdx": 386
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 388,
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 11,
-              "oldPower": 10,
-              "_changeIdx": 393,
-              "cardEntityId": 35
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "type": "play",
-              "entityId": 58,
-              "location": "Subterranea",
-              "_changeIdx": 398,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 58,
-              "_changeIdx": 402,
-              "drawReveal": false
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 407
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 24
-            },
-            {
-              "winner": "player",
-              "playerPower": 11,
-              "opponentPower": 3
-            }
-          ]
-        },
-        86
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "DoctorOctopusFracturedFrontier",
-              "isPlayer": true,
-              "location": "Subterranea",
-              "locationIndex": 0
-            },
-            {
-              "card": "Blink",
-              "isPlayer": true,
-              "location": "Mojoworld",
-              "locationIndex": 2
-            },
-            {
-              "card": "HulkChampion",
-              "isPlayer": false,
-              "location": "Mojoworld",
-              "locationIndex": 2
-            },
-            {
-              "card": "Rock",
-              "isPlayer": false,
-              "location": "Mojoworld",
-              "locationIndex": 2
-            },
-            {
-              "card": "Odin",
-              "isPlayer": true,
-              "location": "Subterranea",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 7,
-            "opponent": 7
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 410
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 412
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 414
-            },
-            {
-              "who": "player",
-              "card": "Blink",
-              "cost": 5,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 39,
-              "_changeIdx": 417,
+              "entityId": 19,
+              "_changeIdx": 242,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Blink",
+              "card": "RedShift",
               "type": "draw",
-              "_changeIdx": 418
+              "_changeIdx": 243
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "player",
-              "_changeIdx": 422
+              "_changeIdx": 247
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 423
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "play",
-              "entityId": 36,
-              "location": "Mojoworld",
-              "_changeIdx": 426,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "cardStaged",
-              "_changeIdx": 427
-            },
-            {
-              "who": "player",
-              "card": "Blink",
-              "type": "play",
-              "entityId": 39,
-              "location": "Subterranea",
-              "_changeIdx": 430,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Blink",
-              "type": "cardStaged",
-              "_changeIdx": 431
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 439
-            },
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "type": "play",
-              "entityId": 20,
-              "location": "Subterranea",
-              "_changeIdx": 440,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "type": "play",
-              "entityId": 51,
-              "location": "Subterranea",
-              "_changeIdx": 443,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 36,
-              "_changeIdx": 448,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "_changeIdx": 450,
-              "playerPower": 128,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "shuffle",
-              "_changeIdx": 454
-            },
-            {
-              "who": "player",
-              "card": "Falcon",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 59,
-              "_changeIdx": 458,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Falcon",
-              "type": "power",
-              "source": "DoctorOctopusFracturedFrontier",
-              "newPower": 6,
-              "oldPower": 3,
-              "_changeIdx": 461,
-              "cardEntityId": 59
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "cardResolved",
-              "_changeIdx": 466
-            },
-            {
-              "who": "player",
-              "card": "Blink",
-              "cost": 5,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 39,
-              "_changeIdx": 467,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 470,
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "cost": 2,
-              "type": "resetCard",
-              "power": 2,
-              "_changeIdx": 475
-            },
-            {
-              "who": "player",
-              "card": "DoctorOctopusFracturedFrontier",
-              "type": "shuffle",
-              "_changeIdx": 476
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "_changeIdx": 479,
-              "playerPower": 126,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "play",
-              "entityId": 35,
-              "location": "Mojoworld",
-              "_changeIdx": 483,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 14,
-              "entityId": 35,
-              "_changeIdx": 486,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Mojoworld",
-              "_changeIdx": 488,
-              "playerPower": 140,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Falcon",
-              "type": "discarded",
-              "_changeIdx": 496
-            },
-            {
-              "who": "opponent",
-              "card": "JenniferKale",
-              "type": "destroyed",
-              "_changeIdx": 500,
-              "fromLocation": "Subterranea"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 507,
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Blink",
-              "type": "cardResolved",
-              "_changeIdx": 514
-            },
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "cost": 6,
-              "type": "reveal",
-              "power": 14,
-              "entityId": 20,
-              "_changeIdx": 515,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "type": "cardRevealed",
-              "_changeIdx": 516
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 518,
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 14
-            },
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 51,
-              "_changeIdx": 521,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "type": "cardRevealed",
-              "_changeIdx": 522
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 524,
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 15
-            },
-            {
-              "who": "player",
-              "card": "Death",
-              "type": "power",
-              "source": "TaLo",
-              "newPower": 14,
-              "oldPower": 13,
-              "_changeIdx": 529,
-              "cardEntityId": 37
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 538
+              "_changeIdx": 248
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "player",
-              "playerPower": 140,
+              "winner": null,
+              "playerPower": 0,
               "opponentPower": 0
             },
             {
@@ -6310,48 +2499,44 @@
               "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 19,
-              "opponentPower": 15
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             }
           ]
         },
-        123
+        41
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 20161,
-  "opp_sp": 5487,
+  "opp_cl": 16527,
+  "opp_sp": 4225,
   "bracket": null,
-  "match_id": "26e9580c-91a7-4691-a6ff-f729036a1dd3",
-  "opp_name": "SboroMcSbor",
+  "match_id": "852c14ca-3f24-4b9e-92bc-28b5e807a875",
+  "opp_name": "duduk",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "Subterranea",
-    "TaLo",
-    "Mojoworld"
-  ],
+  "locations": [],
   "player_cl": 11839,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Skill01HulkChampion"
+    "CardDefId": "Skill01SentinelChampion"
   },
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": "Grand Arena",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
-  "match_result": "win",
-  "match_status": "complete",
-  "opp_clan_tag": "BOX",
+  "current_turn": 4,
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_clan_tag": "MOR",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
     "CardDefId": "Skill01GhostRiderChampion"
@@ -6359,41 +2544,24 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "Quake",
-    "RedHulk",
-    "FrankieRaye",
-    "SheHulk",
-    "JenniferKale",
-    "HulkChampion"
+    "Mirage",
+    "ZombieMisterFantastic"
   ],
-  "last_updated_at": "2026-10-16T07:09:11.09+00:00",
-  "opp_played_cards": [
-    "RedHulk"
-  ],
+  "last_updated_at": "2026-10-16T07:10:52.38+00:00",
+  "opp_played_cards": [],
   "player_deck_cards": [
     "GhostRiderChampion",
-    "Hela",
-    "LadySif",
-    "CorvusGlaive",
-    "Death",
-    "Skaar",
-    "RedShift",
-    "Odin",
-    "DoctorOctopusFracturedFrontier",
+    "Gambit",
     "Eson",
+    "Hela",
     "Blink",
-    "Gambit"
+    "RedShift"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "Quake",
-    "RedHulk",
-    "FrankieRaye",
-    "Skill01HulkChampion",
-    "SheHulk",
-    "JenniferKale",
-    "HulkChampion",
-    "Rock"
+    "Mirage",
+    "ZombieMisterFantastic",
+    "ZombieHorde"
   ],
   "conquest_round_index": null
 }
