@@ -1,5 +1,5 @@
 {
-  "mode": "Ranked",
+  "mode": "LTGM",
   "steps": {
     "compactSteps": [
       [
@@ -35,8 +35,8 @@
             }
           ],
           "c": {
-            "player": 3,
-            "opponent": 3
+            "player": 4,
+            "opponent": 4
           },
           "d": {
             "player": [],
@@ -45,24 +45,31 @@
           "h": [
             {
               "cost": 2,
-              "power": 5,
-              "baseCost": 2,
-              "basePower": 5,
-              "cardDefId": "ColleenWing"
-            },
-            {
-              "cost": 4,
               "power": 2,
-              "baseCost": 4,
-              "basePower": 1,
-              "cardDefId": "Dracula"
+              "baseCost": 2,
+              "basePower": 2,
+              "cardDefId": "CarnageChampion"
             },
             {
-              "cost": 3,
-              "power": 6,
-              "baseCost": 3,
-              "basePower": 6,
-              "cardDefId": "LadySif"
+              "cost": 1,
+              "power": 0,
+              "baseCost": 1,
+              "basePower": 0,
+              "cardDefId": "Skill01CarnageChampion"
+            },
+            {
+              "cost": 6,
+              "power": 0,
+              "baseCost": 6,
+              "basePower": 0,
+              "cardDefId": "Knull"
+            },
+            {
+              "cost": 6,
+              "power": 0,
+              "baseCost": 6,
+              "basePower": 0,
+              "cardDefId": "ArnimZola"
             }
           ],
           "n": {
@@ -88,12 +95,12 @@
             {
               "who": "opponent",
               "type": "energy",
-              "energy": 1
+              "energy": 2
             },
             {
               "who": "player",
               "type": "energy",
-              "energy": 1
+              "energy": 2
             }
           ]
         },
@@ -106,7 +113,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "PizzaPlace",
+              "to": "Shadowland",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +130,7 @@
                 {
                   "location": [
                     0,
-                    "PizzaPlace"
+                    "Shadowland"
                   ],
                   "revealed": [
                     0,
@@ -139,44 +146,151 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Draw",
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Ninja",
+              "cost": 1,
+              "type": "reveal",
+              "power": -2,
+              "oppKit": "||Common|",
+              "entityId": 53,
+              "drawReveal": false
+            },
+            {
+              "who": "player",
+              "card": "Ninja",
+              "cost": 1,
+              "type": "reveal",
+              "power": -2,
+              "entityId": 54,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": -2,
+                          "baseCost": 1,
+                          "entityId": 54,
+                          "basePower": -2,
+                          "cardDefId": "Ninja",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": -2,
+                          "baseCost": 1,
+                          "entityId": 53,
+                          "basePower": -2,
+                          "cardDefId": "Ninja",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Ninja",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "Shadowland",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": -2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
           "events": [
             {
               "who": "player",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 48,
-              "drawReveal": true
-            },
+              "card": "Ninja",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
             {
-              "who": "player",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 49,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 50,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 51,
-              "drawReveal": true
-            },
+              "type": "score",
+              "winner": null,
+              "location": "Shadowland",
+              "playerPower": -2,
+              "locationIndex": 0,
+              "opponentPower": -2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Draw",
+          "events": [
             {
               "who": "opponent",
               "card": null,
@@ -184,16 +298,16 @@
             },
             {
               "who": "player",
-              "card": "Blade",
-              "cost": 1,
+              "card": "Wong",
+              "cost": 4,
               "type": "reveal",
-              "power": 3,
-              "entityId": 35,
+              "power": 2,
+              "entityId": 33,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Blade",
+              "card": "Wong",
               "type": "draw"
             }
           ]
@@ -204,46 +318,26 @@
             {
               "player": [
                 0,
-                6
+                5
               ],
               "opponent": [
                 0,
-                6
+                5
               ]
             }
           ],
           "h": [
             2,
-            6,
+            5,
             {
-              "3": [
-                0,
-                {
-                  "cost": 0,
-                  "power": 1,
-                  "baseCost": 0,
-                  "basePower": 1,
-                  "cardDefId": "PizzaSlice"
-                }
-              ],
               "4": [
                 0,
                 {
-                  "cost": 0,
-                  "power": 1,
-                  "baseCost": 0,
-                  "basePower": 1,
-                  "cardDefId": "PizzaSlice"
-                }
-              ],
-              "5": [
-                0,
-                {
-                  "cost": 1,
-                  "power": 3,
-                  "baseCost": 1,
-                  "basePower": 3,
-                  "cardDefId": "Blade"
+                  "cost": 4,
+                  "power": 2,
+                  "baseCost": 4,
+                  "basePower": 2,
+                  "cardDefId": "Wong"
                 }
               ]
             }
@@ -296,6 +390,160 @@
         {
           "_v": 2,
           "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "player",
+              "card": "CarnageChampion",
+              "type": "play",
+              "entityId": 30,
+              "location": "Shadowland",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        0,
+                        {
+                          "cost": 2,
+                          "power": 2,
+                          "baseCost": 2,
+                          "entityId": 30,
+                          "basePower": 2,
+                          "cardDefId": "CarnageChampion",
+                          "arrivalSeq": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                4
+              ]
+            }
+          ],
+          "h": [
+            2,
+            4,
+            {
+              "0": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    1
+                  ],
+                  "power": [
+                    0,
+                    0
+                  ],
+                  "baseCost": [
+                    0,
+                    1
+                  ],
+                  "basePower": [
+                    0,
+                    0
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Skill01CarnageChampion"
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    6
+                  ],
+                  "baseCost": [
+                    0,
+                    6
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Knull"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cardDefId": [
+                    0,
+                    "ArnimZola"
+                  ]
+                }
+              ],
+              "3": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    2
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    2
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Wong"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Staged",
+          "events": [
+            {
+              "who": "player",
+              "card": "CarnageChampion",
+              "type": "cardStaged"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
           "label": "End Turn",
           "events": [
             {
@@ -310,15 +558,50 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Play",
+          "label": "Reveal",
           "events": [
             {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "type": "play",
-              "entityId": 25,
-              "location": "RevealOn3",
-              "locationIndex": 2
+              "who": "player",
+              "card": "CarnageChampion",
+              "cost": 2,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 30,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "Shadowland",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": -2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Destroyed",
+          "events": [
+            {
+              "who": "player",
+              "card": "Ninja",
+              "type": "destroyed",
+              "fromLocation": "Shadowland"
             }
           ]
         },
@@ -327,23 +610,40 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
-                  "opponentCards": [
+                  "playerCards": [
                     2,
                     1,
                     {
                       "0": [
-                        0,
+                        1,
                         {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 25,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
+                          "cost": [
+                            0,
+                            2
+                          ],
+                          "power": [
+                            0,
+                            2
+                          ],
+                          "baseCost": [
+                            0,
+                            2
+                          ],
+                          "entityId": [
+                            0,
+                            30
+                          ],
+                          "basePower": [
+                            0,
+                            2
+                          ],
+                          "cardDefId": [
+                            0,
+                            "CarnageChampion"
+                          ]
                         }
                       ]
                     }
@@ -352,12 +652,22 @@
               ]
             }
           ],
-          "c": [
+          "x": [
             1,
             {
-              "opponent": [
-                0,
-                5
+              "player": [
+                2,
+                1,
+                {
+                  "0": [
+                    0,
+                    {
+                      "cost": 1,
+                      "power": -2,
+                      "cardDefId": "Ninja"
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -367,16 +677,33 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Reveal",
+          "label": "Score",
           "events": [
             {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 25,
-              "drawReveal": false
+              "type": "score",
+              "winner": "player",
+              "location": "Shadowland",
+              "playerPower": 2,
+              "locationIndex": 0,
+              "opponentPower": -2
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Power",
+          "events": [
+            {
+              "who": "player",
+              "card": "CarnageChampion",
+              "type": "power",
+              "newPower": 4,
+              "oldPower": 2,
+              "cardEntityId": 30
             }
           ]
         },
@@ -385,35 +712,19 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
-                  "opponentCards": [
+                  "playerCards": [
                     2,
                     1,
                     {
                       "0": [
                         1,
                         {
-                          "cost": [
-                            0,
-                            1
-                          ],
                           "power": [
                             0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "NicholasScratch"
+                            4
                           ]
                         }
                       ]
@@ -429,12 +740,15 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Resolve",
+          "label": "Score",
           "events": [
             {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "type": "cardRevealed"
+              "type": "score",
+              "winner": "player",
+              "location": "Shadowland",
+              "playerPower": 4,
+              "locationIndex": 0,
+              "opponentPower": -2
             }
           ]
         },
@@ -444,15 +758,12 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Score",
+          "label": "Resolved",
           "events": [
             {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RevealOn3",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 3
+              "who": "player",
+              "card": "CarnageChampion",
+              "type": "cardResolved"
             }
           ]
         },
@@ -467,12 +778,12 @@
             {
               "who": "opponent",
               "type": "energy",
-              "energy": 2
+              "energy": 3
             },
             {
               "who": "player",
               "type": "energy",
-              "energy": 2
+              "energy": 3
             }
           ]
         },
@@ -485,90 +796,11 @@
           "label": "Location",
           "events": [
             {
-              "to": "GreatPortal",
+              "to": "HellfireClub",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "GreatPortal"
-                  ],
-                  "revealed": [
-                    0,
-                    true
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Orka",
-              "cost": 6,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 53,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "6": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 11,
-                  "baseCost": 6,
-                  "basePower": 11,
-                  "cardDefId": "Orka"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Location",
-          "events": [
+            },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
@@ -582,6 +814,19 @@
             2,
             3,
             {
+              "1": [
+                1,
+                {
+                  "location": [
+                    0,
+                    "HellfireClub"
+                  ],
+                  "revealed": [
+                    0,
+                    true
+                  ]
+                }
+              ],
               "2": [
                 1,
                 {
@@ -609,6 +854,20 @@
               "who": "opponent",
               "card": null,
               "type": "draw"
+            },
+            {
+              "who": "player",
+              "card": "Venom",
+              "cost": 3,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 41,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Venom",
+              "type": "draw"
             }
           ]
         },
@@ -616,15 +875,39 @@
           "c": [
             1,
             {
+              "player": [
+                0,
+                5
+              ],
               "opponent": [
                 0,
-                7
+                6
+              ]
+            }
+          ],
+          "h": [
+            2,
+            5,
+            {
+              "4": [
+                0,
+                {
+                  "cost": 3,
+                  "power": 3,
+                  "baseCost": 3,
+                  "basePower": 3,
+                  "cardDefId": "Venom"
+                }
               ]
             }
           ],
           "r": [
             1,
             {
+              "player": [
+                0,
+                7
+              ],
               "opponent": [
                 0,
                 7
@@ -642,7 +925,7 @@
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent"
+              "winner": "player"
             }
           ]
         },
@@ -655,264 +938,8 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "type": "play",
-              "entityId": 48,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 1,
-                          "baseCost": 0,
-                          "entityId": 48,
-                          "basePower": 1,
-                          "cardDefId": "PizzaSlice",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Blade"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    11
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Orka"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "type": "play",
-              "entityId": 49,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 1,
-                          "baseCost": 0,
-                          "entityId": 49,
-                          "basePower": 1,
-                          "cardDefId": "PizzaSlice",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Blade"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    11
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Orka"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "type": "cardStaged"
             }
           ]
         },
@@ -940,11 +967,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "VampireKillmonger",
+              "card": "Skill01HulkChampion",
               "type": "play",
-              "entityId": 23,
-              "location": "RevealOn2",
-              "locationIndex": 2
+              "entityId": 43,
+              "location": "HellfireClub",
+              "locationIndex": 1
             }
           ]
         },
@@ -953,23 +980,23 @@
             2,
             3,
             {
-              "2": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
+                      "0": [
                         0,
                         {
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 23,
+                          "entityId": 43,
                           "basePower": null,
                           "cardDefId": null,
-                          "arrivalSeq": 1
+                          "arrivalSeq": 0
                         }
                       ]
                     }
@@ -983,7 +1010,7 @@
             {
               "opponent": [
                 0,
-                6
+                5
               ]
             }
           ]
@@ -997,11 +1024,12 @@
           "events": [
             {
               "who": "opponent",
-              "card": "VampireKillmonger",
-              "cost": 2,
+              "card": "Skill01HulkChampion",
+              "cost": 3,
               "type": "reveal",
-              "power": 2,
-              "entityId": 23,
+              "power": 0,
+              "oppKit": "|SparkleGold|Champion|",
+              "entityId": 43,
               "drawReveal": false
             }
           ]
@@ -1011,35 +1039,35 @@
             2,
             3,
             {
-              "2": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
+                      "0": [
                         1,
                         {
                           "cost": [
                             0,
-                            2
+                            3
                           ],
                           "power": [
                             0,
-                            2
+                            0
                           ],
                           "baseCost": [
                             0,
-                            2
+                            3
                           ],
                           "basePower": [
                             0,
-                            2
+                            0
                           ],
                           "cardDefId": [
                             0,
-                            "VampireKillmonger"
+                            "Skill01HulkChampion"
                           ]
                         }
                       ]
@@ -1059,7 +1087,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "VampireKillmonger",
+              "card": "Skill01HulkChampion",
               "type": "cardRevealed"
             }
           ]
@@ -1070,122 +1098,12 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Score",
+          "label": "Removed",
           "events": [
             {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RevealOn2",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 48,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PizzaPlace",
-              "playerPower": 1,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 49,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PizzaPlace",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 48
+              "who": "opponent",
+              "card": "Skill01HulkChampion",
+              "type": "removed"
             }
           ]
         },
@@ -1194,22 +1112,31 @@
             2,
             3,
             {
-              "0": [
+              "1": [
                 1,
                 {
-                  "playerCards": [
+                  "opponentCards": [
                     2,
-                    2,
+                    0,
+                    {}
+                  ]
+                }
+              ]
+            }
+          ],
+          "n": [
+            1,
+            {
+              "opponent": [
+                2,
+                1,
+                {
+                  "0": [
+                    0,
                     {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
+                      "cost": 3,
+                      "power": 0,
+                      "cardDefId": "Skill01HulkChampion"
                     }
                   ]
                 }
@@ -1221,46 +1148,18 @@
       [
         {
           "_v": 2,
-          "turn": 2,
-          "label": "Set Aside",
+          "turn": 3,
+          "label": "Energy",
           "events": [
             {
-              "who": "player",
-              "card": "PizzaSlice",
-              "from": "PizzaPlace",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolved",
-          "events": [
+              "who": "opponent",
+              "type": "energy",
+              "energy": 4
+            },
             {
               "who": "player",
-              "card": "PizzaSlice",
-              "type": "cardResolved"
+              "type": "energy",
+              "energy": 4
             }
           ]
         },
@@ -1270,40 +1169,10 @@
         {
           "_v": 2,
           "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
           "label": "Location",
           "events": [
             {
-              "to": "SanctumSanctorum",
+              "to": "VibraniumMines",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -1320,7 +1189,7 @@
                 {
                   "location": [
                     0,
-                    "SanctumSanctorum"
+                    "VibraniumMines"
                   ]
                 }
               ]
@@ -1335,17 +1204,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "InvisibleWoman",
-              "cost": 2,
+              "card": "Shuri",
+              "cost": 4,
               "type": "reveal",
-              "power": 4,
-              "entityId": 34,
+              "power": 3,
+              "entityId": 31,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "InvisibleWoman",
+              "card": "Shuri",
               "type": "draw"
             }
           ]
@@ -1355,6 +1229,10 @@
             1,
             {
               "player": [
+                0,
+                6
+              ],
+              "opponent": [
                 0,
                 6
               ]
@@ -1367,11 +1245,11 @@
               "5": [
                 0,
                 {
-                  "cost": 2,
-                  "power": 4,
-                  "baseCost": 2,
-                  "basePower": 4,
-                  "cardDefId": "InvisibleWoman"
+                  "cost": 4,
+                  "power": 3,
+                  "baseCost": 4,
+                  "basePower": 3,
+                  "cardDefId": "Shuri"
                 }
               ]
             }
@@ -1381,7 +1259,11 @@
             {
               "player": [
                 0,
-                7
+                6
+              ],
+              "opponent": [
+                0,
+                6
               ]
             }
           ]
@@ -1396,7 +1278,7 @@
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent"
+              "winner": "player"
             }
           ]
         },
@@ -1409,37 +1291,8 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Snap",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "snap",
-              "cubeValue": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
             }
           ]
         },
@@ -1453,10 +1306,10 @@
           "events": [
             {
               "who": "player",
-              "card": "InvisibleWoman",
+              "card": "Wong",
               "type": "play",
-              "entityId": 34,
-              "location": "GreatPortal",
+              "entityId": 33,
+              "location": "HellfireClub",
               "locationIndex": 1
             }
           ]
@@ -1476,12 +1329,12 @@
                       "0": [
                         0,
                         {
-                          "cost": 2,
-                          "power": 4,
-                          "baseCost": 2,
-                          "entityId": 34,
-                          "basePower": 4,
-                          "cardDefId": "InvisibleWoman",
+                          "cost": 4,
+                          "power": 2,
+                          "baseCost": 4,
+                          "entityId": 33,
+                          "basePower": 2,
+                          "cardDefId": "Wong",
                           "arrivalSeq": 0
                         }
                       ]
@@ -1503,7 +1356,50 @@
           "h": [
             2,
             5,
-            {}
+            {
+              "3": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    3
+                  ],
+                  "power": [
+                    0,
+                    3
+                  ],
+                  "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    3
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Venom"
+                  ]
+                }
+              ],
+              "4": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Shuri"
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
@@ -1515,7 +1411,7 @@
           "events": [
             {
               "who": "player",
-              "card": "InvisibleWoman",
+              "card": "Wong",
               "type": "cardStaged"
             }
           ]
@@ -1544,2116 +1440,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Cosmo",
-              "type": "play",
-              "entityId": 29,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 29,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 29,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Cosmo"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 34,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 5,
-                  "baseCost": 3,
-                  "basePower": 5,
-                  "cardDefId": "CorvusGlaive"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Dracula",
-              "type": "play",
-              "entityId": 41,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 2,
-                          "baseCost": 4,
-                          "entityId": 41,
-                          "basePower": 1,
-                          "cardDefId": "Dracula",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "LadySif"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Blade"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    11
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Orka"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "CorvusGlaive"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Dracula",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 19,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "type": "play",
-              "entityId": 50,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "type": "play",
-              "entityId": 51,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "play",
-              "entityId": 54,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "play",
-              "entityId": 55,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 1,
-                          "baseCost": 0,
-                          "entityId": 51,
-                          "basePower": 1,
-                          "cardDefId": "PizzaSlice",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 19,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ],
-                      "1": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 1,
-                          "baseCost": 0,
-                          "entityId": 50,
-                          "basePower": 1,
-                          "cardDefId": "PizzaSlice",
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 54,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ],
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 55,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 19,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            1
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            1
-                          ],
-                          "cardDefId": [
-                            0,
-                            "KittyPryde"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 50,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 19
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "from": "GreatPortal",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            null
-                          ],
-                          "power": [
-                            0,
-                            null
-                          ],
-                          "baseCost": [
-                            0,
-                            null
-                          ],
-                          "entityId": [
-                            0,
-                            54
-                          ],
-                          "basePower": [
-                            0,
-                            null
-                          ],
-                          "cardDefId": [
-                            0,
-                            null
-                          ]
-                        }
-                      ],
-                      "2": [
-                        1,
-                        {
-                          "entityId": [
-                            0,
-                            55
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 51,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 54,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "VampiricSpear"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 6,
-              "cardEntityId": 40
-            },
-            {
-              "who": "opponent",
-              "card": "VampireKillmonger",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 23
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    4
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SanctumSanctorum",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            null
-                          ],
-                          "power": [
-                            0,
-                            null
-                          ],
-                          "baseCost": [
-                            0,
-                            null
-                          ],
-                          "entityId": [
-                            0,
-                            55
-                          ],
-                          "basePower": [
-                            0,
-                            null
-                          ],
-                          "cardDefId": [
-                            0,
-                            null
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 0,
-                      "cardDefId": "VampiricSpear"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SanctumSanctorum",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 55,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "VampiricSpear"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 4,
-              "cardEntityId": 40
-            },
-            {
-              "who": "opponent",
-              "card": "VampireKillmonger",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "cardEntityId": 23
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    2
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SanctumSanctorum",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "opponent": [
-                2,
-                2,
-                {
-                  "1": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 0,
-                      "cardDefId": "VampiricSpear"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 4,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SanctumSanctorum",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Dracula",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 41,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "PizzaPlace",
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Dracula",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "basePower": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Bounce",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "GreatPortal",
-              "type": "bounce",
-              "entityId": 19
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "cardEntityId": 19
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Morbius",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 39,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 0,
-                  "baseCost": 2,
-                  "basePower": 0,
-                  "cardDefId": "Morbius"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "play",
-              "entityId": 39,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 0,
-                          "baseCost": 2,
-                          "entityId": 39,
-                          "basePower": 0,
-                          "cardDefId": "Morbius",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "play",
-              "entityId": 40,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 2,
-                          "baseCost": 3,
-                          "entityId": 40,
-                          "basePower": 6,
-                          "cardDefId": "LadySif",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Blade"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    11
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    11
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Orka"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "CorvusGlaive"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sasquatch",
-              "type": "play",
-              "entityId": 52,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 19,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Sasquatch",
+              "card": "Surtur",
               "type": "play",
               "entityId": 27,
-              "location": "GreatPortal",
-              "locationIndex": 1
+              "location": "Shadowland",
+              "locationIndex": 0
             }
           ]
         },
@@ -3667,43 +1458,8 @@
                 {
                   "opponentCards": [
                     2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 52,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
                     2,
                     {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 3,
-                          "baseCost": 1,
-                          "entityId": 19,
-                          "basePower": 2,
-                          "cardDefId": "KittyPryde",
-                          "arrivalSeq": 0
-                        }
-                      ],
                       "1": [
                         0,
                         {
@@ -3727,7 +1483,7 @@
             {
               "opponent": [
                 0,
-                1
+                5
               ]
             }
           ]
@@ -3736,111 +1492,16 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Reveal",
           "events": [
             {
-              "who": "opponent",
-              "card": "Sasquatch",
-              "cost": 6,
+              "who": "player",
+              "card": "Wong",
+              "cost": 4,
               "type": "reveal",
-              "power": 11,
-              "entityId": 52,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            11
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "basePower": [
-                            0,
-                            11
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Sasquatch"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sasquatch",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 19,
+              "power": 2,
+              "entityId": 33,
               "drawReveal": false
             }
           ]
@@ -3850,16 +1511,16 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "player",
-              "location": "GreatPortal",
-              "playerPower": 4,
+              "location": "HellfireClub",
+              "playerPower": 2,
               "locationIndex": 1,
-              "opponentPower": 3
+              "opponentPower": 0
             }
           ]
         },
@@ -3868,15 +1529,31 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "Wong",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
           "label": "Reveal",
           "events": [
             {
               "who": "opponent",
-              "card": "Sasquatch",
-              "cost": 6,
+              "card": "Surtur",
+              "cost": 3,
               "type": "reveal",
-              "power": 11,
+              "power": 5,
+              "oppKit": "MetallicFoil||MetallicCopper|Surtur_03",
               "entityId": 27,
               "drawReveal": false
             }
@@ -3887,7 +1564,7 @@
             2,
             3,
             {
-              "1": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
@@ -3899,23 +1576,23 @@
                         {
                           "cost": [
                             0,
-                            6
+                            3
                           ],
                           "power": [
                             0,
-                            11
+                            5
                           ],
                           "baseCost": [
                             0,
-                            6
+                            3
                           ],
                           "basePower": [
                             0,
-                            11
+                            5
                           ],
                           "cardDefId": [
                             0,
-                            "Sasquatch"
+                            "Surtur"
                           ]
                         }
                       ]
@@ -3930,12 +1607,12 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Resolve",
           "events": [
             {
               "who": "opponent",
-              "card": "Sasquatch",
+              "card": "Surtur",
               "type": "cardRevealed"
             }
           ]
@@ -3945,16 +1622,16 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Score",
           "events": [
             {
               "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
+              "winner": "player",
+              "location": "Shadowland",
               "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 14
+              "locationIndex": 0,
+              "opponentPower": 3
             }
           ]
         },
@@ -3963,79 +1640,18 @@
       [
         {
           "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Morbius",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
+          "turn": 4,
           "label": "Energy",
           "events": [
             {
               "who": "opponent",
               "type": "energy",
-              "energy": 6
+              "energy": 5
             },
             {
               "who": "player",
               "type": "energy",
-              "energy": 6
+              "energy": 5
             }
           ]
         },
@@ -4044,177 +1660,7 @@
       [
         {
           "_v": 2,
-          "turn": 6,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 3
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "basePower": [
-                            0,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Bounce",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "GreatPortal",
-              "type": "bounce",
-              "entityId": 19
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            11
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "entityId": [
-                            0,
-                            27
-                          ],
-                          "basePower": [
-                            0,
-                            11
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Sasquatch"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "cardEntityId": 19
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
+          "turn": 4,
           "label": "Draw",
           "events": [
             {
@@ -4224,16 +1670,16 @@
             },
             {
               "who": "player",
-              "card": "Gambit",
-              "cost": 3,
+              "card": "ThePhoenixForce",
+              "cost": 4,
               "type": "reveal",
-              "power": 3,
-              "entityId": 37,
+              "power": 5,
+              "entityId": 40,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Gambit",
+              "card": "ThePhoenixForce",
               "type": "draw"
             }
           ]
@@ -4244,26 +1690,26 @@
             {
               "player": [
                 0,
-                5
+                6
               ],
               "opponent": [
                 0,
-                3
+                6
               ]
             }
           ],
           "h": [
             2,
-            5,
+            6,
             {
-              "4": [
+              "5": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 3,
-                  "baseCost": 3,
-                  "basePower": 3,
-                  "cardDefId": "Gambit"
+                  "cost": 4,
+                  "power": 5,
+                  "baseCost": 4,
+                  "basePower": 5,
+                  "cardDefId": "ThePhoenixForce"
                 }
               ]
             }
@@ -4273,7 +1719,7 @@
             {
               "player": [
                 0,
-                4
+                5
               ],
               "opponent": [
                 0,
@@ -4286,13 +1732,13 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 4,
           "label": "Turn Winner",
           "events": [
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent"
+              "winner": "player"
             }
           ]
         },
@@ -4301,1196 +1747,13 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 4,
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "play",
-              "entityId": 37,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 3,
-                          "baseCost": 3,
-                          "entityId": 37,
-                          "basePower": 3,
-                          "cardDefId": "Gambit",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "type": "play",
-              "entityId": 30,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 5,
-                          "baseCost": 3,
-                          "entityId": 30,
-                          "basePower": 5,
-                          "cardDefId": "CorvusGlaive",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "play",
-              "entityId": 22,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 19,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 22,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 4,
-                          "baseCost": 1,
-                          "entityId": 19,
-                          "basePower": 3,
-                          "cardDefId": "KittyPryde",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            4
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            4
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ZombieGiantMan"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 56,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 0,
-                          "baseCost": 0,
-                          "entityId": 56,
-                          "basePower": 0,
-                          "cardDefId": "ZombieHorde",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "cardEntityId": 56
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "cardEntityId": 22
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 19,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 40,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "Orka",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 11,
-                      "cardDefId": "Orka"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "cardEntityId": 39
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 37,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "Blade",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                1
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                2,
-                {
-                  "0": [
-                    1,
-                    {
-                      "cost": [
-                        0,
-                        1
-                      ],
-                      "power": [
-                        0,
-                        3
-                      ],
-                      "cardDefId": [
-                        0,
-                        "Blade"
-                      ]
-                    }
-                  ],
-                  "1": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 11,
-                      "cardDefId": "Orka"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            1,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 39
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "destroyed",
-              "fromLocation": "PizzaPlace"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 0,
-                      "power": 2,
-                      "cardDefId": "ZombieHorde"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "playerPower": 14,
-              "locationIndex": 1,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "player",
-              "card": "ColleenWing",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                0
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "player": [
-                2,
-                3,
-                {
-                  "0": [
-                    1,
-                    {
-                      "cost": [
-                        0,
-                        2
-                      ],
-                      "power": [
-                        0,
-                        5
-                      ],
-                      "cardDefId": [
-                        0,
-                        "ColleenWing"
-                      ]
-                    }
-                  ],
-                  "1": [
-                    1,
-                    {
-                      "cost": [
-                        0,
-                        1
-                      ],
-                      "power": [
-                        0,
-                        3
-                      ],
-                      "cardDefId": [
-                        0,
-                        "Blade"
-                      ]
-                    }
-                  ],
-                  "2": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 11,
-                      "cardDefId": "Orka"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            0,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "cardEntityId": 39
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "playerPower": 10,
-              "locationIndex": 0,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -5532,191 +1795,10 @@
           "turn": 1,
           "plays": [
             {
-              "card": "NicholasScratch",
-              "isPlayer": false,
-              "location": "SanctumSanctorum",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 1,
-            "opponent": 1
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 69
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 71
-            },
-            {
-              "to": "PizzaPlace",
-              "from": "RevealOn1",
-              "type": "location",
-              "_changeIdx": 74,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 48,
-              "_changeIdx": 78,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 49,
-              "_changeIdx": 82,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 50,
-              "_changeIdx": 86,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 51,
-              "_changeIdx": 90,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 95
-            },
-            {
-              "who": "player",
-              "card": "Blade",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 35,
-              "_changeIdx": 98,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Blade",
-              "type": "draw",
-              "_changeIdx": 99
-            },
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 102
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 103
-            },
-            {
-              "turn": 1,
-              "type": "endTurn",
-              "_changeIdx": 107
-            },
-            {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "type": "play",
-              "entityId": 25,
-              "location": "RevealOn3",
-              "_changeIdx": 108,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 25,
-              "_changeIdx": 111,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "type": "cardRevealed",
-              "_changeIdx": 112
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RevealOn3",
-              "_changeIdx": 115,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 3
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        8
-      ],
-      [
-        {
-          "turn": 2,
-          "plays": [
-            {
-              "card": "PizzaSlice",
+              "card": "CarnageChampion",
               "isPlayer": true,
-              "location": "PizzaPlace",
+              "location": "Shadowland",
               "locationIndex": 0
-            },
-            {
-              "card": "PizzaSlice",
-              "isPlayer": true,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            },
-            {
-              "card": "VampireKillmonger",
-              "isPlayer": false,
-              "location": "SanctumSanctorum",
-              "locationIndex": 2
             }
           ],
           "energy": {
@@ -5728,197 +1810,191 @@
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 121
+              "_changeIdx": 79
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 123
+              "_changeIdx": 81
             },
             {
-              "to": "GreatPortal",
-              "from": "RevealOn2",
+              "to": "Shadowland",
+              "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 126,
-              "locationIndex": 1
+              "_changeIdx": 84,
+              "locationIndex": 0
+            },
+            {
+              "who": "opponent",
+              "card": "Ninja",
+              "cost": 1,
+              "type": "reveal",
+              "power": -2,
+              "oppKit": "||Common|",
+              "entityId": 53,
+              "_changeIdx": 88,
+              "drawReveal": false
             },
             {
               "who": "player",
-              "card": "Orka",
-              "cost": 6,
+              "card": "Ninja",
+              "cost": 1,
               "type": "reveal",
-              "power": 11,
-              "entityId": 53,
-              "_changeIdx": 133,
-              "drawReveal": true
+              "power": -2,
+              "entityId": 54,
+              "_changeIdx": 91,
+              "drawReveal": false
             },
             {
-              "to": "RevealOn2",
-              "from": "RevealOn3",
-              "type": "location",
-              "_changeIdx": 140,
-              "locationIndex": 2
+              "who": "opponent",
+              "card": "Ninja",
+              "type": "cardRevealed",
+              "_changeIdx": 93
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "Shadowland",
+              "_changeIdx": 94,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": -2
+            },
+            {
+              "who": "player",
+              "card": "Ninja",
+              "type": "cardRevealed",
+              "_changeIdx": 97
+            },
+            {
+              "type": "score",
+              "winner": null,
+              "location": "Shadowland",
+              "_changeIdx": 98,
+              "playerPower": -2,
+              "locationIndex": 0,
+              "opponentPower": -2
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 144
+              "_changeIdx": 103
             },
             {
-              "tie": false,
+              "who": "player",
+              "card": "Wong",
+              "cost": 4,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 33,
+              "_changeIdx": 106,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Wong",
+              "type": "draw",
+              "_changeIdx": 107
+            },
+            {
+              "tie": true,
               "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 148
+              "winner": null,
+              "_changeIdx": 110
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 149
+              "_changeIdx": 111
             },
             {
               "who": "player",
-              "card": "PizzaSlice",
+              "card": "CarnageChampion",
               "type": "play",
-              "entityId": 48,
-              "location": "PizzaPlace",
-              "_changeIdx": 152,
+              "entityId": 30,
+              "location": "Shadowland",
+              "_changeIdx": 114,
               "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "PizzaSlice",
+              "card": "CarnageChampion",
               "type": "cardStaged",
-              "_changeIdx": 153
+              "_changeIdx": 115
             },
             {
-              "who": "player",
-              "card": "PizzaSlice",
-              "type": "play",
-              "entityId": 49,
-              "location": "PizzaPlace",
-              "_changeIdx": 156,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "type": "cardStaged",
-              "_changeIdx": 157
-            },
-            {
-              "turn": 2,
+              "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 161
+              "_changeIdx": 120
             },
             {
-              "who": "opponent",
-              "card": "VampireKillmonger",
-              "type": "play",
-              "entityId": 23,
-              "location": "RevealOn2",
-              "_changeIdx": 162,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "VampireKillmonger",
+              "who": "player",
+              "card": "CarnageChampion",
               "cost": 2,
               "type": "reveal",
               "power": 2,
-              "entityId": 23,
-              "_changeIdx": 167,
+              "entityId": 30,
+              "_changeIdx": 122,
               "drawReveal": false
             },
             {
-              "who": "opponent",
-              "card": "VampireKillmonger",
-              "type": "cardRevealed",
-              "_changeIdx": 168
-            },
-            {
               "type": "score",
-              "winner": "opponent",
-              "location": "RevealOn2",
-              "_changeIdx": 170,
+              "winner": "player",
+              "location": "Shadowland",
+              "_changeIdx": 124,
               "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 5
-            },
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 48,
-              "_changeIdx": 173,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PizzaPlace",
-              "_changeIdx": 175,
-              "playerPower": 1,
               "locationIndex": 0,
-              "opponentPower": 0
+              "opponentPower": -2
             },
             {
               "who": "player",
-              "card": "PizzaSlice",
-              "type": "cardResolved",
-              "_changeIdx": 178
-            },
-            {
-              "who": "player",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 49,
-              "_changeIdx": 179,
-              "drawReveal": false
+              "card": "Ninja",
+              "type": "destroyed",
+              "_changeIdx": 128,
+              "fromLocation": "Shadowland"
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "PizzaPlace",
-              "_changeIdx": 181,
+              "location": "Shadowland",
+              "_changeIdx": 132,
               "playerPower": 2,
               "locationIndex": 0,
-              "opponentPower": 0
+              "opponentPower": -2
             },
             {
               "who": "player",
-              "card": "PizzaSlice",
+              "card": "CarnageChampion",
               "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 186,
-              "cardEntityId": 48
+              "newPower": 4,
+              "oldPower": 2,
+              "_changeIdx": 135,
+              "cardEntityId": 30
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "Shadowland",
+              "_changeIdx": 139,
+              "playerPower": 4,
+              "locationIndex": 0,
+              "opponentPower": -2
             },
             {
               "who": "player",
-              "card": "PizzaSlice",
-              "from": "PizzaPlace",
-              "type": "setaside",
-              "_changeIdx": 191
-            },
-            {
-              "who": "player",
-              "card": "PizzaSlice",
+              "card": "CarnageChampion",
               "type": "cardResolved",
-              "_changeIdx": 197
+              "_changeIdx": 142
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
               "winner": "player",
-              "playerPower": 2,
-              "opponentPower": 0
+              "playerPower": 4,
+              "opponentPower": -2
             },
             {
               "winner": null,
@@ -5926,29 +2002,23 @@
               "opponentPower": 0
             },
             {
-              "winner": "opponent",
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 5
+              "opponentPower": 0
             }
           ]
         },
-        35
+        18
       ],
       [
         {
-          "turn": 3,
+          "turn": 2,
           "plays": [
             {
-              "card": "InvisibleWoman",
-              "isPlayer": true,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "card": "Cosmo",
+              "card": "Skill01HulkChampion",
               "isPlayer": false,
-              "location": "PizzaPlace",
-              "locationIndex": 0
+              "location": "HellfireClub",
+              "locationIndex": 1
             }
           ],
           "energy": {
@@ -5960,152 +2030,109 @@
               "who": "opponent",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 207
+              "_changeIdx": 146
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 209
+              "_changeIdx": 148
             },
             {
-              "to": "SanctumSanctorum",
+              "to": "HellfireClub",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 212,
+              "_changeIdx": 151,
+              "locationIndex": 1
+            },
+            {
+              "to": "RevealOn2",
+              "from": "RevealOn3",
+              "type": "location",
+              "_changeIdx": 155,
               "locationIndex": 2
             },
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 158
+            },
+            {
               "who": "player",
-              "card": "InvisibleWoman",
-              "cost": 2,
+              "card": "Venom",
+              "cost": 3,
               "type": "reveal",
-              "power": 4,
-              "entityId": 34,
-              "_changeIdx": 218,
+              "power": 3,
+              "entityId": 41,
+              "_changeIdx": 161,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "InvisibleWoman",
+              "card": "Venom",
               "type": "draw",
-              "_changeIdx": 219
+              "_changeIdx": 162
             },
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 222
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 223
-            },
-            {
-              "who": "opponent",
-              "type": "snap",
-              "cubeValue": 2,
-              "_changeIdx": 226
-            },
-            {
-              "type": "cubePreview",
-              "_changeIdx": 226,
-              "cubeValueNextTurn": 2
+              "winner": "player",
+              "_changeIdx": 165
             },
             {
               "who": "player",
-              "card": "InvisibleWoman",
+              "type": "initiative",
+              "_changeIdx": 166
+            },
+            {
+              "turn": 2,
+              "type": "endTurn",
+              "_changeIdx": 170
+            },
+            {
+              "who": "opponent",
+              "card": "Skill01HulkChampion",
               "type": "play",
-              "entityId": 34,
-              "location": "GreatPortal",
-              "_changeIdx": 227,
+              "entityId": 43,
+              "location": "HellfireClub",
+              "_changeIdx": 171,
               "locationIndex": 1
             },
             {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "cardStaged",
-              "_changeIdx": 228
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 234
-            },
-            {
               "who": "opponent",
-              "card": "Cosmo",
-              "type": "play",
-              "entityId": 29,
-              "location": "PizzaPlace",
-              "_changeIdx": 236,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Cosmo",
+              "card": "Skill01HulkChampion",
               "cost": 3,
               "type": "reveal",
-              "power": 3,
-              "entityId": 29,
-              "_changeIdx": 240,
+              "power": 0,
+              "oppKit": "|SparkleGold|Champion|",
+              "entityId": 43,
+              "_changeIdx": 174,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "Cosmo",
+              "card": "Skill01HulkChampion",
               "type": "cardRevealed",
-              "_changeIdx": 241
+              "_changeIdx": 175
             },
             {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "_changeIdx": 244,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
+              "who": "opponent",
+              "card": "Skill01HulkChampion",
+              "type": "removed",
+              "_changeIdx": 180
+            }
+          ],
+          "snapEvent": null,
+          "locationPower": [
             {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 34,
-              "_changeIdx": 247,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "_changeIdx": 250,
-              "playerPower": 4,
-              "locationIndex": 1,
+              "winner": null,
+              "playerPower": 0,
               "opponentPower": 0
             },
             {
-              "who": "player",
-              "card": "InvisibleWoman",
-              "type": "cardResolved",
-              "_changeIdx": 253
-            }
-          ],
-          "snapEvent": {
-            "cubeValue": 2,
-            "totalSnaps": 1
-          },
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 2,
-              "opponentPower": 3
-            },
-            {
-              "winner": "player",
-              "playerPower": 4,
+              "winner": null,
+              "playerPower": 0,
               "opponentPower": 0
             },
             {
@@ -6115,47 +2142,23 @@
             }
           ]
         },
-        52
+        30
       ],
       [
         {
-          "turn": 4,
+          "turn": 3,
           "plays": [
             {
-              "card": "Dracula",
+              "card": "Wong",
               "isPlayer": true,
-              "location": "PizzaPlace",
+              "location": "HellfireClub",
+              "locationIndex": 1
+            },
+            {
+              "card": "Surtur",
+              "isPlayer": false,
+              "location": "Shadowland",
               "locationIndex": 0
-            },
-            {
-              "card": "KittyPryde",
-              "isPlayer": false,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "card": "PizzaSlice",
-              "isPlayer": false,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "card": "PizzaSlice",
-              "isPlayer": false,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            },
-            {
-              "card": "VampiricSpear",
-              "isPlayer": false,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "card": "VampiricSpear",
-              "isPlayer": false,
-              "location": "GreatPortal",
-              "locationIndex": 1
             }
           ],
           "energy": {
@@ -6167,401 +2170,160 @@
               "who": "opponent",
               "type": "energy",
               "energy": 4,
-              "_changeIdx": 263
+              "_changeIdx": 185
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 4,
-              "_changeIdx": 265
+              "_changeIdx": 187
+            },
+            {
+              "to": "VibraniumMines",
+              "from": "RevealOn2",
+              "type": "location",
+              "_changeIdx": 190,
+              "locationIndex": 2
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 193
             },
             {
               "who": "player",
-              "card": "CorvusGlaive",
-              "cost": 3,
+              "card": "Shuri",
+              "cost": 4,
               "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "_changeIdx": 268,
+              "power": 3,
+              "entityId": 31,
+              "_changeIdx": 196,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "CorvusGlaive",
+              "card": "Shuri",
               "type": "draw",
-              "_changeIdx": 269
+              "_changeIdx": 197
             },
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 272
+              "winner": "player",
+              "_changeIdx": 200
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative",
-              "_changeIdx": 273
+              "_changeIdx": 201
             },
             {
               "who": "player",
-              "card": "Dracula",
+              "card": "Wong",
               "type": "play",
-              "entityId": 41,
-              "location": "PizzaPlace",
-              "_changeIdx": 278,
-              "locationIndex": 0
+              "entityId": 33,
+              "location": "HellfireClub",
+              "_changeIdx": 205,
+              "locationIndex": 1
             },
             {
               "who": "player",
-              "card": "Dracula",
+              "card": "Wong",
               "type": "cardStaged",
-              "_changeIdx": 279
+              "_changeIdx": 206
             },
             {
-              "turn": 4,
+              "turn": 3,
               "type": "endTurn",
-              "_changeIdx": 286
+              "_changeIdx": 211
             },
             {
               "who": "opponent",
-              "card": "KittyPryde",
+              "card": "Surtur",
               "type": "play",
-              "entityId": 19,
-              "location": "GreatPortal",
-              "_changeIdx": 287,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "type": "play",
-              "entityId": 50,
-              "location": "GreatPortal",
-              "_changeIdx": 290,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "type": "play",
-              "entityId": 51,
-              "location": "PizzaPlace",
-              "_changeIdx": 293,
+              "entityId": 27,
+              "location": "Shadowland",
+              "_changeIdx": 212,
               "locationIndex": 0
             },
             {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "play",
-              "entityId": 54,
-              "location": "GreatPortal",
-              "_changeIdx": 296,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "play",
-              "entityId": 55,
-              "location": "GreatPortal",
-              "_changeIdx": 299,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 19,
-              "_changeIdx": 303,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "cardRevealed",
-              "_changeIdx": 304
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "_changeIdx": 306,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 1
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 50,
-              "_changeIdx": 310,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "_changeIdx": 312,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 317,
-              "cardEntityId": 19
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "from": "GreatPortal",
-              "type": "setaside",
-              "_changeIdx": 322
-            },
-            {
-              "who": "opponent",
-              "card": "PizzaSlice",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 51,
-              "_changeIdx": 329,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "_changeIdx": 331,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 4
-            },
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 54,
-              "_changeIdx": 334,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "cardRevealed",
-              "_changeIdx": 335
-            },
-            {
               "who": "player",
-              "card": "LadySif",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 6,
-              "_changeIdx": 338,
-              "cardEntityId": 40
-            },
-            {
-              "who": "opponent",
-              "card": "VampireKillmonger",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 341,
-              "cardEntityId": 23
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SanctumSanctorum",
-              "_changeIdx": 344,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 7
-            },
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "removed",
-              "_changeIdx": 349
-            },
-            {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "_changeIdx": 353,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SanctumSanctorum",
-              "_changeIdx": 357,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 8
-            },
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 55,
-              "_changeIdx": 360,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "cardRevealed",
-              "_changeIdx": 361
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 4,
-              "_changeIdx": 364,
-              "cardEntityId": 40
-            },
-            {
-              "who": "opponent",
-              "card": "VampireKillmonger",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "_changeIdx": 367,
-              "cardEntityId": 23
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SanctumSanctorum",
-              "_changeIdx": 370,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 10
-            },
-            {
-              "who": "opponent",
-              "card": "VampiricSpear",
-              "type": "removed",
-              "_changeIdx": 375
-            },
-            {
-              "who": "opponent",
-              "card": "NicholasScratch",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 4,
-              "_changeIdx": 378,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SanctumSanctorum",
-              "_changeIdx": 382,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "Dracula",
+              "card": "Wong",
               "cost": 4,
               "type": "reveal",
               "power": 2,
-              "entityId": 41,
-              "_changeIdx": 385,
+              "entityId": 33,
+              "_changeIdx": 216,
               "drawReveal": false
             },
             {
               "type": "score",
-              "winner": null,
-              "location": "PizzaPlace",
-              "_changeIdx": 387,
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 4
+              "winner": "player",
+              "location": "HellfireClub",
+              "_changeIdx": 219,
+              "playerPower": 2,
+              "locationIndex": 1,
+              "opponentPower": 0
             },
             {
               "who": "player",
-              "card": "Dracula",
+              "card": "Wong",
               "type": "cardResolved",
-              "_changeIdx": 390
+              "_changeIdx": 222
+            },
+            {
+              "who": "opponent",
+              "card": "Surtur",
+              "cost": 3,
+              "type": "reveal",
+              "power": 5,
+              "oppKit": "MetallicFoil||MetallicCopper|Surtur_03",
+              "entityId": 27,
+              "_changeIdx": 223,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Surtur",
+              "type": "cardRevealed",
+              "_changeIdx": 224
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "Shadowland",
+              "_changeIdx": 227,
+              "playerPower": 4,
+              "locationIndex": 0,
+              "opponentPower": 3
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
+              "winner": "player",
               "playerPower": 4,
-              "opponentPower": 4
+              "opponentPower": 3
             },
             {
               "winner": "player",
-              "playerPower": 4,
-              "opponentPower": 2
+              "playerPower": 2,
+              "opponentPower": 0
             },
             {
-              "winner": "opponent",
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 11
+              "opponentPower": 0
             }
           ]
         },
-        81
+        43
       ],
       [
         {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "Morbius",
-              "isPlayer": true,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            },
-            {
-              "card": "LadySif",
-              "isPlayer": true,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "card": "Sasquatch",
-              "isPlayer": false,
-              "location": "PizzaPlace",
-              "locationIndex": 0
-            },
-            {
-              "card": "KittyPryde",
-              "isPlayer": false,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "card": "Sasquatch",
-              "isPlayer": false,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            }
-          ],
+          "turn": 4,
+          "plays": [],
           "energy": {
             "player": 5,
             "opponent": 5
@@ -6571,252 +2333,59 @@
               "who": "opponent",
               "type": "energy",
               "energy": 5,
-              "_changeIdx": 394
+              "_changeIdx": 233
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 5,
-              "_changeIdx": 396
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 2,
-              "_changeIdx": 400
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "GreatPortal",
-              "type": "bounce",
-              "entityId": 19,
-              "_changeIdx": 401
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 2,
-              "_changeIdx": 405
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "GreatPortal",
-              "_changeIdx": 406,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 410,
-              "cardEntityId": 19
+              "_changeIdx": 235
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 415
+              "_changeIdx": 237
             },
             {
               "who": "player",
-              "card": "Morbius",
-              "cost": 2,
+              "card": "ThePhoenixForce",
+              "cost": 4,
               "type": "reveal",
-              "power": 0,
-              "entityId": 39,
-              "_changeIdx": 418,
+              "power": 5,
+              "entityId": 40,
+              "_changeIdx": 240,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Morbius",
+              "card": "ThePhoenixForce",
               "type": "draw",
-              "_changeIdx": 419
+              "_changeIdx": 241
             },
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 423
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 424
-            },
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "play",
-              "entityId": 39,
-              "location": "PizzaPlace",
-              "_changeIdx": 427,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "cardStaged",
-              "_changeIdx": 428
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "play",
-              "entityId": 40,
-              "location": "GreatPortal",
-              "_changeIdx": 431,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "cardStaged",
-              "_changeIdx": 432
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 440
-            },
-            {
-              "who": "opponent",
-              "card": "Sasquatch",
-              "type": "play",
-              "entityId": 52,
-              "location": "PizzaPlace",
-              "_changeIdx": 441,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 19,
-              "location": "GreatPortal",
-              "_changeIdx": 444,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Sasquatch",
-              "type": "play",
-              "entityId": 27,
-              "location": "GreatPortal",
-              "_changeIdx": 447,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Sasquatch",
-              "cost": 6,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 52,
-              "_changeIdx": 452,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Sasquatch",
-              "type": "cardRevealed",
-              "_changeIdx": 453
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "_changeIdx": 456,
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 15
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 19,
-              "_changeIdx": 459,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
               "winner": "player",
-              "location": "GreatPortal",
-              "_changeIdx": 461,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 3
-            },
-            {
-              "who": "opponent",
-              "card": "Sasquatch",
-              "cost": 6,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 27,
-              "_changeIdx": 464,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Sasquatch",
-              "type": "cardRevealed",
-              "_changeIdx": 465
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "_changeIdx": 468,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 14
+              "_changeIdx": 244
             },
             {
               "who": "player",
-              "card": "Morbius",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 39,
-              "_changeIdx": 471,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "cardResolved",
-              "_changeIdx": 476
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 478
+              "type": "initiative",
+              "_changeIdx": 245
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
-              "playerPower": 4,
-              "opponentPower": 15
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
-              "winner": "opponent",
-              "playerPower": 4,
-              "opponentPower": 14
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -6825,557 +2394,67 @@
             }
           ]
         },
-        106
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "Gambit",
-              "isPlayer": true,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "card": "CorvusGlaive",
-              "isPlayer": true,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "card": "ZombieGiantMan",
-              "isPlayer": false,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            },
-            {
-              "card": "KittyPryde",
-              "isPlayer": false,
-              "location": "GreatPortal",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "type": "cubePreview",
-              "_changeIdx": 480,
-              "cubeValueNextTurn": 4
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 482
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 484
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 3,
-              "_changeIdx": 488
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "GreatPortal",
-              "type": "bounce",
-              "entityId": 19,
-              "_changeIdx": 489
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 3,
-              "_changeIdx": 492
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "_changeIdx": 493,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "_changeIdx": 497,
-              "cardEntityId": 19
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 502
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 37,
-              "_changeIdx": 505,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "draw",
-              "_changeIdx": 506
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 509
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 510
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "play",
-              "entityId": 37,
-              "location": "GreatPortal",
-              "_changeIdx": 513,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardStaged",
-              "_changeIdx": 514
-            },
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "type": "play",
-              "entityId": 30,
-              "location": "GreatPortal",
-              "_changeIdx": 517,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "type": "cardStaged",
-              "_changeIdx": 518
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 527
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "play",
-              "entityId": 22,
-              "location": "GreatPortal",
-              "_changeIdx": 528,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 19,
-              "location": "GreatPortal",
-              "_changeIdx": 531,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 22,
-              "_changeIdx": 536,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "cardRevealed",
-              "_changeIdx": 537
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "_changeIdx": 539,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 15
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 56,
-              "_changeIdx": 544,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "_changeIdx": 546,
-              "cardEntityId": 56
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "_changeIdx": 549,
-              "cardEntityId": 22
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "cardRevealed",
-              "_changeIdx": 552
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "_changeIdx": 553,
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "_changeIdx": 556,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 17
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 19,
-              "_changeIdx": 560,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "_changeIdx": 562,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 21
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 40,
-              "_changeIdx": 573,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "_changeIdx": 576,
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 21
-            },
-            {
-              "who": "player",
-              "card": "Orka",
-              "type": "discarded",
-              "_changeIdx": 581
-            },
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "_changeIdx": 586,
-              "cardEntityId": 39
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "_changeIdx": 589,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "who": "player",
-              "card": "LadySif",
-              "type": "cardResolved",
-              "_changeIdx": 595
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 37,
-              "_changeIdx": 596,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "_changeIdx": 598,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 21
-            },
-            {
-              "who": "player",
-              "card": "Blade",
-              "type": "discarded",
-              "_changeIdx": 603
-            },
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 607,
-              "cardEntityId": 39
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "_changeIdx": 610,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "who": "opponent",
-              "card": "ZombieHorde",
-              "type": "destroyed",
-              "_changeIdx": 615,
-              "fromLocation": "PizzaPlace"
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "_changeIdx": 617,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 15
-            },
-            {
-              "who": "player",
-              "card": "Gambit",
-              "type": "cardResolved",
-              "_changeIdx": 621
-            },
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "_changeIdx": 622,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GreatPortal",
-              "_changeIdx": 624,
-              "playerPower": 14,
-              "locationIndex": 1,
-              "opponentPower": 21
-            },
-            {
-              "who": "player",
-              "card": "ColleenWing",
-              "type": "discarded",
-              "_changeIdx": 629
-            },
-            {
-              "who": "player",
-              "card": "Morbius",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "_changeIdx": 634,
-              "cardEntityId": 39
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PizzaPlace",
-              "_changeIdx": 637,
-              "playerPower": 10,
-              "locationIndex": 0,
-              "opponentPower": 15
-            },
-            {
-              "who": "player",
-              "card": "CorvusGlaive",
-              "type": "cardResolved",
-              "_changeIdx": 644
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 649
-            }
-          ],
-          "snapEvent": {
-            "cubeValue": 4,
-            "totalSnaps": 2
-          },
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 10,
-              "opponentPower": 15
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 14,
-              "opponentPower": 21
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        154
+        47
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 7240,
-  "opp_sp": 3031,
+  "opp_cl": 38628,
+  "opp_sp": 7230,
   "bracket": null,
-  "match_id": "e69edab9-8a1b-4136-8e1f-7095a04eaef4",
-  "opp_name": "ToToRoSo",
-  "opp_team": null,
+  "match_id": "042e0b6a-fd19-4b05-86c5-7d63868b3e2d",
+  "opp_name": "New Mask Same Task",
+  "opp_team": "ChampionArena_Oct26_Hulk",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "PizzaPlace",
-    "GreatPortal",
-    "SanctumSanctorum"
-  ],
-  "player_cl": 11990,
+  "locations": [],
+  "player_cl": 11991,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Galactus",
-    "ArtVariantDefId": "Galactus_14"
+    "CardDefId": "Skill01HulkChampion"
   },
   "opp_health": null,
   "opp_is_bot": false,
-  "mode_detail": null,
+  "mode_detail": "Grand Arena",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
+  "current_turn": 5,
   "kudzu_spread": null,
-  "match_result": "loss",
-  "match_status": "complete",
-  "opp_champion": null,
-  "opp_clan_tag": "WAR",
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_champion": "HulkChampion",
+  "opp_clan_tag": "TWC",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
-  "player_avatar": null,
+  "opp_retreated": null,
+  "player_avatar": {
+    "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
+    "CardDefId": "Skill01CarnageChampion"
+  },
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "NicholasScratch",
-    "VampireKillmonger",
-    "Cosmo",
-    "KittyPryde",
-    "Sasquatch",
-    "ZombieGiantMan"
+    "Surtur"
   ],
-  "last_updated_at": "2026-10-21T00:58:31.236+00:00",
-  "player_champion": null,
-  "opp_played_cards": [
-    "PizzaSlice",
-    "KittyPryde"
-  ],
+  "last_updated_at": "2026-10-21T01:08:23.771+00:00",
+  "player_champion": "CarnageChampion",
+  "opp_played_cards": [],
   "player_deck_cards": [
-    "Blade",
-    "Morbius",
-    "DragonLord",
-    "InvisibleWoman",
-    "Modok",
-    "ColleenWing",
-    "LadySif",
-    "Dracula",
-    "Apocalypse",
-    "Gambit",
-    "Scorn",
-    "CorvusGlaive"
+    "CarnageChampion",
+    "Knull",
+    "ArnimZola",
+    "Wong",
+    "Venom",
+    "Shuri",
+    "ThePhoenixForce"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "PizzaSlice",
-    "NicholasScratch",
-    "VampireKillmonger",
-    "Cosmo",
-    "KittyPryde",
-    "VampiricSpear",
-    "Sasquatch",
-    "ZombieGiantMan",
-    "ZombieHorde"
+    "Ninja",
+    "Skill01HulkChampion",
+    "Surtur"
   ],
   "conquest_round_index": null
 }
