@@ -44,13 +44,6 @@
           },
           "h": [
             {
-              "cost": 5,
-              "power": 8,
-              "baseCost": 5,
-              "basePower": 8,
-              "cardDefId": "Sandman"
-            },
-            {
               "cost": 2,
               "power": 2,
               "baseCost": 2,
@@ -58,11 +51,18 @@
               "cardDefId": "Psylocke"
             },
             {
+              "cost": 5,
+              "power": 7,
+              "baseCost": 5,
+              "basePower": 7,
+              "cardDefId": "Legion"
+            },
+            {
               "cost": 6,
-              "power": 8,
+              "power": 5,
               "baseCost": 6,
-              "basePower": 8,
-              "cardDefId": "Onslaught"
+              "basePower": 5,
+              "cardDefId": "DrDoom"
             }
           ],
           "n": {
@@ -106,7 +106,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "CrownCity",
+              "to": "StarkIndustries",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +123,7 @@
                 {
                   "location": [
                     0,
-                    "CrownCity"
+                    "StarkIndustries"
                   ],
                   "revealed": [
                     0,
@@ -148,16 +148,16 @@
             },
             {
               "who": "player",
-              "card": "DrDoom",
+              "card": "Onslaught",
               "cost": 6,
               "type": "reveal",
-              "power": 5,
-              "entityId": 41,
+              "power": 8,
+              "entityId": 32,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "DrDoom",
+              "card": "Onslaught",
               "type": "draw"
             }
           ]
@@ -184,10 +184,10 @@
                 0,
                 {
                   "cost": 6,
-                  "power": 5,
+                  "power": 8,
                   "baseCost": 6,
-                  "basePower": 5,
-                  "cardDefId": "DrDoom"
+                  "basePower": 8,
+                  "cardDefId": "Onslaught"
                 }
               ]
             }
@@ -229,7 +229,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative"
             }
           ]
@@ -245,6 +245,158 @@
             {
               "turn": 1,
               "type": "endTurn"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "AmericaChavez",
+              "type": "play",
+              "entityId": 24,
+              "location": "StarkIndustries",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": null,
+                          "power": null,
+                          "baseCost": null,
+                          "entityId": 24,
+                          "basePower": null,
+                          "cardDefId": null,
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "AmericaChavez",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 24,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            1
+                          ],
+                          "power": [
+                            0,
+                            2
+                          ],
+                          "baseCost": [
+                            0,
+                            1
+                          ],
+                          "basePower": [
+                            0,
+                            2
+                          ],
+                          "cardDefId": [
+                            0,
+                            "AmericaChavez"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "AmericaChavez",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "StarkIndustries",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 2
             }
           ]
         },
@@ -277,7 +429,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "OrchisForge",
+              "to": "FracturedFrontier",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -300,7 +452,7 @@
                 {
                   "location": [
                     0,
-                    "OrchisForge"
+                    "FracturedFrontier"
                   ],
                   "revealed": [
                     0,
@@ -342,7 +494,7 @@
               "cost": 3,
               "type": "reveal",
               "power": 6,
-              "entityId": 35,
+              "entityId": 38,
               "drawReveal": true
             },
             {
@@ -362,7 +514,7 @@
               ],
               "opponent": [
                 0,
-                5
+                4
               ]
             }
           ],
@@ -404,13 +556,29 @@
           "label": "Turn Winner",
           "events": [
             {
-              "tie": true,
+              "tie": false,
               "type": "turnWinner",
-              "winner": null
+              "winner": "opponent"
             }
           ]
         },
-        {}
+        {
+          "h": [
+            2,
+            5,
+            {
+              "4": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -419,7 +587,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative"
             }
           ]
@@ -434,10 +602,10 @@
           "events": [
             {
               "who": "player",
-              "card": "Psylocke",
+              "card": "LunaSnow",
               "type": "play",
-              "entityId": 36,
-              "location": "CrownCity",
+              "entityId": 38,
+              "location": "StarkIndustries",
               "locationIndex": 0
             }
           ]
@@ -457,544 +625,10 @@
                       "0": [
                         0,
                         {
-                          "cost": 2,
-                          "power": 2,
-                          "baseCost": 2,
-                          "entityId": 36,
-                          "basePower": 2,
-                          "cardDefId": "Psylocke",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Onslaught"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "LunaSnow"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Psylocke",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 2,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "type": "play",
-              "entityId": 20,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 20,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Psylocke",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Psylocke",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Okoye"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "EternityRange",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "EternityRange"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 33,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "4": [
-                0,
-                {
-                  "cost": 1,
-                  "power": 1,
-                  "baseCost": 1,
-                  "basePower": 1,
-                  "cardDefId": "Zabu"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "LunaSnow",
-              "type": "play",
-              "entityId": 35,
-              "location": "EternityRange",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
+                          "cost": 1,
                           "power": 6,
                           "baseCost": 3,
-                          "entityId": 35,
+                          "entityId": 38,
                           "basePower": 6,
                           "cardDefId": "LunaSnow",
                           "arrivalSeq": 0
@@ -1018,40 +652,14 @@
           "h": [
             2,
             4,
-            {
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Zabu"
-                  ]
-                }
-              ]
-            }
+            {}
           ]
         }
       ],
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Staged",
           "events": [
             {
@@ -1066,16 +674,256 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
+          "label": "End Turn",
+          "events": [
+            {
+              "turn": 2,
+              "type": "endTurn"
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
           "label": "Play",
           "events": [
             {
-              "who": "player",
-              "card": "Zabu",
+              "who": "opponent",
+              "card": "Phastos",
               "type": "play",
-              "entityId": 33,
-              "location": "CrownCity",
+              "entityId": 20,
+              "location": "StarkIndustries",
               "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        0,
+                        {
+                          "cost": null,
+                          "power": null,
+                          "baseCost": null,
+                          "entityId": 20,
+                          "basePower": null,
+                          "cardDefId": null,
+                          "arrivalSeq": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Phastos",
+              "cost": 3,
+              "type": "reveal",
+              "power": 7,
+              "entityId": 20,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            3
+                          ],
+                          "power": [
+                            0,
+                            7
+                          ],
+                          "baseCost": [
+                            0,
+                            3
+                          ],
+                          "basePower": [
+                            0,
+                            4
+                          ],
+                          "cardDefId": [
+                            0,
+                            "Phastos"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Phastos",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "StarkIndustries",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 9
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "LunaSnow",
+              "cost": 3,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 38,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "StarkIndustries",
+              "playerPower": 6,
+              "locationIndex": 0,
+              "opponentPower": 9
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "IceCube",
+              "cost": 1,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 48,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "IceCube",
+              "cost": 1,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 49,
+              "drawReveal": false
             }
           ]
         },
@@ -1095,198 +943,21 @@
                         0,
                         {
                           "cost": 1,
-                          "power": 1,
+                          "power": 0,
                           "baseCost": 1,
-                          "entityId": 33,
-                          "basePower": 1,
-                          "cardDefId": "Zabu",
+                          "entityId": 48,
+                          "basePower": 0,
+                          "cardDefId": "IceCube",
                           "arrivalSeq": 1
                         }
                       ]
                     }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "type": "play",
-              "entityId": 48,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
+                  ],
                   "opponentCards": [
                     2,
-                    2,
+                    3,
                     {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 48,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "LunaSnow",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 35,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "IceCube",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 49,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "IceCube",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 50,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
+                      "2": [
                         0,
                         {
                           "cost": 1,
@@ -1295,25 +966,7 @@
                           "entityId": 49,
                           "basePower": 0,
                           "cardDefId": "IceCube",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 0,
-                          "baseCost": 1,
-                          "entityId": 50,
-                          "basePower": 0,
-                          "cardDefId": "IceCube",
-                          "arrivalSeq": 0
+                          "arrivalSeq": 2
                         }
                       ]
                     }
@@ -1327,7 +980,7 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Resolve",
           "events": [
             {
@@ -1347,7 +1000,7 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Resolved",
           "events": [
             {
@@ -1363,266 +1016,17 @@
         {
           "_v": 2,
           "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Zabu",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 33,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 48,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Sentinel"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "OrchisForge",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 51,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 53,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 0,
-                          "baseCost": 1,
-                          "entityId": 53,
-                          "basePower": 0,
-                          "cardDefId": "Rock",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
           "label": "Energy",
           "events": [
             {
               "who": "opponent",
               "type": "energy",
-              "energy": 5
+              "energy": 4
             },
             {
               "who": "player",
               "type": "energy",
-              "energy": 5
+              "energy": 4
             }
           ]
         },
@@ -1631,254 +1035,13 @@
       [
         {
           "_v": 2,
-          "turn": 4,
-          "label": "Draw",
+          "turn": 3,
+          "label": "Location",
           "events": [
             {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 3,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 31,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 7,
-                  "baseCost": 4,
-                  "basePower": 7,
-                  "cardDefId": "IronLad"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Sandman",
-              "type": "play",
-              "entityId": 40,
-              "location": "CrownCity",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 8,
-                          "baseCost": 5,
-                          "entityId": 40,
-                          "basePower": 8,
-                          "cardDefId": "Sandman",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Onslaught"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "IronLad"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Sandman",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sera",
-              "type": "play",
-              "entityId": 29,
-              "location": "EternityRange",
+              "to": "SinisterLondon",
+              "from": "RevealOn2",
+              "type": "location",
               "locationIndex": 2
             }
           ]
@@ -1891,34 +1054,11 @@
               "2": [
                 1,
                 {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 29,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
+                  "location": [
+                    0,
+                    "SinisterLondon"
                   ]
                 }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
               ]
             }
           ]
@@ -1927,1445 +1067,26 @@
       [
         {
           "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
+          "turn": 3,
+          "label": "Draw",
           "events": [
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
             {
               "who": "player",
               "card": "Sandman",
               "cost": 5,
               "type": "reveal",
               "power": 8,
-              "entityId": 40,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "playerPower": 11,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
+              "entityId": 33,
+              "drawReveal": true
+            },
             {
               "who": "player",
               "card": "Sandman",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sera",
-              "cost": 5,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 29,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Sera"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sera",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "EternityRange",
-              "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "cost": 3,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 30,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 1,
-                  "baseCost": 4,
-                  "basePower": 1,
-                  "cardDefId": "Jubilee"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "play",
-              "entityId": 41,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 5,
-                          "baseCost": 6,
-                          "entityId": 41,
-                          "basePower": 5,
-                          "cardDefId": "DrDoom",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "IronLad"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Jubilee"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Brood",
-              "type": "play",
-              "entityId": 23,
-              "location": "CrownCity",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 21,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "type": "play",
-              "entityId": 51,
-              "location": "EternityRange",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 23,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 21,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 3,
-                          "baseCost": 2,
-                          "entityId": 51,
-                          "basePower": 3,
-                          "cardDefId": "Sentinel",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "cost": 6,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 41,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot",
-              "cost": 6,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 54,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "DoomBot",
-              "cost": 6,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 55,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 5,
-                          "baseCost": 6,
-                          "entityId": 54,
-                          "basePower": 5,
-                          "cardDefId": "DoomBot",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 5,
-                          "baseCost": 6,
-                          "entityId": 55,
-                          "basePower": 5,
-                          "cardDefId": "DoomBot",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "DoomBot",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 56,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 3,
-                  "baseCost": 2,
-                  "basePower": 3,
-                  "cardDefId": "Sentinel"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Brood",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 23,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Brood"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Brood",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 57,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 58,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 2,
-                          "baseCost": 3,
-                          "entityId": 57,
-                          "basePower": 2,
-                          "cardDefId": "Broodling",
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 2,
-                          "baseCost": 3,
-                          "entityId": 58,
-                          "basePower": 2,
-                          "cardDefId": "Broodling",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "AmericaChavez"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "OrchisForge",
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 51,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 60,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "IceCube",
-              "type": "destroyed",
-              "fromLocation": "EternityRange"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "entityId": [
-                            0,
-                            53
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Rock"
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "entityId": [
-                            0,
-                            29
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Sera"
-                          ]
-                        }
-                      ],
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "entityId": [
-                            0,
-                            51
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Sentinel"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 0,
-                      "cardDefId": "IceCube"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 34,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
               "type": "draw"
             }
           ]
@@ -3380,7 +1101,7 @@
               ],
               "opponent": [
                 0,
-                7
+                4
               ]
             }
           ],
@@ -3391,11 +1112,11 @@
               "4": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 6,
-                  "baseCost": 4,
-                  "basePower": 6,
-                  "cardDefId": "Doom2099"
+                  "cost": 5,
+                  "power": 8,
+                  "baseCost": 5,
+                  "basePower": 8,
+                  "cardDefId": "Sandman"
                 }
               ]
             }
@@ -3405,11 +1126,11 @@
             {
               "player": [
                 0,
-                3
+                6
               ],
               "opponent": [
                 0,
-                4
+                6
               ]
             }
           ]
@@ -3418,13 +1139,13 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 3,
           "label": "Turn Winner",
           "events": [
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "player"
+              "winner": "opponent"
             }
           ]
         },
@@ -3433,1495 +1154,13 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 3,
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative"
             }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "play",
-              "entityId": 31,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 7,
-                          "baseCost": 4,
-                          "entityId": 31,
-                          "basePower": 7,
-                          "cardDefId": "IronLad",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Jubilee"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Sentinel"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Doom2099"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "type": "play",
-              "entityId": 30,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 1,
-                          "baseCost": 4,
-                          "entityId": 30,
-                          "basePower": 1,
-                          "cardDefId": "Jubilee",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Sentinel"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Doom2099"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ]
-                        }
-                      ],
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Galacta",
-              "type": "play",
-              "entityId": 25,
-              "location": "CrownCity",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "SilverSurfer",
-              "type": "play",
-              "entityId": 27,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Rogue",
-              "type": "play",
-              "entityId": 24,
-              "location": "EternityRange",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 25,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 27,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 24,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 31,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "playerPower": 16,
-              "locationIndex": 1,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "cost": 6,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 39,
-              "drawReveal": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Override",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "abilityOverride",
-              "overrideAbility": "AntiPolarMagneto"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "overrideAbility": [
-                            0,
-                            "AntiPolarMagneto"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "play",
-              "entityId": 34,
-              "location": "EternityRange",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 6,
-                          "baseCost": 4,
-                          "entityId": 34,
-                          "basePower": 6,
-                          "cardDefId": "Doom2099",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 34,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 17,
-              "locationIndex": 2,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 61,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "2": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 3,
-                  "baseCost": 2,
-                  "basePower": 3,
-                  "cardDefId": "Sentinel"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "cost": 4,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 30,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "playerPower": 17,
-              "locationIndex": 1,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "type": "play",
-              "entityId": 39,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 8,
-                          "baseCost": 6,
-                          "entityId": 39,
-                          "basePower": 8,
-                          "cardDefId": "AntiPolarMagneto",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "cost": 6,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "playerPower": 25,
-              "locationIndex": 1,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 62,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 3,
-                  "baseCost": 2,
-                  "basePower": 3,
-                  "cardDefId": "Sentinel"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Galacta",
-              "cost": 4,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 25,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            10
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            6
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Galacta"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Galacta",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "CrownCity",
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 16
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SilverSurfer",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 27,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SilverSurfer"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SilverSurfer",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 27
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SilverSurfer",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 13
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Brood",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 23
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CrownCity",
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 18
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 57
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CrownCity",
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 20
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 58
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CrownCity",
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 22
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Rogue",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 24,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Rogue"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Rogue",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "playerPower": 17,
-              "locationIndex": 2,
-              "opponentPower": 12
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -4961,7 +1200,14 @@
       [
         {
           "turn": 1,
-          "plays": [],
+          "plays": [
+            {
+              "card": "AmericaChavez",
+              "isPlayer": false,
+              "location": "StarkIndustries",
+              "locationIndex": 0
+            }
+          ],
           "energy": {
             "player": 1,
             "opponent": 1
@@ -4980,7 +1226,7 @@
               "_changeIdx": 69
             },
             {
-              "to": "CrownCity",
+              "to": "StarkIndustries",
               "from": "RevealOn1",
               "type": "location",
               "_changeIdx": 72,
@@ -4990,47 +1236,81 @@
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 76
+              "_changeIdx": 75
             },
             {
               "who": "player",
-              "card": "DrDoom",
+              "card": "Onslaught",
               "cost": 6,
               "type": "reveal",
-              "power": 5,
-              "entityId": 41,
-              "_changeIdx": 79,
+              "power": 8,
+              "entityId": 32,
+              "_changeIdx": 78,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "DrDoom",
+              "card": "Onslaught",
               "type": "draw",
-              "_changeIdx": 80
+              "_changeIdx": 79
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 83
+              "_changeIdx": 82
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 84
+              "_changeIdx": 83
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 87
+              "_changeIdx": 86
+            },
+            {
+              "who": "opponent",
+              "card": "AmericaChavez",
+              "type": "play",
+              "entityId": 24,
+              "location": "StarkIndustries",
+              "_changeIdx": 87,
+              "locationIndex": 0
+            },
+            {
+              "who": "opponent",
+              "card": "AmericaChavez",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 24,
+              "_changeIdx": 90,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "AmericaChavez",
+              "type": "cardRevealed",
+              "_changeIdx": 91
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "StarkIndustries",
+              "_changeIdx": 93,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 2
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 2
             },
             {
               "winner": null,
@@ -5044,23 +1324,23 @@
             }
           ]
         },
-        3
+        8
       ],
       [
         {
           "turn": 2,
           "plays": [
             {
-              "card": "Psylocke",
+              "card": "LunaSnow",
               "isPlayer": true,
-              "location": "CrownCity",
+              "location": "StarkIndustries",
               "locationIndex": 0
             },
             {
-              "card": "Okoye",
+              "card": "Phastos",
               "isPlayer": false,
-              "location": "OrchisForge",
-              "locationIndex": 1
+              "location": "StarkIndustries",
+              "locationIndex": 0
             }
           ],
           "energy": {
@@ -5072,33 +1352,33 @@
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 91
+              "_changeIdx": 101
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 93
+              "_changeIdx": 103
             },
             {
-              "to": "OrchisForge",
+              "to": "FracturedFrontier",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 96,
+              "_changeIdx": 106,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 100,
+              "_changeIdx": 112,
               "locationIndex": 2
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 103
+              "_changeIdx": 115
             },
             {
               "who": "player",
@@ -5106,260 +1386,80 @@
               "cost": 3,
               "type": "reveal",
               "power": 6,
-              "entityId": 35,
-              "_changeIdx": 106,
+              "entityId": 38,
+              "_changeIdx": 118,
               "drawReveal": true
             },
             {
               "who": "player",
               "card": "LunaSnow",
               "type": "draw",
-              "_changeIdx": 107
-            },
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 110
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 111
-            },
-            {
-              "who": "player",
-              "card": "Psylocke",
-              "type": "play",
-              "entityId": 36,
-              "location": "CrownCity",
-              "_changeIdx": 114,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Psylocke",
-              "type": "cardStaged",
-              "_changeIdx": 115
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 118
-            },
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "type": "play",
-              "entityId": 20,
-              "location": "OrchisForge",
-              "_changeIdx": 119,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Psylocke",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 36,
-              "_changeIdx": 123,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "_changeIdx": 126,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "_changeIdx": 129,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Psylocke",
-              "type": "cardResolved",
-              "_changeIdx": 135
-            },
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 20,
-              "_changeIdx": 136,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Okoye",
-              "type": "cardRevealed",
-              "_changeIdx": 137
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "_changeIdx": 139,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 3
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 2,
-              "opponentPower": 0
-            },
-            {
-              "winner": "player",
-              "playerPower": 4,
-              "opponentPower": 3
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        22
-      ],
-      [
-        {
-          "turn": 3,
-          "plays": [
-            {
-              "card": "LunaSnow",
-              "isPlayer": true,
-              "location": "EternityRange",
-              "locationIndex": 2
-            },
-            {
-              "card": "Zabu",
-              "isPlayer": true,
-              "location": "CrownCity",
-              "locationIndex": 0
-            },
-            {
-              "card": "Sentinel",
-              "isPlayer": false,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 3
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 153
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 155
-            },
-            {
-              "to": "EternityRange",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 162,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 166
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 33,
-              "_changeIdx": 169,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "draw",
-              "_changeIdx": 170
+              "_changeIdx": 119
             },
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 173
+              "winner": "opponent",
+              "_changeIdx": 127
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 174
+              "_changeIdx": 128
             },
             {
               "who": "player",
               "card": "LunaSnow",
               "type": "play",
-              "entityId": 35,
-              "location": "EternityRange",
-              "_changeIdx": 177,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "LunaSnow",
-              "type": "cardStaged",
-              "_changeIdx": 178
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "play",
-              "entityId": 33,
-              "location": "CrownCity",
-              "_changeIdx": 181,
+              "entityId": 38,
+              "location": "StarkIndustries",
+              "_changeIdx": 131,
               "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "Zabu",
+              "card": "LunaSnow",
               "type": "cardStaged",
-              "_changeIdx": 182
+              "_changeIdx": 132
             },
             {
-              "turn": 3,
+              "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 188
+              "_changeIdx": 140
             },
             {
               "who": "opponent",
-              "card": "Sentinel",
+              "card": "Phastos",
               "type": "play",
-              "entityId": 48,
-              "location": "OrchisForge",
-              "_changeIdx": 189,
-              "locationIndex": 1
+              "entityId": 20,
+              "location": "StarkIndustries",
+              "_changeIdx": 141,
+              "locationIndex": 0
+            },
+            {
+              "who": "opponent",
+              "card": "Phastos",
+              "cost": 3,
+              "type": "reveal",
+              "power": 7,
+              "entityId": 20,
+              "_changeIdx": 145,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Phastos",
+              "type": "cardRevealed",
+              "_changeIdx": 146
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "StarkIndustries",
+              "_changeIdx": 148,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 9
             },
             {
               "who": "player",
@@ -5367,244 +1467,112 @@
               "cost": 3,
               "type": "reveal",
               "power": 6,
-              "entityId": 35,
-              "_changeIdx": 194,
+              "entityId": 38,
+              "_changeIdx": 153,
               "drawReveal": false
             },
             {
               "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 196,
+              "winner": "opponent",
+              "location": "StarkIndustries",
+              "_changeIdx": 155,
               "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 0
+              "locationIndex": 0,
+              "opponentPower": 9
             },
             {
               "who": "player",
+              "card": "IceCube",
+              "cost": 1,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 48,
+              "_changeIdx": 160,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
               "card": "IceCube",
               "cost": 1,
               "type": "reveal",
               "power": 0,
               "entityId": 49,
-              "_changeIdx": 201,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "IceCube",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 50,
-              "_changeIdx": 204,
+              "_changeIdx": 163,
               "drawReveal": false
             },
             {
               "who": "player",
               "card": "IceCube",
               "type": "cardRevealed",
-              "_changeIdx": 206
+              "_changeIdx": 165
             },
             {
               "who": "opponent",
               "card": "IceCube",
               "type": "cardRevealed",
-              "_changeIdx": 207
+              "_changeIdx": 166
             },
             {
               "who": "player",
               "card": "LunaSnow",
               "type": "cardResolved",
-              "_changeIdx": 209
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 33,
-              "_changeIdx": 210,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "_changeIdx": 212,
-              "playerPower": 3,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Zabu",
-              "type": "cardResolved",
-              "_changeIdx": 217
-            },
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 48,
-              "_changeIdx": 218,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "type": "cardRevealed",
-              "_changeIdx": 219
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "OrchisForge",
-              "_changeIdx": 221,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 51,
-              "_changeIdx": 226,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 53,
-              "_changeIdx": 240,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Rock",
-              "type": "cardRevealed",
-              "_changeIdx": 242
+              "_changeIdx": 169
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "player",
-              "playerPower": 3,
+              "winner": "opponent",
+              "playerPower": 6,
+              "opponentPower": 9
+            },
+            {
+              "winner": null,
+              "playerPower": 0,
               "opponentPower": 0
             },
             {
-              "winner": "opponent",
-              "playerPower": 4,
-              "opponentPower": 6
-            },
-            {
-              "winner": "player",
-              "playerPower": 6,
+              "winner": null,
+              "playerPower": 0,
               "opponentPower": 0
             }
           ]
         },
-        45
+        25
       ],
       [
         {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "Sandman",
-              "isPlayer": true,
-              "location": "CrownCity",
-              "locationIndex": 0
-            },
-            {
-              "card": "Sera",
-              "isPlayer": false,
-              "location": "EternityRange",
-              "locationIndex": 2
-            }
-          ],
+          "turn": 3,
+          "plays": [],
           "energy": {
-            "player": 5,
-            "opponent": 5
+            "player": 4,
+            "opponent": 4
           },
           "events": [
             {
               "who": "opponent",
               "type": "energy",
-              "energy": 5,
-              "_changeIdx": 247
+              "energy": 4,
+              "_changeIdx": 173
             },
             {
               "who": "player",
               "type": "energy",
-              "energy": 5,
-              "_changeIdx": 249
+              "energy": 4,
+              "_changeIdx": 175
             },
             {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 3,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 31,
-              "_changeIdx": 260,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "draw",
-              "_changeIdx": 261
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 264
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 265
-            },
-            {
-              "who": "player",
-              "card": "Sandman",
-              "type": "play",
-              "entityId": 40,
-              "location": "CrownCity",
-              "_changeIdx": 269,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Sandman",
-              "type": "cardStaged",
-              "_changeIdx": 270
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 276
+              "to": "SinisterLondon",
+              "from": "RevealOn2",
+              "type": "location",
+              "_changeIdx": 178,
+              "locationIndex": 2
             },
             {
               "who": "opponent",
-              "card": "Sera",
-              "type": "play",
-              "entityId": 29,
-              "location": "EternityRange",
-              "_changeIdx": 277,
-              "locationIndex": 2
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 189
             },
             {
               "who": "player",
@@ -5612,56 +1580,33 @@
               "cost": 5,
               "type": "reveal",
               "power": 8,
-              "entityId": 40,
-              "_changeIdx": 281,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "_changeIdx": 283,
-              "playerPower": 11,
-              "locationIndex": 0,
-              "opponentPower": 0
+              "entityId": 33,
+              "_changeIdx": 192,
+              "drawReveal": true
             },
             {
               "who": "player",
               "card": "Sandman",
-              "type": "cardResolved",
-              "_changeIdx": 309
+              "type": "draw",
+              "_changeIdx": 193
+            },
+            {
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "opponent",
+              "_changeIdx": 196
             },
             {
               "who": "opponent",
-              "card": "Sera",
-              "cost": 5,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 29,
-              "_changeIdx": 310,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Sera",
-              "type": "cardRevealed",
-              "_changeIdx": 311
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "EternityRange",
-              "_changeIdx": 320,
-              "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 6
+              "type": "initiative",
+              "_changeIdx": 197
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "player",
-              "playerPower": 11,
+              "winner": null,
+              "playerPower": 0,
               "opponentPower": 0
             },
             {
@@ -5671,876 +1616,12 @@
             },
             {
               "winner": null,
-              "playerPower": 6,
-              "opponentPower": 6
-            }
-          ]
-        },
-        58
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "DrDoom",
-              "isPlayer": true,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            },
-            {
-              "card": "Brood",
-              "isPlayer": false,
-              "location": "CrownCity",
-              "locationIndex": 0
-            },
-            {
-              "card": "AmericaChavez",
-              "isPlayer": false,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            },
-            {
-              "card": "Sentinel",
-              "isPlayer": false,
-              "location": "EternityRange",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 327
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 329
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 339
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "cost": 3,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 30,
-              "_changeIdx": 351,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "type": "draw",
-              "_changeIdx": 352
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 365
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 366
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "play",
-              "entityId": 41,
-              "location": "OrchisForge",
-              "_changeIdx": 369,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "cardStaged",
-              "_changeIdx": 370
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 390
-            },
-            {
-              "who": "opponent",
-              "card": "Brood",
-              "type": "play",
-              "entityId": 23,
-              "location": "CrownCity",
-              "_changeIdx": 391,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "play",
-              "entityId": 21,
-              "location": "OrchisForge",
-              "_changeIdx": 394,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "type": "play",
-              "entityId": 51,
-              "location": "EternityRange",
-              "_changeIdx": 397,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "cost": 6,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 41,
-              "_changeIdx": 401,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "_changeIdx": 403,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "who": "player",
-              "card": "DoomBot",
-              "cost": 6,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 54,
-              "_changeIdx": 408,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "DoomBot",
-              "cost": 6,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 55,
-              "_changeIdx": 411,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "DoomBot",
-              "type": "cardRevealed",
-              "_changeIdx": 414
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "_changeIdx": 415,
-              "playerPower": 16,
-              "locationIndex": 0,
+              "playerPower": 0,
               "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "DoomBot",
-              "type": "cardRevealed",
-              "_changeIdx": 418
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 419,
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 6
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "cardResolved",
-              "_changeIdx": 423
-            },
-            {
-              "who": "player",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 56,
-              "_changeIdx": 427,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "Brood",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 23,
-              "_changeIdx": 441,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Brood",
-              "type": "cardRevealed",
-              "_changeIdx": 442
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "_changeIdx": 444,
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 57,
-              "_changeIdx": 449,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 58,
-              "_changeIdx": 452,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "type": "cardRevealed",
-              "_changeIdx": 454
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "_changeIdx": 455,
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 4
-            },
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "type": "cardRevealed",
-              "_changeIdx": 458
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CrownCity",
-              "_changeIdx": 459,
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 6
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "_changeIdx": 463,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "AmericaChavez",
-              "type": "cardRevealed",
-              "_changeIdx": 464
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "OrchisForge",
-              "_changeIdx": 466,
-              "playerPower": 9,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 51,
-              "_changeIdx": 485,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 487,
-              "playerPower": 11,
-              "locationIndex": 2,
-              "opponentPower": 9
-            },
-            {
-              "who": "opponent",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 60,
-              "_changeIdx": 492,
-              "drawReveal": true
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 508
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 16,
-              "opponentPower": 6
-            },
-            {
-              "winner": null,
-              "playerPower": 9,
-              "opponentPower": 9
-            },
-            {
-              "winner": "player",
-              "playerPower": 11,
-              "opponentPower": 9
             }
           ]
         },
-        91
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "IronLad",
-              "isPlayer": true,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            },
-            {
-              "card": "Jubilee",
-              "isPlayer": true,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            },
-            {
-              "card": "Galacta",
-              "isPlayer": false,
-              "location": "CrownCity",
-              "locationIndex": 0
-            },
-            {
-              "card": "SilverSurfer",
-              "isPlayer": false,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            },
-            {
-              "card": "Rogue",
-              "isPlayer": false,
-              "location": "EternityRange",
-              "locationIndex": 2
-            },
-            {
-              "card": "Doom2099",
-              "isPlayer": true,
-              "location": "EternityRange",
-              "locationIndex": 2
-            },
-            {
-              "card": "AntiPolarMagneto",
-              "isPlayer": true,
-              "location": "OrchisForge",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 7,
-            "opponent": 7
-          },
-          "events": [
-            {
-              "type": "cubePreview",
-              "_changeIdx": 523,
-              "cubeValueNextTurn": 2
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 525
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 527
-            },
-            {
-              "who": "opponent",
-              "card": "IceCube",
-              "type": "destroyed",
-              "_changeIdx": 538,
-              "fromLocation": "EternityRange"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 542
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 34,
-              "_changeIdx": 553,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "draw",
-              "_changeIdx": 554
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 557
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 558
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "play",
-              "entityId": 31,
-              "location": "OrchisForge",
-              "_changeIdx": 561,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardStaged",
-              "_changeIdx": 562
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "type": "play",
-              "entityId": 30,
-              "location": "OrchisForge",
-              "_changeIdx": 565,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "type": "cardStaged",
-              "_changeIdx": 566
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 585
-            },
-            {
-              "who": "opponent",
-              "card": "Galacta",
-              "type": "play",
-              "entityId": 25,
-              "location": "CrownCity",
-              "_changeIdx": 586,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "SilverSurfer",
-              "type": "play",
-              "entityId": 27,
-              "location": "OrchisForge",
-              "_changeIdx": 589,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Rogue",
-              "type": "play",
-              "entityId": 24,
-              "location": "EternityRange",
-              "_changeIdx": 592,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 31,
-              "_changeIdx": 597,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "_changeIdx": 599,
-              "playerPower": 16,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "cost": 6,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 39,
-              "_changeIdx": 603,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "abilityOverride",
-              "_changeIdx": 604,
-              "overrideAbility": "AntiPolarMagneto"
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "play",
-              "entityId": 34,
-              "location": "EternityRange",
-              "_changeIdx": 608,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 34,
-              "_changeIdx": 612,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 616,
-              "playerPower": 17,
-              "locationIndex": 2,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardResolved",
-              "_changeIdx": 621
-            },
-            {
-              "who": "player",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 61,
-              "_changeIdx": 625,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "cost": 4,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 30,
-              "_changeIdx": 629,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "_changeIdx": 631,
-              "playerPower": 17,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "type": "play",
-              "entityId": 39,
-              "location": "OrchisForge",
-              "_changeIdx": 635,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "cost": 6,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 39,
-              "_changeIdx": 638,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "_changeIdx": 639,
-              "playerPower": 25,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "type": "cardResolved",
-              "_changeIdx": 646
-            },
-            {
-              "who": "player",
-              "card": "Sentinel",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 62,
-              "_changeIdx": 650,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "Galacta",
-              "cost": 4,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 25,
-              "_changeIdx": 654,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Galacta",
-              "type": "cardRevealed",
-              "_changeIdx": 655
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "CrownCity",
-              "_changeIdx": 658,
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 16
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "_changeIdx": 661,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 9
-            },
-            {
-              "who": "opponent",
-              "card": "SilverSurfer",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 27,
-              "_changeIdx": 665,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "SilverSurfer",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 666,
-              "cardEntityId": 27
-            },
-            {
-              "who": "opponent",
-              "card": "SilverSurfer",
-              "type": "cardRevealed",
-              "_changeIdx": 670
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "_changeIdx": 672,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 13
-            },
-            {
-              "who": "opponent",
-              "card": "Brood",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 676,
-              "cardEntityId": 23
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CrownCity",
-              "_changeIdx": 680,
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 18
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OrchisForge",
-              "_changeIdx": 683,
-              "playerPower": 21,
-              "locationIndex": 1,
-              "opponentPower": 17
-            },
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 686,
-              "cardEntityId": 57
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CrownCity",
-              "_changeIdx": 689,
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 20
-            },
-            {
-              "who": "opponent",
-              "card": "Broodling",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 692,
-              "cardEntityId": 58
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CrownCity",
-              "_changeIdx": 695,
-              "playerPower": 16,
-              "locationIndex": 0,
-              "opponentPower": 22
-            },
-            {
-              "who": "opponent",
-              "card": "Rogue",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 24,
-              "_changeIdx": 711,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Rogue",
-              "type": "cardRevealed",
-              "_changeIdx": 712
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "EternityRange",
-              "_changeIdx": 714,
-              "playerPower": 17,
-              "locationIndex": 2,
-              "opponentPower": 12
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 721
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 16,
-              "opponentPower": 22
-            },
-            {
-              "winner": "player",
-              "playerPower": 21,
-              "opponentPower": 17
-            },
-            {
-              "winner": "player",
-              "playerPower": 17,
-              "opponentPower": 12
-            }
-          ]
-        },
-        134
+        30
       ]
     ],
     "replayStorageVersion": 1
@@ -6548,16 +1629,12 @@
   "opp_cl": 5972,
   "opp_sp": 4628,
   "bracket": null,
-  "match_id": "46aeabb9-9978-4a43-a74e-8fe75bf3d64a",
+  "match_id": "6f3cd40b-312e-4cff-9fb9-f0af027a5fb6",
   "opp_name": "Bojack",
   "opp_team": null,
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "CrownCity",
-    "OrchisForge",
-    "EternityRange"
-  ],
+  "locations": [],
   "player_cl": 11997,
   "player_sp": 4875,
   "turn_data": null,
@@ -6571,15 +1648,15 @@
   "opp_is_bot": false,
   "mode_detail": "Gold",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
+  "current_turn": 4,
   "kudzu_spread": null,
-  "match_result": "win",
-  "match_status": "complete",
+  "match_result": null,
+  "match_status": "in_progress",
   "opp_champion": null,
   "opp_clan_tag": null,
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": null,
   "player_health": 1,
   "wild_boosters": false,
@@ -6597,11 +1674,9 @@
     "SilverSurfer",
     "Rogue"
   ],
-  "last_updated_at": "2026-10-21T08:54:50.239+00:00",
+  "last_updated_at": "2026-10-21T08:56:23.188+00:00",
   "player_champion": null,
-  "opp_played_cards": [
-    "Sentinel"
-  ],
+  "opp_played_cards": [],
   "player_deck_cards": [
     "Onslaught",
     "Jubilee",
@@ -6618,17 +1693,9 @@
   ],
   "booster_card_def_id": "Legion",
   "opponent_cards_seen": [
-    "Okoye",
-    "IceCube",
-    "Sentinel",
-    "Rock",
-    "Sera",
-    "Brood",
-    "Broodling",
     "AmericaChavez",
-    "Galacta",
-    "SilverSurfer",
-    "Rogue"
+    "Phastos",
+    "IceCube"
   ],
-  "conquest_round_index": 6
+  "conquest_round_index": 7
 }
