@@ -44,32 +44,32 @@
           },
           "h": [
             {
-              "cost": 2,
-              "power": 2,
-              "baseCost": 2,
-              "basePower": 2,
-              "cardDefId": "CarnageChampion"
-            },
-            {
               "cost": 1,
-              "power": 0,
+              "power": 1,
               "baseCost": 1,
-              "basePower": 0,
-              "cardDefId": "Skill01CarnageChampion"
-            },
-            {
-              "cost": 5,
-              "power": 5,
-              "baseCost": 5,
-              "basePower": 5,
-              "cardDefId": "BlackPanther"
+              "basePower": 1,
+              "cardDefId": "RocketRaccoonChampion"
             },
             {
               "cost": 2,
               "power": 0,
               "baseCost": 2,
               "basePower": 0,
-              "cardDefId": "FastballSpecial"
+              "cardDefId": "Skill01RocketRaccoonChampion"
+            },
+            {
+              "cost": 6,
+              "power": 0,
+              "baseCost": 6,
+              "basePower": 0,
+              "cardDefId": "ArnimZola"
+            },
+            {
+              "cost": 6,
+              "power": 0,
+              "baseCost": 6,
+              "basePower": 0,
+              "cardDefId": "Knull"
             }
           ],
           "n": {
@@ -93,12 +93,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             }
@@ -113,7 +113,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "RocketPad",
+              "to": "CaveOfTheDragon",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -130,7 +130,7 @@
                 {
                   "location": [
                     0,
-                    "RocketPad"
+                    "CaveOfTheDragon"
                   ],
                   "revealed": [
                     0,
@@ -149,22 +149,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Odin",
-              "cost": 6,
+              "card": "AbsorbingMan",
+              "cost": 4,
               "type": "reveal",
-              "power": 10,
-              "entityId": 25,
+              "power": 5,
+              "entityId": 31,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Odin",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "AbsorbingMan",
               "type": "draw"
             }
           ]
@@ -190,11 +190,11 @@
               "4": [
                 0,
                 {
-                  "cost": 6,
-                  "power": 10,
-                  "baseCost": 6,
-                  "basePower": 10,
-                  "cardDefId": "Odin"
+                  "cost": 4,
+                  "power": 5,
+                  "baseCost": 4,
+                  "basePower": 5,
+                  "cardDefId": "AbsorbingMan"
                 }
               ]
             }
@@ -247,6 +247,135 @@
         {
           "_v": 2,
           "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "type": "play",
+              "entityId": 47,
+              "location": "CaveOfTheDragon",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 2,
+                          "power": 0,
+                          "baseCost": 2,
+                          "entityId": 47,
+                          "basePower": 0,
+                          "cardDefId": "Skill01RocketRaccoonChampion",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                4
+              ]
+            }
+          ],
+          "h": [
+            2,
+            4,
+            {
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    6
+                  ],
+                  "baseCost": [
+                    0,
+                    6
+                  ],
+                  "cardDefId": [
+                    0,
+                    "ArnimZola"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cardDefId": [
+                    0,
+                    "Knull"
+                  ]
+                }
+              ],
+              "3": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    5
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    5
+                  ],
+                  "cardDefId": [
+                    0,
+                    "AbsorbingMan"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Staged",
+          "events": [
+            {
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "type": "cardStaged"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
           "label": "End Turn",
           "events": [
             {
@@ -265,11 +394,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "ThaddeusRoss",
+              "card": "BlackKnight",
               "type": "play",
-              "entityId": 31,
-              "location": "RocketPad",
-              "locationIndex": 0
+              "entityId": 21,
+              "location": "RevealOn2",
+              "locationIndex": 1
             }
           ]
         },
@@ -278,7 +407,7 @@
             2,
             3,
             {
-              "0": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
@@ -291,7 +420,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 31,
+                          "entityId": 21,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -322,12 +451,12 @@
           "events": [
             {
               "who": "opponent",
-              "card": "ThaddeusRoss",
-              "cost": 2,
+              "card": "BlackKnight",
+              "cost": 1,
               "type": "reveal",
               "power": 2,
-              "oppKit": "||Rare|",
-              "entityId": 31,
+              "oppKit": "PrismBlack|KirbyBlack|MetalChains|",
+              "entityId": 21,
               "drawReveal": false
             }
           ]
@@ -337,7 +466,7 @@
             2,
             3,
             {
-              "0": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
@@ -349,7 +478,7 @@
                         {
                           "cost": [
                             0,
-                            2
+                            1
                           ],
                           "power": [
                             0,
@@ -357,7 +486,7 @@
                           ],
                           "baseCost": [
                             0,
-                            2
+                            1
                           ],
                           "basePower": [
                             0,
@@ -365,7 +494,7 @@
                           ],
                           "cardDefId": [
                             0,
-                            "ThaddeusRoss"
+                            "BlackKnight"
                           ]
                         }
                       ]
@@ -385,7 +514,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "ThaddeusRoss",
+              "card": "BlackKnight",
               "type": "cardRevealed"
             }
           ]
@@ -401,9 +530,9 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RocketPad",
+              "location": "RevealOn2",
               "playerPower": 0,
-              "locationIndex": 0,
+              "locationIndex": 1,
               "opponentPower": 2
             }
           ]
@@ -414,12 +543,101 @@
         {
           "_v": 2,
           "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "cost": 2,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 47,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Removed",
+          "events": [
+            {
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "type": "removed"
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    0,
+                    {}
+                  ]
+                }
+              ]
+            }
+          ],
+          "n": [
+            1,
+            {
+              "player": [
+                2,
+                1,
+                {
+                  "0": [
+                    0,
+                    {
+                      "cost": 2,
+                      "power": 0,
+                      "cardDefId": "Skill01RocketRaccoonChampion"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "cost": 2,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 52,
+              "drawReveal": true
             }
           ]
         },
@@ -427,18 +645,25 @@
           "c": [
             1,
             {
-              "opponent": [
+              "player": [
                 0,
                 5
               ]
             }
           ],
-          "r": [
-            1,
+          "h": [
+            2,
+            5,
             {
-              "opponent": [
+              "4": [
                 0,
-                7
+                {
+                  "cost": 2,
+                  "power": 0,
+                  "baseCost": 2,
+                  "basePower": 0,
+                  "cardDefId": "Skill01RocketRaccoonChampion"
+                }
               ]
             }
           ]
@@ -451,14 +676,14 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 3
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
-              "energy": 3
+              "energy": 4
             }
           ]
         },
@@ -471,7 +696,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "HellsKitchen",
+              "to": "Superflow",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -494,7 +719,7 @@
                 {
                   "location": [
                     0,
-                    "HellsKitchen"
+                    "Superflow"
                   ],
                   "revealed": [
                     0,
@@ -526,2069 +751,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 28,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 7,
-                  "baseCost": 4,
-                  "basePower": 7,
-                  "cardDefId": "SymbioteSpiderMan"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 2,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "play",
-              "entityId": 48,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 48,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "oppKit": "|SparkleGold|Champion|",
-              "entityId": 48,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Skill01HulkChampion"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 3,
-                      "power": 0,
-                      "cardDefId": "Skill01HulkChampion"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Draw",
-          "events": [
-            {
               "who": "opponent",
               "card": null,
               "type": "draw"
             },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 4,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "Ink|GlimmerRed|Fire|",
-              "entityId": 36,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 10,
-              "cardEntityId": 36
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "MonsterIsland",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "MonsterIsland"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Monster",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "||Common|",
-              "entityId": 53,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Monster",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 54,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 10,
-                          "baseCost": 6,
-                          "entityId": 54,
-                          "basePower": 10,
-                          "cardDefId": "Monster",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 10,
-                          "baseCost": 6,
-                          "entityId": 53,
-                          "basePower": 10,
-                          "cardDefId": "Monster",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Monster",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "MonsterIsland",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "Monster",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "MonsterIsland",
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Shuri",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 18,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Shuri",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "6": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 3,
-                  "baseCost": 4,
-                  "basePower": 3,
-                  "cardDefId": "Shuri"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "play",
-              "entityId": 28,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 7,
-                          "baseCost": 4,
-                          "entityId": 28,
-                          "basePower": 7,
-                          "cardDefId": "SymbioteSpiderMan",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Shuri"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "type": "play",
-              "entityId": 34,
-              "location": "MonsterIsland",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 34,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "cost": 6,
-              "type": "reveal",
-              "power": 14,
-              "oppKit": "|SparkleGold|Champion|",
-              "entityId": 34,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            14
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "basePower": [
-                            0,
-                            14
-                          ],
-                          "cardDefId": [
-                            0,
-                            "HulkChampion"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "MonsterIsland",
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 24
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 28,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 26,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "6": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 0,
-                  "baseCost": 6,
-                  "basePower": 0,
-                  "cardDefId": "ArnimZola"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "play",
-              "entityId": 24,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 5,
-                          "baseCost": 5,
-                          "entityId": 24,
-                          "basePower": 5,
-                          "cardDefId": "BlackPanther",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "FastballSpecial"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    10
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    10
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Odin"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Shuri"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ArnimZola"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardStaged"
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "play",
-              "entityId": 35,
-              "location": "RocketPad",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "play",
-              "entityId": 37,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 35,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 37,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "oppKit": "|SparkleBlue|Fire|",
-              "entityId": 35,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Surtur"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "oppKit": "||FireRed|ShadowlandsDaredevil_01",
-              "entityId": 37,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ShadowlandsDaredevil"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Demon",
-              "cost": 1,
-              "type": "reveal",
-              "power": 6,
-              "oppKit": "||FireRed|",
-              "entityId": 55,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "Demon",
-              "cost": 1,
-              "type": "reveal",
-              "power": 6,
-              "oppKit": "||FireRed|",
-              "entityId": 56,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "Demon",
-              "cost": 1,
-              "type": "reveal",
-              "power": 6,
-              "oppKit": "||FireRed|",
-              "entityId": 57,
-              "drawReveal": true
-            }
-          ]
-        },
-        {
-          "r": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
             {
               "who": "player",
               "card": "BlackPanther",
               "cost": 5,
               "type": "reveal",
               "power": 5,
-              "entityId": 24,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "playerPower": 12,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 5,
-              "cardEntityId": 24
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            10
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "playerPower": 17,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardResolved"
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Ability",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "activated",
-              "isActivated": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 17,
-              "oldPower": 7,
-              "cardEntityId": 28
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            17
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "from": "HellsKitchen",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Override",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "abilityOverride",
-              "overrideAbility": "BlackPanther"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "overrideAbility": [
-                            0,
-                            "BlackPanther"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 34,
-              "oldPower": 17,
-              "cardEntityId": 28
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            34
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "playerPower": 34,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ThaddeusRoss",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "cardEntityId": 31
-            },
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 5,
-              "cardEntityId": 35
-            },
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "cardEntityId": 37
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ],
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 13
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Knull",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 29,
+              "entityId": 36,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Knull",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "BlackPanther",
               "type": "draw"
             }
           ]
@@ -2599,26 +777,26 @@
             {
               "player": [
                 0,
-                7
+                6
               ],
               "opponent": [
                 0,
-                6
+                5
               ]
             }
           ],
           "h": [
             2,
-            7,
+            6,
             {
-              "6": [
+              "5": [
                 0,
                 {
-                  "cost": 6,
-                  "power": 0,
-                  "baseCost": 6,
-                  "basePower": 0,
-                  "cardDefId": "Knull"
+                  "cost": 5,
+                  "power": 5,
+                  "baseCost": 5,
+                  "basePower": 5,
+                  "cardDefId": "BlackPanther"
                 }
               ]
             }
@@ -2628,11 +806,11 @@
             {
               "player": [
                 0,
-                4
+                7
               ],
               "opponent": [
                 0,
-                5
+                7
               ]
             }
           ]
@@ -2641,70 +819,7 @@
       [
         {
           "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "cardEntityId": 37
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
+          "turn": 2,
           "label": "Turn Winner",
           "events": [
             {
@@ -2719,2314 +834,13 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 2,
           "label": "Initiative",
           "events": [
             {
               "who": "opponent",
               "type": "initiative"
             }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "play",
-              "entityId": 26,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 0,
-                          "baseCost": 6,
-                          "entityId": 26,
-                          "basePower": 0,
-                          "cardDefId": "ArnimZola",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "Knull"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "play",
-              "entityId": 36,
-              "location": "MonsterIsland",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 13,
-                          "baseCost": 6,
-                          "entityId": 36,
-                          "basePower": 10,
-                          "cardDefId": "RedHulk",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 13,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "MonsterIsland",
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 37
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 6,
-              "cardEntityId": 35
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 26,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "destroyed",
-              "fromLocation": "HellsKitchen"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "entityId": [
-                            0,
-                            26
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ArnimZola"
-                          ]
-                        },
-                        [
-                          "overrideAbility"
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 4,
-                      "power": 34,
-                      "cardDefId": "SymbioteSpiderMan"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "HellsKitchen",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 34,
-              "entityId": 59,
-              "drawReveal": false,
-              "overrideAbility": "BlackPanther"
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 34,
-              "entityId": 60,
-              "drawReveal": false,
-              "overrideAbility": "BlackPanther"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 34,
-                          "baseCost": 4,
-                          "entityId": 59,
-                          "basePower": 7,
-                          "cardDefId": "SymbioteSpiderMan",
-                          "arrivalSeq": 0,
-                          "overrideAbility": "BlackPanther"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 34,
-                          "baseCost": 4,
-                          "entityId": 60,
-                          "basePower": 7,
-                          "cardDefId": "SymbioteSpiderMan",
-                          "arrivalSeq": 1,
-                          "overrideAbility": "BlackPanther"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 34,
-              "locationIndex": 0,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 68,
-              "oldPower": 34,
-              "cardEntityId": 59
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            68
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 68,
-              "locationIndex": 0,
-              "opponentPower": 17
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "playerPower": 44,
-              "locationIndex": 2,
-              "opponentPower": 37
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 68,
-              "oldPower": 34,
-              "cardEntityId": 60
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            68
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "playerPower": 78,
-              "locationIndex": 2,
-              "opponentPower": 37
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 20,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": "Demon",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "6": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 2,
-                  "baseCost": 3,
-                  "basePower": 2,
-                  "cardDefId": "Magik"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 6,
-              "cardEntityId": 37
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 68,
-              "locationIndex": 0,
-              "opponentPower": 19
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "play",
-              "entityId": 25,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 10,
-                          "baseCost": 6,
-                          "entityId": 25,
-                          "basePower": 10,
-                          "cardDefId": "Odin",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Shuri"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Knull"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Magik"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Hulkling",
-              "type": "play",
-              "entityId": 38,
-              "location": "MonsterIsland",
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Skaar",
-              "type": "play",
-              "entityId": 32,
-              "location": "RocketPad",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "type": "play",
-              "entityId": 40,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 32,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 40,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 38,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 25,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "playerPower": 10,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "destroyed",
-              "fromLocation": "HellsKitchen"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "player": [
-                2,
-                2,
-                {
-                  "0": [
-                    1,
-                    {
-                      "cost": [
-                        0,
-                        6
-                      ],
-                      "power": [
-                        0,
-                        10
-                      ],
-                      "cardDefId": [
-                        0,
-                        "Odin"
-                      ]
-                    }
-                  ],
-                  "1": [
-                    0,
-                    {
-                      "cost": 4,
-                      "power": 34,
-                      "cardDefId": "SymbioteSpiderMan"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "HellsKitchen",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 62,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 63,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 10,
-                          "baseCost": 6,
-                          "entityId": 62,
-                          "basePower": 10,
-                          "cardDefId": "Odin",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 10,
-                          "baseCost": 6,
-                          "entityId": 63,
-                          "basePower": 10,
-                          "cardDefId": "Odin",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 78,
-              "locationIndex": 0,
-              "opponentPower": 19
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 136,
-              "oldPower": 68,
-              "cardEntityId": 59
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            136
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 19
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "playerPower": 88,
-              "locationIndex": 2,
-              "opponentPower": 37
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 136,
-              "oldPower": 68,
-              "cardEntityId": 60
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            136
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "playerPower": 156,
-              "locationIndex": 2,
-              "opponentPower": 37
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Hulkling",
-              "cost": 6,
-              "type": "reveal",
-              "power": 12,
-              "oppKit": "||NeonGreen|Hulkling_06",
-              "entityId": 38,
-              "drawReveal": false,
-              "overrideAbility": "Gorr"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            12
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "basePower": [
-                            0,
-                            12
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Hulkling"
-                          ],
-                          "overrideAbility": [
-                            0,
-                            "Gorr"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Hulkling",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Hulkling",
-              "type": "power",
-              "newPower": 24,
-              "oldPower": 12,
-              "cardEntityId": 38
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            24
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "playerPower": 156,
-              "locationIndex": 2,
-              "opponentPower": 61
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 8,
-              "cardEntityId": 35
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            10
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skaar",
-              "cost": 7,
-              "type": "reveal",
-              "power": 12,
-              "oppKit": "||NeonGreen|Skaar_08",
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            7
-                          ],
-                          "power": [
-                            0,
-                            12
-                          ],
-                          "baseCost": [
-                            0,
-                            7
-                          ],
-                          "basePower": [
-                            0,
-                            12
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Skaar"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Skaar",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 33
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 12,
-              "oldPower": 10,
-              "cardEntityId": 35
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            12
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 35
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "|Bananas|NeonGreen|SheHulk_19",
-              "entityId": 40,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            10
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "basePower": [
-                            0,
-                            10
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SheHulk"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "HellsKitchen",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 14,
-              "oldPower": 12,
-              "cardEntityId": 35
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            14
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 37
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 8,
-              "cardEntityId": 37
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            10
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 39
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 16,
-              "oldPower": 13,
-              "cardEntityId": 36
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    4,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            16
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "playerPower": 156,
-              "locationIndex": 2,
-              "opponentPower": 64
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -5068,10 +882,16 @@
           "turn": 1,
           "plays": [
             {
-              "card": "ThaddeusRoss",
-              "isPlayer": false,
-              "location": "RocketPad",
+              "card": "Skill01RocketRaccoonChampion",
+              "isPlayer": true,
+              "location": "CaveOfTheDragon",
               "locationIndex": 0
+            },
+            {
+              "card": "BlackKnight",
+              "isPlayer": false,
+              "location": "Superflow",
+              "locationIndex": 1
             }
           ],
           "energy": {
@@ -5080,43 +900,43 @@
           },
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2,
               "_changeIdx": 78
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2,
               "_changeIdx": 80
             },
             {
-              "to": "RocketPad",
+              "to": "CaveOfTheDragon",
               "from": "RevealOn1",
               "type": "location",
               "_changeIdx": 83,
               "locationIndex": 0
             },
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 86
+            },
+            {
               "who": "player",
-              "card": "Odin",
-              "cost": 6,
+              "card": "AbsorbingMan",
+              "cost": 4,
               "type": "reveal",
-              "power": 10,
-              "entityId": 25,
-              "_changeIdx": 86,
+              "power": 5,
+              "entityId": 31,
+              "_changeIdx": 89,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Odin",
-              "type": "draw",
-              "_changeIdx": 87
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "AbsorbingMan",
               "type": "draw",
               "_changeIdx": 90
             },
@@ -5124,71 +944,112 @@
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 93
+              "_changeIdx": 94
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 94
+              "_changeIdx": 95
             },
             {
-              "turn": 1,
-              "type": "endTurn",
-              "_changeIdx": 97
-            },
-            {
-              "who": "opponent",
-              "card": "ThaddeusRoss",
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
               "type": "play",
-              "entityId": 31,
-              "location": "RocketPad",
+              "entityId": 47,
+              "location": "CaveOfTheDragon",
               "_changeIdx": 98,
               "locationIndex": 0
             },
             {
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "type": "cardStaged",
+              "_changeIdx": 99
+            },
+            {
+              "turn": 1,
+              "type": "endTurn",
+              "_changeIdx": 103
+            },
+            {
               "who": "opponent",
-              "card": "ThaddeusRoss",
-              "cost": 2,
+              "card": "BlackKnight",
+              "type": "play",
+              "entityId": 21,
+              "location": "RevealOn2",
+              "_changeIdx": 104,
+              "locationIndex": 1
+            },
+            {
+              "who": "opponent",
+              "card": "BlackKnight",
+              "cost": 1,
               "type": "reveal",
               "power": 2,
-              "oppKit": "||Rare|",
-              "entityId": 31,
-              "_changeIdx": 101,
+              "oppKit": "PrismBlack|KirbyBlack|MetalChains|",
+              "entityId": 21,
+              "_changeIdx": 108,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "ThaddeusRoss",
+              "card": "BlackKnight",
               "type": "cardRevealed",
-              "_changeIdx": 102
+              "_changeIdx": 109
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 104,
+              "location": "RevealOn2",
+              "_changeIdx": 111,
               "playerPower": 0,
-              "locationIndex": 0,
+              "locationIndex": 1,
               "opponentPower": 2
             },
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 109
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "cost": 2,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 47,
+              "_changeIdx": 114,
+              "drawReveal": false
+            },
+            {
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "type": "cardResolved",
+              "_changeIdx": 119
+            },
+            {
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "type": "removed",
+              "_changeIdx": 121
+            },
+            {
+              "who": "player",
+              "card": "Skill01RocketRaccoonChampion",
+              "cost": 2,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 52,
+              "_changeIdx": 125,
+              "drawReveal": true
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 2
-            },
-            {
               "winner": null,
               "playerPower": 0,
               "opponentPower": 0
+            },
+            {
+              "winner": "opponent",
+              "playerPower": 0,
+              "opponentPower": 2
             },
             {
               "winner": null,
@@ -5197,596 +1058,48 @@
             }
           ]
         },
-        11
+        16
       ],
       [
         {
           "turn": 2,
-          "plays": [
-            {
-              "card": "Skill01HulkChampion",
-              "isPlayer": false,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            }
-          ],
+          "plays": [],
           "energy": {
-            "player": 3,
+            "player": 4,
             "opponent": 3
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 115
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 117
+              "_changeIdx": 132
             },
             {
-              "to": "HellsKitchen",
+              "who": "player",
+              "type": "energy",
+              "energy": 4,
+              "_changeIdx": 134
+            },
+            {
+              "to": "Superflow",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 120,
+              "_changeIdx": 137,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 126,
+              "_changeIdx": 146,
               "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 28,
-              "_changeIdx": 129,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "draw",
-              "_changeIdx": 130
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 133
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 136
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 137
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 141
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "play",
-              "entityId": 48,
-              "location": "HellsKitchen",
-              "_changeIdx": 142,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "cost": 3,
-              "type": "reveal",
-              "power": 0,
-              "oppKit": "|SparkleGold|Champion|",
-              "entityId": 48,
-              "_changeIdx": 145,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "cardRevealed",
-              "_changeIdx": 146
-            },
-            {
-              "who": "opponent",
-              "card": "Skill01HulkChampion",
-              "type": "removed",
-              "_changeIdx": 151
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 155
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 4,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "Ink|GlimmerRed|Fire|",
-              "entityId": 36,
-              "_changeIdx": 160,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 10,
-              "_changeIdx": 161,
-              "cardEntityId": 36
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        22
-      ],
-      [
-        {
-          "turn": 3,
-          "plays": [
-            {
-              "card": "SymbioteSpiderMan",
-              "isPlayer": true,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            },
-            {
-              "card": "HulkChampion",
-              "isPlayer": false,
-              "location": "MonsterIsland",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 167
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 169
-            },
-            {
-              "to": "MonsterIsland",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 172,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Monster",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "||Common|",
-              "entityId": 53,
-              "_changeIdx": 177,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Monster",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 54,
-              "_changeIdx": 180,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Monster",
-              "type": "cardRevealed",
-              "_changeIdx": 182
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "MonsterIsland",
-              "_changeIdx": 183,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 10
-            },
-            {
-              "who": "player",
-              "card": "Monster",
-              "type": "cardRevealed",
-              "_changeIdx": 186
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "MonsterIsland",
-              "_changeIdx": 187,
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 10
-            },
-            {
-              "who": "player",
-              "card": "Shuri",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 18,
-              "_changeIdx": 192,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Shuri",
-              "type": "draw",
-              "_changeIdx": 193
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 196
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 199
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 200
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "play",
-              "entityId": 28,
-              "location": "HellsKitchen",
-              "_changeIdx": 203,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardStaged",
-              "_changeIdx": 204
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 210
-            },
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "type": "play",
-              "entityId": 34,
-              "location": "MonsterIsland",
-              "_changeIdx": 211,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "cost": 6,
-              "type": "reveal",
-              "power": 14,
-              "oppKit": "|SparkleGold|Champion|",
-              "entityId": 34,
-              "_changeIdx": 215,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "HulkChampion",
-              "type": "cardRevealed",
-              "_changeIdx": 216
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "MonsterIsland",
-              "_changeIdx": 218,
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 24
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 28,
-              "_changeIdx": 221,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "_changeIdx": 223,
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardResolved",
-              "_changeIdx": 226
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "player",
-              "playerPower": 7,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 10,
-              "opponentPower": 24
-            }
-          ]
-        },
-        38
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "BlackPanther",
-              "isPlayer": true,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            },
-            {
-              "card": "Surtur",
-              "isPlayer": false,
-              "location": "RocketPad",
-              "locationIndex": 0
-            },
-            {
-              "card": "ShadowlandsDaredevil",
-              "isPlayer": false,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 230
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 232
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 26,
-              "_changeIdx": 235,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "draw",
-              "_changeIdx": 236
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 239
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 242
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 243
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "play",
-              "entityId": 24,
-              "location": "HellsKitchen",
-              "_changeIdx": 246,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardStaged",
-              "_changeIdx": 247
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardStaged",
-              "_changeIdx": 251
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 257
-            },
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "play",
-              "entityId": 35,
-              "location": "RocketPad",
-              "_changeIdx": 258,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "play",
-              "entityId": 37,
-              "location": "RocketPad",
-              "_changeIdx": 261,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "oppKit": "|SparkleBlue|Fire|",
-              "entityId": 35,
-              "_changeIdx": 266,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "cardRevealed",
-              "_changeIdx": 267
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 270,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "oppKit": "||FireRed|ShadowlandsDaredevil_01",
-              "entityId": 37,
-              "_changeIdx": 273,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "cardRevealed",
-              "_changeIdx": 274
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 276,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 10
-            },
-            {
-              "who": "opponent",
-              "card": "Demon",
-              "cost": 1,
-              "type": "reveal",
-              "power": 6,
-              "oppKit": "||FireRed|",
-              "entityId": 55,
-              "_changeIdx": 281,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "Demon",
-              "cost": 1,
-              "type": "reveal",
-              "power": 6,
-              "oppKit": "||FireRed|",
-              "entityId": 56,
-              "_changeIdx": 284,
-              "drawReveal": true
-            },
-            {
-              "who": "opponent",
-              "card": "Demon",
-              "cost": 1,
-              "type": "reveal",
-              "power": 6,
-              "oppKit": "||FireRed|",
-              "entityId": 57,
-              "_changeIdx": 287,
-              "drawReveal": true
+              "_changeIdx": 149
             },
             {
               "who": "player",
@@ -5794,437 +1107,34 @@
               "cost": 5,
               "type": "reveal",
               "power": 5,
-              "entityId": 24,
-              "_changeIdx": 292,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "_changeIdx": 294,
-              "playerPower": 12,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 5,
-              "_changeIdx": 298,
-              "cardEntityId": 24
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "_changeIdx": 302,
-              "playerPower": 17,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardResolved",
-              "_changeIdx": 305
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardResolved",
-              "_changeIdx": 307
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "activated",
-              "_changeIdx": 308,
-              "isActivated": true
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 17,
-              "oldPower": 7,
-              "_changeIdx": 311,
-              "cardEntityId": 28
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "from": "HellsKitchen",
-              "type": "setaside",
-              "_changeIdx": 316
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "abilityOverride",
-              "_changeIdx": 321,
-              "overrideAbility": "BlackPanther"
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 34,
-              "oldPower": 17,
-              "_changeIdx": 325,
-              "cardEntityId": 28
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "_changeIdx": 329,
-              "playerPower": 34,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "ThaddeusRoss",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 335,
-              "cardEntityId": 31
-            },
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 5,
-              "_changeIdx": 338,
-              "cardEntityId": 35
-            },
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "_changeIdx": 341,
-              "cardEntityId": 37
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 345,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 13
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 13
-            },
-            {
-              "winner": "player",
-              "playerPower": 34,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        70
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "ArnimZola",
-              "isPlayer": true,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            },
-            {
-              "card": "RedHulk",
-              "isPlayer": false,
-              "location": "MonsterIsland",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 350
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 352
-            },
-            {
-              "who": "player",
-              "card": "Knull",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 29,
-              "_changeIdx": 355,
+              "entityId": 36,
+              "_changeIdx": 152,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Knull",
+              "card": "BlackPanther",
               "type": "draw",
-              "_changeIdx": 356
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 360
-            },
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "_changeIdx": 364,
-              "cardEntityId": 37
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 368,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 15
+              "_changeIdx": 153
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "opponent",
-              "_changeIdx": 371
+              "_changeIdx": 156
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 372
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "play",
-              "entityId": 26,
-              "location": "HellsKitchen",
-              "_changeIdx": 375,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "cardStaged",
-              "_changeIdx": 376
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 383
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "play",
-              "entityId": 36,
-              "location": "MonsterIsland",
-              "_changeIdx": 384,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 13,
-              "entityId": 36,
-              "_changeIdx": 389,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "MonsterIsland",
-              "_changeIdx": 391,
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 37
-            },
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 6,
-              "_changeIdx": 395,
-              "cardEntityId": 35
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 399,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 26,
-              "_changeIdx": 402,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "destroyed",
-              "_changeIdx": 407,
-              "fromLocation": "HellsKitchen"
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "HellsKitchen",
-              "_changeIdx": 411,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 34,
-              "entityId": 59,
-              "_changeIdx": 415,
-              "drawReveal": false,
-              "overrideAbility": "BlackPanther"
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 34,
-              "entityId": 60,
-              "_changeIdx": 418,
-              "drawReveal": false,
-              "overrideAbility": "BlackPanther"
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardRevealed",
-              "_changeIdx": 420
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 423,
-              "playerPower": 34,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 68,
-              "oldPower": 34,
-              "_changeIdx": 427,
-              "cardEntityId": 59
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 431,
-              "playerPower": 68,
-              "locationIndex": 0,
-              "opponentPower": 17
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "cardRevealed",
-              "_changeIdx": 434
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "_changeIdx": 435,
-              "playerPower": 44,
-              "locationIndex": 2,
-              "opponentPower": 37
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 68,
-              "oldPower": 34,
-              "_changeIdx": 439,
-              "cardEntityId": 60
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "_changeIdx": 443,
-              "playerPower": 78,
-              "locationIndex": 2,
-              "opponentPower": 37
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "cardResolved",
-              "_changeIdx": 447
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 449
+              "_changeIdx": 157
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "player",
-              "playerPower": 68,
-              "opponentPower": 17
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -6232,582 +1142,69 @@
               "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 78,
-              "opponentPower": 37
-            }
-          ]
-        },
-        96
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "Odin",
-              "isPlayer": true,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            },
-            {
-              "card": "Hulkling",
-              "isPlayer": false,
-              "location": "MonsterIsland",
-              "locationIndex": 2
-            },
-            {
-              "card": "Skaar",
-              "isPlayer": false,
-              "location": "RocketPad",
-              "locationIndex": 0
-            },
-            {
-              "card": "SheHulk",
-              "isPlayer": false,
-              "location": "HellsKitchen",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 7,
-            "opponent": 7
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 452
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 454
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 20,
-              "_changeIdx": 456,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "draw",
-              "_changeIdx": 457
-            },
-            {
-              "who": "opponent",
-              "card": "Demon",
-              "type": "draw",
-              "_changeIdx": 460
-            },
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 6,
-              "_changeIdx": 464,
-              "cardEntityId": 37
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 468,
-              "playerPower": 68,
-              "locationIndex": 0,
-              "opponentPower": 19
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 471
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 472
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "play",
-              "entityId": 25,
-              "location": "HellsKitchen",
-              "_changeIdx": 475,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "cardStaged",
-              "_changeIdx": 476
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 484
-            },
-            {
-              "who": "opponent",
-              "card": "Hulkling",
-              "type": "play",
-              "entityId": 38,
-              "location": "MonsterIsland",
-              "_changeIdx": 485,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Skaar",
-              "type": "play",
-              "entityId": 32,
-              "location": "RocketPad",
-              "_changeIdx": 488,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "type": "play",
-              "entityId": 40,
-              "location": "HellsKitchen",
-              "_changeIdx": 491,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 25,
-              "_changeIdx": 495,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "HellsKitchen",
-              "_changeIdx": 497,
-              "playerPower": 10,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "cardResolved",
-              "_changeIdx": 504
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "destroyed",
-              "_changeIdx": 506,
-              "fromLocation": "HellsKitchen"
-            },
-            {
-              "type": "score",
               "winner": null,
-              "location": "HellsKitchen",
-              "_changeIdx": 509,
               "playerPower": 0,
-              "locationIndex": 1,
               "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 62,
-              "_changeIdx": 513,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "entityId": 63,
-              "_changeIdx": 516,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "cardRevealed",
-              "_changeIdx": 518
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 519,
-              "playerPower": 78,
-              "locationIndex": 0,
-              "opponentPower": 19
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 136,
-              "oldPower": 68,
-              "_changeIdx": 525,
-              "cardEntityId": 59
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 529,
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 19
-            },
-            {
-              "who": "player",
-              "card": "Odin",
-              "type": "cardRevealed",
-              "_changeIdx": 533
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "_changeIdx": 534,
-              "playerPower": 88,
-              "locationIndex": 2,
-              "opponentPower": 37
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "power",
-              "newPower": 136,
-              "oldPower": 68,
-              "_changeIdx": 540,
-              "cardEntityId": 60
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "_changeIdx": 544,
-              "playerPower": 156,
-              "locationIndex": 2,
-              "opponentPower": 37
-            },
-            {
-              "who": "opponent",
-              "card": "Hulkling",
-              "cost": 6,
-              "type": "reveal",
-              "power": 12,
-              "oppKit": "||NeonGreen|Hulkling_06",
-              "entityId": 38,
-              "_changeIdx": 550,
-              "drawReveal": false,
-              "overrideAbility": "Gorr"
-            },
-            {
-              "who": "opponent",
-              "card": "Hulkling",
-              "type": "cardRevealed",
-              "_changeIdx": 551
-            },
-            {
-              "who": "opponent",
-              "card": "Hulkling",
-              "type": "power",
-              "newPower": 24,
-              "oldPower": 12,
-              "_changeIdx": 554,
-              "cardEntityId": 38
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "_changeIdx": 557,
-              "playerPower": 156,
-              "locationIndex": 2,
-              "opponentPower": 61
-            },
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 8,
-              "_changeIdx": 561,
-              "cardEntityId": 35
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 565,
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 21
-            },
-            {
-              "who": "opponent",
-              "card": "Skaar",
-              "cost": 7,
-              "type": "reveal",
-              "power": 12,
-              "oppKit": "||NeonGreen|Skaar_08",
-              "entityId": 32,
-              "_changeIdx": 568,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Skaar",
-              "type": "cardRevealed",
-              "_changeIdx": 569
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 572,
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 33
-            },
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 12,
-              "oldPower": 10,
-              "_changeIdx": 576,
-              "cardEntityId": 35
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 580,
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 35
-            },
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "|Bananas|NeonGreen|SheHulk_19",
-              "entityId": 40,
-              "_changeIdx": 583,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "SheHulk",
-              "type": "cardRevealed",
-              "_changeIdx": 584
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "HellsKitchen",
-              "_changeIdx": 587,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 10
-            },
-            {
-              "who": "opponent",
-              "card": "Surtur",
-              "type": "power",
-              "newPower": 14,
-              "oldPower": 12,
-              "_changeIdx": 591,
-              "cardEntityId": 35
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 595,
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 37
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 600
-            },
-            {
-              "who": "opponent",
-              "card": "ShadowlandsDaredevil",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 8,
-              "_changeIdx": 604,
-              "cardEntityId": 37
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 608,
-              "playerPower": 146,
-              "locationIndex": 0,
-              "opponentPower": 39
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 16,
-              "oldPower": 13,
-              "_changeIdx": 614,
-              "cardEntityId": 36
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MonsterIsland",
-              "_changeIdx": 618,
-              "playerPower": 156,
-              "locationIndex": 2,
-              "opponentPower": 64
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 624
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 146,
-              "opponentPower": 39
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 10
-            },
-            {
-              "winner": "player",
-              "playerPower": 156,
-              "opponentPower": 64
             }
           ]
         },
-        143
+        19
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 21011,
-  "opp_sp": 5685,
+  "opp_cl": 27173,
+  "opp_sp": 6027,
   "bracket": null,
-  "match_id": "09ec44d1-fafd-4c28-b69c-847e235e101c",
-  "opp_name": "Starkiller ",
-  "opp_team": "ChampionArena_Oct26_Hulk",
+  "match_id": "4529a231-1ee2-41fe-b8bb-83ba7bdd115f",
+  "opp_name": "Freeman",
+  "opp_team": "ChampionArena_Oct26_GhostRider",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "RocketPad",
-    "HellsKitchen",
-    "MonsterIsland"
-  ],
+  "locations": [],
   "player_cl": 12011,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Skill01HulkChampion"
+    "CardDefId": "Skill01GhostRiderChampion"
   },
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": "Grand Arena",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
+  "current_turn": 3,
   "kudzu_spread": null,
-  "match_result": "win",
-  "match_status": "complete",
-  "opp_champion": "HulkChampion",
-  "opp_clan_tag": "ESP",
+  "match_result": null,
+  "match_status": "in_progress",
+  "opp_champion": "GhostRiderChampion",
+  "opp_clan_tag": null,
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Skill01CarnageChampion"
+    "CardDefId": "Skill01RocketRaccoonChampion"
   },
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "ThaddeusRoss",
-    "RedHulk",
-    "HulkChampion",
-    "Surtur",
-    "ShadowlandsDaredevil",
-    "Hulkling",
-    "Skaar",
-    "SheHulk"
+    "BlackKnight"
   ],
-  "last_updated_at": "2026-10-21T14:14:07.031+00:00",
-  "player_champion": "CarnageChampion",
-  "opp_played_cards": [
-    "RedHulk"
-  ],
+  "last_updated_at": "2026-10-21T14:18:56.029+00:00",
+  "player_champion": "RocketRaccoonChampion",
+  "opp_played_cards": [],
   "player_deck_cards": [
-    "CarnageChampion",
-    "FastballSpecial",
-    "ThePhoenixForce",
-    "Shuri",
-    "BlackPanther",
-    "Odin",
-    "Wong",
-    "Magik",
-    "SymbioteSpiderMan",
-    "Venom",
+    "RocketRaccoonChampion",
     "ArnimZola",
-    "Knull"
+    "Knull",
+    "AbsorbingMan",
+    "BlackPanther"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "ThaddeusRoss",
-    "Skill01HulkChampion",
-    "RedHulk",
-    "Monster",
-    "HulkChampion",
-    "Surtur",
-    "ShadowlandsDaredevil",
-    "Demon",
-    "Hulkling",
-    "Skaar",
-    "SheHulk"
+    "BlackKnight"
   ],
   "conquest_round_index": null
 }
