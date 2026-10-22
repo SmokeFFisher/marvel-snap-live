@@ -45,13 +45,6 @@
           "h": [
             {
               "cost": 3,
-              "power": 8,
-              "baseCost": 3,
-              "basePower": 8,
-              "cardDefId": "Gladiator"
-            },
-            {
-              "cost": 3,
               "power": 1,
               "baseCost": 3,
               "basePower": 1,
@@ -62,7 +55,14 @@
               "power": 8,
               "baseCost": 5,
               "basePower": 8,
-              "cardDefId": "SpiderWoman"
+              "cardDefId": "BlackBolt"
+            },
+            {
+              "cost": 6,
+              "power": 8,
+              "baseCost": 6,
+              "basePower": 8,
+              "cardDefId": "Onslaught"
             }
           ],
           "n": {
@@ -86,12 +86,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             }
@@ -106,7 +106,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "NovaRoma",
+              "to": "Xandar",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +123,7 @@
                 {
                   "location": [
                     0,
-                    "NovaRoma"
+                    "Xandar"
                   ],
                   "revealed": [
                     0,
@@ -142,20 +142,6 @@
           "label": "Draw",
           "events": [
             {
-              "who": "player",
-              "card": "Ultron",
-              "cost": 6,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 29,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Ultron",
-              "type": "draw"
-            },
-            {
               "who": "opponent",
               "card": null,
               "type": "draw"
@@ -166,17 +152,12 @@
               "cost": 3,
               "type": "reveal",
               "power": 6,
-              "entityId": 26,
+              "entityId": 40,
               "drawReveal": true
             },
             {
               "who": "player",
               "card": "Wave",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
               "type": "draw"
             }
           ]
@@ -187,29 +168,19 @@
             {
               "player": [
                 0,
-                5
+                4
               ],
               "opponent": [
                 0,
-                5
+                4
               ]
             }
           ],
           "h": [
             2,
-            5,
+            4,
             {
               "3": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 8,
-                  "baseCost": 6,
-                  "basePower": 8,
-                  "cardDefId": "Ultron"
-                }
-              ],
-              "4": [
                 0,
                 {
                   "cost": 3,
@@ -226,11 +197,11 @@
             {
               "player": [
                 0,
-                7
+                8
               ],
               "opponent": [
                 0,
-                7
+                8
               ]
             }
           ]
@@ -287,10 +258,10 @@
           "events": [
             {
               "who": "opponent",
-              "card": "KittyPryde",
+              "card": "NicoMinoru",
               "type": "play",
-              "entityId": 30,
-              "location": "NovaRoma",
+              "entityId": 25,
+              "location": "Xandar",
               "locationIndex": 0
             }
           ]
@@ -313,7 +284,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 30,
+                          "entityId": 25,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -330,7 +301,7 @@
             {
               "opponent": [
                 0,
-                4
+                3
               ]
             }
           ]
@@ -344,12 +315,13 @@
           "events": [
             {
               "who": "opponent",
-              "card": "KittyPryde",
+              "card": "NicoMinoru",
               "cost": 1,
               "type": "reveal",
-              "power": 1,
-              "entityId": 30,
-              "drawReveal": false
+              "power": 2,
+              "entityId": 25,
+              "drawReveal": false,
+              "overrideAbility": "Spell02NicoMinoru"
             }
           ]
         },
@@ -374,7 +346,7 @@
                           ],
                           "power": [
                             0,
-                            1
+                            2
                           ],
                           "baseCost": [
                             0,
@@ -382,11 +354,15 @@
                           ],
                           "basePower": [
                             0,
-                            1
+                            2
                           ],
                           "cardDefId": [
                             0,
-                            "KittyPryde"
+                            "NicoMinoru"
+                          ],
+                          "overrideAbility": [
+                            0,
+                            "Spell02NicoMinoru"
                           ]
                         }
                       ]
@@ -406,7 +382,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "KittyPryde",
+              "card": "NicoMinoru",
               "type": "cardRevealed"
             }
           ]
@@ -417,15 +393,60 @@
         {
           "_v": 2,
           "turn": 1,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "NicoMinoru",
+              "type": "power",
+              "newPower": 3,
+              "oldPower": 2,
+              "cardEntityId": 25
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "opponent",
-              "location": "NovaRoma",
+              "location": "Xandar",
               "playerPower": 0,
               "locationIndex": 0,
-              "opponentPower": 1
+              "opponentPower": 3
             }
           ]
         },
@@ -438,12 +459,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             }
@@ -458,7 +479,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Titan",
+              "to": "TheNexus",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -481,7 +502,7 @@
                 {
                   "location": [
                     0,
-                    "Titan"
+                    "TheNexus"
                   ],
                   "revealed": [
                     0,
@@ -503,136 +524,8 @@
                 }
               ]
             }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ]
-                }
-              ]
-            }
           ]
         }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Bounce",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "NovaRoma",
-              "type": "bounce",
-              "entityId": 30
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "NovaRoma",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 30
-            }
-          ]
-        },
-        {}
       ],
       [
         {
@@ -641,22 +534,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Onslaught",
-              "cost": 6,
+              "card": "Sera",
+              "cost": 5,
               "type": "reveal",
-              "power": 8,
-              "entityId": 20,
+              "power": 5,
+              "entityId": 35,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Onslaught",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "Sera",
               "type": "draw"
             }
           ]
@@ -667,26 +560,26 @@
             {
               "player": [
                 0,
-                6
+                5
               ],
               "opponent": [
                 0,
-                6
+                4
               ]
             }
           ],
           "h": [
             2,
-            6,
+            5,
             {
-              "5": [
+              "4": [
                 0,
                 {
                   "cost": 5,
-                  "power": 8,
-                  "baseCost": 6,
-                  "basePower": 8,
-                  "cardDefId": "Onslaught"
+                  "power": 5,
+                  "baseCost": 5,
+                  "basePower": 5,
+                  "cardDefId": "Sera"
                 }
               ]
             }
@@ -696,11 +589,11 @@
             {
               "player": [
                 0,
-                6
+                7
               ],
               "opponent": [
                 0,
-                6
+                7
               ]
             }
           ]
@@ -713,9 +606,9 @@
           "label": "Turn Winner",
           "events": [
             {
-              "tie": true,
+              "tie": false,
               "type": "turnWinner",
-              "winner": null
+              "winner": "opponent"
             }
           ]
         },
@@ -757,18 +650,10 @@
           "events": [
             {
               "who": "opponent",
-              "card": "NicoMinoru",
+              "card": "Okoye",
               "type": "play",
-              "entityId": 31,
-              "location": "Titan",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 30,
-              "location": "Titan",
+              "entityId": 28,
+              "location": "TheNexus",
               "locationIndex": 1
             }
           ]
@@ -783,7 +668,7 @@
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
                       "0": [
                         0,
@@ -791,22 +676,10 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 31,
+                          "entityId": 28,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
-                        }
-                      ],
-                      "1": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 2,
-                          "baseCost": 1,
-                          "entityId": 30,
-                          "basePower": 1,
-                          "cardDefId": "KittyPryde",
-                          "arrivalSeq": 1
                         }
                       ]
                     }
@@ -820,7 +693,7 @@
             {
               "opponent": [
                 0,
-                4
+                3
               ]
             }
           ]
@@ -834,13 +707,12 @@
           "events": [
             {
               "who": "opponent",
-              "card": "NicoMinoru",
-              "cost": 1,
+              "card": "Okoye",
+              "cost": 2,
               "type": "reveal",
-              "power": 2,
-              "entityId": 31,
-              "drawReveal": false,
-              "overrideAbility": "Spell04NicoMinoru"
+              "power": 3,
+              "entityId": 28,
+              "drawReveal": false
             }
           ]
         },
@@ -854,34 +726,30 @@
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
                       "0": [
                         1,
                         {
                           "cost": [
                             0,
-                            1
+                            2
                           ],
                           "power": [
                             0,
-                            2
+                            3
                           ],
                           "baseCost": [
                             0,
-                            1
+                            2
                           ],
                           "basePower": [
                             0,
-                            2
+                            3
                           ],
                           "cardDefId": [
                             0,
-                            "NicoMinoru"
-                          ],
-                          "overrideAbility": [
-                            0,
-                            "Spell04NicoMinoru"
+                            "Okoye"
                           ]
                         }
                       ]
@@ -901,7 +769,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "NicoMinoru",
+              "card": "Okoye",
               "type": "cardRevealed"
             }
           ]
@@ -917,47 +785,26 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Titan",
+              "location": "Xandar",
               "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 30,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
+              "locationIndex": 0,
+              "opponentPower": 6
+            },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Titan",
+              "location": "TheNexus",
               "playerPower": 0,
               "locationIndex": 1,
-              "opponentPower": 4
+              "opponentPower": 3
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "RevealOn2",
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 3
             }
           ]
         },
@@ -967,15 +814,13 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Power",
+          "label": "Destroyed",
           "events": [
             {
               "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 30
+              "card": "Okoye",
+              "type": "destroyed",
+              "fromLocation": "TheNexus"
             }
           ]
         },
@@ -989,17 +834,26 @@
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    0,
+                    {}
+                  ]
+                }
+              ]
+            }
+          ],
+          "x": [
+            1,
+            {
+              "opponent": [
+                2,
+                1,
+                {
+                  "0": [
+                    0,
                     {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
+                      "cost": 2,
+                      "power": 3,
+                      "cardDefId": "Okoye"
                     }
                   ]
                 }
@@ -1017,10 +871,26 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Titan",
+              "location": "Xandar",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 3
+            },
+            {
+              "type": "score",
+              "winner": null,
+              "location": "TheNexus",
               "playerPower": 0,
               "locationIndex": 1,
-              "opponentPower": 6
+              "opponentPower": 0
+            },
+            {
+              "type": "score",
+              "winner": null,
+              "location": "RevealOn2",
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 0
             }
           ]
         },
@@ -1029,16 +899,55 @@
       [
         {
           "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": "ThanosFracturedFrontier",
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ],
+          "r": [
+            1,
+            {
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
           "turn": 3,
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 3
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 3
             }
@@ -1053,7 +962,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "GrandCentral",
+              "to": "NovaRoma",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -1070,153 +979,13 @@
                 {
                   "location": [
                     0,
-                    "GrandCentral"
+                    "NovaRoma"
                   ]
                 }
               ]
             }
           ]
         }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 4
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "basePower": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Bounce",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "Titan",
-              "type": "bounce",
-              "entityId": 30
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reset",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Titan",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 4,
-              "cardEntityId": 30
-            }
-          ]
-        },
-        {}
       ],
       [
         {
@@ -1225,22 +994,41 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "BlackBolt",
+              "card": "SpiderWoman",
               "cost": 5,
               "type": "reveal",
               "power": 8,
-              "entityId": 28,
+              "entityId": 41,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "BlackBolt",
+              "card": "SpiderWoman",
               "type": "draw"
             },
             {
               "who": "opponent",
               "card": null,
+              "type": "draw"
+            },
+            {
+              "who": "player",
+              "card": "Ultron",
+              "cost": 6,
+              "type": "reveal",
+              "power": 8,
+              "entityId": 37,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Ultron",
               "type": "draw"
             }
           ]
@@ -1255,7 +1043,7 @@
               ],
               "opponent": [
                 0,
-                6
+                7
               ]
             }
           ],
@@ -1263,14 +1051,24 @@
             2,
             7,
             {
-              "6": [
+              "5": [
                 0,
                 {
                   "cost": 5,
                   "power": 8,
                   "baseCost": 5,
                   "basePower": 8,
-                  "cardDefId": "BlackBolt"
+                  "cardDefId": "SpiderWoman"
+                }
+              ],
+              "6": [
+                0,
+                {
+                  "cost": 6,
+                  "power": 8,
+                  "baseCost": 6,
+                  "basePower": 8,
+                  "cardDefId": "Ultron"
                 }
               ]
             }
@@ -1284,7 +1082,7 @@
               ],
               "opponent": [
                 0,
-                5
+                3
               ]
             }
           ]
@@ -1315,11 +1113,6 @@
               "who": "opponent",
               "type": "initiative"
             }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -1361,9 +1154,9 @@
           "turn": 1,
           "plays": [
             {
-              "card": "KittyPryde",
+              "card": "NicoMinoru",
               "isPlayer": false,
-              "location": "NovaRoma",
+              "location": "Xandar",
               "locationIndex": 0
             }
           ],
@@ -1373,61 +1166,23 @@
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 67
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 69
-            },
-            {
-              "to": "NovaRoma",
-              "from": "RevealOn1",
-              "type": "location",
-              "_changeIdx": 72,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Ultron",
-              "cost": 6,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 29,
-              "_changeIdx": 75,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Ultron",
-              "type": "draw",
-              "_changeIdx": 76
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
               "_changeIdx": 79
             },
             {
               "who": "player",
-              "card": "Wave",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 26,
-              "_changeIdx": 85,
-              "drawReveal": true
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 81
             },
             {
-              "who": "player",
-              "card": "Wave",
-              "type": "draw",
-              "_changeIdx": 86
+              "to": "Xandar",
+              "from": "RevealOn1",
+              "type": "location",
+              "_changeIdx": 84,
+              "locationIndex": 0
             },
             {
               "who": "opponent",
@@ -1436,62 +1191,94 @@
               "_changeIdx": 89
             },
             {
+              "who": "player",
+              "card": "Wave",
+              "cost": 3,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 40,
+              "_changeIdx": 94,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Wave",
+              "type": "draw",
+              "_changeIdx": 95
+            },
+            {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 92
+              "_changeIdx": 98
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 93
+              "_changeIdx": 99
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 96
+              "_changeIdx": 102
             },
             {
               "who": "opponent",
-              "card": "KittyPryde",
+              "card": "NicoMinoru",
               "type": "play",
-              "entityId": 30,
-              "location": "NovaRoma",
-              "_changeIdx": 97,
+              "entityId": 25,
+              "location": "Xandar",
+              "_changeIdx": 103,
               "locationIndex": 0
             },
             {
               "who": "opponent",
-              "card": "KittyPryde",
+              "card": "NicoMinoru",
               "cost": 1,
               "type": "reveal",
-              "power": 1,
-              "entityId": 30,
-              "_changeIdx": 100,
-              "drawReveal": false
+              "power": 2,
+              "entityId": 25,
+              "_changeIdx": 106,
+              "drawReveal": false,
+              "overrideAbility": "Spell02NicoMinoru"
             },
             {
               "who": "opponent",
-              "card": "KittyPryde",
+              "card": "NicoMinoru",
               "type": "cardRevealed",
-              "_changeIdx": 101
+              "_changeIdx": 107
+            },
+            {
+              "who": "opponent",
+              "card": "NicoMinoru",
+              "type": "power",
+              "newPower": 3,
+              "oldPower": 2,
+              "_changeIdx": 109,
+              "cardEntityId": 25
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "NovaRoma",
-              "_changeIdx": 103,
+              "location": "Xandar",
+              "_changeIdx": 114,
               "playerPower": 0,
               "locationIndex": 0,
-              "opponentPower": 1
+              "opponentPower": 3
             }
           ],
+          "chambers": {
+            "player": null,
+            "opponent": [
+              "PowerShot"
+            ]
+          },
           "snapEvent": null,
           "locationPower": [
             {
               "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 1
+              "opponentPower": 3
             },
             {
               "winner": null,
@@ -1505,22 +1292,16 @@
             }
           ]
         },
-        8
+        10
       ],
       [
         {
           "turn": 2,
           "plays": [
             {
-              "card": "NicoMinoru",
+              "card": "Okoye",
               "isPlayer": false,
-              "location": "Titan",
-              "locationIndex": 1
-            },
-            {
-              "card": "KittyPryde",
-              "isPlayer": false,
-              "location": "Titan",
+              "location": "TheNexus",
               "locationIndex": 1
             }
           ],
@@ -1530,204 +1311,185 @@
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 109
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 111
+              "_changeIdx": 128
             },
             {
-              "to": "Titan",
+              "who": "player",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 130
+            },
+            {
+              "to": "TheNexus",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 114,
+              "_changeIdx": 133,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 122,
+              "_changeIdx": 140,
               "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 1,
-              "_changeIdx": 127
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "NovaRoma",
-              "type": "bounce",
-              "entityId": 30,
-              "_changeIdx": 128
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 1,
-              "_changeIdx": 131
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "NovaRoma",
-              "_changeIdx": 132,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 136,
-              "cardEntityId": 30
-            },
-            {
-              "who": "player",
-              "card": "Onslaught",
-              "cost": 6,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 20,
-              "_changeIdx": 142,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Onslaught",
-              "type": "draw",
-              "_changeIdx": 143
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 152
+              "_changeIdx": 144
             },
             {
-              "tie": true,
+              "who": "player",
+              "card": "Sera",
+              "cost": 5,
+              "type": "reveal",
+              "power": 5,
+              "entityId": 35,
+              "_changeIdx": 149,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Sera",
+              "type": "draw",
+              "_changeIdx": 150
+            },
+            {
+              "tie": false,
               "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 155
+              "winner": "opponent",
+              "_changeIdx": 153
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 156
+              "_changeIdx": 154
             },
             {
               "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 160
+              "_changeIdx": 159
             },
             {
               "who": "opponent",
-              "card": "NicoMinoru",
+              "card": "Okoye",
               "type": "play",
-              "entityId": 31,
-              "location": "Titan",
-              "_changeIdx": 161,
+              "entityId": 28,
+              "location": "TheNexus",
+              "_changeIdx": 160,
               "locationIndex": 1
             },
             {
               "who": "opponent",
-              "card": "KittyPryde",
-              "type": "play",
-              "entityId": 30,
-              "location": "Titan",
-              "_changeIdx": 164,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "NicoMinoru",
-              "cost": 1,
+              "card": "Okoye",
+              "cost": 2,
               "type": "reveal",
-              "power": 2,
-              "entityId": 31,
-              "_changeIdx": 167,
-              "drawReveal": false,
-              "overrideAbility": "Spell04NicoMinoru"
-            },
-            {
-              "who": "opponent",
-              "card": "NicoMinoru",
-              "type": "cardRevealed",
-              "_changeIdx": 168
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Titan",
-              "_changeIdx": 171,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 30,
-              "_changeIdx": 179,
+              "power": 3,
+              "entityId": 28,
+              "_changeIdx": 163,
               "drawReveal": false
             },
             {
+              "who": "opponent",
+              "card": "Okoye",
+              "type": "cardRevealed",
+              "_changeIdx": 164
+            },
+            {
               "type": "score",
               "winner": "opponent",
-              "location": "Titan",
-              "_changeIdx": 181,
+              "location": "Xandar",
+              "_changeIdx": 167,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 6
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "TheNexus",
+              "_changeIdx": 170,
               "playerPower": 0,
               "locationIndex": 1,
-              "opponentPower": 4
+              "opponentPower": 3
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "RevealOn2",
+              "_changeIdx": 173,
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 3
             },
             {
               "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 185,
-              "cardEntityId": 30
+              "card": "Okoye",
+              "type": "destroyed",
+              "_changeIdx": 180,
+              "fromLocation": "TheNexus"
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Titan",
-              "_changeIdx": 190,
+              "location": "Xandar",
+              "_changeIdx": 183,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 3
+            },
+            {
+              "type": "score",
+              "winner": null,
+              "location": "TheNexus",
+              "_changeIdx": 186,
               "playerPower": 0,
               "locationIndex": 1,
-              "opponentPower": 6
+              "opponentPower": 0
+            },
+            {
+              "type": "score",
+              "winner": null,
+              "location": "RevealOn2",
+              "_changeIdx": 189,
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 0
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 192
+            },
+            {
+              "who": "opponent",
+              "card": "ThanosFracturedFrontier",
+              "type": "draw",
+              "_changeIdx": 197
             }
           ],
+          "chambers": {
+            "player": null,
+            "opponent": [
+              "PowerShot"
+            ]
+          },
           "snapEvent": null,
           "locationPower": [
+            {
+              "winner": "opponent",
+              "playerPower": 0,
+              "opponentPower": 3
+            },
             {
               "winner": null,
               "playerPower": 0,
               "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 6
             },
             {
               "winner": null,
@@ -1736,7 +1498,7 @@
             }
           ]
         },
-        28
+        24
       ],
       [
         {
@@ -1748,100 +1510,86 @@
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 196
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 198
-            },
-            {
-              "to": "GrandCentral",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 201,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 4,
-              "_changeIdx": 206
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "from": "Titan",
-              "type": "bounce",
-              "entityId": 30,
               "_changeIdx": 207
             },
             {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "cost": 1,
-              "type": "resetCard",
-              "power": 4,
-              "_changeIdx": 210
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Titan",
-              "_changeIdx": 211,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "KittyPryde",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 4,
-              "_changeIdx": 215,
-              "cardEntityId": 30
-            },
-            {
               "who": "player",
-              "card": "BlackBolt",
-              "cost": 5,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 28,
-              "_changeIdx": 220,
-              "drawReveal": true
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 209
             },
             {
-              "who": "player",
-              "card": "BlackBolt",
-              "type": "draw",
-              "_changeIdx": 221
+              "to": "NovaRoma",
+              "from": "RevealOn2",
+              "type": "location",
+              "_changeIdx": 212,
+              "locationIndex": 2
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 224
+              "_changeIdx": 216
+            },
+            {
+              "who": "player",
+              "card": "SpiderWoman",
+              "cost": 5,
+              "type": "reveal",
+              "power": 8,
+              "entityId": 41,
+              "_changeIdx": 221,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "SpiderWoman",
+              "type": "draw",
+              "_changeIdx": 222
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 227
+            },
+            {
+              "who": "player",
+              "card": "Ultron",
+              "cost": 6,
+              "type": "reveal",
+              "power": 8,
+              "entityId": 37,
+              "_changeIdx": 232,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Ultron",
+              "type": "draw",
+              "_changeIdx": 233
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "opponent",
-              "_changeIdx": 227
+              "_changeIdx": 236
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 228
+              "_changeIdx": 237
             }
           ],
+          "chambers": {
+            "player": null,
+            "opponent": [
+              "PowerShot"
+            ]
+          },
           "snapEvent": null,
           "locationPower": [
             {
@@ -1850,9 +1598,9 @@
               "opponentPower": 0
             },
             {
-              "winner": "opponent",
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 2
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -1861,32 +1609,28 @@
             }
           ]
         },
-        37
+        27
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 10450,
-  "opp_sp": 3267,
+  "opp_cl": 12195,
+  "opp_sp": 4289,
   "bracket": null,
-  "match_id": "5f0946a5-53af-4e07-87e9-53608a2bebdf",
-  "opp_name": "Oscar.Mk.11",
+  "match_id": "3d87435b-a925-42f6-9046-0ec444a36b3e",
+  "opp_name": "SNESMaster",
   "opp_team": null,
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "NovaRoma",
-    "Titan",
-    "GrandCentral"
-  ],
+  "locations": [],
   "player_cl": 12035,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Bast",
-    "ArtVariantDefId": "Bast_05"
+    "CardDefId": "GreenGoblin",
+    "ArtVariantDefId": "GreenGoblin_13"
   },
   "opp_health": null,
   "opp_is_bot": false,
@@ -1894,43 +1638,38 @@
   "player_name": "SmokeFisher",
   "current_turn": 4,
   "kudzu_spread": null,
-  "match_result": "retreat",
-  "match_status": "complete",
+  "match_result": null,
+  "match_status": "in_progress",
   "opp_champion": null,
-  "opp_clan_tag": "MK8",
+  "opp_clan_tag": null,
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": null,
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "KittyPryde",
-    "NicoMinoru"
+    "ThanosFracturedFrontier",
+    "NicoMinoru",
+    "Okoye"
   ],
-  "last_updated_at": "2026-10-22T18:54:02.999+00:00",
+  "last_updated_at": "2026-10-22T18:55:45.806+00:00",
   "player_champion": null,
-  "opp_played_cards": [
-    "KittyPryde"
-  ],
+  "opp_played_cards": [],
   "player_deck_cards": [
-    "Sera",
-    "AntiPolarMagneto",
-    "WilsonFisk",
-    "Ultron",
+    "Mystique",
+    "BlackBolt",
     "Onslaught",
     "Wave",
-    "Gladiator",
-    "Cerebro",
-    "SuperiorIronMan",
+    "Sera",
     "SpiderWoman",
-    "BlackBolt",
-    "Mystique"
+    "Ultron"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "KittyPryde",
-    "NicoMinoru"
+    "ThanosFracturedFrontier",
+    "NicoMinoru",
+    "Okoye"
   ],
   "conquest_round_index": null
 }
