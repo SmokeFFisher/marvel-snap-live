@@ -44,18 +44,11 @@
           },
           "h": [
             {
-              "cost": 6,
-              "power": 10,
-              "baseCost": 6,
-              "basePower": 10,
-              "cardDefId": "Odin"
-            },
-            {
-              "cost": 3,
-              "power": 3,
-              "baseCost": 3,
-              "basePower": 3,
-              "cardDefId": "Venom"
+              "cost": 2,
+              "power": 2,
+              "baseCost": 2,
+              "basePower": 2,
+              "cardDefId": "Carnage"
             },
             {
               "cost": 6,
@@ -63,6 +56,13 @@
               "baseCost": 6,
               "basePower": 0,
               "cardDefId": "ArnimZola"
+            },
+            {
+              "cost": 5,
+              "power": 5,
+              "baseCost": 5,
+              "basePower": 5,
+              "cardDefId": "BlackPanther"
             }
           ],
           "n": {
@@ -106,7 +106,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "TheSandbar",
+              "to": "KunLun",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +123,7 @@
                 {
                   "location": [
                     0,
-                    "TheSandbar"
+                    "KunLun"
                   ],
                   "revealed": [
                     0,
@@ -148,16 +148,16 @@
             },
             {
               "who": "player",
-              "card": "FastballSpecial",
-              "cost": 2,
+              "card": "Nimrod",
+              "cost": 5,
               "type": "reveal",
-              "power": 0,
-              "entityId": 33,
+              "power": 6,
+              "entityId": 37,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "FastballSpecial",
+              "card": "Nimrod",
               "type": "draw"
             }
           ]
@@ -183,11 +183,11 @@
               "3": [
                 0,
                 {
-                  "cost": 2,
-                  "power": 0,
-                  "baseCost": 2,
-                  "basePower": 0,
-                  "cardDefId": "FastballSpecial"
+                  "cost": 5,
+                  "power": 6,
+                  "baseCost": 5,
+                  "basePower": 6,
+                  "cardDefId": "Nimrod"
                 }
               ]
             }
@@ -229,37 +229,8 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Snap",
-          "events": [
-            {
               "who": "opponent",
-              "type": "snap",
-              "cubeValue": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
+              "type": "initiative"
             }
           ]
         },
@@ -274,6 +245,158 @@
             {
               "turn": 1,
               "type": "endTurn"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "PowerStone",
+              "type": "play",
+              "entityId": 46,
+              "location": "RevealOn2",
+              "locationIndex": 1
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": null,
+                          "power": null,
+                          "baseCost": null,
+                          "entityId": 46,
+                          "basePower": null,
+                          "cardDefId": null,
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "PowerStone",
+              "cost": 1,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 46,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            1
+                          ],
+                          "power": [
+                            0,
+                            3
+                          ],
+                          "baseCost": [
+                            0,
+                            1
+                          ],
+                          "basePower": [
+                            0,
+                            3
+                          ],
+                          "cardDefId": [
+                            0,
+                            "PowerStone"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "PowerStone",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "RevealOn2",
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 3
             }
           ]
         },
@@ -306,7 +429,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "GrandCentral",
+              "to": "Morag",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -329,7 +452,7 @@
                 {
                   "location": [
                     0,
-                    "GrandCentral"
+                    "Morag"
                   ],
                   "revealed": [
                     0,
@@ -367,16 +490,16 @@
             },
             {
               "who": "player",
-              "card": "Wong",
-              "cost": 4,
+              "card": "Magik",
+              "cost": 3,
               "type": "reveal",
               "power": 2,
-              "entityId": 35,
+              "entityId": 36,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Wong",
+              "card": "Magik",
               "type": "draw"
             }
           ]
@@ -391,7 +514,7 @@
               ],
               "opponent": [
                 0,
-                5
+                4
               ]
             }
           ],
@@ -402,11 +525,11 @@
               "4": [
                 0,
                 {
-                  "cost": 4,
+                  "cost": 3,
                   "power": 2,
-                  "baseCost": 4,
+                  "baseCost": 3,
                   "basePower": 2,
-                  "cardDefId": "Wong"
+                  "cardDefId": "Magik"
                 }
               ]
             }
@@ -433,9 +556,9 @@
           "label": "Turn Winner",
           "events": [
             {
-              "tie": true,
+              "tie": false,
               "type": "turnWinner",
-              "winner": null
+              "winner": "opponent"
             }
           ]
         },
@@ -477,338 +600,19 @@
           "events": [
             {
               "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "play",
-              "entityId": 25,
-              "location": "TheSandbar",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 25,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 25,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "StrangeSupreme"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "PetAvengersMansion",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "PetAvengersMansion"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Knull",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 32,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Knull",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 0,
-                  "baseCost": 6,
-                  "basePower": 0,
-                  "cardDefId": "Knull"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                24
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
               "card": "MindStone",
               "type": "play",
-              "entityId": 57,
-              "location": "PetAvengersMansion",
-              "locationIndex": 2
+              "entityId": 45,
+              "location": "KunLun",
+              "locationIndex": 0
             },
             {
               "who": "opponent",
               "card": "TimeStone",
               "type": "play",
-              "entityId": 56,
-              "location": "PetAvengersMansion",
-              "locationIndex": 2
+              "entityId": 44,
+              "location": "Morag",
+              "locationIndex": 1
             }
           ]
         },
@@ -817,12 +621,12 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
                       "0": [
                         0,
@@ -830,19 +634,30 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 57,
+                          "entityId": 45,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
                         }
-                      ],
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    2,
+                    {
                       "1": [
                         0,
                         {
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 56,
+                          "entityId": 44,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 1
@@ -859,7 +674,7 @@
             {
               "opponent": [
                 0,
-                3
+                2
               ]
             }
           ]
@@ -868,7 +683,7 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Reveal",
           "events": [
             {
@@ -877,7 +692,7 @@
               "cost": 1,
               "type": "reveal",
               "power": 1,
-              "entityId": 57,
+              "entityId": 45,
               "drawReveal": false
             }
           ]
@@ -887,12 +702,12 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
                       "0": [
                         1,
@@ -930,7 +745,7 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Resolve",
           "events": [
             {
@@ -945,15 +760,15 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "opponent",
-              "location": "PetAvengersMansion",
+              "location": "KunLun",
               "playerPower": 0,
-              "locationIndex": 2,
+              "locationIndex": 0,
               "opponentPower": 1
             }
           ]
@@ -963,7 +778,7 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Draw",
           "events": [
             {
@@ -984,7 +799,7 @@
             {
               "opponent": [
                 0,
-                5
+                4
               ]
             }
           ],
@@ -993,7 +808,7 @@
             {
               "opponent": [
                 0,
-                22
+                23
               ]
             }
           ]
@@ -1002,7 +817,7 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Reveal",
           "events": [
             {
@@ -1011,7 +826,7 @@
               "cost": 1,
               "type": "reveal",
               "power": 1,
-              "entityId": 56,
+              "entityId": 44,
               "drawReveal": false
             }
           ]
@@ -1021,7 +836,7 @@
             2,
             3,
             {
-              "2": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
@@ -1064,7 +879,7 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Resolve",
           "events": [
             {
@@ -1079,16 +894,16 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "opponent",
-              "location": "PetAvengersMansion",
+              "location": "Morag",
               "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 2
+              "locationIndex": 1,
+              "opponentPower": 4
             }
           ]
         },
@@ -1097,7 +912,7 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Draw",
           "events": [
             {
@@ -1113,13 +928,137 @@
             {
               "opponent": [
                 0,
-                6
+                5
               ]
             }
           ],
           "r": [
             1,
             {
+              "opponent": [
+                0,
+                22
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Energy",
+          "events": [
+            {
+              "who": "opponent",
+              "type": "energy",
+              "energy": 4
+            },
+            {
+              "who": "player",
+              "type": "energy",
+              "energy": 3
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Location",
+          "events": [
+            {
+              "to": "FracturedFrontier",
+              "from": "RevealOn2",
+              "type": "location",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "location": [
+                    0,
+                    "FracturedFrontier"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
+              "who": "player",
+              "card": "Knull",
+              "cost": 6,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 41,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Knull",
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                6
+              ],
+              "opponent": [
+                0,
+                6
+              ]
+            }
+          ],
+          "h": [
+            2,
+            6,
+            {
+              "5": [
+                0,
+                {
+                  "cost": 6,
+                  "power": 0,
+                  "baseCost": 6,
+                  "basePower": 0,
+                  "cardDefId": "Knull"
+                }
+              ]
+            }
+          ],
+          "r": [
+            1,
+            {
+              "player": [
+                0,
+                6
+              ],
               "opponent": [
                 0,
                 21
@@ -1132,2016 +1071,12 @@
         {
           "_v": 2,
           "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "TimeStone",
-              "from": "PetAvengersMansion",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 3,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Carnage",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 34,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Carnage",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "6": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 2,
-                  "baseCost": 2,
-                  "basePower": 2,
-                  "cardDefId": "Carnage"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                20
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
           "label": "Turn Winner",
           "events": [
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "play",
-              "entityId": 35,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 2,
-                          "baseCost": 4,
-                          "entityId": 35,
-                          "basePower": 2,
-                          "cardDefId": "Wong",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Knull"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Carnage"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "BaronMordo",
-              "type": "play",
-              "entityId": 47,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "SpaceStone",
-              "type": "play",
-              "entityId": 54,
-              "location": "PetAvengersMansion",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 47,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 54,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "BaronMordo",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 47,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "BaronMordo"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "BaronMordo",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SpaceStone",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 54,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SpaceStone"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SpaceStone",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Thanos",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "opponent": [
-                0,
-                19
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 35,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 5,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "SpaceStone",
-              "from": "PetAvengersMansion",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 8
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 8,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            10
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 36,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "6": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 2,
-                  "baseCost": 3,
-                  "basePower": 2,
-                  "cardDefId": "Magik"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                18
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            7,
-            {
-              "6": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Thanos",
-              "type": "play",
-              "entityId": 22,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 12,
-                          "baseCost": 6,
-                          "entityId": 22,
-                          "basePower": 12,
-                          "cardDefId": "Thanos",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Thanos",
-              "cost": 6,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Herbie",
-              "type": "play",
-              "entityId": 52,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "play",
-              "entityId": 40,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 0,
-                          "baseCost": 6,
-                          "entityId": 40,
-                          "basePower": 0,
-                          "cardDefId": "ArnimZola",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 52,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "FastballSpecial"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Knull"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Carnage"
-                  ]
-                }
-              ],
-              "5": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Magik"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Herbie",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 52,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Herbie"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Herbie",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 18
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 40,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "destroyed",
-              "fromLocation": "GrandCentral"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "entityId": [
-                            0,
-                            40
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ArnimZola"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "player": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 4,
-                      "power": 2,
-                      "cardDefId": "Wong"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 18
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 67,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 68,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 2,
-                          "baseCost": 4,
-                          "entityId": 67,
-                          "basePower": 2,
-                          "cardDefId": "Wong",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 2,
-                          "baseCost": 4,
-                          "entityId": 68,
-                          "basePower": 2,
-                          "cardDefId": "Wong",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "playerPower": 2,
-              "locationIndex": 2,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 10,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            13
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "BaronMordo",
-              "from": "GrandCentral",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            12
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "entityId": [
-                            0,
-                            22
-                          ],
-                          "basePower": [
-                            0,
-                            12
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Thanos"
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "entityId": [
-                            0,
-                            52
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Herbie"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 13
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 15,
-              "oldPower": 13,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            15
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 15
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 3
             }
           ]
         },
@@ -3155,7 +1090,7 @@
                 {
                   "cost": [
                     0,
-                    3
+                    4
                   ]
                 }
               ]
@@ -3166,168 +1101,13 @@
       [
         {
           "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Override",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Herbie",
-              "type": "abilityOverride",
-              "overrideAbility": "Program02Herbie"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "overrideAbility": [
-                            0,
-                            "Program02Herbie"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Shuri",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 39,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Shuri",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            7,
-            {
-              "6": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 3,
-                  "baseCost": 4,
-                  "basePower": 3,
-                  "cardDefId": "Shuri"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                17
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
+          "turn": 3,
           "label": "Initiative",
           "events": [
             {
               "who": "opponent",
               "type": "initiative"
             }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -3367,7 +1147,14 @@
       [
         {
           "turn": 1,
-          "plays": [],
+          "plays": [
+            {
+              "card": "PowerStone",
+              "isPlayer": false,
+              "location": "Morag",
+              "locationIndex": 1
+            }
+          ],
           "energy": {
             "player": 1,
             "opponent": 1
@@ -3386,7 +1173,7 @@
               "_changeIdx": 91
             },
             {
-              "to": "TheSandbar",
+              "to": "KunLun",
               "from": "RevealOn1",
               "type": "location",
               "_changeIdx": 94,
@@ -3396,56 +1183,76 @@
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 98
+              "_changeIdx": 97
             },
             {
               "who": "player",
-              "card": "FastballSpecial",
-              "cost": 2,
+              "card": "Nimrod",
+              "cost": 5,
               "type": "reveal",
-              "power": 0,
-              "entityId": 33,
-              "_changeIdx": 103,
+              "power": 6,
+              "entityId": 37,
+              "_changeIdx": 100,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "FastballSpecial",
+              "card": "Nimrod",
               "type": "draw",
-              "_changeIdx": 104
+              "_changeIdx": 101
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 107
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 108
+              "_changeIdx": 104
             },
             {
               "who": "opponent",
-              "type": "snap",
-              "cubeValue": 2,
-              "_changeIdx": 111
-            },
-            {
-              "type": "cubePreview",
-              "_changeIdx": 111,
-              "cubeValueNextTurn": 2
+              "type": "initiative",
+              "_changeIdx": 105
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 112
+              "_changeIdx": 108
+            },
+            {
+              "who": "opponent",
+              "card": "PowerStone",
+              "type": "play",
+              "entityId": 46,
+              "location": "RevealOn2",
+              "_changeIdx": 109,
+              "locationIndex": 1
+            },
+            {
+              "who": "opponent",
+              "card": "PowerStone",
+              "cost": 1,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 46,
+              "_changeIdx": 112,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "PowerStone",
+              "type": "cardRevealed",
+              "_changeIdx": 113
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "RevealOn2",
+              "_changeIdx": 115,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 3
             }
           ],
-          "snapEvent": {
-            "cubeValue": 2,
-            "totalSnaps": 1
-          },
+          "snapEvent": null,
           "locationPower": [
             {
               "winner": null,
@@ -3453,9 +1260,9 @@
               "opponentPower": 0
             },
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 3
             },
             {
               "winner": null,
@@ -3464,17 +1271,23 @@
             }
           ]
         },
-        3
+        8
       ],
       [
         {
           "turn": 2,
           "plays": [
             {
-              "card": "StrangeSupreme",
+              "card": "MindStone",
               "isPlayer": false,
-              "location": "TheSandbar",
+              "location": "KunLun",
               "locationIndex": 0
+            },
+            {
+              "card": "TimeStone",
+              "isPlayer": false,
+              "location": "Morag",
+              "locationIndex": 1
             }
           ],
           "energy": {
@@ -3486,99 +1299,151 @@
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 117
+              "_changeIdx": 121
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 119
+              "_changeIdx": 123
             },
             {
-              "to": "GrandCentral",
+              "to": "Morag",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 122,
+              "_changeIdx": 126,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 126,
+              "_changeIdx": 132,
               "locationIndex": 2
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 129
+              "_changeIdx": 135
             },
             {
               "who": "player",
-              "card": "Wong",
-              "cost": 4,
+              "card": "Magik",
+              "cost": 3,
               "type": "reveal",
               "power": 2,
-              "entityId": 35,
-              "_changeIdx": 135,
+              "entityId": 36,
+              "_changeIdx": 138,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Wong",
+              "card": "Magik",
               "type": "draw",
-              "_changeIdx": 136
+              "_changeIdx": 139
             },
             {
-              "tie": true,
+              "tie": false,
               "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 139
+              "winner": "opponent",
+              "_changeIdx": 142
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 140
+              "_changeIdx": 143
             },
             {
               "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 143
+              "_changeIdx": 147
             },
             {
               "who": "opponent",
-              "card": "StrangeSupreme",
+              "card": "MindStone",
               "type": "play",
-              "entityId": 25,
-              "location": "TheSandbar",
-              "_changeIdx": 144,
+              "entityId": 45,
+              "location": "KunLun",
+              "_changeIdx": 148,
               "locationIndex": 0
             },
             {
               "who": "opponent",
-              "card": "StrangeSupreme",
-              "cost": 2,
+              "card": "TimeStone",
+              "type": "play",
+              "entityId": 44,
+              "location": "Morag",
+              "_changeIdx": 151,
+              "locationIndex": 1
+            },
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "cost": 1,
               "type": "reveal",
-              "power": 2,
-              "entityId": 25,
-              "_changeIdx": 147,
+              "power": 1,
+              "entityId": 45,
+              "_changeIdx": 154,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "StrangeSupreme",
+              "card": "MindStone",
               "type": "cardRevealed",
-              "_changeIdx": 148
+              "_changeIdx": 155
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "TheSandbar",
-              "_changeIdx": 150,
+              "location": "KunLun",
+              "_changeIdx": 157,
               "playerPower": 0,
               "locationIndex": 0,
-              "opponentPower": 2
+              "opponentPower": 1
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 161
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 164
+            },
+            {
+              "who": "opponent",
+              "card": "TimeStone",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 44,
+              "_changeIdx": 168,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "TimeStone",
+              "type": "cardRevealed",
+              "_changeIdx": 169
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "Morag",
+              "_changeIdx": 171,
+              "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 4
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 175
             }
           ],
           "snapEvent": null,
@@ -3586,12 +1451,12 @@
             {
               "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 2
+              "opponentPower": 1
             },
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 4
             },
             {
               "winner": null,
@@ -3600,25 +1465,12 @@
             }
           ]
         },
-        16
+        25
       ],
       [
         {
           "turn": 3,
-          "plays": [
-            {
-              "card": "MindStone",
-              "isPlayer": false,
-              "location": "PetAvengersMansion",
-              "locationIndex": 2
-            },
-            {
-              "card": "TimeStone",
-              "isPlayer": false,
-              "location": "PetAvengersMansion",
-              "locationIndex": 2
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 3,
             "opponent": 4
@@ -3628,26 +1480,26 @@
               "who": "opponent",
               "type": "energy",
               "energy": 4,
-              "_changeIdx": 158
+              "_changeIdx": 182
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 160
+              "_changeIdx": 184
             },
             {
-              "to": "PetAvengersMansion",
+              "to": "FracturedFrontier",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 167,
+              "_changeIdx": 192,
               "locationIndex": 2
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 171
+              "_changeIdx": 197
             },
             {
               "who": "player",
@@ -3655,838 +1507,26 @@
               "cost": 6,
               "type": "reveal",
               "power": 0,
-              "entityId": 32,
-              "_changeIdx": 178,
+              "entityId": 41,
+              "_changeIdx": 200,
               "drawReveal": true
             },
             {
               "who": "player",
               "card": "Knull",
               "type": "draw",
-              "_changeIdx": 179
+              "_changeIdx": 201
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "opponent",
-              "_changeIdx": 183
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 184
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 190
-            },
-            {
-              "who": "opponent",
-              "card": "MindStone",
-              "type": "play",
-              "entityId": 57,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 191,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "TimeStone",
-              "type": "play",
-              "entityId": 56,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 194,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "MindStone",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 57,
-              "_changeIdx": 197,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "MindStone",
-              "type": "cardRevealed",
-              "_changeIdx": 198
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 200,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 1
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 204
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
               "_changeIdx": 210
             },
             {
               "who": "opponent",
-              "card": "TimeStone",
-              "cost": 1,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 56,
-              "_changeIdx": 218,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "TimeStone",
-              "type": "cardRevealed",
-              "_changeIdx": 219
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 221,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 225
-            },
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 237,
-              "cardEntityId": 25
-            },
-            {
-              "who": "opponent",
-              "card": "TimeStone",
-              "from": "PetAvengersMansion",
-              "type": "setaside",
-              "_changeIdx": 242
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "_changeIdx": 246,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 249,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 1
-            },
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 3,
-              "_changeIdx": 253,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "_changeIdx": 257,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 5
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 5
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 1
-            }
-          ]
-        },
-        37
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "Wong",
-              "isPlayer": true,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            },
-            {
-              "card": "BaronMordo",
-              "isPlayer": false,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            },
-            {
-              "card": "SpaceStone",
-              "isPlayer": false,
-              "location": "PetAvengersMansion",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 264
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 266
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 268
-            },
-            {
-              "who": "player",
-              "card": "Carnage",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 34,
-              "_changeIdx": 271,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Carnage",
-              "type": "draw",
-              "_changeIdx": 272
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 275
-            },
-            {
-              "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 276
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "play",
-              "entityId": 35,
-              "location": "GrandCentral",
-              "_changeIdx": 279,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardStaged",
-              "_changeIdx": 280
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 289
-            },
-            {
-              "who": "opponent",
-              "card": "BaronMordo",
-              "type": "play",
-              "entityId": 47,
-              "location": "GrandCentral",
-              "_changeIdx": 290,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "SpaceStone",
-              "type": "play",
-              "entityId": 54,
-              "location": "PetAvengersMansion",
-              "_changeIdx": 293,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "BaronMordo",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 47,
-              "_changeIdx": 297,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "BaronMordo",
-              "type": "cardRevealed",
-              "_changeIdx": 298
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 300,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 3
-            },
-            {
-              "who": "opponent",
-              "card": "SpaceStone",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 54,
-              "_changeIdx": 306,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "SpaceStone",
-              "type": "cardRevealed",
-              "_changeIdx": 307
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 309,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 4
-            },
-            {
-              "who": "opponent",
-              "card": "Thanos",
-              "type": "draw",
-              "_changeIdx": 313
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 35,
-              "_changeIdx": 318,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 321,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardResolved",
-              "_changeIdx": 324
-            },
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 5,
-              "_changeIdx": 328,
-              "cardEntityId": 25
-            },
-            {
-              "who": "opponent",
-              "card": "SpaceStone",
-              "from": "PetAvengersMansion",
-              "type": "setaside",
-              "_changeIdx": 334
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "_changeIdx": 338,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 8
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 341,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 1
-            },
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 8,
-              "_changeIdx": 345,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "_changeIdx": 349,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 10
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 10
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 2,
-              "opponentPower": 3
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 1
-            }
-          ]
-        },
-        60
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "Thanos",
-              "isPlayer": false,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            },
-            {
-              "card": "Herbie",
-              "isPlayer": false,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            },
-            {
-              "card": "ArnimZola",
-              "isPlayer": true,
-              "location": "GrandCentral",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 356
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 358
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 360
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 36,
-              "_changeIdx": 363,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "draw",
-              "_changeIdx": 364
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 372
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 373
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 383
-            },
-            {
-              "who": "opponent",
-              "card": "Thanos",
-              "type": "play",
-              "entityId": 22,
-              "location": "GrandCentral",
-              "_changeIdx": 384,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Thanos",
-              "cost": 6,
-              "type": "reveal",
-              "power": 12,
-              "entityId": 22,
-              "_changeIdx": 388,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 390,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 15
-            },
-            {
-              "who": "opponent",
-              "card": "Herbie",
-              "type": "play",
-              "entityId": 52,
-              "location": "GrandCentral",
-              "_changeIdx": 395,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "play",
-              "entityId": 40,
-              "location": "GrandCentral",
-              "_changeIdx": 397,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "doubleTrigger",
-              "_changeIdx": 401
-            },
-            {
-              "who": "opponent",
-              "card": "Herbie",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 52,
-              "_changeIdx": 405,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Herbie",
-              "type": "cardRevealed",
-              "_changeIdx": 406
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 408,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 18
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 40,
-              "_changeIdx": 412,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "destroyed",
-              "_changeIdx": 418,
-              "fromLocation": "GrandCentral"
-            },
-            {
-              "who": "player",
-              "card": "ArnimZola",
-              "type": "doubleTrigger",
-              "_changeIdx": 422
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 424,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 18
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 67,
-              "_changeIdx": 428,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 68,
-              "_changeIdx": 431,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardRevealed",
-              "_changeIdx": 433
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "_changeIdx": 435,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 10
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardRevealed",
-              "_changeIdx": 438
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "PetAvengersMansion",
-              "_changeIdx": 440,
-              "playerPower": 2,
-              "locationIndex": 2,
-              "opponentPower": 1
-            },
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 10,
-              "_changeIdx": 450,
-              "cardEntityId": 25
-            },
-            {
-              "who": "opponent",
-              "card": "BaronMordo",
-              "from": "GrandCentral",
-              "type": "setaside",
-              "_changeIdx": 455
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "_changeIdx": 459,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 13
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "GrandCentral",
-              "_changeIdx": 462,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 15
-            },
-            {
-              "who": "opponent",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 15,
-              "oldPower": 13,
-              "_changeIdx": 466,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "TheSandbar",
-              "_changeIdx": 470,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": 15
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 474
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 2,
-              "opponentPower": 15
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 15
-            },
-            {
-              "winner": "player",
-              "playerPower": 2,
-              "opponentPower": 1
-            }
-          ]
-        },
-        87
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [],
-          "energy": {
-            "player": 6,
-            "opponent": 7
-          },
-          "events": [
-            {
-              "type": "cubePreview",
-              "_changeIdx": 482,
-              "cubeValueNextTurn": 3
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 484
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 486
-            },
-            {
-              "who": "opponent",
-              "card": "Herbie",
-              "type": "abilityOverride",
-              "_changeIdx": 490,
-              "overrideAbility": "Program02Herbie"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 493
-            },
-            {
-              "who": "player",
-              "card": "Shuri",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 39,
-              "_changeIdx": 499,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Shuri",
-              "type": "draw",
-              "_changeIdx": 500
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 503
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 504
+              "_changeIdx": 211
             }
           ],
           "snapEvent": null,
@@ -4508,7 +1548,7 @@
             }
           ]
         },
-        93
+        29
       ]
     ],
     "replayStorageVersion": 1
@@ -4516,16 +1556,12 @@
   "opp_cl": 20973,
   "opp_sp": 4877,
   "bracket": null,
-  "match_id": "c7215abe-b20a-4e61-8240-0193bd2fc444",
+  "match_id": "0a12c879-a131-41c4-a4fa-89f92ee7e21b",
   "opp_name": "BR59",
   "opp_team": null,
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "TheSandbar",
-    "GrandCentral",
-    "PetAvengersMansion"
-  ],
+  "locations": [],
   "player_cl": 12012,
   "player_sp": 4875,
   "turn_data": null,
@@ -4539,15 +1575,15 @@
   "opp_is_bot": false,
   "mode_detail": "Silver",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
+  "current_turn": 4,
   "kudzu_spread": null,
-  "match_result": "retreat",
-  "match_status": "complete",
+  "match_result": null,
+  "match_status": "in_progress",
   "opp_champion": null,
   "opp_clan_tag": "FRA",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": null,
   "player_health": 1,
   "wild_boosters": false,
@@ -4559,11 +1595,9 @@
     "SymbioteSpiderMan",
     "StrangeSupreme"
   ],
-  "last_updated_at": "2026-10-22T00:32:38.458+00:00",
+  "last_updated_at": "2026-10-22T00:33:36.333+00:00",
   "player_champion": null,
-  "opp_played_cards": [
-    "Thanos"
-  ],
+  "opp_played_cards": [],
   "player_deck_cards": [
     "Wong",
     "BlackPanther",
@@ -4581,13 +1615,9 @@
   "booster_card_def_id": "FastballSpecial",
   "opponent_cards_seen": [
     "Thanos",
-    "StrangeSupreme",
+    "PowerStone",
     "MindStone",
-    "TimeStone",
-    "BaronMordo",
-    "Arishem",
-    "SpaceStone",
-    "Herbie"
+    "TimeStone"
   ],
-  "conquest_round_index": 4
+  "conquest_round_index": 5
 }
