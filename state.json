@@ -44,6 +44,13 @@
           },
           "h": [
             {
+              "cost": 6,
+              "power": 10,
+              "baseCost": 6,
+              "basePower": 10,
+              "cardDefId": "Odin"
+            },
+            {
               "cost": 4,
               "power": 2,
               "baseCost": 4,
@@ -51,18 +58,11 @@
               "cardDefId": "Wong"
             },
             {
-              "cost": 5,
-              "power": 5,
-              "baseCost": 5,
-              "basePower": 5,
-              "cardDefId": "BlackPanther"
-            },
-            {
-              "cost": 5,
-              "power": 6,
-              "baseCost": 5,
-              "basePower": 6,
-              "cardDefId": "Nimrod"
+              "cost": 2,
+              "power": 0,
+              "baseCost": 2,
+              "basePower": 0,
+              "cardDefId": "FastballSpecial"
             }
           ],
           "n": {
@@ -106,7 +106,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "EternityRange",
+              "to": "Bifrost",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +123,7 @@
                 {
                   "location": [
                     0,
-                    "EternityRange"
+                    "Bifrost"
                   ],
                   "revealed": [
                     0,
@@ -148,16 +148,16 @@
             },
             {
               "who": "player",
-              "card": "Venom",
-              "cost": 3,
+              "card": "SymbioteSpiderMan",
+              "cost": 4,
               "type": "reveal",
-              "power": 3,
-              "entityId": 30,
+              "power": 7,
+              "entityId": 37,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Venom",
+              "card": "SymbioteSpiderMan",
               "type": "draw"
             }
           ]
@@ -183,11 +183,11 @@
               "3": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 3,
-                  "baseCost": 3,
-                  "basePower": 3,
-                  "cardDefId": "Venom"
+                  "cost": 4,
+                  "power": 7,
+                  "baseCost": 4,
+                  "basePower": 7,
+                  "cardDefId": "SymbioteSpiderMan"
                 }
               ]
             }
@@ -229,7 +229,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
           ]
@@ -249,6 +249,197 @@
           ]
         },
         {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "type": "play",
+              "entityId": 45,
+              "location": "Bifrost",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": null,
+                          "power": null,
+                          "baseCost": null,
+                          "entityId": 45,
+                          "basePower": null,
+                          "cardDefId": null,
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 45,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            1
+                          ],
+                          "power": [
+                            0,
+                            1
+                          ],
+                          "baseCost": [
+                            0,
+                            1
+                          ],
+                          "basePower": [
+                            0,
+                            1
+                          ],
+                          "cardDefId": [
+                            0,
+                            "MindStone"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "Bifrost",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 1
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ],
+          "r": [
+            1,
+            {
+              "opponent": [
+                0,
+                24
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -277,7 +468,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "AsgardBesieged",
+              "to": "OnslaughtsCitadel",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -300,7 +491,7 @@
                 {
                   "location": [
                     0,
-                    "AsgardBesieged"
+                    "OnslaughtsCitadel"
                   ],
                   "revealed": [
                     0,
@@ -338,16 +529,16 @@
             },
             {
               "who": "player",
-              "card": "Shuri",
-              "cost": 4,
+              "card": "BlackPanther",
+              "cost": 5,
               "type": "reveal",
-              "power": 3,
-              "entityId": 34,
+              "power": 5,
+              "entityId": 30,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Shuri",
+              "card": "BlackPanther",
               "type": "draw"
             }
           ]
@@ -362,7 +553,7 @@
               ],
               "opponent": [
                 0,
-                5
+                6
               ]
             }
           ],
@@ -373,11 +564,11 @@
               "4": [
                 0,
                 {
-                  "cost": 4,
-                  "power": 3,
-                  "baseCost": 4,
-                  "basePower": 3,
-                  "cardDefId": "Shuri"
+                  "cost": 5,
+                  "power": 5,
+                  "baseCost": 5,
+                  "basePower": 5,
+                  "cardDefId": "BlackPanther"
                 }
               ]
             }
@@ -391,741 +582,6 @@
               ],
               "opponent": [
                 0,
-                25
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 2,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "SmithsonianMuseum",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "SmithsonianMuseum"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Thanos",
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Knull",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 32,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Knull",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 0,
-                  "baseCost": 6,
-                  "basePower": 0,
-                  "cardDefId": "Knull"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                24
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Venom",
-              "type": "play",
-              "entityId": 30,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 3,
-                          "baseCost": 3,
-                          "entityId": 30,
-                          "basePower": 3,
-                          "cardDefId": "Venom",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Shuri"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Knull"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Venom",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Fantasticar",
-              "type": "play",
-              "entityId": 47,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 47,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Venom",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 30,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Venom",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "cost": 6,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 18,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Fantasticar",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 47,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Fantasticar"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Fantasticar",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "AsgardBesieged",
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Destroyer",
-              "cost": 6,
-              "type": "reveal",
-              "power": 18,
-              "entityId": 66,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 18,
-                          "baseCost": 6,
-                          "entityId": 66,
-                          "basePower": 18,
-                          "cardDefId": "Destroyer",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Destroyer",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "AsgardBesieged",
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 23
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 11,
-              "cardEntityId": 18
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 33,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 7,
-                  "baseCost": 4,
-                  "basePower": 7,
-                  "cardDefId": "SymbioteSpiderMan"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
                 23
               ]
             }
@@ -1135,7 +591,7 @@
       [
         {
           "_v": 2,
-          "turn": 4,
+          "turn": 2,
           "label": "Turn Winner",
           "events": [
             {
@@ -1150,1561 +606,7 @@
       [
         {
           "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "play",
-              "entityId": 38,
-              "location": "SmithsonianMuseum",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 2,
-                          "baseCost": 4,
-                          "entityId": 38,
-                          "basePower": 2,
-                          "cardDefId": "Wong",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "BlackPanther"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Nimrod"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Shuri"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Knull"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SymbioteSpiderMan"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "type": "play",
-              "entityId": 49,
-              "location": "SmithsonianMuseum",
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Carnage",
-              "type": "play",
-              "entityId": 44,
-              "location": "EternityRange",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 44,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 49,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 49,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            6
-                          ],
-                          "cardDefId": [
-                            0,
-                            "LadySif"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Arishem",
-              "cost": 7,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Discarded",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Arishem",
-              "type": "discarded"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ],
-          "d": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 7,
-                      "power": 7,
-                      "cardDefId": "Arishem"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Carnage",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 44,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Carnage"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Carnage",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "EternityRange",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Ability",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Fantasticar",
-              "type": "activated",
-              "isActivated": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 38,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "cardEntityId": 38
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "playerPower": 3,
-              "locationIndex": 2,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "type": "power",
-              "newPower": 15,
-              "oldPower": 13,
-              "cardEntityId": 18
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "FastballSpecial",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 40,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "FastballSpecial",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 0,
-                  "baseCost": 2,
-                  "basePower": 0,
-                  "cardDefId": "FastballSpecial"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                22
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "play",
-              "entityId": 31,
-              "location": "SmithsonianMuseum",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 5,
-                          "baseCost": 5,
-                          "entityId": 31,
-                          "basePower": 5,
-                          "cardDefId": "BlackPanther",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Nimrod"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Shuri"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Knull"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    7
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    7
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SymbioteSpiderMan"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "FastballSpecial"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "type": "play",
-              "entityId": 18,
-              "location": "SmithsonianMuseum",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 15,
-                          "baseCost": 6,
-                          "entityId": 18,
-                          "basePower": 11,
-                          "cardDefId": "GalactusFirstSteps",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "cost": 6,
-              "type": "reveal",
-              "power": 15,
-              "entityId": 18,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "playerPower": 3,
-              "locationIndex": 2,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "cost": 5,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 31,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 5,
-              "cardEntityId": 31
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "playerPower": 9,
-              "locationIndex": 2,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "newPower": 11,
-              "oldPower": 6,
-              "cardEntityId": 31
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            11
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "playerPower": 14,
-              "locationIndex": 2,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "newPower": 21,
-              "oldPower": 11,
-              "cardEntityId": 31
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            21
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SmithsonianMuseum",
-              "playerPower": 24,
-              "locationIndex": 2,
-              "opponentPower": 21
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "type": "power",
-              "newPower": 17,
-              "oldPower": 15,
-              "cardEntityId": 18
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            17
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SmithsonianMuseum",
-              "playerPower": 24,
-              "locationIndex": 2,
-              "opponentPower": 23
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 37,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 2,
-                  "baseCost": 3,
-                  "basePower": 2,
-                  "cardDefId": "Magik"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                21
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
+          "turn": 2,
           "label": "Initiative",
           "events": [
             {
@@ -2750,7 +652,14 @@
       [
         {
           "turn": 1,
-          "plays": [],
+          "plays": [
+            {
+              "card": "MindStone",
+              "isPlayer": false,
+              "location": "Bifrost",
+              "locationIndex": 0
+            }
+          ],
           "energy": {
             "player": 1,
             "opponent": 1
@@ -2769,7 +678,7 @@
               "_changeIdx": 91
             },
             {
-              "to": "EternityRange",
+              "to": "Bifrost",
               "from": "RevealOn1",
               "type": "location",
               "_changeIdx": 94,
@@ -2783,17 +692,17 @@
             },
             {
               "who": "player",
-              "card": "Venom",
-              "cost": 3,
+              "card": "SymbioteSpiderMan",
+              "cost": 4,
               "type": "reveal",
-              "power": 3,
-              "entityId": 30,
+              "power": 7,
+              "entityId": 37,
               "_changeIdx": 100,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Venom",
+              "card": "SymbioteSpiderMan",
               "type": "draw",
               "_changeIdx": 101
             },
@@ -2804,7 +713,7 @@
               "_changeIdx": 104
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative",
               "_changeIdx": 105
             },
@@ -2812,14 +721,60 @@
               "turn": 1,
               "type": "endTurn",
               "_changeIdx": 108
+            },
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "type": "play",
+              "entityId": 45,
+              "location": "Bifrost",
+              "_changeIdx": 109,
+              "locationIndex": 0
+            },
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 45,
+              "_changeIdx": 112,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "MindStone",
+              "type": "cardRevealed",
+              "_changeIdx": 113
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "Bifrost",
+              "_changeIdx": 115,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 1
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 119
+            },
+            {
+              "who": "opponent",
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 122
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 1
             },
             {
               "winner": null,
@@ -2833,7 +788,7 @@
             }
           ]
         },
-        3
+        11
       ],
       [
         {
@@ -2848,676 +803,33 @@
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 112
+              "_changeIdx": 129
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 114
+              "_changeIdx": 131
             },
             {
-              "to": "AsgardBesieged",
+              "to": "OnslaughtsCitadel",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 117,
+              "_changeIdx": 134,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 121,
+              "_changeIdx": 139,
               "locationIndex": 2
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 124
-            },
-            {
-              "who": "player",
-              "card": "Shuri",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 34,
-              "_changeIdx": 127,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Shuri",
-              "type": "draw",
-              "_changeIdx": 128
-            },
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 131
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 132
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 135
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        9
-      ],
-      [
-        {
-          "turn": 3,
-          "plays": [
-            {
-              "card": "Venom",
-              "isPlayer": true,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            },
-            {
-              "card": "Fantasticar",
-              "isPlayer": false,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 3,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 141
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 143
-            },
-            {
-              "to": "SmithsonianMuseum",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 150,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Thanos",
-              "type": "draw",
-              "_changeIdx": 154
-            },
-            {
-              "who": "player",
-              "card": "Knull",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 32,
-              "_changeIdx": 157,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Knull",
-              "type": "draw",
-              "_changeIdx": 158
-            },
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 162
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 163
-            },
-            {
-              "who": "player",
-              "card": "Venom",
-              "type": "play",
-              "entityId": 30,
-              "location": "AsgardBesieged",
-              "_changeIdx": 166,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Venom",
-              "type": "cardStaged",
-              "_changeIdx": 167
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 170
-            },
-            {
-              "who": "opponent",
-              "card": "Fantasticar",
-              "type": "play",
-              "entityId": 47,
-              "location": "AsgardBesieged",
-              "_changeIdx": 171,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Venom",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 30,
-              "_changeIdx": 175,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 177,
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Venom",
-              "type": "cardResolved",
-              "_changeIdx": 183
-            },
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "cost": 6,
-              "type": "reveal",
-              "power": 11,
-              "entityId": 18,
-              "_changeIdx": 185,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Fantasticar",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 47,
-              "_changeIdx": 186,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Fantasticar",
-              "type": "cardRevealed",
-              "_changeIdx": 191
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "AsgardBesieged",
-              "_changeIdx": 194,
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 5
-            },
-            {
-              "who": "opponent",
-              "card": "Destroyer",
-              "cost": 6,
-              "type": "reveal",
-              "power": 18,
-              "entityId": 66,
-              "_changeIdx": 203,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Destroyer",
-              "type": "cardRevealed",
-              "_changeIdx": 205
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "AsgardBesieged",
-              "_changeIdx": 206,
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 23
-            },
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 11,
-              "_changeIdx": 213,
-              "cardEntityId": 18
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 3,
-              "opponentPower": 23
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        28
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "Wong",
-              "isPlayer": true,
-              "location": "SmithsonianMuseum",
-              "locationIndex": 2
-            },
-            {
-              "card": "LadySif",
-              "isPlayer": false,
-              "location": "SmithsonianMuseum",
-              "locationIndex": 2
-            },
-            {
-              "card": "Carnage",
-              "isPlayer": false,
-              "location": "EternityRange",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 221
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 223
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 225
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 33,
-              "_changeIdx": 228,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "SymbioteSpiderMan",
-              "type": "draw",
-              "_changeIdx": 229
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 232
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 233
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "play",
-              "entityId": 38,
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 237,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardStaged",
-              "_changeIdx": 238
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 243
-            },
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "type": "play",
-              "entityId": 49,
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 244,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Carnage",
-              "type": "play",
-              "entityId": 44,
-              "location": "EternityRange",
-              "_changeIdx": 247,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 49,
-              "_changeIdx": 251,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "LadySif",
-              "type": "cardRevealed",
-              "_changeIdx": 252
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 258,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 6
-            },
-            {
-              "who": "opponent",
-              "card": "Arishem",
-              "cost": 7,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 22,
-              "_changeIdx": 262,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Arishem",
-              "type": "discarded",
-              "_changeIdx": 263
-            },
-            {
-              "who": "opponent",
-              "card": "Carnage",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 44,
-              "_changeIdx": 267,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Carnage",
-              "type": "cardRevealed",
-              "_changeIdx": 268
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "EternityRange",
-              "_changeIdx": 270,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Fantasticar",
-              "type": "activated",
-              "_changeIdx": 274,
-              "isActivated": true
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 38,
-              "_changeIdx": 278,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 281,
-              "cardEntityId": 38
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 287,
-              "playerPower": 3,
-              "locationIndex": 2,
-              "opponentPower": 6
-            },
-            {
-              "who": "player",
-              "card": "Wong",
-              "type": "cardResolved",
-              "_changeIdx": 290
-            },
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "type": "power",
-              "newPower": 15,
-              "oldPower": 13,
-              "_changeIdx": 294,
-              "cardEntityId": 18
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 2
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 3,
-              "opponentPower": 6
-            }
-          ]
-        },
-        50
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "BlackPanther",
-              "isPlayer": true,
-              "location": "SmithsonianMuseum",
-              "locationIndex": 2
-            },
-            {
-              "card": "GalactusFirstSteps",
-              "isPlayer": false,
-              "location": "SmithsonianMuseum",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 300
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 302
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 304
-            },
-            {
-              "who": "player",
-              "card": "FastballSpecial",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 40,
-              "_changeIdx": 307,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "FastballSpecial",
-              "type": "draw",
-              "_changeIdx": 308
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 311
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 312
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "play",
-              "entityId": 31,
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 315,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardStaged",
-              "_changeIdx": 316
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "doubleTrigger",
-              "_changeIdx": 321
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 326
-            },
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "type": "play",
-              "entityId": 18,
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 327,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "cost": 6,
-              "type": "reveal",
-              "power": 15,
-              "entityId": 18,
-              "_changeIdx": 332,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 343,
-              "playerPower": 3,
-              "locationIndex": 2,
-              "opponentPower": 21
+              "_changeIdx": 142
             },
             {
               "who": "player",
@@ -3525,172 +837,26 @@
               "cost": 5,
               "type": "reveal",
               "power": 5,
-              "entityId": 31,
-              "_changeIdx": 346,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 5,
-              "_changeIdx": 351,
-              "cardEntityId": 31
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 358,
-              "playerPower": 9,
-              "locationIndex": 2,
-              "opponentPower": 21
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "newPower": 11,
-              "oldPower": 6,
-              "_changeIdx": 362,
-              "cardEntityId": 31
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 369,
-              "playerPower": 14,
-              "locationIndex": 2,
-              "opponentPower": 21
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "power",
-              "newPower": 21,
-              "oldPower": 11,
-              "_changeIdx": 373,
-              "cardEntityId": 31
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 380,
-              "playerPower": 24,
-              "locationIndex": 2,
-              "opponentPower": 21
-            },
-            {
-              "who": "player",
-              "card": "BlackPanther",
-              "type": "cardResolved",
-              "_changeIdx": 383
-            },
-            {
-              "who": "opponent",
-              "card": "GalactusFirstSteps",
-              "type": "power",
-              "newPower": 17,
-              "oldPower": 15,
-              "_changeIdx": 387,
-              "cardEntityId": 18
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SmithsonianMuseum",
-              "_changeIdx": 392,
-              "playerPower": 24,
-              "locationIndex": 2,
-              "opponentPower": 23
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 395
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "player",
-              "playerPower": 24,
-              "opponentPower": 23
-            }
-          ]
-        },
-        73
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [],
-          "energy": {
-            "player": 6,
-            "opponent": 7
-          },
-          "events": [
-            {
-              "type": "cubePreview",
-              "_changeIdx": 397,
-              "cubeValueNextTurn": 2
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 399
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 401
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 403
-            },
-            {
-              "who": "player",
-              "card": "Magik",
-              "cost": 3,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 37,
-              "_changeIdx": 406,
+              "entityId": 30,
+              "_changeIdx": 145,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Magik",
+              "card": "BlackPanther",
               "type": "draw",
-              "_changeIdx": 407
+              "_changeIdx": 146
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "opponent",
-              "_changeIdx": 410
+              "_changeIdx": 149
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 411
+              "_changeIdx": 150
             }
           ],
           "snapEvent": null,
@@ -3712,7 +878,7 @@
             }
           ]
         },
-        78
+        14
       ]
     ],
     "replayStorageVersion": 1
@@ -3720,7 +886,7 @@
   "opp_cl": 20973,
   "opp_sp": 4877,
   "bracket": null,
-  "match_id": "9a997741-3085-4605-8087-56c03e5885f0",
+  "match_id": "841a553e-d3d3-42b8-a7b6-b210cf670cee",
   "opp_name": "BR59",
   "opp_team": null,
   "share_id": "pxjvfy",
@@ -3739,7 +905,7 @@
   "opp_is_bot": false,
   "mode_detail": "Silver",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
+  "current_turn": 3,
   "kudzu_spread": null,
   "match_result": null,
   "match_status": "in_progress",
@@ -3749,18 +915,16 @@
   "next_match_id": null,
   "opp_retreated": null,
   "player_avatar": null,
-  "player_health": 10,
-  "wild_boosters": null,
+  "player_health": 9,
+  "wild_boosters": false,
   "opp_deck_cards": [
     "Thanos",
     "GalactusFirstSteps",
     "Arishem"
   ],
-  "last_updated_at": "2026-10-22T00:25:33.919+00:00",
+  "last_updated_at": "2026-10-22T00:26:36.972+00:00",
   "player_champion": null,
-  "opp_played_cards": [
-    "GalactusFirstSteps"
-  ],
+  "opp_played_cards": [],
   "player_deck_cards": [
     "Wong",
     "BlackPanther",
@@ -3770,17 +934,13 @@
     "Knull",
     "SymbioteSpiderMan",
     "FastballSpecial",
-    "Magik"
+    "Magik",
+    "Odin"
   ],
-  "booster_card_def_id": null,
+  "booster_card_def_id": "FastballSpecial",
   "opponent_cards_seen": [
     "Thanos",
-    "GalactusFirstSteps",
-    "Fantasticar",
-    "Arishem",
-    "Destroyer",
-    "LadySif",
-    "Carnage"
+    "MindStone"
   ],
-  "conquest_round_index": 1
+  "conquest_round_index": 2
 }
