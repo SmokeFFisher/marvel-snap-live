@@ -45,24 +45,24 @@
           "h": [
             {
               "cost": 2,
-              "power": 2,
+              "power": 0,
               "baseCost": 2,
-              "basePower": 2,
-              "cardDefId": "StrangeSupreme"
-            },
-            {
-              "cost": 4,
-              "power": 5,
-              "baseCost": 4,
-              "basePower": 5,
-              "cardDefId": "ThePhoenixForce"
+              "basePower": 0,
+              "cardDefId": "ZombieNova"
             },
             {
               "cost": 2,
-              "power": 1,
+              "power": 2,
               "baseCost": 2,
-              "basePower": 1,
-              "cardDefId": "ZombieSentry"
+              "basePower": 2,
+              "cardDefId": "ZombieMisterFantastic"
+            },
+            {
+              "cost": 1,
+              "power": 0,
+              "baseCost": 1,
+              "basePower": 0,
+              "cardDefId": "TheHunger"
             }
           ],
           "n": {
@@ -86,12 +86,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             }
@@ -106,7 +106,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Proscenium",
+              "to": "Genosha",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +123,7 @@
                 {
                   "location": [
                     0,
-                    "Proscenium"
+                    "Genosha"
                   ],
                   "revealed": [
                     0,
@@ -142,22 +142,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "TheHunger",
-              "cost": 1,
+              "card": "ZombieSentry",
+              "cost": 2,
               "type": "reveal",
-              "power": 0,
-              "entityId": 30,
+              "power": 1,
+              "entityId": 28,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "TheHunger",
+              "card": "ZombieSentry",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -183,11 +183,11 @@
               "3": [
                 0,
                 {
-                  "cost": 1,
-                  "power": 0,
-                  "baseCost": 1,
-                  "basePower": 0,
-                  "cardDefId": "TheHunger"
+                  "cost": 2,
+                  "power": 1,
+                  "baseCost": 2,
+                  "basePower": 1,
+                  "cardDefId": "ZombieSentry"
                 }
               ]
             }
@@ -229,7 +229,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
           ]
@@ -246,7 +246,7 @@
               "who": "player",
               "card": "TheHunger",
               "type": "play",
-              "entityId": 30,
+              "entityId": 27,
               "location": "RevealOn2",
               "locationIndex": 1
             }
@@ -270,7 +270,7 @@
                           "cost": 1,
                           "power": 0,
                           "baseCost": 1,
-                          "entityId": 30,
+                          "entityId": 27,
                           "basePower": 0,
                           "cardDefId": "TheHunger",
                           "arrivalSeq": 0
@@ -294,7 +294,33 @@
           "h": [
             2,
             3,
-            {}
+            {
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    2
+                  ],
+                  "power": [
+                    0,
+                    1
+                  ],
+                  "baseCost": [
+                    0,
+                    2
+                  ],
+                  "basePower": [
+                    0,
+                    1
+                  ],
+                  "cardDefId": [
+                    0,
+                    "ZombieSentry"
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
@@ -331,203 +357,6 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "play",
-              "entityId": 26,
-              "location": "Proscenium",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 26,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 26,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            0
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            0
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Sunspot"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "cardEntityId": 26
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
           "label": "Reveal",
           "events": [
             {
@@ -536,7 +365,7 @@
               "cost": 1,
               "type": "reveal",
               "power": 0,
-              "entityId": 30,
+              "entityId": 27,
               "drawReveal": false
             },
             {
@@ -545,7 +374,7 @@
               "cost": 0,
               "type": "reveal",
               "power": 0,
-              "entityId": 54,
+              "entityId": 48,
               "drawReveal": false
             }
           ]
@@ -568,7 +397,7 @@
                           "cost": 0,
                           "power": 0,
                           "baseCost": 0,
-                          "entityId": 54,
+                          "entityId": 48,
                           "basePower": 0,
                           "cardDefId": "ZombieHorde",
                           "arrivalSeq": 0
@@ -594,7 +423,7 @@
               "type": "power",
               "newPower": 3,
               "oldPower": 0,
-              "cardEntityId": 54
+              "cardEntityId": 48
             }
           ]
         },
@@ -733,12 +562,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             }
@@ -753,7 +582,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "StarkIndustries",
+              "to": "Kyln",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -776,7 +605,7 @@
                 {
                   "location": [
                     0,
-                    "StarkIndustries"
+                    "Kyln"
                   ],
                   "revealed": [
                     0,
@@ -808,22 +637,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "Hulkbuster",
+              "card": "ZombieBlade",
               "cost": 2,
               "type": "reveal",
               "power": 3,
-              "entityId": 32,
+              "entityId": 21,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Hulkbuster",
+              "card": "ZombieBlade",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -838,7 +667,7 @@
               ],
               "opponent": [
                 0,
-                4
+                5
               ]
             }
           ],
@@ -853,7 +682,7 @@
                   "power": 3,
                   "baseCost": 2,
                   "basePower": 3,
-                  "cardDefId": "Hulkbuster"
+                  "cardDefId": "ZombieBlade"
                 }
               ]
             }
@@ -910,9 +739,9 @@
           "events": [
             {
               "who": "player",
-              "card": "StrangeSupreme",
+              "card": "ZombieBlade",
               "type": "play",
-              "entityId": 34,
+              "entityId": 21,
               "location": "RevealOn2",
               "locationIndex": 2
             }
@@ -934,11 +763,11 @@
                         0,
                         {
                           "cost": 2,
-                          "power": 2,
+                          "power": 3,
                           "baseCost": 2,
-                          "entityId": 34,
-                          "basePower": 2,
-                          "cardDefId": "StrangeSupreme",
+                          "entityId": 21,
+                          "basePower": 3,
+                          "cardDefId": "ZombieBlade",
                           "arrivalSeq": 1
                         }
                       ]
@@ -960,75 +789,7 @@
           "h": [
             2,
             3,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ThePhoenixForce"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ZombieSentry"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hulkbuster"
-                  ]
-                }
-              ]
-            }
+            {}
           ]
         }
       ],
@@ -1040,7 +801,7 @@
           "events": [
             {
               "who": "player",
-              "card": "StrangeSupreme",
+              "card": "ZombieBlade",
               "type": "cardStaged"
             }
           ]
@@ -1069,11 +830,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "ZombiePowerMan",
               "type": "play",
-              "entityId": 20,
-              "location": "RevealOn2",
-              "locationIndex": 2
+              "entityId": 35,
+              "location": "Genosha",
+              "locationIndex": 0
             }
           ]
         },
@@ -1082,7 +843,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
@@ -1095,7 +856,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 20,
+                          "entityId": 35,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -1112,7 +873,7 @@
             {
               "opponent": [
                 0,
-                3
+                4
               ]
             }
           ]
@@ -1126,11 +887,11 @@
           "events": [
             {
               "who": "player",
-              "card": "StrangeSupreme",
+              "card": "ZombieBlade",
               "cost": 2,
               "type": "reveal",
-              "power": 2,
-              "entityId": 34,
+              "power": 3,
+              "entityId": 21,
               "drawReveal": false
             }
           ]
@@ -1147,7 +908,7 @@
               "type": "score",
               "winner": "player",
               "location": "RevealOn2",
-              "playerPower": 5,
+              "playerPower": 6,
               "locationIndex": 2,
               "opponentPower": 0
             }
@@ -1163,7 +924,7 @@
           "events": [
             {
               "who": "player",
-              "card": "StrangeSupreme",
+              "card": "ZombieBlade",
               "type": "cardResolved"
             }
           ]
@@ -1178,11 +939,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Nebula",
-              "cost": 1,
+              "card": "ZombiePowerMan",
+              "cost": 2,
               "type": "reveal",
-              "power": 1,
-              "entityId": 20,
+              "power": 4,
+              "entityId": 35,
               "drawReveal": false
             }
           ]
@@ -1192,7 +953,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
@@ -1204,23 +965,23 @@
                         {
                           "cost": [
                             0,
-                            1
+                            2
                           ],
                           "power": [
                             0,
-                            1
+                            4
                           ],
                           "baseCost": [
                             0,
-                            1
+                            2
                           ],
                           "basePower": [
                             0,
-                            1
+                            4
                           ],
                           "cardDefId": [
                             0,
-                            "Nebula"
+                            "ZombiePowerMan"
                           ]
                         }
                       ]
@@ -1240,7 +1001,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "ZombiePowerMan",
               "type": "cardRevealed"
             }
           ]
@@ -1255,11 +1016,91 @@
           "events": [
             {
               "type": "score",
-              "winner": "player",
-              "location": "RevealOn2",
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 1
+              "winner": "opponent",
+              "location": "Genosha",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 4
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Scorn",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 41,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Discarded",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Scorn",
+              "type": "discarded"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                3
+              ]
+            }
+          ],
+          "d": [
+            1,
+            {
+              "opponent": [
+                2,
+                1,
+                {
+                  "0": [
+                    0,
+                    {
+                      "cost": 1,
+                      "power": 2,
+                      "cardDefId": "Scorn"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reset",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Scorn",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 2
             }
           ]
         },
@@ -1273,11 +1114,85 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Sunspot",
+              "card": "Scorn",
               "type": "power",
-              "newPower": 3,
+              "newPower": 4,
               "oldPower": 2,
-              "cardEntityId": 26
+              "cardEntityId": 41
+            }
+          ]
+        },
+        {
+          "d": [
+            1,
+            {
+              "opponent": [
+                2,
+                1,
+                {
+                  "0": [
+                    1,
+                    {
+                      "power": [
+                        0,
+                        4
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Scorn",
+              "type": "draw"
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                4
+              ]
+            }
+          ],
+          "d": [
+            1,
+            {
+              "opponent": [
+                2,
+                0,
+                {}
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ZombiePowerMan",
+              "type": "power",
+              "newPower": 6,
+              "oldPower": 4,
+              "cardEntityId": 35
             }
           ]
         },
@@ -1298,7 +1213,7 @@
                         {
                           "power": [
                             0,
-                            3
+                            6
                           ]
                         }
                       ]
@@ -1319,181 +1234,10 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Proscenium",
+              "location": "Genosha",
               "playerPower": 0,
               "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 2,
-              "cardEntityId": 34
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "from": "RevealOn2",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "entityId": [
-                            0,
-                            34
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "StrangeSupreme"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 7,
-              "oldPower": 5,
-              "cardEntityId": 34
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RevealOn2",
-              "playerPower": 7,
-              "locationIndex": 2,
-              "opponentPower": 1
+              "opponentPower": 6
             }
           ]
         },
@@ -1506,12 +1250,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 3
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 3
             }
@@ -1526,7 +1270,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "KamarTaj",
+              "to": "TimeTheater",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -1543,33 +1287,13 @@
                 {
                   "location": [
                     0,
-                    "KamarTaj"
+                    "TimeTheater"
                   ]
                 }
               ]
             }
           ]
         }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Event",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "doubleTrigger"
-            },
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
       ],
       [
         {
@@ -1578,1640 +1302,13 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "ZombieGiantMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 37,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 5,
-                  "power": 4,
-                  "baseCost": 5,
-                  "basePower": 4,
-                  "cardDefId": "ZombieGiantMan"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "play",
-              "entityId": 36,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 1,
-                          "baseCost": 2,
-                          "entityId": 36,
-                          "basePower": 1,
-                          "cardDefId": "ZombieSentry",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Hulkbuster"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ZombieGiantMan"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "play",
-              "entityId": 25,
-              "location": "StarkIndustries",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 25,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "cost": 2,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 8,
-              "locationIndex": 2,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 56,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 0,
-                          "baseCost": 0,
-                          "entityId": 56,
-                          "basePower": 0,
-                          "cardDefId": "ZombieHorde",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "cardEntityId": 56
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 56
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Proscenium",
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "cardEntityId": 56
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Proscenium",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 25,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Cosmo"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 7,
-              "cardEntityId": 34
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            13
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "from": "Proscenium",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 14,
-              "locationIndex": 2,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 15,
-              "oldPower": 13,
-              "cardEntityId": 34
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            15
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 16,
-              "locationIndex": 2,
-              "opponentPower": 1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Taskmaster",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 38,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Taskmaster",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 6,
-                  "power": 0,
-                  "baseCost": 6,
-                  "basePower": 0,
-                  "cardDefId": "Taskmaster"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "play",
-              "entityId": 32,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 3,
-                          "baseCost": 2,
-                          "entityId": 32,
-                          "basePower": 3,
-                          "cardDefId": "Hulkbuster",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    4
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ZombieGiantMan"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Taskmaster"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "play",
-              "entityId": 19,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 19,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Scorpion",
+              "card": "ZombieBlade",
               "cost": 2,
               "type": "reveal",
               "power": 3,
-              "entityId": 19,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Scorpion"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 16,
-              "locationIndex": 2,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 5,
-              "cardEntityId": 33
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 4,
-              "cardEntityId": 37
-            },
-            {
-              "who": "player",
-              "card": "Taskmaster",
-              "type": "power",
-              "newPower": -1,
-              "oldPower": 0,
-              "cardEntityId": 38
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 4,
-              "cardEntityId": 33
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 3,
-              "cardEntityId": 37
-            },
-            {
-              "who": "player",
-              "card": "Taskmaster",
-              "type": "power",
-              "newPower": -2,
-              "oldPower": -1,
-              "cardEntityId": 38
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    2
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    -2
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 1,
-              "cardEntityId": 36
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "from": "KamarTaj",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "power",
-              "newPower": 11,
-              "oldPower": 3,
-              "cardEntityId": 25
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            11
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 3,
-              "cardEntityId": 26
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "VampireKillmonger",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 31,
+              "entityId": 49,
               "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "VampireKillmonger",
-              "type": "draw"
             }
           ]
         },
@@ -3220,10 +1317,6 @@
             1,
             {
               "player": [
-                0,
-                4
-              ],
-              "opponent": [
                 0,
                 4
               ]
@@ -3237,24 +1330,11 @@
                 0,
                 {
                   "cost": 2,
-                  "power": 2,
+                  "power": 3,
                   "baseCost": 2,
-                  "basePower": 2,
-                  "cardDefId": "VampireKillmonger"
+                  "basePower": 3,
+                  "cardDefId": "ZombieBlade"
                 }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
               ]
             }
           ]
@@ -3263,2390 +1343,38 @@
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Turn Winner",
           "events": [
             {
-              "tie": false,
+              "tie": true,
               "type": "turnWinner",
-              "winner": "opponent"
+              "winner": null
             }
           ]
         },
-        {}
+        {
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
       ],
       [
         {
           "_v": 2,
-          "turn": 5,
+          "turn": 3,
           "label": "Initiative",
           "events": [
             {
               "who": "opponent",
               "type": "initiative"
             }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "play",
-              "entityId": 37,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 2,
-                          "baseCost": 5,
-                          "entityId": 37,
-                          "basePower": 4,
-                          "cardDefId": "ZombieGiantMan",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    -2
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Taskmaster"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "VampireKillmonger"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JaneFosterFracturedFrontier",
-              "type": "play",
-              "entityId": 22,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 22,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JaneFosterFracturedFrontier",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "JaneFosterFracturedFrontier"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "JaneFosterFracturedFrontier",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "cardEntityId": 19
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 5,
-              "cardEntityId": 26
-            },
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 4,
-              "cardEntityId": 36
-            },
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 20
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 6
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 18,
-              "locationIndex": 2,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 3,
-              "cardEntityId": 36
-            },
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "cardEntityId": 20
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 7,
-              "oldPower": 6,
-              "cardEntityId": 26
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 4,
-              "cardEntityId": 19
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 17,
-              "locationIndex": 2,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 37,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 59,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 0,
-                          "baseCost": 0,
-                          "entityId": 59,
-                          "basePower": 0,
-                          "cardDefId": "ZombieHorde",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "cardEntityId": 59
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 37
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 21,
-              "locationIndex": 2,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 59
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 4,
-              "cardEntityId": 37
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 25,
-              "locationIndex": 2,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 9,
-              "oldPower": 7,
-              "cardEntityId": 26
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            9
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 19,
-              "oldPower": 15,
-              "cardEntityId": 34
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            19
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "from": "StarkIndustries",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 29,
-              "locationIndex": 2,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 21,
-              "oldPower": 19,
-              "cardEntityId": 34
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            21
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 31,
-              "locationIndex": 2,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 35,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 2,
-                  "power": 0,
-                  "baseCost": 2,
-                  "basePower": 0,
-                  "cardDefId": "ZombieNova"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "play",
-              "entityId": 35,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 0,
-                          "baseCost": 2,
-                          "entityId": 35,
-                          "basePower": 0,
-                          "cardDefId": "ZombieNova",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "play",
-              "entityId": 33,
-              "location": "Proscenium",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 3,
-                          "baseCost": 4,
-                          "entityId": 33,
-                          "basePower": 5,
-                          "cardDefId": "ThePhoenixForce",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    -2
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Taskmaster"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    2
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    2
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "VampireKillmonger"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "doubleTrigger"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 6,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cyclops",
-              "type": "play",
-              "entityId": 27,
-              "location": "StarkIndustries",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Abomination",
-              "type": "play",
-              "entityId": 29,
-              "location": "Proscenium",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 29,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 27,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cyclops",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 27,
-              "drawReveal": false,
-              "overrideAbility": "EvolvedCyclops"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Cyclops"
-                          ],
-                          "overrideAbility": [
-                            0,
-                            "EvolvedCyclops"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cyclops",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 16
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Abomination",
-              "cost": 5,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 29,
-              "drawReveal": false,
-              "overrideAbility": "EvolvedAbomination"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            5
-                          ],
-                          "power": [
-                            0,
-                            9
-                          ],
-                          "baseCost": [
-                            0,
-                            5
-                          ],
-                          "basePower": [
-                            0,
-                            9
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Abomination"
-                          ],
-                          "overrideAbility": [
-                            0,
-                            "EvolvedAbomination"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Abomination",
-              "type": "power",
-              "newPower": 11,
-              "oldPower": 9,
-              "cardEntityId": 29
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            11
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Abomination",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 20
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 35,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 61,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 0,
-                          "power": 0,
-                          "baseCost": 0,
-                          "entityId": 61,
-                          "basePower": 0,
-                          "cardDefId": "ZombieHorde",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 0,
-              "cardEntityId": 61
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 3,
-              "cardEntityId": 61
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 20
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 5,
-              "cardEntityId": 61
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 20
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 3,
-              "cardEntityId": 33
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 33,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 13,
-              "locationIndex": 0,
-              "opponentPower": 20
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 29,
-              "oldPower": 21,
-              "cardEntityId": 34
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            29
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "from": "Proscenium",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 20
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 39,
-              "locationIndex": 2,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 31,
-              "oldPower": 29,
-              "cardEntityId": 34
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            31
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "playerPower": 41,
-              "locationIndex": 2,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -5690,14 +1418,8 @@
             {
               "card": "TheHunger",
               "isPlayer": true,
-              "location": "StarkIndustries",
+              "location": "Kyln",
               "locationIndex": 1
-            },
-            {
-              "card": "Sunspot",
-              "isPlayer": false,
-              "location": "Proscenium",
-              "locationIndex": 0
             }
           ],
           "energy": {
@@ -5706,119 +1428,76 @@
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 89
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 91
+              "_changeIdx": 66
             },
             {
-              "to": "Proscenium",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 68
+            },
+            {
+              "to": "Genosha",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 94,
+              "_changeIdx": 71,
               "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "ZombieSentry",
+              "cost": 2,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 28,
+              "_changeIdx": 74,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "ZombieSentry",
+              "type": "draw",
+              "_changeIdx": 75
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 97
-            },
-            {
-              "who": "player",
-              "card": "TheHunger",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 30,
-              "_changeIdx": 102,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "TheHunger",
-              "type": "draw",
-              "_changeIdx": 103
+              "_changeIdx": 79
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 106
+              "_changeIdx": 82
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative",
-              "_changeIdx": 107
+              "_changeIdx": 83
             },
             {
               "who": "player",
               "card": "TheHunger",
               "type": "play",
-              "entityId": 30,
+              "entityId": 27,
               "location": "RevealOn2",
-              "_changeIdx": 110,
+              "_changeIdx": 86,
               "locationIndex": 1
             },
             {
               "who": "player",
               "card": "TheHunger",
               "type": "cardStaged",
-              "_changeIdx": 111
+              "_changeIdx": 87
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 115
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "play",
-              "entityId": 26,
-              "location": "Proscenium",
-              "_changeIdx": 116,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "cost": 1,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 26,
-              "_changeIdx": 121,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "_changeIdx": 122,
-              "cardEntityId": 26
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "cardRevealed",
-              "_changeIdx": 126
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 128,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 2
+              "_changeIdx": 91
             },
             {
               "who": "player",
@@ -5826,8 +1505,8 @@
               "cost": 1,
               "type": "reveal",
               "power": 0,
-              "entityId": 30,
-              "_changeIdx": 134,
+              "entityId": 27,
+              "_changeIdx": 93,
               "drawReveal": false
             },
             {
@@ -5836,8 +1515,8 @@
               "cost": 0,
               "type": "reveal",
               "power": 0,
-              "entityId": 54,
-              "_changeIdx": 138,
+              "entityId": 48,
+              "_changeIdx": 97,
               "drawReveal": false
             },
             {
@@ -5846,20 +1525,20 @@
               "type": "power",
               "newPower": 3,
               "oldPower": 0,
-              "_changeIdx": 140,
-              "cardEntityId": 54
+              "_changeIdx": 99,
+              "cardEntityId": 48
             },
             {
               "who": "player",
               "card": "ZombieHorde",
               "type": "cardRevealed",
-              "_changeIdx": 144
+              "_changeIdx": 102
             },
             {
               "type": "score",
               "winner": "player",
               "location": "RevealOn3",
-              "_changeIdx": 145,
+              "_changeIdx": 104,
               "playerPower": 3,
               "locationIndex": 2,
               "opponentPower": 0
@@ -5868,27 +1547,21 @@
               "who": "player",
               "card": "TheHunger",
               "type": "cardResolved",
-              "_changeIdx": 149
+              "_changeIdx": 108
             },
             {
               "who": "player",
               "card": "TheHunger",
               "type": "removed",
-              "_changeIdx": 151
+              "_changeIdx": 110
             }
           ],
-          "chambers": {
-            "player": null,
-            "opponent": [
-              "TimeShot"
-            ]
-          },
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 2
+              "opponentPower": 0
             },
             {
               "winner": null,
@@ -5902,23 +1575,23 @@
             }
           ]
         },
-        19
+        14
       ],
       [
         {
           "turn": 2,
           "plays": [
             {
-              "card": "StrangeSupreme",
+              "card": "ZombieBlade",
               "isPlayer": true,
-              "location": "KamarTaj",
+              "location": "TimeTheater",
               "locationIndex": 2
             },
             {
-              "card": "Nebula",
+              "card": "ZombiePowerMan",
               "isPlayer": false,
-              "location": "KamarTaj",
-              "locationIndex": 2
+              "location": "Genosha",
+              "locationIndex": 0
             }
           ],
           "energy": {
@@ -5927,209 +1600,207 @@
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 156
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 158
+              "_changeIdx": 115
             },
             {
-              "to": "StarkIndustries",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 117
+            },
+            {
+              "to": "Kyln",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 161,
+              "_changeIdx": 120,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 165,
+              "_changeIdx": 124,
               "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "ZombieBlade",
+              "cost": 2,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 21,
+              "_changeIdx": 128,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "ZombieBlade",
+              "type": "draw",
+              "_changeIdx": 129
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 169
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 32,
-              "_changeIdx": 174,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "draw",
-              "_changeIdx": 175
+              "_changeIdx": 132
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "player",
-              "_changeIdx": 178
+              "_changeIdx": 135
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 179
+              "_changeIdx": 136
             },
             {
               "who": "player",
-              "card": "StrangeSupreme",
+              "card": "ZombieBlade",
               "type": "play",
-              "entityId": 34,
+              "entityId": 21,
               "location": "RevealOn2",
-              "_changeIdx": 182,
+              "_changeIdx": 139,
               "locationIndex": 2
             },
             {
               "who": "player",
-              "card": "StrangeSupreme",
+              "card": "ZombieBlade",
               "type": "cardStaged",
-              "_changeIdx": 183
+              "_changeIdx": 140
             },
             {
               "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 189
+              "_changeIdx": 145
             },
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "ZombiePowerMan",
               "type": "play",
-              "entityId": 20,
-              "location": "RevealOn2",
-              "_changeIdx": 190,
-              "locationIndex": 2
+              "entityId": 35,
+              "location": "Genosha",
+              "_changeIdx": 146,
+              "locationIndex": 0
             },
             {
               "who": "player",
-              "card": "StrangeSupreme",
+              "card": "ZombieBlade",
               "cost": 2,
               "type": "reveal",
-              "power": 2,
-              "entityId": 34,
-              "_changeIdx": 194,
+              "power": 3,
+              "entityId": 21,
+              "_changeIdx": 150,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
               "location": "RevealOn2",
-              "_changeIdx": 196,
-              "playerPower": 5,
+              "_changeIdx": 152,
+              "playerPower": 6,
               "locationIndex": 2,
               "opponentPower": 0
             },
             {
               "who": "player",
-              "card": "StrangeSupreme",
+              "card": "ZombieBlade",
               "type": "cardResolved",
-              "_changeIdx": 199
+              "_changeIdx": 155
             },
             {
               "who": "opponent",
-              "card": "Nebula",
-              "cost": 1,
+              "card": "ZombiePowerMan",
+              "cost": 2,
               "type": "reveal",
-              "power": 1,
-              "entityId": 20,
-              "_changeIdx": 200,
+              "power": 4,
+              "entityId": 35,
+              "_changeIdx": 156,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "Nebula",
+              "card": "ZombiePowerMan",
               "type": "cardRevealed",
-              "_changeIdx": 201
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RevealOn2",
-              "_changeIdx": 203,
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 211,
-              "cardEntityId": 26
+              "_changeIdx": 157
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 215,
+              "location": "Genosha",
+              "_changeIdx": 159,
               "playerPower": 0,
               "locationIndex": 0,
-              "opponentPower": 3
+              "opponentPower": 4
             },
             {
-              "who": "player",
-              "card": "StrangeSupreme",
+              "who": "opponent",
+              "card": "Scorn",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 41,
+              "_changeIdx": 164,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Scorn",
+              "type": "discarded",
+              "_changeIdx": 165
+            },
+            {
+              "who": "opponent",
+              "card": "Scorn",
+              "cost": 1,
+              "type": "resetCard",
+              "power": 2,
+              "_changeIdx": 169
+            },
+            {
+              "who": "opponent",
+              "card": "Scorn",
               "type": "power",
-              "newPower": 5,
+              "newPower": 4,
               "oldPower": 2,
-              "_changeIdx": 220,
-              "cardEntityId": 34
+              "_changeIdx": 170,
+              "cardEntityId": 41
             },
             {
-              "who": "player",
-              "card": "ZombieHorde",
-              "from": "RevealOn2",
-              "type": "setaside",
-              "_changeIdx": 225
+              "who": "opponent",
+              "card": "Scorn",
+              "type": "draw",
+              "_changeIdx": 173
             },
             {
-              "who": "player",
-              "card": "StrangeSupreme",
+              "who": "opponent",
+              "card": "ZombiePowerMan",
               "type": "power",
-              "newPower": 7,
-              "oldPower": 5,
-              "_changeIdx": 232,
-              "cardEntityId": 34
+              "newPower": 6,
+              "oldPower": 4,
+              "_changeIdx": 176,
+              "cardEntityId": 35
             },
             {
               "type": "score",
-              "winner": "player",
-              "location": "RevealOn2",
-              "_changeIdx": 236,
-              "playerPower": 7,
-              "locationIndex": 2,
-              "opponentPower": 1
+              "winner": "opponent",
+              "location": "Genosha",
+              "_changeIdx": 180,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 6
             }
           ],
-          "chambers": {
-            "player": null,
-            "opponent": [
-              "TimeShot",
-              "PowerShot"
-            ]
-          },
           "snapEvent": null,
           "locationPower": [
             {
               "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 3
+              "opponentPower": 6
             },
             {
               "winner": null,
@@ -6138,1553 +1809,139 @@
             },
             {
               "winner": "player",
-              "playerPower": 7,
-              "opponentPower": 1
+              "playerPower": 6,
+              "opponentPower": 0
             }
           ]
         },
-        39
+        35
       ],
       [
         {
           "turn": 3,
-          "plays": [
-            {
-              "card": "ZombieSentry",
-              "isPlayer": true,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            },
-            {
-              "card": "Cosmo",
-              "isPlayer": false,
-              "location": "StarkIndustries",
-              "locationIndex": 1
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 3,
             "opponent": 3
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 242
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 244
+              "_changeIdx": 186
             },
             {
-              "to": "KamarTaj",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 188
+            },
+            {
+              "to": "TimeTheater",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 247,
+              "_changeIdx": 191,
               "locationIndex": 2
             },
             {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "doubleTrigger",
-              "_changeIdx": 250
-            },
-            {
               "who": "player",
-              "card": "StrangeSupreme",
-              "type": "doubleTrigger",
-              "_changeIdx": 252
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 256
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "cost": 5,
+              "card": "ZombieBlade",
+              "cost": 2,
               "type": "reveal",
-              "power": 4,
-              "entityId": 37,
-              "_changeIdx": 261,
+              "power": 3,
+              "entityId": 49,
+              "_changeIdx": 197,
               "drawReveal": true
             },
             {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "draw",
-              "_changeIdx": 262
-            },
-            {
-              "tie": false,
+              "tie": true,
               "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 267
+              "winner": null,
+              "_changeIdx": 206
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 268
-            },
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "play",
-              "entityId": 36,
-              "location": "KamarTaj",
-              "_changeIdx": 271,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "cardStaged",
-              "_changeIdx": 272
-            },
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "doubleTrigger",
-              "_changeIdx": 277
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 281
-            },
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "play",
-              "entityId": 25,
-              "location": "StarkIndustries",
-              "_changeIdx": 282,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "cost": 2,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 36,
-              "_changeIdx": 286,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 289,
-              "playerPower": 8,
-              "locationIndex": 2,
-              "opponentPower": 1
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 56,
-              "_changeIdx": 294,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "_changeIdx": 296,
-              "cardEntityId": 56
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 300,
-              "cardEntityId": 56
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "cardRevealed",
-              "_changeIdx": 304
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Proscenium",
-              "_changeIdx": 305,
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "_changeIdx": 310,
-              "cardEntityId": 56
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Proscenium",
-              "_changeIdx": 314,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "cardResolved",
-              "_changeIdx": 317
-            },
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 25,
-              "_changeIdx": 318,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "cardRevealed",
-              "_changeIdx": 319
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "_changeIdx": 322,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 3
-            },
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 7,
-              "_changeIdx": 331,
-              "cardEntityId": 34
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "from": "Proscenium",
-              "type": "setaside",
-              "_changeIdx": 336
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 340,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 343,
-              "playerPower": 14,
-              "locationIndex": 2,
-              "opponentPower": 1
-            },
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 15,
-              "oldPower": 13,
-              "_changeIdx": 347,
-              "cardEntityId": 34
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 351,
-              "playerPower": 16,
-              "locationIndex": 2,
-              "opponentPower": 1
+              "_changeIdx": 207
             }
           ],
-          "chambers": {
-            "player": null,
-            "opponent": [
-              "TimeShot",
-              "PowerShot",
-              "RealityShot"
-            ]
-          },
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 3
+              "opponentPower": 0
             },
             {
-              "winner": "opponent",
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 3
+              "opponentPower": 0
             },
             {
-              "winner": "player",
-              "playerPower": 16,
-              "opponentPower": 1
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             }
           ]
         },
-        67
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "Hulkbuster",
-              "isPlayer": true,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            },
-            {
-              "card": "Scorpion",
-              "isPlayer": false,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 358
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 360
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 362
-            },
-            {
-              "who": "player",
-              "card": "Taskmaster",
-              "cost": 6,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 38,
-              "_changeIdx": 367,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Taskmaster",
-              "type": "draw",
-              "_changeIdx": 368
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 372
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 373
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "play",
-              "entityId": 32,
-              "location": "KamarTaj",
-              "_changeIdx": 376,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "cardStaged",
-              "_changeIdx": 377
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "doubleTrigger",
-              "_changeIdx": 383
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 388
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "play",
-              "entityId": 19,
-              "location": "KamarTaj",
-              "_changeIdx": 389,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 19,
-              "_changeIdx": 393,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "cardRevealed",
-              "_changeIdx": 394
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 396,
-              "playerPower": 16,
-              "locationIndex": 2,
-              "opponentPower": 4
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 5,
-              "_changeIdx": 400,
-              "cardEntityId": 33
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 4,
-              "_changeIdx": 403,
-              "cardEntityId": 37
-            },
-            {
-              "who": "player",
-              "card": "Taskmaster",
-              "type": "power",
-              "newPower": -1,
-              "oldPower": 0,
-              "_changeIdx": 406,
-              "cardEntityId": 38
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 4,
-              "_changeIdx": 411,
-              "cardEntityId": 33
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 3,
-              "_changeIdx": 414,
-              "cardEntityId": 37
-            },
-            {
-              "who": "player",
-              "card": "Taskmaster",
-              "type": "power",
-              "newPower": -2,
-              "oldPower": -1,
-              "_changeIdx": 417,
-              "cardEntityId": 38
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 32,
-              "_changeIdx": 424,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 426,
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 4
-            },
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 1,
-              "_changeIdx": 431,
-              "cardEntityId": 36
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "from": "KamarTaj",
-              "type": "setaside",
-              "_changeIdx": 436
-            },
-            {
-              "who": "player",
-              "card": "Hulkbuster",
-              "type": "cardResolved",
-              "_changeIdx": 443
-            },
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "power",
-              "newPower": 11,
-              "oldPower": 3,
-              "_changeIdx": 446,
-              "cardEntityId": 25
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "_changeIdx": 450,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 3,
-              "_changeIdx": 454,
-              "cardEntityId": 26
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 458,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 5
-            }
-          ],
-          "chambers": {
-            "player": null,
-            "opponent": [
-              "RealityShot",
-              "TimeShot",
-              "PowerShot",
-              "SoulShot"
-            ]
-          },
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 5
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 11
-            },
-            {
-              "winner": "player",
-              "playerPower": 19,
-              "opponentPower": 4
-            }
-          ]
-        },
-        89
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "ZombieGiantMan",
-              "isPlayer": true,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            },
-            {
-              "card": "JaneFosterFracturedFrontier",
-              "isPlayer": false,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 466
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 468
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 470
-            },
-            {
-              "who": "player",
-              "card": "VampireKillmonger",
-              "cost": 2,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 31,
-              "_changeIdx": 476,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "VampireKillmonger",
-              "type": "draw",
-              "_changeIdx": 477
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 480
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 481
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "play",
-              "entityId": 37,
-              "location": "KamarTaj",
-              "_changeIdx": 484,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "cardStaged",
-              "_changeIdx": 485
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "doubleTrigger",
-              "_changeIdx": 492
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 497
-            },
-            {
-              "who": "opponent",
-              "card": "JaneFosterFracturedFrontier",
-              "type": "play",
-              "entityId": 22,
-              "location": "KamarTaj",
-              "_changeIdx": 498,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": "JaneFosterFracturedFrontier",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 22,
-              "_changeIdx": 502,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "JaneFosterFracturedFrontier",
-              "type": "cardRevealed",
-              "_changeIdx": 503
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 505,
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 7
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "_changeIdx": 509,
-              "cardEntityId": 19
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 5,
-              "_changeIdx": 512,
-              "cardEntityId": 26
-            },
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 4,
-              "_changeIdx": 515,
-              "cardEntityId": 36
-            },
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 518,
-              "cardEntityId": 20
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 524,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 6
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 527,
-              "playerPower": 18,
-              "locationIndex": 2,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "ZombieSentry",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 3,
-              "_changeIdx": 531,
-              "cardEntityId": 36
-            },
-            {
-              "who": "opponent",
-              "card": "Nebula",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 534,
-              "cardEntityId": 20
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 7,
-              "oldPower": 6,
-              "_changeIdx": 537,
-              "cardEntityId": 26
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 4,
-              "_changeIdx": 540,
-              "cardEntityId": 19
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 544,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 547,
-              "playerPower": 17,
-              "locationIndex": 2,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 37,
-              "_changeIdx": 550,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 556,
-              "playerPower": 19,
-              "locationIndex": 2,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 59,
-              "_changeIdx": 561,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 0,
-              "_changeIdx": 563,
-              "cardEntityId": 59
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 566,
-              "cardEntityId": 37
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 569,
-              "playerPower": 21,
-              "locationIndex": 2,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "cardRevealed",
-              "_changeIdx": 572
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "_changeIdx": 573,
-              "playerPower": 2,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 578,
-              "cardEntityId": 59
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 4,
-              "_changeIdx": 581,
-              "cardEntityId": 37
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "_changeIdx": 585,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 588,
-              "playerPower": 25,
-              "locationIndex": 2,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "ZombieGiantMan",
-              "type": "cardResolved",
-              "_changeIdx": 591
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 9,
-              "oldPower": 7,
-              "_changeIdx": 595,
-              "cardEntityId": 26
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 599,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 19,
-              "oldPower": 15,
-              "_changeIdx": 604,
-              "cardEntityId": 34
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "from": "StarkIndustries",
-              "type": "setaside",
-              "_changeIdx": 609
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "_changeIdx": 613,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 616,
-              "playerPower": 29,
-              "locationIndex": 2,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 21,
-              "oldPower": 19,
-              "_changeIdx": 620,
-              "cardEntityId": 34
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 624,
-              "playerPower": 31,
-              "locationIndex": 2,
-              "opponentPower": 11
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 628
-            }
-          ],
-          "chambers": {
-            "player": null,
-            "opponent": [
-              "RealityShot",
-              "TimeShot",
-              "PowerShot",
-              "SoulShot"
-            ]
-          },
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 9
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 11
-            },
-            {
-              "winner": "player",
-              "playerPower": 31,
-              "opponentPower": 11
-            }
-          ]
-        },
-        122
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "ZombieNova",
-              "isPlayer": true,
-              "location": "KamarTaj",
-              "locationIndex": 2
-            },
-            {
-              "card": "ThePhoenixForce",
-              "isPlayer": true,
-              "location": "Proscenium",
-              "locationIndex": 0
-            },
-            {
-              "card": "Cyclops",
-              "isPlayer": false,
-              "location": "StarkIndustries",
-              "locationIndex": 1
-            },
-            {
-              "card": "Abomination",
-              "isPlayer": false,
-              "location": "Proscenium",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "type": "cubePreview",
-              "_changeIdx": 630,
-              "cubeValueNextTurn": 2
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 632
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 634
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 636
-            },
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 35,
-              "_changeIdx": 642,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "draw",
-              "_changeIdx": 643
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 646
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 647
-            },
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "play",
-              "entityId": 35,
-              "location": "KamarTaj",
-              "_changeIdx": 650,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "cardStaged",
-              "_changeIdx": 651
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "play",
-              "entityId": 33,
-              "location": "Proscenium",
-              "_changeIdx": 654,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "cardStaged",
-              "_changeIdx": 655
-            },
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "doubleTrigger",
-              "_changeIdx": 662
-            },
-            {
-              "turn": 6,
-              "type": "endTurn",
-              "_changeIdx": 668
-            },
-            {
-              "who": "opponent",
-              "card": "Cyclops",
-              "type": "play",
-              "entityId": 27,
-              "location": "StarkIndustries",
-              "_changeIdx": 669,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Abomination",
-              "type": "play",
-              "entityId": 29,
-              "location": "Proscenium",
-              "_changeIdx": 672,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Cyclops",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 27,
-              "_changeIdx": 677,
-              "drawReveal": false,
-              "overrideAbility": "EvolvedCyclops"
-            },
-            {
-              "who": "opponent",
-              "card": "Cyclops",
-              "type": "cardRevealed",
-              "_changeIdx": 678
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "StarkIndustries",
-              "_changeIdx": 680,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 16
-            },
-            {
-              "who": "opponent",
-              "card": "Abomination",
-              "cost": 5,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 29,
-              "_changeIdx": 687,
-              "drawReveal": false,
-              "overrideAbility": "EvolvedAbomination"
-            },
-            {
-              "who": "opponent",
-              "card": "Abomination",
-              "type": "power",
-              "newPower": 11,
-              "oldPower": 9,
-              "_changeIdx": 688,
-              "cardEntityId": 29
-            },
-            {
-              "who": "opponent",
-              "card": "Abomination",
-              "type": "cardRevealed",
-              "_changeIdx": 692
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 695,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 20
-            },
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "cost": 2,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 35,
-              "_changeIdx": 698,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "cost": 0,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 61,
-              "_changeIdx": 702,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 0,
-              "_changeIdx": 704,
-              "cardEntityId": 61
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 3,
-              "_changeIdx": 708,
-              "cardEntityId": 61
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "cardRevealed",
-              "_changeIdx": 712
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 713,
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 20
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 5,
-              "_changeIdx": 718,
-              "cardEntityId": 61
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 722,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 20
-            },
-            {
-              "who": "player",
-              "card": "ZombieNova",
-              "type": "cardResolved",
-              "_changeIdx": 725
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 3,
-              "_changeIdx": 729,
-              "cardEntityId": 33
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 33,
-              "_changeIdx": 733,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 735,
-              "playerPower": 13,
-              "locationIndex": 0,
-              "opponentPower": 20
-            },
-            {
-              "who": "player",
-              "card": "ThePhoenixForce",
-              "type": "cardResolved",
-              "_changeIdx": 741
-            },
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 29,
-              "oldPower": 21,
-              "_changeIdx": 746,
-              "cardEntityId": 34
-            },
-            {
-              "who": "player",
-              "card": "ZombieHorde",
-              "from": "Proscenium",
-              "type": "setaside",
-              "_changeIdx": 751
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Proscenium",
-              "_changeIdx": 755,
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 20
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 758,
-              "playerPower": 39,
-              "locationIndex": 2,
-              "opponentPower": 11
-            },
-            {
-              "who": "player",
-              "card": "StrangeSupreme",
-              "type": "power",
-              "newPower": 31,
-              "oldPower": 29,
-              "_changeIdx": 762,
-              "cardEntityId": 34
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "KamarTaj",
-              "_changeIdx": 766,
-              "playerPower": 41,
-              "locationIndex": 2,
-              "opponentPower": 11
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 771
-            }
-          ],
-          "chambers": {
-            "player": null,
-            "opponent": [
-              "RealityShot",
-              "TimeShot",
-              "PowerShot",
-              "SoulShot",
-              "SpaceShot"
-            ]
-          },
-          "snapEvent": {
-            "cubeValue": 2,
-            "totalSnaps": 1
-          },
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 5,
-              "opponentPower": 20
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 16
-            },
-            {
-              "winner": "player",
-              "playerPower": 41,
-              "opponentPower": 11
-            }
-          ]
-        },
-        158
+        40
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 11099,
-  "opp_sp": 3632,
+  "opp_cl": 16842,
+  "opp_sp": 4787,
   "bracket": null,
-  "match_id": "2a21f851-af35-4727-99fa-a82754a6e437",
-  "opp_name": "Ben",
+  "match_id": "e7233ee2-115f-4b64-ab3e-a0af2c4ae00f",
+  "opp_name": "sbronzaman",
   "opp_team": null,
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "Proscenium",
-    "StarkIndustries",
-    "KamarTaj"
-  ],
+  "locations": [],
   "player_cl": 12060,
   "player_sp": 4875,
   "turn_data": null,
   "draft_deck": null,
-  "opp_avatar": null,
+  "opp_avatar": {
+    "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
+    "CardDefId": "GhostRider",
+    "ArtVariantDefId": "GhostRider_02"
+  },
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": null,
   "player_name": "SmokeFisher",
-  "current_turn": 7,
+  "current_turn": 4,
   "kudzu_spread": null,
-  "match_result": "loss",
-  "match_status": "complete",
+  "match_result": null,
+  "match_status": "in_progress",
   "opp_champion": null,
-  "opp_clan_tag": "007",
+  "opp_clan_tag": null,
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": null,
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "ThanosFracturedFrontier",
-    "Sunspot",
-    "Nebula",
-    "Cosmo",
-    "Scorpion",
-    "JaneFosterFracturedFrontier",
-    "Cyclops",
-    "HighEvolutionary",
-    "Abomination"
+    "ZombiePowerMan",
+    "Scorn"
   ],
-  "last_updated_at": "2026-10-23T18:58:06.52+00:00",
+  "last_updated_at": "2026-10-23T18:59:35.1+00:00",
   "player_champion": null,
   "opp_played_cards": [],
   "player_deck_cards": [
-    "VampireKillmonger",
-    "Taskmaster",
-    "ThePhoenixForce",
-    "Hulkbuster",
-    "StrangeSupreme",
-    "TheHunger",
-    "ZombieSentry",
-    "ZombieGiantMan",
-    "ZombieBlade",
     "ZombieNova",
     "ZombieMisterFantastic",
-    "FastballSpecial"
+    "TheHunger",
+    "ZombieSentry",
+    "ZombieBlade"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "ThanosFracturedFrontier",
-    "Sunspot",
-    "Nebula",
-    "Cosmo",
-    "Scorpion",
-    "JaneFosterFracturedFrontier",
-    "Cyclops",
-    "HighEvolutionary",
-    "Abomination"
+    "ZombiePowerMan",
+    "Scorn"
   ],
   "conquest_round_index": null
 }
