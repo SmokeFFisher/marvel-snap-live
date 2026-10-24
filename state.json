@@ -44,25 +44,25 @@
           },
           "h": [
             {
-              "cost": 1,
-              "power": 2,
-              "baseCost": 1,
-              "basePower": 2,
-              "cardDefId": "SpiderManBrandNewDay"
+              "cost": 2,
+              "power": 5,
+              "baseCost": 2,
+              "basePower": 5,
+              "cardDefId": "Silk"
+            },
+            {
+              "cost": 3,
+              "power": 4,
+              "baseCost": 3,
+              "basePower": 4,
+              "cardDefId": "Prowler"
             },
             {
               "cost": 3,
               "power": 3,
               "baseCost": 3,
               "basePower": 3,
-              "cardDefId": "SpiderPunk"
-            },
-            {
-              "cost": 3,
-              "power": 5,
-              "baseCost": 3,
-              "basePower": 5,
-              "cardDefId": "ScarletSpiderWebSlingers"
+              "cardDefId": "HydraStomper"
             }
           ],
           "n": {
@@ -106,7 +106,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "RocketPad",
+              "to": "MonsterIsland",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +123,7 @@
                 {
                   "location": [
                     0,
-                    "RocketPad"
+                    "MonsterIsland"
                   ],
                   "revealed": [
                     0,
@@ -139,6 +139,149 @@
         {
           "_v": 2,
           "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "Monster",
+              "cost": 6,
+              "type": "reveal",
+              "power": 10,
+              "entityId": 50,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Monster",
+              "cost": 6,
+              "type": "reveal",
+              "power": 10,
+              "oppKit": "||Common|",
+              "entityId": 51,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 6,
+                          "power": 10,
+                          "baseCost": 6,
+                          "entityId": 50,
+                          "basePower": 10,
+                          "cardDefId": "Monster",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 6,
+                          "power": 10,
+                          "baseCost": 6,
+                          "entityId": 51,
+                          "basePower": 10,
+                          "cardDefId": "Monster",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "player",
+              "card": "Monster",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "MonsterIsland",
+              "playerPower": 10,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Monster",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": null,
+              "location": "MonsterIsland",
+              "playerPower": 10,
+              "locationIndex": 0,
+              "opponentPower": 10
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
           "label": "Draw",
           "events": [
             {
@@ -148,16 +291,16 @@
             },
             {
               "who": "player",
-              "card": "AgonyWebSlingers",
-              "cost": 1,
+              "card": "SymbioteSpiderManWebSlingers",
+              "cost": 4,
               "type": "reveal",
-              "power": 2,
+              "power": 6,
               "entityId": 37,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "AgonyWebSlingers",
+              "card": "SymbioteSpiderManWebSlingers",
               "type": "draw"
             }
           ]
@@ -183,11 +326,11 @@
               "3": [
                 0,
                 {
-                  "cost": 1,
-                  "power": 2,
-                  "baseCost": 1,
-                  "basePower": 2,
-                  "cardDefId": "AgonyWebSlingers"
+                  "cost": 4,
+                  "power": 6,
+                  "baseCost": 4,
+                  "basePower": 6,
+                  "cardDefId": "SymbioteSpiderManWebSlingers"
                 }
               ]
             }
@@ -240,303 +383,11 @@
         {
           "_v": 2,
           "turn": 1,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "type": "play",
-              "entityId": 37,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 2,
-                          "baseCost": 1,
-                          "entityId": 37,
-                          "basePower": 2,
-                          "cardDefId": "AgonyWebSlingers",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {}
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
           "label": "End Turn",
           "events": [
             {
               "turn": 1,
               "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ValentinaThunderbolts",
-              "type": "play",
-              "entityId": 27,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 27,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ValentinaThunderbolts",
-              "cost": 1,
-              "type": "reveal",
-              "power": -1,
-              "oppKit": "TeamThunderbolts|DiamondGold|Faction_Thunderbolts|",
-              "entityId": 27,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            -1
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            -1
-                          ],
-                          "cardDefId": [
-                            0,
-                            "ValentinaThunderbolts"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ValentinaThunderbolts",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": -1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 37,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": -1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 1,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "type": "cardResolved"
             }
           ]
         },
@@ -569,16 +420,10 @@
           "label": "Location",
           "events": [
             {
-              "to": "Kyln",
+              "to": "DestroyedMansion",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
-            },
-            {
-              "to": "RevealOn2",
-              "from": "RevealOn3",
-              "type": "location",
-              "locationIndex": 2
             }
           ]
         },
@@ -592,14 +437,210 @@
                 {
                   "location": [
                     0,
-                    "Kyln"
+                    "DestroyedMansion"
                   ],
                   "revealed": [
                     0,
                     true
                   ]
                 }
-              ],
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Rock",
+              "cost": 1,
+              "type": "reveal",
+              "power": 0,
+              "oppKit": "||Common|",
+              "entityId": 53,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 0,
+                          "baseCost": 1,
+                          "entityId": 53,
+                          "basePower": 0,
+                          "cardDefId": "Rock",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "Vibranium",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 54,
+              "drawReveal": true
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                5
+              ]
+            }
+          ],
+          "h": [
+            2,
+            5,
+            {
+              "4": [
+                0,
+                {
+                  "cost": 1,
+                  "power": 4,
+                  "baseCost": 1,
+                  "basePower": 4,
+                  "cardDefId": "Vibranium"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "Rock",
+              "cost": 1,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 55,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 0,
+                          "baseCost": 1,
+                          "entityId": 55,
+                          "basePower": 0,
+                          "cardDefId": "Rock",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Rock",
+              "type": "cardRevealed"
+            },
+            {
+              "who": "player",
+              "card": "Rock",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Location",
+          "events": [
+            {
+              "to": "RevealOn2",
+              "from": "RevealOn3",
+              "type": "location",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
               "2": [
                 1,
                 {
@@ -630,2684 +671,16 @@
             },
             {
               "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 33,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 5,
-                  "baseCost": 3,
-                  "basePower": 5,
-                  "cardDefId": "AntiVenomWebSlingers"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                7
-              ],
-              "opponent": [
-                0,
-                7
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "play",
-              "entityId": 39,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 2,
-                          "baseCost": 1,
-                          "entityId": 39,
-                          "basePower": 2,
-                          "cardDefId": "SpiderManBrandNewDay",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SpiderPunk"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ScarletSpiderWebSlingers"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "AntiVenomWebSlingers"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 2,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "PunisherWarMachine",
-              "type": "play",
-              "entityId": 50,
-              "location": "Kyln",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 50,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
               "card": "SpiderManBrandNewDay",
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": -1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "cardEntityId": 39
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Set Aside",
-          "events": [
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "from": "RocketPad",
-              "type": "setaside"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ],
-                          "entityId": [
-                            0,
-                            39
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SpiderManBrandNewDay"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Move",
-          "events": [
-            {
-              "to": "Kyln",
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "from": "RocketPad",
-              "type": "move",
-              "entityId": 39,
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 4,
-                          "baseCost": 1,
-                          "entityId": 39,
-                          "basePower": 2,
-                          "cardDefId": "SpiderManBrandNewDay",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": -1
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "PunisherWarMachine",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "oppKit": "||Common|",
-              "entityId": 50,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            4
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "PunisherWarMachine"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "PunisherWarMachine",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Kyln",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "||DistressedGold|",
-              "entityId": 28,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 10,
-              "cardEntityId": 28
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "Subterranea",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "Subterranea"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "cost": 5,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 40,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 5,
-                  "power": 8,
-                  "baseCost": 5,
-                  "basePower": 8,
-                  "cardDefId": "SpiderMan2099WebSlingers"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                10
-              ],
-              "opponent": [
-                0,
-                10
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "play",
-              "entityId": 41,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 3,
-                          "baseCost": 3,
-                          "entityId": 41,
-                          "basePower": 3,
-                          "cardDefId": "SpiderPunk",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ScarletSpiderWebSlingers"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "AntiVenomWebSlingers"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SpiderMan2099WebSlingers"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Move",
-          "events": [
-            {
-              "to": "RocketPad",
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "from": "Kyln",
-              "type": "move",
-              "entityId": 39,
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 4,
-                          "baseCost": 1,
-                          "entityId": 39,
-                          "basePower": 2,
-                          "cardDefId": "SpiderManBrandNewDay",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Kyln",
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "type": "play",
-              "entityId": 21,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 21,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": -1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "cardEntityId": 41
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 41,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": -1
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "cost": 3,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "||DistressedGold|",
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            10
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            8
-                          ],
-                          "cardDefId": [
-                            0,
-                            "RedHulkFracturedFrontier"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 10,
-              "cardEntityId": 21
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            8
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 16,
-              "oldPower": 13,
-              "cardEntityId": 28
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 38,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 3,
-                  "baseCost": 3,
-                  "basePower": 3,
-                  "cardDefId": "HydraStomper"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                9
-              ],
-              "opponent": [
-                0,
-                9
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "play",
-              "entityId": 32,
-              "location": "Kyln",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 5,
-                          "baseCost": 3,
-                          "entityId": 32,
-                          "basePower": 5,
-                          "cardDefId": "ScarletSpiderWebSlingers",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "AntiVenomWebSlingers"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SpiderMan2099WebSlingers"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "HydraStomper"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "type": "play",
-              "entityId": 33,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 5,
-                          "baseCost": 3,
-                          "entityId": 33,
-                          "basePower": 5,
-                          "cardDefId": "AntiVenomWebSlingers",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ],
-                  "power": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "SpiderMan2099WebSlingers"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "HydraStomper"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Move",
-          "events": [
-            {
-              "to": "Kyln",
-              "who": "player",
-              "card": "SpiderPunk",
-              "from": "RocketPad",
-              "type": "move",
-              "entityId": 41,
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "entityId": [
-                            0,
-                            39
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SpiderManBrandNewDay"
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "entityId": [
-                            0,
-                            33
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "AntiVenomWebSlingers"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 4,
-                          "baseCost": 3,
-                          "entityId": 41,
-                          "basePower": 3,
-                          "cardDefId": "SpiderPunk",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Move",
-          "events": [
-            {
-              "to": "Kyln",
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "from": "RocketPad",
-              "type": "move",
-              "entityId": 39,
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "entityId": [
-                            0,
-                            33
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "AntiVenomWebSlingers"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 1,
-                          "power": 4,
-                          "baseCost": 1,
-                          "entityId": 39,
-                          "basePower": 2,
-                          "cardDefId": "SpiderManBrandNewDay",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Klaw",
-              "type": "play",
-              "entityId": 20,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 20,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Kyln",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "PunisherWarMachine",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 4,
-              "cardEntityId": 50
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "cardEntityId": 41
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "playerPower": 10,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "newPower": 7,
-              "oldPower": 6,
-              "cardEntityId": 41
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            7
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "playerPower": 11,
-              "locationIndex": 1,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Klaw",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "oppKit": "||DistressedGold|",
-              "entityId": 20,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            2
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Klaw"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Klaw",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "playerPower": 11,
-              "locationIndex": 1,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "playerPower": 16,
-              "locationIndex": 1,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 33,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 9
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ValentinaThunderbolts",
-              "type": "power",
-              "newPower": 0,
-              "oldPower": -1,
-              "cardEntityId": 27
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "type": "power",
-              "newPower": 9,
-              "oldPower": 8,
-              "cardEntityId": 21
-            },
-            {
-              "who": "opponent",
-              "card": "Klaw",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "cardEntityId": 20
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            0
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            9
-                          ]
-                        }
-                      ],
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 12
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Prowler",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
               "entityId": 30,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Prowler",
+              "card": "SpiderManBrandNewDay",
               "type": "draw"
             }
           ]
@@ -3318,860 +691,26 @@
             {
               "player": [
                 0,
-                3
+                6
               ],
               "opponent": [
                 0,
-                5
+                6
               ]
             }
           ],
           "h": [
             2,
-            3,
+            6,
             {
-              "2": [
+              "5": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 5,
-                  "baseCost": 3,
-                  "basePower": 4,
-                  "cardDefId": "Prowler"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                8
-              ],
-              "opponent": [
-                0,
-                8
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "play",
-              "entityId": 40,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 8,
-                          "baseCost": 5,
-                          "entityId": 40,
-                          "basePower": 8,
-                          "cardDefId": "SpiderMan2099WebSlingers",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            2,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "HydraStomper"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    4
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Prowler"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "cardStaged"
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AbsorbingMan",
-              "type": "play",
-              "entityId": 29,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 29,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "cost": 5,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 40,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 13,
-              "locationIndex": 0,
-              "opponentPower": 12
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "newPower": 9,
-              "oldPower": 7,
-              "cardEntityId": 41
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 8,
-              "cardEntityId": 40
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            10
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            9
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 15,
-              "locationIndex": 0,
-              "opponentPower": 12
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "playerPower": 18,
-              "locationIndex": 1,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "cardResolved"
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Ability",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "activated",
-              "isActivated": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletSpiderClone",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 59,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 5,
-                          "baseCost": 4,
-                          "entityId": 59,
-                          "basePower": 5,
-                          "cardDefId": "ScarletSpiderClone",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Move",
-          "events": [
-            {
-              "to": "RocketPad",
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "from": "Kyln",
-              "type": "move",
-              "entityId": 32,
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 5,
-                          "baseCost": 3,
-                          "entityId": 32,
-                          "basePower": 5,
-                          "cardDefId": "ScarletSpiderWebSlingers",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            9
-                          ],
-                          "entityId": [
-                            0,
-                            41
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SpiderPunk"
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            4
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "entityId": [
-                            0,
-                            39
-                          ],
-                          "basePower": [
-                            0,
-                            2
-                          ],
-                          "cardDefId": [
-                            0,
-                            "SpiderManBrandNewDay"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "playerPower": 20,
-              "locationIndex": 0,
-              "opponentPower": 12
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "playerPower": 13,
-              "locationIndex": 1,
-              "opponentPower": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletSpiderClone",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AbsorbingMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "oppKit": "||DistressedGold|",
-              "entityId": 29,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            4
-                          ],
-                          "power": [
-                            0,
-                            7
-                          ],
-                          "baseCost": [
-                            0,
-                            4
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "AbsorbingMan"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AbsorbingMan",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Subterranea",
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 19,
-              "oldPower": 16,
-              "cardEntityId": 28
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 8
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "MaryJane",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 35,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "MaryJane",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "2": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 4,
-                  "baseCost": 3,
-                  "basePower": 3,
-                  "cardDefId": "MaryJane"
+                  "cost": 1,
+                  "power": 2,
+                  "baseCost": 1,
+                  "basePower": 2,
+                  "cardDefId": "SpiderManBrandNewDay"
                 }
               ]
             }
@@ -4194,13 +733,13 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 2,
           "label": "Turn Winner",
           "events": [
             {
-              "tie": false,
+              "tie": true,
               "type": "turnWinner",
-              "winner": "player"
+              "winner": null
             }
           ]
         },
@@ -4209,11 +748,11 @@
       [
         {
           "_v": 2,
-          "turn": 6,
+          "turn": 2,
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative"
             }
           ]
@@ -4255,20 +794,7 @@
       [
         {
           "turn": 1,
-          "plays": [
-            {
-              "card": "AgonyWebSlingers",
-              "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 0
-            },
-            {
-              "card": "ValentinaThunderbolts",
-              "isPlayer": false,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 1,
             "opponent": 1
@@ -4278,141 +804,117 @@
               "who": "opponent",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 66
+              "_changeIdx": 67
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 68
+              "_changeIdx": 69
             },
             {
-              "to": "RocketPad",
+              "to": "MonsterIsland",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 71,
+              "_changeIdx": 72,
               "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "Monster",
+              "cost": 6,
+              "type": "reveal",
+              "power": 10,
+              "entityId": 50,
+              "_changeIdx": 77,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Monster",
+              "cost": 6,
+              "type": "reveal",
+              "power": 10,
+              "oppKit": "||Common|",
+              "entityId": 51,
+              "_changeIdx": 80,
+              "drawReveal": false
+            },
+            {
+              "who": "player",
+              "card": "Monster",
+              "type": "cardRevealed",
+              "_changeIdx": 82
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "MonsterIsland",
+              "_changeIdx": 83,
+              "playerPower": 10,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "who": "opponent",
+              "card": "Monster",
+              "type": "cardRevealed",
+              "_changeIdx": 86
+            },
+            {
+              "type": "score",
+              "winner": null,
+              "location": "MonsterIsland",
+              "_changeIdx": 87,
+              "playerPower": 10,
+              "locationIndex": 0,
+              "opponentPower": 10
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 74
+              "_changeIdx": 92
             },
             {
               "who": "player",
-              "card": "AgonyWebSlingers",
-              "cost": 1,
+              "card": "SymbioteSpiderManWebSlingers",
+              "cost": 4,
               "type": "reveal",
-              "power": 2,
+              "power": 6,
               "entityId": 37,
-              "_changeIdx": 77,
+              "_changeIdx": 95,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "AgonyWebSlingers",
+              "card": "SymbioteSpiderManWebSlingers",
               "type": "draw",
-              "_changeIdx": 78
+              "_changeIdx": 96
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 81
+              "_changeIdx": 99
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 82
-            },
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "type": "play",
-              "entityId": 37,
-              "location": "RocketPad",
-              "_changeIdx": 85,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "type": "cardStaged",
-              "_changeIdx": 86
+              "_changeIdx": 100
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 92
-            },
-            {
-              "who": "opponent",
-              "card": "ValentinaThunderbolts",
-              "type": "play",
-              "entityId": 27,
-              "location": "RocketPad",
-              "_changeIdx": 93,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "ValentinaThunderbolts",
-              "cost": 1,
-              "type": "reveal",
-              "power": -1,
-              "oppKit": "TeamThunderbolts|DiamondGold|Faction_Thunderbolts|",
-              "entityId": 27,
-              "_changeIdx": 97,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "ValentinaThunderbolts",
-              "type": "cardRevealed",
-              "_changeIdx": 98
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 100,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": -1
-            },
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 37,
-              "_changeIdx": 110,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 112,
-              "playerPower": 2,
-              "locationIndex": 0,
-              "opponentPower": -1
-            },
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "type": "cardResolved",
-              "_changeIdx": 115
+              "_changeIdx": 104
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "player",
-              "playerPower": 2,
-              "opponentPower": -1
+              "winner": null,
+              "playerPower": 10,
+              "opponentPower": 10
             },
             {
               "winner": null,
@@ -4426,25 +928,12 @@
             }
           ]
         },
-        13
+        8
       ],
       [
         {
           "turn": 2,
-          "plays": [
-            {
-              "card": "SpiderManBrandNewDay",
-              "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 0
-            },
-            {
-              "card": "PunisherWarMachine",
-              "isPlayer": false,
-              "location": "Kyln",
-              "locationIndex": 1
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 2,
             "opponent": 2
@@ -4454,89 +943,76 @@
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 120
+              "_changeIdx": 108
             },
             {
               "who": "player",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 122
+              "_changeIdx": 110
             },
             {
-              "to": "Kyln",
+              "to": "DestroyedMansion",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 125,
+              "_changeIdx": 113,
               "locationIndex": 1
+            },
+            {
+              "who": "opponent",
+              "card": "Rock",
+              "cost": 1,
+              "type": "reveal",
+              "power": 0,
+              "oppKit": "||Common|",
+              "entityId": 53,
+              "_changeIdx": 120,
+              "drawReveal": false
+            },
+            {
+              "who": "player",
+              "card": "Vibranium",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 54,
+              "_changeIdx": 123,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Rock",
+              "cost": 1,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 55,
+              "_changeIdx": 127,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Rock",
+              "type": "cardRevealed",
+              "_changeIdx": 129
+            },
+            {
+              "who": "player",
+              "card": "Rock",
+              "type": "cardRevealed",
+              "_changeIdx": 130
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 129,
+              "_changeIdx": 134,
               "locationIndex": 2
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 132
-            },
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 33,
-              "_changeIdx": 135,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "type": "draw",
-              "_changeIdx": 136
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 139
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 140
-            },
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "play",
-              "entityId": 39,
-              "location": "RocketPad",
-              "_changeIdx": 145,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardStaged",
-              "_changeIdx": 146
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 153
-            },
-            {
-              "who": "opponent",
-              "card": "PunisherWarMachine",
-              "type": "play",
-              "entityId": 50,
-              "location": "Kyln",
-              "_changeIdx": 154,
-              "locationIndex": 1
+              "_changeIdx": 137
             },
             {
               "who": "player",
@@ -4544,1108 +1020,26 @@
               "cost": 1,
               "type": "reveal",
               "power": 2,
-              "entityId": 39,
-              "_changeIdx": 161,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 164,
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": -1
-            },
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardResolved",
-              "_changeIdx": 167
-            },
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 2,
-              "_changeIdx": 172,
-              "cardEntityId": 39
-            },
-            {
-              "who": "player",
-              "card": "AgonyWebSlingers",
-              "from": "RocketPad",
-              "type": "setaside",
-              "_changeIdx": 177
-            },
-            {
-              "to": "Kyln",
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "from": "RocketPad",
-              "type": "move",
-              "entityId": 39,
-              "_changeIdx": 185,
-              "locationIndex": 1
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 194,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": -1
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "_changeIdx": 197,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "PunisherWarMachine",
-              "cost": 2,
-              "type": "reveal",
-              "power": 4,
-              "oppKit": "||Common|",
-              "entityId": 50,
-              "_changeIdx": 214,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "PunisherWarMachine",
-              "type": "cardRevealed",
-              "_changeIdx": 215
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Kyln",
-              "_changeIdx": 218,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "||DistressedGold|",
-              "entityId": 28,
-              "_changeIdx": 227,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 13,
-              "oldPower": 10,
-              "_changeIdx": 228,
-              "cardEntityId": 28
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 0,
-              "opponentPower": -1
-            },
-            {
-              "winner": null,
-              "playerPower": 4,
-              "opponentPower": 4
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        32
-      ],
-      [
-        {
-          "turn": 3,
-          "plays": [
-            {
-              "card": "SpiderPunk",
-              "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 0
-            },
-            {
-              "card": "RedHulkFracturedFrontier",
-              "isPlayer": false,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 3
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 242
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 244
-            },
-            {
-              "to": "Subterranea",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 254,
-              "locationIndex": 2
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 273
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "cost": 5,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 40,
-              "_changeIdx": 277,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "draw",
-              "_changeIdx": 278
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 284
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 285
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "play",
-              "entityId": 41,
-              "location": "RocketPad",
-              "_changeIdx": 290,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardStaged",
-              "_changeIdx": 291
-            },
-            {
-              "to": "RocketPad",
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "from": "Kyln",
-              "type": "move",
-              "entityId": 39,
-              "_changeIdx": 295,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardStaged",
-              "_changeIdx": 296
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Kyln",
-              "_changeIdx": 306,
-              "playerPower": 0,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 309
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "type": "play",
-              "entityId": 21,
-              "location": "RocketPad",
-              "_changeIdx": 310,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardResolved",
-              "_changeIdx": 317
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 320,
-              "playerPower": 4,
-              "locationIndex": 0,
-              "opponentPower": -1
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "_changeIdx": 325,
-              "cardEntityId": 41
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 41,
-              "_changeIdx": 335,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 338,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": -1
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardResolved",
-              "_changeIdx": 341
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "cost": 3,
-              "type": "reveal",
-              "power": 10,
-              "oppKit": "||DistressedGold|",
-              "entityId": 21,
-              "_changeIdx": 348,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "type": "cardRevealed",
-              "_changeIdx": 349
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 352,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "type": "power",
-              "newPower": 8,
-              "oldPower": 10,
-              "_changeIdx": 357,
-              "cardEntityId": 21
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 362,
-              "playerPower": 8,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 16,
-              "oldPower": 13,
-              "_changeIdx": 372,
-              "cardEntityId": 28
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 8,
-              "opponentPower": 7
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 4
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        58
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "ScarletSpiderWebSlingers",
-              "isPlayer": true,
-              "location": "Kyln",
-              "locationIndex": 1
-            },
-            {
-              "card": "AntiVenomWebSlingers",
-              "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 0
-            },
-            {
-              "card": "Klaw",
-              "isPlayer": false,
-              "location": "RocketPad",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 386
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 388
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 399
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 38,
-              "_changeIdx": 403,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "HydraStomper",
-              "type": "draw",
-              "_changeIdx": 404
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 411
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 412
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "play",
-              "entityId": 32,
-              "location": "Kyln",
-              "_changeIdx": 417,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "cardStaged",
-              "_changeIdx": 418
-            },
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "type": "play",
-              "entityId": 33,
-              "location": "RocketPad",
-              "_changeIdx": 422,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "type": "cardStaged",
-              "_changeIdx": 423
-            },
-            {
-              "to": "Kyln",
-              "who": "player",
-              "card": "SpiderPunk",
-              "from": "RocketPad",
-              "type": "move",
-              "entityId": 41,
-              "_changeIdx": 427,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardStaged",
-              "_changeIdx": 428
-            },
-            {
-              "to": "Kyln",
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "from": "RocketPad",
-              "type": "move",
-              "entityId": 39,
-              "_changeIdx": 431,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardStaged",
-              "_changeIdx": 432
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 442,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 446
-            },
-            {
-              "who": "opponent",
-              "card": "Klaw",
-              "type": "play",
-              "entityId": 20,
-              "location": "RocketPad",
-              "_changeIdx": 447,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "cardResolved",
-              "_changeIdx": 456
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Kyln",
-              "_changeIdx": 459,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 4
-            },
-            {
-              "who": "opponent",
-              "card": "PunisherWarMachine",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 4,
-              "_changeIdx": 464,
-              "cardEntityId": 50
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "newPower": 6,
-              "oldPower": 4,
-              "_changeIdx": 467,
-              "cardEntityId": 41
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "_changeIdx": 472,
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "SpiderManBrandNewDay",
-              "type": "cardResolved",
-              "_changeIdx": 476
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "_changeIdx": 479,
-              "playerPower": 10,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "newPower": 7,
-              "oldPower": 6,
-              "_changeIdx": 484,
-              "cardEntityId": 41
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "_changeIdx": 489,
-              "playerPower": 11,
-              "locationIndex": 1,
-              "opponentPower": 2
-            },
-            {
-              "who": "opponent",
-              "card": "Klaw",
-              "cost": 4,
-              "type": "reveal",
-              "power": 2,
-              "oppKit": "||DistressedGold|",
-              "entityId": 20,
-              "_changeIdx": 497,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Klaw",
-              "type": "cardRevealed",
-              "_changeIdx": 498
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 502,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "_changeIdx": 505,
-              "playerPower": 11,
-              "locationIndex": 1,
-              "opponentPower": 8
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 32,
-              "_changeIdx": 511,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "_changeIdx": 514,
-              "playerPower": 16,
-              "locationIndex": 1,
-              "opponentPower": 8
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "cardResolved",
-              "_changeIdx": 517
-            },
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 33,
-              "_changeIdx": 522,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 525,
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 9
-            },
-            {
-              "who": "player",
-              "card": "AntiVenomWebSlingers",
-              "type": "cardResolved",
-              "_changeIdx": 532
-            },
-            {
-              "who": "opponent",
-              "card": "ValentinaThunderbolts",
-              "type": "power",
-              "newPower": 0,
-              "oldPower": -1,
-              "_changeIdx": 538,
-              "cardEntityId": 27
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulkFracturedFrontier",
-              "type": "power",
-              "newPower": 9,
-              "oldPower": 8,
-              "_changeIdx": 541,
-              "cardEntityId": 21
-            },
-            {
-              "who": "opponent",
-              "card": "Klaw",
-              "type": "power",
-              "newPower": 3,
-              "oldPower": 2,
-              "_changeIdx": 544,
-              "cardEntityId": 20
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RocketPad",
-              "_changeIdx": 549,
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 12
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 5,
-              "opponentPower": 12
-            },
-            {
-              "winner": "player",
-              "playerPower": 16,
-              "opponentPower": 8
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        93
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "SpiderMan2099WebSlingers",
-              "isPlayer": true,
-              "location": "RocketPad",
-              "locationIndex": 0
-            },
-            {
-              "card": "AbsorbingMan",
-              "isPlayer": false,
-              "location": "Subterranea",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 7,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 563
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7,
-              "_changeIdx": 565
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 577
-            },
-            {
-              "who": "player",
-              "card": "Prowler",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
               "entityId": 30,
-              "_changeIdx": 581,
+              "_changeIdx": 140,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Prowler",
+              "card": "SpiderManBrandNewDay",
               "type": "draw",
-              "_changeIdx": 582
+              "_changeIdx": 141
             },
             {
-              "tie": false,
+              "tie": true,
               "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 588
+              "winner": null,
+              "_changeIdx": 144
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 589
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "play",
-              "entityId": 40,
-              "location": "RocketPad",
-              "_changeIdx": 595,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "cardStaged",
-              "_changeIdx": 596
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "cardStaged",
-              "_changeIdx": 601
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 610
-            },
-            {
-              "who": "opponent",
-              "card": "AbsorbingMan",
-              "type": "play",
-              "entityId": 29,
-              "location": "Subterranea",
-              "_changeIdx": 611,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "cost": 5,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 40,
-              "_changeIdx": 619,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 622,
-              "playerPower": 13,
-              "locationIndex": 0,
-              "opponentPower": 12
-            },
-            {
-              "who": "player",
-              "card": "SpiderPunk",
-              "type": "power",
-              "newPower": 9,
-              "oldPower": 7,
-              "_changeIdx": 628,
-              "cardEntityId": 41
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "power",
-              "newPower": 10,
-              "oldPower": 8,
-              "_changeIdx": 631,
-              "cardEntityId": 40
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 636,
-              "playerPower": 15,
-              "locationIndex": 0,
-              "opponentPower": 12
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "_changeIdx": 639,
-              "playerPower": 18,
-              "locationIndex": 1,
-              "opponentPower": 8
-            },
-            {
-              "who": "player",
-              "card": "SpiderMan2099WebSlingers",
-              "type": "cardResolved",
-              "_changeIdx": 642
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "cardResolved",
-              "_changeIdx": 646
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "type": "activated",
-              "_changeIdx": 648,
-              "isActivated": true
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderClone",
-              "cost": 4,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 59,
-              "_changeIdx": 653,
-              "drawReveal": false
-            },
-            {
-              "to": "RocketPad",
-              "who": "player",
-              "card": "ScarletSpiderWebSlingers",
-              "from": "Kyln",
-              "type": "move",
-              "entityId": 32,
-              "_changeIdx": 655,
-              "locationIndex": 0
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "RocketPad",
-              "_changeIdx": 663,
-              "playerPower": 20,
-              "locationIndex": 0,
-              "opponentPower": 12
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "_changeIdx": 666,
-              "playerPower": 13,
-              "locationIndex": 1,
-              "opponentPower": 8
-            },
-            {
-              "who": "player",
-              "card": "ScarletSpiderClone",
-              "type": "cardRevealed",
-              "_changeIdx": 671
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Subterranea",
-              "_changeIdx": 673,
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "AbsorbingMan",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "oppKit": "||DistressedGold|",
-              "entityId": 29,
-              "_changeIdx": 695,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "AbsorbingMan",
-              "type": "cardRevealed",
-              "_changeIdx": 696
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Subterranea",
-              "_changeIdx": 699,
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 7
-            },
-            {
-              "who": "opponent",
-              "card": "RedHulk",
-              "type": "power",
-              "newPower": 19,
-              "oldPower": 16,
-              "_changeIdx": 712,
-              "cardEntityId": 28
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 724
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 20,
-              "opponentPower": 12
-            },
-            {
-              "winner": "player",
-              "playerPower": 13,
-              "opponentPower": 8
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 5,
-              "opponentPower": 7
-            }
-          ]
-        },
-        114
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [],
-          "energy": {
-            "player": 8,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 727
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 8,
-              "_changeIdx": 729
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 738
-            },
-            {
-              "who": "player",
-              "card": "MaryJane",
-              "cost": 3,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 35,
-              "_changeIdx": 742,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "MaryJane",
-              "type": "draw",
-              "_changeIdx": 743
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 749
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 750
+              "_changeIdx": 145
             }
           ],
           "snapEvent": null,
@@ -5667,17 +1061,17 @@
             }
           ]
         },
-        120
+        19
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 15975,
-  "opp_sp": 6654,
+  "opp_cl": 34723,
+  "opp_sp": 7133,
   "bracket": null,
-  "match_id": "2ef1b54e-d257-409c-9db9-ed77f277624a",
-  "opp_name": "AstroViking",
-  "opp_team": "TeamUp_Thunderbolts",
+  "match_id": "9c056712-5feb-41d5-90cb-1c1803bd6c5f",
+  "opp_name": "SOSAL?",
+  "opp_team": "TeamUp_XMen",
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
   "locations": [],
@@ -5687,18 +1081,19 @@
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "WinterSoldier"
+    "CardDefId": "JeffTheBabyLandShark",
+    "ArtVariantDefId": "JeffTheBabyLandShark_09"
   },
   "opp_health": null,
   "opp_is_bot": false,
   "mode_detail": "Team Clash",
   "player_name": "SmokeFisher",
-  "current_turn": 7,
+  "current_turn": 3,
   "kudzu_spread": null,
   "match_result": null,
   "match_status": "in_progress",
   "opp_champion": null,
-  "opp_clan_tag": "MNM",
+  "opp_clan_tag": "NFX",
   "owner_status": "live",
   "next_match_id": null,
   "opp_retreated": null,
@@ -5708,35 +1103,21 @@
   },
   "player_health": null,
   "wild_boosters": null,
-  "opp_deck_cards": [
-    "ValentinaThunderbolts",
-    "RedHulk",
-    "RedHulkFracturedFrontier",
-    "Klaw",
-    "AbsorbingMan"
-  ],
-  "last_updated_at": "2026-10-24T14:46:18.959+00:00",
+  "opp_deck_cards": null,
+  "last_updated_at": "2026-10-24T14:47:29.291+00:00",
   "player_champion": null,
   "opp_played_cards": [],
   "player_deck_cards": [
-    "SpiderManBrandNewDay",
-    "SpiderPunk",
-    "ScarletSpiderWebSlingers",
-    "AgonyWebSlingers",
-    "AntiVenomWebSlingers",
-    "SpiderMan2099WebSlingers",
-    "HydraStomper",
+    "Silk",
     "Prowler",
-    "MaryJane"
+    "HydraStomper",
+    "SymbioteSpiderManWebSlingers",
+    "SpiderManBrandNewDay"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "ValentinaThunderbolts",
-    "PunisherWarMachine",
-    "RedHulk",
-    "RedHulkFracturedFrontier",
-    "Klaw",
-    "AbsorbingMan"
+    "Monster",
+    "Rock"
   ],
   "conquest_round_index": null
 }
