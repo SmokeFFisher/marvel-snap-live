@@ -44,25 +44,25 @@
           },
           "h": [
             {
-              "cost": 2,
-              "power": 3,
-              "baseCost": 2,
-              "basePower": 3,
-              "cardDefId": "ScarletWitch"
-            },
-            {
-              "cost": 2,
-              "power": 3,
-              "baseCost": 2,
-              "basePower": 3,
-              "cardDefId": "JenniferKale"
-            },
-            {
               "cost": 3,
-              "power": 1,
+              "power": 2,
               "baseCost": 3,
-              "basePower": 1,
-              "cardDefId": "Mystique"
+              "basePower": 2,
+              "cardDefId": "Patriot"
+            },
+            {
+              "cost": 5,
+              "power": 3,
+              "baseCost": 5,
+              "basePower": 3,
+              "cardDefId": "BlueMarvel"
+            },
+            {
+              "cost": 1,
+              "power": 0,
+              "baseCost": 1,
+              "basePower": 0,
+              "cardDefId": "MajesticWingbeat"
             }
           ],
           "n": {
@@ -86,12 +86,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             }
@@ -106,7 +106,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Boardwalk",
+              "to": "Mojoworld",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +123,7 @@
                 {
                   "location": [
                     0,
-                    "Boardwalk"
+                    "Mojoworld"
                   ],
                   "revealed": [
                     0,
@@ -142,22 +142,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Frigga",
+              "card": "CaptainAmerica",
               "cost": 3,
               "type": "reveal",
               "power": 3,
-              "entityId": 20,
+              "entityId": 32,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Frigga",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "CaptainAmerica",
               "type": "draw"
             }
           ]
@@ -187,7 +187,7 @@
                   "power": 3,
                   "baseCost": 3,
                   "basePower": 3,
-                  "cardDefId": "Frigga"
+                  "cardDefId": "CaptainAmerica"
                 }
               ]
             }
@@ -229,8 +229,26 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "Mojoworld",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 100
             }
           ]
         },
@@ -253,16 +271,173 @@
       [
         {
           "_v": 2,
+          "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "NicoMinoru",
+              "type": "play",
+              "entityId": 20,
+              "location": "Mojoworld",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": null,
+                          "power": null,
+                          "baseCost": null,
+                          "entityId": 20,
+                          "basePower": null,
+                          "cardDefId": null,
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "opponent": [
+                0,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "NicoMinoru",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 20,
+              "drawReveal": false,
+              "overrideAbility": "Spell03NicoMinoru"
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            1
+                          ],
+                          "power": [
+                            0,
+                            2
+                          ],
+                          "baseCost": [
+                            0,
+                            1
+                          ],
+                          "basePower": [
+                            0,
+                            2
+                          ],
+                          "cardDefId": [
+                            0,
+                            "NicoMinoru"
+                          ],
+                          "overrideAbility": [
+                            0,
+                            "Spell03NicoMinoru"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "NicoMinoru",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "Mojoworld",
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 102
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
           "turn": 2,
           "label": "Energy",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             }
@@ -277,16 +452,10 @@
           "label": "Location",
           "events": [
             {
-              "to": "SpaceThrone",
+              "to": "GreatPortal",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
-            },
-            {
-              "to": "RevealOn2",
-              "from": "RevealOn3",
-              "type": "location",
-              "locationIndex": 2
             }
           ]
         },
@@ -300,14 +469,86 @@
                 {
                   "location": [
                     0,
-                    "SpaceThrone"
+                    "GreatPortal"
                   ],
                   "revealed": [
                     0,
                     true
                   ]
                 }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "player",
+              "card": "Magneto",
+              "cost": 6,
+              "type": "reveal",
+              "power": 12,
+              "entityId": 50,
+              "drawReveal": true
+            }
+          ]
+        },
+        {
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                5
               ],
+              "opponent": [
+                0,
+                4
+              ]
+            }
+          ],
+          "h": [
+            2,
+            5,
+            {
+              "4": [
+                0,
+                {
+                  "cost": 6,
+                  "power": 12,
+                  "baseCost": 6,
+                  "basePower": 12,
+                  "cardDefId": "Magneto"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Location",
+          "events": [
+            {
+              "to": "RevealOn2",
+              "from": "RevealOn3",
+              "type": "location",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
               "2": [
                 1,
                 {
@@ -332,22 +573,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "MBaku",
-              "cost": 1,
+              "card": "TheInversion",
+              "cost": 3,
               "type": "reveal",
-              "power": 3,
-              "entityId": 29,
+              "power": 0,
+              "entityId": 39,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "MBaku",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "TheInversion",
               "type": "draw"
             }
           ]
@@ -358,7 +599,7 @@
             {
               "player": [
                 0,
-                5
+                6
               ],
               "opponent": [
                 0,
@@ -368,16 +609,16 @@
           ],
           "h": [
             2,
-            5,
+            6,
             {
-              "4": [
+              "5": [
                 0,
                 {
-                  "cost": 1,
-                  "power": 3,
-                  "baseCost": 1,
-                  "basePower": 3,
-                  "cardDefId": "MBaku"
+                  "cost": 3,
+                  "power": 0,
+                  "baseCost": 3,
+                  "basePower": 0,
+                  "cardDefId": "TheInversion"
                 }
               ]
             }
@@ -401,618 +642,6 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "type": "play",
-              "entityId": 21,
-              "location": "SpaceThrone",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 2,
-                          "power": 3,
-                          "baseCost": 2,
-                          "entityId": 21,
-                          "basePower": 3,
-                          "cardDefId": "ScarletWitch",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "0": [
-                1,
-                {
-                  "cardDefId": [
-                    0,
-                    "JenniferKale"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Mystique"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Frigga"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "MBaku"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 2,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Tombstone",
-              "type": "play",
-              "entityId": 39,
-              "location": "RevealOn2",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 39,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Tombstone",
-              "cost": 2,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Tombstone"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Tombstone",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RevealOn2",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SpaceThrone",
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Location",
-          "events": [
-            {
-              "to": "MoshPit",
-              "from": "SpaceThrone",
-              "type": "location",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "MoshPit"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "cardEntityId": 21
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MoshPit",
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Location",
-          "events": [
-            {
-              "to": "MirrorDimension",
-              "from": "RevealOn2",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "MirrorDimension"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Valkyrie",
-              "cost": 5,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 24,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Valkyrie",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "4": [
-                0,
-                {
-                  "cost": 5,
-                  "power": 3,
-                  "baseCost": 5,
-                  "basePower": 3,
-                  "cardDefId": "Valkyrie"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
           "label": "Turn Winner",
           "events": [
             {
@@ -1027,18 +656,13 @@
       [
         {
           "_v": 2,
-          "turn": 3,
+          "turn": 2,
           "label": "Initiative",
           "events": [
             {
               "who": "opponent",
               "type": "initiative"
             }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -1078,76 +702,127 @@
       [
         {
           "turn": 1,
-          "plays": [],
+          "plays": [
+            {
+              "card": "NicoMinoru",
+              "isPlayer": false,
+              "location": "Mojoworld",
+              "locationIndex": 0
+            }
+          ],
           "energy": {
             "player": 1,
             "opponent": 1
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 67
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 69
+              "_changeIdx": 66
             },
             {
-              "to": "Boardwalk",
+              "who": "player",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 68
+            },
+            {
+              "to": "Mojoworld",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 72,
+              "_changeIdx": 71,
               "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Frigga",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 20,
-              "_changeIdx": 76,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Frigga",
-              "type": "draw",
-              "_changeIdx": 77
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 81
+              "_changeIdx": 76
+            },
+            {
+              "who": "player",
+              "card": "CaptainAmerica",
+              "cost": 3,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 32,
+              "_changeIdx": 79,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "CaptainAmerica",
+              "type": "draw",
+              "_changeIdx": 80
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
+              "_changeIdx": 83
+            },
+            {
+              "who": "opponent",
+              "type": "initiative",
               "_changeIdx": 84
             },
             {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 85
+              "type": "score",
+              "winner": "opponent",
+              "location": "Mojoworld",
+              "_changeIdx": 88,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 100
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 88
+              "_changeIdx": 91
+            },
+            {
+              "who": "opponent",
+              "card": "NicoMinoru",
+              "type": "play",
+              "entityId": 20,
+              "location": "Mojoworld",
+              "_changeIdx": 92,
+              "locationIndex": 0
+            },
+            {
+              "who": "opponent",
+              "card": "NicoMinoru",
+              "cost": 1,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 20,
+              "_changeIdx": 95,
+              "drawReveal": false,
+              "overrideAbility": "Spell03NicoMinoru"
+            },
+            {
+              "who": "opponent",
+              "card": "NicoMinoru",
+              "type": "cardRevealed",
+              "_changeIdx": 96
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "Mojoworld",
+              "_changeIdx": 99,
+              "playerPower": 0,
+              "locationIndex": 0,
+              "opponentPower": 102
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 102
             },
             {
               "winner": null,
@@ -1161,275 +836,85 @@
             }
           ]
         },
-        3
+        9
       ],
       [
         {
           "turn": 2,
-          "plays": [
-            {
-              "card": "ScarletWitch",
-              "isPlayer": true,
-              "location": "MoshPit",
-              "locationIndex": 1
-            },
-            {
-              "card": "Tombstone",
-              "isPlayer": false,
-              "location": "MirrorDimension",
-              "locationIndex": 2
-            }
-          ],
+          "plays": [],
           "energy": {
             "player": 2,
             "opponent": 2
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 92
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 94
+              "_changeIdx": 110
             },
             {
-              "to": "SpaceThrone",
+              "who": "player",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 112
+            },
+            {
+              "to": "GreatPortal",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 97,
+              "_changeIdx": 115,
               "locationIndex": 1
+            },
+            {
+              "who": "player",
+              "card": "Magneto",
+              "cost": 6,
+              "type": "reveal",
+              "power": 12,
+              "entityId": 50,
+              "_changeIdx": 122,
+              "drawReveal": true
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 108,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "MBaku",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 29,
-              "_changeIdx": 111,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "MBaku",
-              "type": "draw",
-              "_changeIdx": 112
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 115
-            },
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 118
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 119
-            },
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "type": "play",
-              "entityId": 21,
-              "location": "SpaceThrone",
-              "_changeIdx": 122,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "type": "cardStaged",
-              "_changeIdx": 123
-            },
-            {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 128
-            },
-            {
-              "who": "opponent",
-              "card": "Tombstone",
-              "type": "play",
-              "entityId": 39,
-              "location": "RevealOn2",
               "_changeIdx": 129,
               "locationIndex": 2
             },
             {
               "who": "opponent",
-              "card": "Tombstone",
-              "cost": 2,
+              "card": null,
+              "type": "draw",
+              "_changeIdx": 132
+            },
+            {
+              "who": "player",
+              "card": "TheInversion",
+              "cost": 3,
               "type": "reveal",
-              "power": 5,
+              "power": 0,
               "entityId": 39,
-              "_changeIdx": 133,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Tombstone",
-              "type": "cardRevealed",
-              "_changeIdx": 134
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "RevealOn2",
-              "_changeIdx": 136,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 5
-            },
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 21,
-              "_changeIdx": 142,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "SpaceThrone",
-              "_changeIdx": 145,
-              "playerPower": 3,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "to": "MoshPit",
-              "from": "SpaceThrone",
-              "type": "location",
-              "_changeIdx": 150,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "type": "cardResolved",
-              "_changeIdx": 156
-            },
-            {
-              "who": "player",
-              "card": "ScarletWitch",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 3,
-              "_changeIdx": 160,
-              "cardEntityId": 21
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "MoshPit",
-              "_changeIdx": 164,
-              "playerPower": 4,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": "player",
-              "playerPower": 4,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 5
-            }
-          ]
-        },
-        23
-      ],
-      [
-        {
-          "turn": 3,
-          "plays": [],
-          "energy": {
-            "player": 3,
-            "opponent": 3
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 169
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 171
-            },
-            {
-              "to": "MirrorDimension",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 174,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Valkyrie",
-              "cost": 5,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 24,
-              "_changeIdx": 178,
+              "_changeIdx": 135,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Valkyrie",
+              "card": "TheInversion",
               "type": "draw",
-              "_changeIdx": 179
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 182
+              "_changeIdx": 136
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "opponent",
-              "_changeIdx": 185
+              "_changeIdx": 139
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 186
+              "_changeIdx": 140
             }
           ],
           "snapEvent": null,
@@ -1451,68 +936,61 @@
             }
           ]
         },
-        27
+        16
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 15212,
-  "opp_sp": null,
+  "opp_cl": 17079,
+  "opp_sp": 3458,
   "bracket": null,
-  "match_id": "80079b4a-9294-416c-bf3a-e174cf57c072",
-  "opp_name": "Marc",
+  "match_id": "ad178cd1-c057-4da4-9a7b-4d668508f73d",
+  "opp_name": "stitch",
   "opp_team": null,
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "Boardwalk",
-    "MoshPit",
-    "MirrorDimension"
-  ],
+  "locations": [],
   "player_cl": 12464,
   "player_sp": 4193,
   "turn_data": null,
   "draft_deck": null,
-  "opp_avatar": null,
+  "opp_avatar": {
+    "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
+    "CardDefId": "Wolverine",
+    "ArtVariantDefId": "Wolverine_16"
+  },
   "opp_health": null,
-  "opp_is_bot": true,
+  "opp_is_bot": false,
   "mode_detail": null,
   "player_name": "SmokeFisher",
-  "current_turn": 4,
+  "current_turn": 3,
   "kudzu_spread": null,
-  "match_result": "retreat",
-  "match_status": "complete",
+  "match_result": null,
+  "match_status": "in_progress",
   "opp_champion": null,
-  "opp_clan_tag": null,
+  "opp_clan_tag": "BST",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": false,
+  "opp_retreated": null,
   "player_avatar": null,
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "Tombstone"
+    "NicoMinoru"
   ],
-  "last_updated_at": "2026-11-04T13:58:16.023+00:00",
+  "last_updated_at": "2026-11-04T14:04:37.131+00:00",
   "player_champion": null,
   "opp_played_cards": [],
   "player_deck_cards": [
-    "Frigga",
-    "Bast",
-    "RavonnaRenslayer",
-    "MBaku",
-    "Mystique",
-    "JenniferKale",
-    "Valkyrie",
-    "Chameleon",
-    "Sentinel",
-    "ScarletWitch",
-    "Cerebro",
-    "Quinjet"
+    "Patriot",
+    "BlueMarvel",
+    "MajesticWingbeat",
+    "CaptainAmerica",
+    "TheInversion"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "Tombstone"
+    "NicoMinoru"
   ],
   "conquest_round_index": null
 }
