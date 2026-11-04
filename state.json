@@ -45,10 +45,17 @@
           "h": [
             {
               "cost": 4,
-              "power": 6,
+              "power": 5,
               "baseCost": 4,
+              "basePower": 5,
+              "cardDefId": "AbsorbingMan"
+            },
+            {
+              "cost": 3,
+              "power": 6,
+              "baseCost": 3,
               "basePower": 6,
-              "cardDefId": "Danger"
+              "cardDefId": "Wave"
             },
             {
               "cost": 6,
@@ -56,13 +63,6 @@
               "baseCost": 6,
               "basePower": 5,
               "cardDefId": "DrDoom"
-            },
-            {
-              "cost": 4,
-              "power": 6,
-              "baseCost": 4,
-              "basePower": 6,
-              "cardDefId": "OmegaRed"
             }
           ],
           "n": {
@@ -86,12 +86,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 1
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 1
             }
@@ -106,7 +106,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Clubhouse",
+              "to": "IslandPrison",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +123,7 @@
                 {
                   "location": [
                     0,
-                    "Clubhouse"
+                    "IslandPrison"
                   ],
                   "revealed": [
                     0,
@@ -142,22 +142,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "Wave",
-              "cost": 3,
+              "card": "Zabu",
+              "cost": 1,
               "type": "reveal",
-              "power": 6,
-              "entityId": 34,
+              "power": 1,
+              "entityId": 23,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Wave",
+              "card": "Zabu",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -183,11 +183,11 @@
               "3": [
                 0,
                 {
-                  "cost": 3,
-                  "power": 6,
-                  "baseCost": 3,
-                  "basePower": 6,
-                  "cardDefId": "Wave"
+                  "cost": 1,
+                  "power": 1,
+                  "baseCost": 1,
+                  "basePower": 1,
+                  "cardDefId": "Zabu"
                 }
               ]
             }
@@ -229,8 +229,85 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "player",
+              "card": "Zabu",
+              "type": "play",
+              "entityId": 23,
+              "location": "IslandPrison",
+              "locationIndex": 0
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 1,
+                          "power": 1,
+                          "baseCost": 1,
+                          "entityId": 23,
+                          "basePower": 1,
+                          "cardDefId": "Zabu",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                3
+              ]
+            }
+          ],
+          "h": [
+            2,
+            3,
+            {}
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Staged",
+          "events": [
+            {
+              "who": "player",
+              "card": "Zabu",
+              "type": "cardStaged"
             }
           ]
         },
@@ -253,16 +330,68 @@
       [
         {
           "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "Zabu",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 23,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "IslandPrison",
+              "playerPower": 1,
+              "locationIndex": 0,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "Zabu",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
           "turn": 2,
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 2
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 2
             }
@@ -277,7 +406,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "AsgardBesieged",
+              "to": "SinisterLondon",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -300,7 +429,7 @@
                 {
                   "location": [
                     0,
-                    "AsgardBesieged"
+                    "SinisterLondon"
                   ],
                   "revealed": [
                     0,
@@ -332,22 +461,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "ShangChi",
-              "cost": 4,
+              "card": "Doom2099",
+              "cost": 3,
               "type": "reveal",
-              "power": 3,
-              "entityId": 40,
+              "power": 6,
+              "entityId": 20,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "ShangChi",
+              "card": "Doom2099",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": null,
               "type": "draw"
             }
           ]
@@ -358,7 +487,7 @@
             {
               "player": [
                 0,
-                5
+                4
               ],
               "opponent": [
                 0,
@@ -368,16 +497,16 @@
           ],
           "h": [
             2,
-            5,
+            4,
             {
-              "4": [
+              "3": [
                 0,
                 {
-                  "cost": 4,
-                  "power": 3,
+                  "cost": 3,
+                  "power": 6,
                   "baseCost": 4,
-                  "basePower": 3,
-                  "cardDefId": "ShangChi"
+                  "basePower": 6,
+                  "cardDefId": "Doom2099"
                 }
               ]
             }
@@ -404,9 +533,9 @@
           "label": "Turn Winner",
           "events": [
             {
-              "tie": true,
+              "tie": false,
               "type": "turnWinner",
-              "winner": null
+              "winner": "player"
             }
           ]
         },
@@ -419,7 +548,7 @@
           "label": "Initiative",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "initiative"
             }
           ]
@@ -448,11 +577,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Sunspot",
+              "card": "ShadowlandsDaredevil",
               "type": "play",
-              "entityId": 24,
-              "location": "RevealOn2",
-              "locationIndex": 2
+              "entityId": 30,
+              "location": "IslandPrison",
+              "locationIndex": 0
             }
           ]
         },
@@ -461,7 +590,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
@@ -474,7 +603,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 24,
+                          "entityId": 30,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -505,11 +634,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Sunspot",
-              "cost": 1,
+              "card": "ShadowlandsDaredevil",
+              "cost": 2,
               "type": "reveal",
-              "power": 0,
-              "entityId": 24,
+              "power": 3,
+              "entityId": 30,
               "drawReveal": false
             }
           ]
@@ -519,7 +648,7 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
                   "opponentCards": [
@@ -531,23 +660,23 @@
                         {
                           "cost": [
                             0,
-                            1
+                            2
                           ],
                           "power": [
                             0,
-                            0
+                            3
                           ],
                           "baseCost": [
                             0,
-                            1
+                            2
                           ],
                           "basePower": [
                             0,
-                            0
+                            3
                           ],
                           "cardDefId": [
                             0,
-                            "Sunspot"
+                            "ShadowlandsDaredevil"
                           ]
                         }
                       ]
@@ -567,7 +696,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Sunspot",
+              "card": "ShadowlandsDaredevil",
               "type": "cardRevealed"
             }
           ]
@@ -578,60 +707,15 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Power",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 1,
-              "oldPower": 0,
-              "cardEntityId": 24
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
           "label": "Score",
           "events": [
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RevealOn2",
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 1
+              "location": "IslandPrison",
+              "playerPower": 1,
+              "locationIndex": 0,
+              "opponentPower": 3
             }
           ]
         },
@@ -640,16 +724,63 @@
       [
         {
           "_v": 2,
+          "turn": 2,
+          "label": "Draw",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 48,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 49,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 50,
+              "drawReveal": true
+            }
+          ]
+        },
+        {
+          "r": [
+            1,
+            {
+              "opponent": [
+                0,
+                10
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
           "turn": 3,
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 3
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 3
             }
@@ -664,7 +795,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "NewYork",
+              "to": "RicketyBridge",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -681,7 +812,7 @@
                 {
                   "location": [
                     0,
-                    "NewYork"
+                    "RicketyBridge"
                   ]
                 }
               ]
@@ -696,22 +827,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "AntiPolarMagneto",
-              "cost": 6,
+              "card": "ArthurPendragon",
+              "cost": 3,
               "type": "reveal",
-              "power": 8,
-              "entityId": 36,
+              "power": 4,
+              "entityId": 22,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "AntiPolarMagneto",
+              "card": "ArthurPendragon",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
               "type": "draw"
             }
           ]
@@ -722,7 +853,7 @@
             {
               "player": [
                 0,
-                6
+                5
               ],
               "opponent": [
                 0,
@@ -732,16 +863,16 @@
           ],
           "h": [
             2,
-            6,
+            5,
             {
-              "5": [
+              "4": [
                 0,
                 {
-                  "cost": 6,
-                  "power": 8,
-                  "baseCost": 6,
-                  "basePower": 8,
-                  "cardDefId": "AntiPolarMagneto"
+                  "cost": 3,
+                  "power": 4,
+                  "baseCost": 4,
+                  "basePower": 4,
+                  "cardDefId": "ArthurPendragon"
                 }
               ]
             }
@@ -755,11 +886,74 @@
               ],
               "opponent": [
                 0,
-                6
+                9
               ]
             }
           ]
         }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "newPower": 5,
+              "oldPower": 3,
+              "cardEntityId": 30
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            5
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "IslandPrison",
+              "playerPower": 1,
+              "locationIndex": 0,
+              "opponentPower": 5
+            }
+          ]
+        },
+        {}
       ],
       [
         {
@@ -798,10 +992,10 @@
           "events": [
             {
               "who": "player",
-              "card": "Wave",
+              "card": "Doom2099",
               "type": "play",
-              "entityId": 34,
-              "location": "AsgardBesieged",
+              "entityId": 20,
+              "location": "SinisterLondon",
               "locationIndex": 1
             }
           ]
@@ -823,10 +1017,10 @@
                         {
                           "cost": 3,
                           "power": 6,
-                          "baseCost": 3,
-                          "entityId": 34,
+                          "baseCost": 4,
+                          "entityId": 20,
                           "basePower": 6,
-                          "cardDefId": "Wave",
+                          "cardDefId": "Doom2099",
                           "arrivalSeq": 0
                         }
                       ]
@@ -841,61 +1035,28 @@
             {
               "player": [
                 0,
-                5
+                4
               ]
             }
           ],
           "h": [
             2,
-            5,
+            4,
             {
               "3": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    4
-                  ],
                   "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
                     0,
                     4
                   ],
                   "basePower": [
                     0,
-                    3
+                    4
                   ],
                   "cardDefId": [
                     0,
-                    "ShangChi"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    8
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    8
-                  ],
-                  "cardDefId": [
-                    0,
-                    "AntiPolarMagneto"
+                    "ArthurPendragon"
                   ]
                 }
               ]
@@ -911,7 +1072,7 @@
           "events": [
             {
               "who": "player",
-              "card": "Wave",
+              "card": "Doom2099",
               "type": "cardStaged"
             }
           ]
@@ -930,7 +1091,34 @@
             }
           ]
         },
-        {}
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ],
       [
         {
@@ -940,11 +1128,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "BannerHulk",
+              "card": "WilsonFisk",
               "type": "play",
-              "entityId": 27,
-              "location": "Clubhouse",
-              "locationIndex": 0
+              "entityId": 33,
+              "location": "SinisterLondon",
+              "locationIndex": 1
             }
           ]
         },
@@ -953,7 +1141,7 @@
             2,
             3,
             {
-              "0": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
@@ -966,7 +1154,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 27,
+                          "entityId": 33,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -997,11 +1185,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "BruceBanner",
-              "cost": 2,
+              "card": "WilsonFisk",
+              "cost": 5,
               "type": "reveal",
-              "power": 1,
-              "entityId": 27,
+              "power": 8,
+              "entityId": 33,
               "drawReveal": false
             }
           ]
@@ -1011,7 +1199,7 @@
             2,
             3,
             {
-              "0": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
@@ -1023,23 +1211,23 @@
                         {
                           "cost": [
                             0,
-                            2
+                            5
                           ],
                           "power": [
                             0,
-                            1
+                            8
                           ],
                           "baseCost": [
                             0,
-                            2
+                            5
                           ],
                           "basePower": [
                             0,
-                            1
+                            8
                           ],
                           "cardDefId": [
                             0,
-                            "BruceBanner"
+                            "WilsonFisk"
                           ]
                         }
                       ]
@@ -1059,7 +1247,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "BruceBanner",
+              "card": "WilsonFisk",
               "type": "cardRevealed"
             }
           ]
@@ -1075,10 +1263,108 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Clubhouse",
+              "location": "SinisterLondon",
               "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 8
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "WilsonFisk",
+              "cost": 5,
+              "type": "reveal",
+              "power": 8,
+              "entityId": 52,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        0,
+                        {
+                          "cost": 5,
+                          "power": 8,
+                          "baseCost": 5,
+                          "entityId": 52,
+                          "basePower": 8,
+                          "cardDefId": "WilsonFisk",
+                          "arrivalSeq": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Lockdown",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "WilsonFisk",
+              "type": "lockdownChange",
+              "canBeMoved": true
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "WilsonFisk",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "IslandPrison",
+              "playerPower": 1,
               "locationIndex": 0,
-              "opponentPower": 1
+              "opponentPower": 13
             }
           ]
         },
@@ -1092,11 +1378,11 @@
           "events": [
             {
               "who": "player",
-              "card": "Wave",
-              "cost": 3,
+              "card": "Doom2099",
+              "cost": 4,
               "type": "reveal",
               "power": 6,
-              "entityId": 34,
+              "entityId": 20,
               "drawReveal": false
             }
           ]
@@ -1111,11 +1397,11 @@
           "events": [
             {
               "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
+              "winner": "opponent",
+              "location": "SinisterLondon",
               "playerPower": 6,
               "locationIndex": 1,
-              "opponentPower": 0
+              "opponentPower": 8
             }
           ]
         },
@@ -1129,31 +1415,55 @@
           "events": [
             {
               "who": "player",
-              "card": "Wave",
+              "card": "Doom2099",
               "type": "cardResolved"
             }
           ]
         },
+        {}
+      ],
+      [
         {
-          "h": [
-            2,
-            5,
+          "_v": 2,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
             {
-              "1": [
+              "who": "player",
+              "card": "Doom2099",
+              "cost": 3,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 53,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
                 1,
                 {
-                  "cost": [
-                    0,
-                    4
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 3,
+                          "power": 6,
+                          "baseCost": 4,
+                          "entityId": 53,
+                          "basePower": 6,
+                          "cardDefId": "Doom2099",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
@@ -1165,16 +1475,163 @@
         {
           "_v": 2,
           "turn": 3,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "cost": [
+                            0,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "RicketyBridge",
+              "playerPower": 6,
+              "locationIndex": 2,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
           "label": "Reveal",
           "events": [
             {
               "who": "player",
-              "card": "Destroyer",
-              "cost": 6,
+              "card": "DoomBot2099",
+              "cost": 4,
               "type": "reveal",
-              "power": 18,
+              "power": 0,
               "entityId": 54,
               "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        0,
+                        {
+                          "cost": 4,
+                          "power": 0,
+                          "baseCost": 4,
+                          "entityId": 54,
+                          "basePower": 0,
+                          "cardDefId": "DoomBot2099",
+                          "arrivalSeq": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Lockdown",
+          "events": [
+            {
+              "who": "player",
+              "card": "DoomBot2099",
+              "type": "lockdownChange",
+              "canBeMoved": true
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Resolve",
+          "events": [
+            {
+              "who": "player",
+              "card": "DoomBot2099",
+              "type": "cardRevealed"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Power",
+          "events": [
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "type": "power",
+              "newPower": 7,
+              "oldPower": 6,
+              "cardEntityId": 20
+            },
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "type": "power",
+              "newPower": 7,
+              "oldPower": 6,
+              "cardEntityId": 53
             }
           ]
         },
@@ -1188,17 +1645,109 @@
                 {
                   "playerCards": [
                     2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            7
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            7
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "SinisterLondon",
+              "playerPower": 7,
+              "locationIndex": 1,
+              "opponentPower": 8
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "RicketyBridge",
+              "playerPower": 7,
+              "locationIndex": 2,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 3,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "DoomBot2099",
+              "cost": 4,
+              "type": "reveal",
+              "power": 0,
+              "entityId": 55,
+              "drawReveal": false
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "playerCards": [
+                    2,
                     2,
                     {
                       "1": [
                         0,
                         {
-                          "cost": 6,
-                          "power": 18,
-                          "baseCost": 6,
-                          "entityId": 54,
-                          "basePower": 18,
-                          "cardDefId": "Destroyer",
+                          "cost": 4,
+                          "power": 0,
+                          "baseCost": 4,
+                          "entityId": 55,
+                          "basePower": 0,
+                          "cardDefId": "DoomBot2099",
                           "arrivalSeq": 1
                         }
                       ]
@@ -1218,26 +1767,8 @@
           "events": [
             {
               "who": "player",
-              "card": "Destroyer",
+              "card": "DoomBot2099",
               "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 24,
-              "locationIndex": 1,
-              "opponentPower": 0
             }
           ]
         },
@@ -1250,12 +1781,36 @@
           "label": "Power",
           "events": [
             {
-              "who": "opponent",
-              "card": "Sunspot",
+              "who": "player",
+              "card": "DoomBot2099",
               "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "cardEntityId": 24
+              "newPower": 1,
+              "oldPower": 0,
+              "cardEntityId": 55
+            },
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "type": "power",
+              "newPower": 8,
+              "oldPower": 7,
+              "cardEntityId": 20
+            },
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "type": "power",
+              "newPower": 8,
+              "oldPower": 7,
+              "cardEntityId": 53
+            },
+            {
+              "who": "player",
+              "card": "DoomBot2099",
+              "type": "power",
+              "newPower": 1,
+              "oldPower": 0,
+              "cardEntityId": 54
             }
           ]
         },
@@ -1264,10 +1819,30 @@
             2,
             3,
             {
-              "2": [
+              "0": [
                 1,
                 {
-                  "opponentCards": [
+                  "playerCards": [
+                    2,
+                    2,
+                    {
+                      "1": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "1": [
+                1,
+                {
+                  "playerCards": [
                     2,
                     1,
                     {
@@ -1276,7 +1851,36 @@
                         {
                           "power": [
                             0,
-                            2
+                            8
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    2,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            8
+                          ]
+                        }
+                      ],
+                      "1": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            1
                           ]
                         }
                       ]
@@ -1297,10 +1901,26 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "NewYork",
-              "playerPower": 0,
+              "location": "IslandPrison",
+              "playerPower": 2,
+              "locationIndex": 0,
+              "opponentPower": 13
+            },
+            {
+              "type": "score",
+              "winner": null,
+              "location": "SinisterLondon",
+              "playerPower": 8,
+              "locationIndex": 1,
+              "opponentPower": 8
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "RicketyBridge",
+              "playerPower": 9,
               "locationIndex": 2,
-              "opponentPower": 2
+              "opponentPower": 0
             }
           ]
         },
@@ -1313,12 +1933,12 @@
           "label": "Energy",
           "events": [
             {
-              "who": "opponent",
+              "who": "player",
               "type": "energy",
               "energy": 4
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "energy",
               "energy": 4
             }
@@ -1333,22 +1953,22 @@
           "label": "Draw",
           "events": [
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
               "who": "player",
-              "card": "AbsorbingMan",
-              "cost": 4,
+              "card": "OmegaRed",
+              "cost": 3,
               "type": "reveal",
-              "power": 5,
-              "entityId": 35,
+              "power": 6,
+              "entityId": 28,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "AbsorbingMan",
+              "card": "OmegaRed",
+              "type": "draw"
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
               "type": "draw"
             }
           ]
@@ -1359,7 +1979,7 @@
             {
               "player": [
                 0,
-                6
+                5
               ],
               "opponent": [
                 0,
@@ -1369,16 +1989,16 @@
           ],
           "h": [
             2,
-            6,
+            5,
             {
-              "5": [
+              "4": [
                 0,
                 {
-                  "cost": 4,
-                  "power": 5,
+                  "cost": 3,
+                  "power": 6,
                   "baseCost": 4,
-                  "basePower": 5,
-                  "cardDefId": "AbsorbingMan"
+                  "basePower": 6,
+                  "cardDefId": "OmegaRed"
                 }
               ]
             }
@@ -1392,11 +2012,74 @@
               ],
               "opponent": [
                 0,
-                5
+                8
               ]
             }
           ]
         }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 4,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "newPower": 7,
+              "oldPower": 5,
+              "cardEntityId": 30
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "0": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    2,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            7
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 4,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "IslandPrison",
+              "playerPower": 2,
+              "locationIndex": 0,
+              "opponentPower": 15
+            }
+          ]
+        },
+        {}
       ],
       [
         {
@@ -1431,276 +2114,12 @@
         {
           "_v": 2,
           "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "type": "play",
-              "entityId": 36,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 8,
-                          "baseCost": 6,
-                          "entityId": 36,
-                          "basePower": 8,
-                          "cardDefId": "AntiPolarMagneto",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "4": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "AbsorbingMan"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
+          "label": "Snap",
           "events": [
             {
               "who": "opponent",
-              "card": "Hulk",
-              "type": "play",
-              "entityId": 22,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 22,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Hulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 20,
-              "entityId": 22,
-              "drawReveal": false,
-              "overrideAbility": "EvolvedHulk"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            20
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "basePower": [
-                            0,
-                            14
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Hulk"
-                          ],
-                          "overrideAbility": [
-                            0,
-                            "EvolvedHulk"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Hulk",
-              "type": "cardRevealed"
+              "type": "snap",
+              "cubeValue": 2
             }
           ]
         },
@@ -1710,1482 +2129,12 @@
         {
           "_v": 2,
           "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 24,
-              "locationIndex": 1,
-              "opponentPower": 20
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "cost": 6,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 36,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 32,
-              "locationIndex": 1,
-              "opponentPower": 20
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "OmegaRed",
-              "type": "play",
-              "entityId": 33,
-              "location": "Clubhouse",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 6,
-                          "baseCost": 4,
-                          "entityId": 33,
-                          "basePower": 6,
-                          "cardDefId": "OmegaRed",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ShangChi"
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "AbsorbingMan"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "OmegaRed",
-              "cost": 4,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 33,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Clubhouse",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 1
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 20
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "NewYork",
-              "playerPower": 3,
-              "locationIndex": 2,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Danger",
-              "type": "play",
-              "entityId": 32,
-              "location": "NewYork",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 6,
-                          "baseCost": 4,
-                          "entityId": 32,
-                          "basePower": 6,
-                          "cardDefId": "Danger",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "DrDoom"
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    3
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    3
-                  ],
-                  "cardDefId": [
-                    0,
-                    "ShangChi"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "AbsorbingMan"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Danger",
-              "cost": 4,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "NewYork",
-              "playerPower": 9,
-              "locationIndex": 2,
-              "opponentPower": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 38,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 6,
-                  "baseCost": 4,
-                  "basePower": 6,
-                  "cardDefId": "Doom2099"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "type": "play",
-              "entityId": 40,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 3,
-                          "baseCost": 4,
-                          "entityId": 40,
-                          "basePower": 3,
-                          "cardDefId": "ShangChi",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    5
-                  ],
-                  "cardDefId": [
-                    0,
-                    "AbsorbingMan"
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Doom2099"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "type": "cardStaged"
-            },
-            {
-              "who": "player",
-              "card": "Danger",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Armor",
-              "type": "play",
-              "entityId": 18,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "play",
-              "entityId": 23,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 18,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 23,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 40,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 38,
-              "locationIndex": 1,
-              "opponentPower": 20
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Hulk",
-              "type": "destroyed",
-              "fromLocation": "AsgardBesieged"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            null
-                          ],
-                          "power": [
-                            0,
-                            null
-                          ],
-                          "baseCost": [
-                            0,
-                            null
-                          ],
-                          "entityId": [
-                            0,
-                            18
-                          ],
-                          "basePower": [
-                            0,
-                            null
-                          ],
-                          "cardDefId": [
-                            0,
-                            null
-                          ]
-                        },
-                        [
-                          "overrideAbility"
-                        ]
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "entityId": [
-                            0,
-                            23
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
-                    0,
-                    {
-                      "cost": 6,
-                      "power": 20,
-                      "cardDefId": "Hulk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 38,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "type": "cardResolved"
-            },
-            {
-              "who": "player",
-              "card": "Danger",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Ability",
-          "events": [
-            {
-              "who": "player",
-              "card": "Danger",
-              "type": "activated",
-              "isActivated": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Destroyed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "destroyed",
-              "fromLocation": "NewYork"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    0,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "x": [
-            1,
-            {
-              "opponent": [
-                2,
-                2,
-                {
-                  "1": [
-                    0,
-                    {
-                      "cost": 1,
-                      "power": 2,
-                      "cardDefId": "Sunspot"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "NewYork",
-              "playerPower": 9,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Armor",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 18,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Armor"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Armor",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 38,
-              "locationIndex": 1,
-              "opponentPower": 3
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 23,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            2
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            2
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Scorpion"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 38,
-              "locationIndex": 1,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 5,
-              "cardEntityId": 39
-            },
-            {
-              "who": "player",
-              "card": "AbsorbingMan",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 5,
-              "cardEntityId": 35
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 6,
-              "cardEntityId": 38
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "power": [
-                    0,
-                    4
-                  ]
-                }
-              ],
-              "1": [
-                1,
-                {
-                  "power": [
-                    0,
-                    4
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "power": [
-                    0,
-                    5
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Transform",
-          "events": [
-            {
-              "to": "BannerHulk",
-              "who": "opponent",
-              "from": "BruceBanner",
-              "type": "morph",
-              "cardEntityId": 27
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            14
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "basePower": [
-                            0,
-                            14
-                          ],
-                          "cardDefId": [
-                            0,
-                            "BannerHulk"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Clubhouse",
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 14
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "NewYork",
-              "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
           "label": "Cubes",
           "events": [
             {
               "type": "cubePreview",
               "cubeValueNextTurn": 2
             }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "ThanosFracturedFrontier",
-              "type": "draw"
-            },
-            {
-              "who": "player",
-              "card": "ArthurPendragon",
-              "cost": 4,
-              "type": "reveal",
-              "power": 4,
-              "entityId": 30,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ArthurPendragon",
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
-              ]
-            }
-          ],
-          "h": [
-            2,
-            4,
-            {
-              "3": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 4,
-                  "baseCost": 4,
-                  "basePower": 4,
-                  "cardDefId": "ArthurPendragon"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -3225,75 +2174,122 @@
       [
         {
           "turn": 1,
-          "plays": [],
+          "plays": [
+            {
+              "card": "Zabu",
+              "isPlayer": true,
+              "location": "IslandPrison",
+              "locationIndex": 0
+            }
+          ],
           "energy": {
             "player": 1,
             "opponent": 1
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 89
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 1,
-              "_changeIdx": 91
+              "_changeIdx": 79
             },
             {
-              "to": "Clubhouse",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 1,
+              "_changeIdx": 81
+            },
+            {
+              "to": "IslandPrison",
               "from": "RevealOn1",
               "type": "location",
-              "_changeIdx": 94,
+              "_changeIdx": 84,
               "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "Zabu",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 23,
+              "_changeIdx": 88,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Zabu",
+              "type": "draw",
+              "_changeIdx": 89
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 97
-            },
-            {
-              "who": "player",
-              "card": "Wave",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 34,
-              "_changeIdx": 102,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "draw",
-              "_changeIdx": 103
+              "_changeIdx": 92
             },
             {
               "tie": true,
               "type": "turnWinner",
               "winner": null,
-              "_changeIdx": 106
+              "_changeIdx": 97
+            },
+            {
+              "who": "opponent",
+              "type": "initiative",
+              "_changeIdx": 98
             },
             {
               "who": "player",
-              "type": "initiative",
-              "_changeIdx": 107
+              "card": "Zabu",
+              "type": "play",
+              "entityId": 23,
+              "location": "IslandPrison",
+              "_changeIdx": 101,
+              "locationIndex": 0
+            },
+            {
+              "who": "player",
+              "card": "Zabu",
+              "type": "cardStaged",
+              "_changeIdx": 102
             },
             {
               "turn": 1,
               "type": "endTurn",
-              "_changeIdx": 110
+              "_changeIdx": 106
+            },
+            {
+              "who": "player",
+              "card": "Zabu",
+              "cost": 1,
+              "type": "reveal",
+              "power": 1,
+              "entityId": 23,
+              "_changeIdx": 108,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "IslandPrison",
+              "_changeIdx": 110,
+              "playerPower": 1,
+              "locationIndex": 0,
+              "opponentPower": 0
+            },
+            {
+              "who": "player",
+              "card": "Zabu",
+              "type": "cardResolved",
+              "_changeIdx": 115
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
-              "playerPower": 0,
+              "winner": "player",
+              "playerPower": 1,
               "opponentPower": 0
             },
             {
@@ -3308,17 +2304,17 @@
             }
           ]
         },
-        3
+        6
       ],
       [
         {
           "turn": 2,
           "plays": [
             {
-              "card": "Sunspot",
+              "card": "ShadowlandsDaredevil",
               "isPlayer": false,
-              "location": "NewYork",
-              "locationIndex": 2
+              "location": "IslandPrison",
+              "locationIndex": 0
             }
           ],
           "energy": {
@@ -3327,155 +2323,176 @@
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 114
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 116
+              "_changeIdx": 120
             },
             {
-              "to": "AsgardBesieged",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 122
+            },
+            {
+              "to": "SinisterLondon",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 119,
+              "_changeIdx": 125,
               "locationIndex": 1
             },
             {
               "to": "RevealOn2",
               "from": "RevealOn3",
               "type": "location",
-              "_changeIdx": 123,
+              "_changeIdx": 129,
               "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "cost": 3,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 20,
+              "_changeIdx": 132,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "type": "draw",
+              "_changeIdx": 133
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 126
-            },
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 40,
-              "_changeIdx": 131,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "type": "draw",
-              "_changeIdx": 132
-            },
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
               "_changeIdx": 136
             },
             {
-              "who": "opponent",
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "player",
+              "_changeIdx": 141
+            },
+            {
+              "who": "player",
               "type": "initiative",
-              "_changeIdx": 137
+              "_changeIdx": 142
             },
             {
               "turn": 2,
               "type": "endTurn",
-              "_changeIdx": 140
+              "_changeIdx": 148
             },
             {
               "who": "opponent",
-              "card": "Sunspot",
+              "card": "ShadowlandsDaredevil",
               "type": "play",
-              "entityId": 24,
-              "location": "RevealOn2",
-              "_changeIdx": 141,
-              "locationIndex": 2
+              "entityId": 30,
+              "location": "IslandPrison",
+              "_changeIdx": 149,
+              "locationIndex": 0
             },
             {
               "who": "opponent",
-              "card": "Sunspot",
-              "cost": 1,
+              "card": "ShadowlandsDaredevil",
+              "cost": 2,
               "type": "reveal",
-              "power": 0,
-              "entityId": 24,
-              "_changeIdx": 144,
+              "power": 3,
+              "entityId": 30,
+              "_changeIdx": 152,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "Sunspot",
+              "card": "ShadowlandsDaredevil",
               "type": "cardRevealed",
-              "_changeIdx": 145
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 1,
-              "oldPower": 0,
-              "_changeIdx": 153,
-              "cardEntityId": 24
+              "_changeIdx": 153
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "RevealOn2",
-              "_changeIdx": 157,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 1
+              "location": "IslandPrison",
+              "_changeIdx": 155,
+              "playerPower": 1,
+              "locationIndex": 0,
+              "opponentPower": 3
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 48,
+              "_changeIdx": 160,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 49,
+              "_changeIdx": 163,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "cost": 1,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 50,
+              "_changeIdx": 166,
+              "drawReveal": true
             }
           ],
           "chambers": {
             "player": null,
             "opponent": [
-              "RealityShot"
+              "SpaceShot"
             ]
           },
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
               "winner": "opponent",
+              "playerPower": 1,
+              "opponentPower": 3
+            },
+            {
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 1
+              "opponentPower": 0
+            },
+            {
+              "winner": null,
+              "playerPower": 0,
+              "opponentPower": 0
             }
           ]
         },
-        16
+        22
       ],
       [
         {
           "turn": 3,
           "plays": [
             {
-              "card": "Wave",
+              "card": "Doom2099",
               "isPlayer": true,
-              "location": "AsgardBesieged",
+              "location": "SinisterLondon",
               "locationIndex": 1
             },
             {
-              "card": "BannerHulk",
+              "card": "WilsonFisk",
               "isPlayer": false,
-              "location": "Clubhouse",
-              "locationIndex": 0
+              "location": "SinisterLondon",
+              "locationIndex": 1
             }
           ],
           "energy": {
@@ -3484,463 +2501,372 @@
           },
           "events": [
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 163
-            },
-            {
               "who": "player",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 165
+              "_changeIdx": 175
             },
             {
-              "to": "NewYork",
+              "who": "opponent",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 177
+            },
+            {
+              "to": "RicketyBridge",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 168,
+              "_changeIdx": 180,
               "locationIndex": 2
             },
             {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 172
-            },
-            {
               "who": "player",
-              "card": "AntiPolarMagneto",
-              "cost": 6,
+              "card": "ArthurPendragon",
+              "cost": 3,
               "type": "reveal",
-              "power": 8,
-              "entityId": 36,
-              "_changeIdx": 178,
+              "power": 4,
+              "entityId": 22,
+              "_changeIdx": 183,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "AntiPolarMagneto",
+              "card": "ArthurPendragon",
               "type": "draw",
-              "_changeIdx": 179
+              "_changeIdx": 184
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "type": "draw",
+              "_changeIdx": 187
+            },
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "newPower": 5,
+              "oldPower": 3,
+              "_changeIdx": 193,
+              "cardEntityId": 30
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "IslandPrison",
+              "_changeIdx": 198,
+              "playerPower": 1,
+              "locationIndex": 0,
+              "opponentPower": 5
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "opponent",
-              "_changeIdx": 183
+              "_changeIdx": 201
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 184
+              "_changeIdx": 202
             },
             {
               "who": "player",
-              "card": "Wave",
+              "card": "Doom2099",
               "type": "play",
-              "entityId": 34,
-              "location": "AsgardBesieged",
-              "_changeIdx": 187,
+              "entityId": 20,
+              "location": "SinisterLondon",
+              "_changeIdx": 205,
               "locationIndex": 1
             },
             {
               "who": "player",
-              "card": "Wave",
+              "card": "Doom2099",
               "type": "cardStaged",
-              "_changeIdx": 188
+              "_changeIdx": 206
             },
             {
               "turn": 3,
               "type": "endTurn",
-              "_changeIdx": 193
+              "_changeIdx": 216
             },
             {
               "who": "opponent",
-              "card": "BannerHulk",
+              "card": "WilsonFisk",
               "type": "play",
-              "entityId": 27,
-              "location": "Clubhouse",
-              "_changeIdx": 194,
-              "locationIndex": 0
+              "entityId": 33,
+              "location": "SinisterLondon",
+              "_changeIdx": 217,
+              "locationIndex": 1
             },
             {
               "who": "opponent",
-              "card": "BruceBanner",
-              "cost": 2,
+              "card": "WilsonFisk",
+              "cost": 5,
               "type": "reveal",
-              "power": 1,
-              "entityId": 27,
-              "_changeIdx": 198,
+              "power": 8,
+              "entityId": 33,
+              "_changeIdx": 221,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "BruceBanner",
+              "card": "WilsonFisk",
               "type": "cardRevealed",
-              "_changeIdx": 199
+              "_changeIdx": 222
             },
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Clubhouse",
-              "_changeIdx": 202,
+              "location": "SinisterLondon",
+              "_changeIdx": 224,
               "playerPower": 0,
+              "locationIndex": 1,
+              "opponentPower": 8
+            },
+            {
+              "who": "opponent",
+              "card": "WilsonFisk",
+              "cost": 5,
+              "type": "reveal",
+              "power": 8,
+              "entityId": 52,
+              "_changeIdx": 230,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "WilsonFisk",
+              "type": "lockdownChange",
+              "_changeIdx": 233,
+              "canBeMoved": true
+            },
+            {
+              "who": "opponent",
+              "card": "WilsonFisk",
+              "type": "cardRevealed",
+              "_changeIdx": 235
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "IslandPrison",
+              "_changeIdx": 236,
+              "playerPower": 1,
               "locationIndex": 0,
-              "opponentPower": 1
+              "opponentPower": 13
             },
             {
               "who": "player",
-              "card": "Wave",
+              "card": "Doom2099",
+              "cost": 4,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 20,
+              "_changeIdx": 240,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "SinisterLondon",
+              "_changeIdx": 242,
+              "playerPower": 6,
+              "locationIndex": 1,
+              "opponentPower": 8
+            },
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "type": "cardResolved",
+              "_changeIdx": 245
+            },
+            {
+              "who": "player",
+              "card": "Doom2099",
               "cost": 3,
               "type": "reveal",
               "power": 6,
-              "entityId": 34,
-              "_changeIdx": 205,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 207,
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "cardResolved",
-              "_changeIdx": 224
-            },
-            {
-              "who": "player",
-              "card": "Destroyer",
-              "cost": 6,
-              "type": "reveal",
-              "power": 18,
-              "entityId": 54,
-              "_changeIdx": 228,
+              "entityId": 53,
+              "_changeIdx": 250,
               "drawReveal": false
             },
             {
               "who": "player",
-              "card": "Destroyer",
+              "card": "Doom2099",
               "type": "cardRevealed",
-              "_changeIdx": 230
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 231,
-              "playerPower": 24,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "power",
-              "newPower": 2,
-              "oldPower": 1,
-              "_changeIdx": 238,
-              "cardEntityId": 24
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "NewYork",
-              "_changeIdx": 242,
-              "playerPower": 0,
-              "locationIndex": 2,
-              "opponentPower": 2
-            }
-          ],
-          "chambers": {
-            "player": null,
-            "opponent": [
-              "RealityShot"
-            ]
-          },
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 1
-            },
-            {
-              "winner": "player",
-              "playerPower": 24,
-              "opponentPower": 0
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 2
-            }
-          ]
-        },
-        36
-      ],
-      [
-        {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "AntiPolarMagneto",
-              "isPlayer": true,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            },
-            {
-              "card": "Hulk",
-              "isPlayer": false,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            },
-            {
-              "card": "OmegaRed",
-              "isPlayer": true,
-              "location": "Clubhouse",
-              "locationIndex": 0
-            },
-            {
-              "card": "Danger",
-              "isPlayer": true,
-              "location": "NewYork",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 4,
-            "opponent": 4
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 251
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 253
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
               "_changeIdx": 255
             },
             {
+              "type": "score",
+              "winner": "player",
+              "location": "RicketyBridge",
+              "_changeIdx": 256,
+              "playerPower": 6,
+              "locationIndex": 2,
+              "opponentPower": 0
+            },
+            {
               "who": "player",
-              "card": "AbsorbingMan",
+              "card": "DoomBot2099",
               "cost": 4,
               "type": "reveal",
-              "power": 5,
-              "entityId": 35,
-              "_changeIdx": 264,
-              "drawReveal": true
+              "power": 0,
+              "entityId": 54,
+              "_changeIdx": 265,
+              "drawReveal": false
             },
             {
               "who": "player",
-              "card": "AbsorbingMan",
-              "type": "draw",
-              "_changeIdx": 265
+              "card": "DoomBot2099",
+              "type": "lockdownChange",
+              "_changeIdx": 268,
+              "canBeMoved": true
             },
             {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
+              "who": "player",
+              "card": "DoomBot2099",
+              "type": "cardRevealed",
               "_changeIdx": 270
             },
             {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 271
+              "who": "player",
+              "card": "Doom2099",
+              "type": "power",
+              "newPower": 7,
+              "oldPower": 6,
+              "_changeIdx": 271,
+              "cardEntityId": 20
             },
             {
               "who": "player",
-              "card": "AntiPolarMagneto",
-              "type": "play",
-              "entityId": 36,
-              "location": "AsgardBesieged",
-              "_changeIdx": 274,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "type": "cardStaged",
-              "_changeIdx": 275
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 290
-            },
-            {
-              "who": "opponent",
-              "card": "Hulk",
-              "type": "play",
-              "entityId": 22,
-              "location": "AsgardBesieged",
-              "_changeIdx": 291,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Hulk",
-              "cost": 6,
-              "type": "reveal",
-              "power": 20,
-              "entityId": 22,
-              "_changeIdx": 295,
-              "drawReveal": false,
-              "overrideAbility": "EvolvedHulk"
-            },
-            {
-              "who": "opponent",
-              "card": "Hulk",
-              "type": "cardRevealed",
-              "_changeIdx": 296
+              "card": "Doom2099",
+              "type": "power",
+              "newPower": 7,
+              "oldPower": 6,
+              "_changeIdx": 272,
+              "cardEntityId": 53
             },
             {
               "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 299,
-              "playerPower": 24,
+              "winner": "opponent",
+              "location": "SinisterLondon",
+              "_changeIdx": 278,
+              "playerPower": 7,
               "locationIndex": 1,
-              "opponentPower": 20
-            },
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "cost": 6,
-              "type": "reveal",
-              "power": 8,
-              "entityId": 36,
-              "_changeIdx": 302,
-              "drawReveal": false
+              "opponentPower": 8
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 305,
-              "playerPower": 32,
-              "locationIndex": 1,
-              "opponentPower": 20
-            },
-            {
-              "who": "player",
-              "card": "OmegaRed",
-              "type": "play",
-              "entityId": 33,
-              "location": "Clubhouse",
-              "_changeIdx": 309,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "OmegaRed",
-              "cost": 4,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 33,
-              "_changeIdx": 313,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Clubhouse",
-              "_changeIdx": 315,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 1
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 319,
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 20
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "NewYork",
-              "_changeIdx": 322,
-              "playerPower": 3,
+              "location": "RicketyBridge",
+              "_changeIdx": 281,
+              "playerPower": 7,
               "locationIndex": 2,
-              "opponentPower": 2
+              "opponentPower": 0
             },
             {
               "who": "player",
-              "card": "Danger",
-              "type": "play",
-              "entityId": 32,
-              "location": "NewYork",
-              "_changeIdx": 325,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Danger",
+              "card": "DoomBot2099",
               "cost": 4,
               "type": "reveal",
-              "power": 6,
-              "entityId": 32,
-              "_changeIdx": 329,
+              "power": 0,
+              "entityId": 55,
+              "_changeIdx": 287,
               "drawReveal": false
+            },
+            {
+              "who": "player",
+              "card": "DoomBot2099",
+              "type": "cardRevealed",
+              "_changeIdx": 289
+            },
+            {
+              "who": "player",
+              "card": "DoomBot2099",
+              "type": "power",
+              "newPower": 1,
+              "oldPower": 0,
+              "_changeIdx": 292,
+              "cardEntityId": 55
+            },
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "type": "power",
+              "newPower": 8,
+              "oldPower": 7,
+              "_changeIdx": 294,
+              "cardEntityId": 20
+            },
+            {
+              "who": "player",
+              "card": "Doom2099",
+              "type": "power",
+              "newPower": 8,
+              "oldPower": 7,
+              "_changeIdx": 295,
+              "cardEntityId": 53
+            },
+            {
+              "who": "player",
+              "card": "DoomBot2099",
+              "type": "power",
+              "newPower": 1,
+              "oldPower": 0,
+              "_changeIdx": 296,
+              "cardEntityId": 54
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "IslandPrison",
+              "_changeIdx": 306,
+              "playerPower": 2,
+              "locationIndex": 0,
+              "opponentPower": 13
+            },
+            {
+              "type": "score",
+              "winner": null,
+              "location": "SinisterLondon",
+              "_changeIdx": 309,
+              "playerPower": 8,
+              "locationIndex": 1,
+              "opponentPower": 8
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "NewYork",
-              "_changeIdx": 331,
+              "location": "RicketyBridge",
+              "_changeIdx": 312,
               "playerPower": 9,
               "locationIndex": 2,
-              "opponentPower": 2
-            },
-            {
-              "who": "player",
-              "card": "AntiPolarMagneto",
-              "type": "cardResolved",
-              "_changeIdx": 335
+              "opponentPower": 0
             }
           ],
           "chambers": {
             "player": null,
             "opponent": [
-              "RealityShot"
+              "SpaceShot"
             ]
           },
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "player",
-              "playerPower": 6,
-              "opponentPower": 1
+              "winner": "opponent",
+              "playerPower": 2,
+              "opponentPower": 13
             },
             {
-              "winner": "player",
-              "playerPower": 35,
-              "opponentPower": 20
+              "winner": null,
+              "playerPower": 8,
+              "opponentPower": 8
             },
             {
               "winner": "player",
               "playerPower": 9,
-              "opponentPower": 2
+              "opponentPower": 0
             }
           ]
         },
@@ -3948,409 +2874,100 @@
       ],
       [
         {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "ShangChi",
-              "isPlayer": true,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            },
-            {
-              "card": "Armor",
-              "isPlayer": false,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            },
-            {
-              "card": "Scorpion",
-              "isPlayer": false,
-              "location": "AsgardBesieged",
-              "locationIndex": 1
-            }
-          ],
-          "energy": {
-            "player": 5,
-            "opponent": 5
-          },
-          "events": [
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 347
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 349
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 351
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "cost": 4,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 38,
-              "_changeIdx": 356,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "draw",
-              "_changeIdx": 357
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 360
-            },
-            {
-              "who": "player",
-              "type": "initiative",
-              "_changeIdx": 361
-            },
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "type": "play",
-              "entityId": 40,
-              "location": "AsgardBesieged",
-              "_changeIdx": 364,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "type": "cardStaged",
-              "_changeIdx": 365
-            },
-            {
-              "who": "player",
-              "card": "Danger",
-              "type": "cardStaged",
-              "_changeIdx": 369
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 376
-            },
-            {
-              "who": "opponent",
-              "card": "Armor",
-              "type": "play",
-              "entityId": 18,
-              "location": "AsgardBesieged",
-              "_changeIdx": 377,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "play",
-              "entityId": 23,
-              "location": "AsgardBesieged",
-              "_changeIdx": 380,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "cost": 4,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 40,
-              "_changeIdx": 385,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 388,
-              "playerPower": 38,
-              "locationIndex": 1,
-              "opponentPower": 20
-            },
-            {
-              "who": "opponent",
-              "card": "Hulk",
-              "type": "destroyed",
-              "_changeIdx": 393,
-              "fromLocation": "AsgardBesieged"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 397,
-              "playerPower": 38,
-              "locationIndex": 1,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "ShangChi",
-              "type": "cardResolved",
-              "_changeIdx": 401
-            },
-            {
-              "who": "player",
-              "card": "Danger",
-              "type": "cardResolved",
-              "_changeIdx": 404
-            },
-            {
-              "who": "player",
-              "card": "Danger",
-              "type": "activated",
-              "_changeIdx": 405,
-              "isActivated": true
-            },
-            {
-              "who": "opponent",
-              "card": "Sunspot",
-              "type": "destroyed",
-              "_changeIdx": 408,
-              "fromLocation": "NewYork"
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "NewYork",
-              "_changeIdx": 410,
-              "playerPower": 9,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Armor",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 18,
-              "_changeIdx": 414,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Armor",
-              "type": "cardRevealed",
-              "_changeIdx": 415
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 418,
-              "playerPower": 38,
-              "locationIndex": 1,
-              "opponentPower": 3
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "cost": 2,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 23,
-              "_changeIdx": 424,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Scorpion",
-              "type": "cardRevealed",
-              "_changeIdx": 425
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 427,
-              "playerPower": 38,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "who": "player",
-              "card": "DrDoom",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 5,
-              "_changeIdx": 431,
-              "cardEntityId": 39
-            },
-            {
-              "who": "player",
-              "card": "AbsorbingMan",
-              "type": "power",
-              "newPower": 4,
-              "oldPower": 5,
-              "_changeIdx": 434,
-              "cardEntityId": 35
-            },
-            {
-              "who": "player",
-              "card": "Doom2099",
-              "type": "power",
-              "newPower": 5,
-              "oldPower": 6,
-              "_changeIdx": 437,
-              "cardEntityId": 38
-            },
-            {
-              "to": "BannerHulk",
-              "who": "opponent",
-              "from": "BruceBanner",
-              "type": "morph",
-              "_changeIdx": 443,
-              "cardEntityId": 27
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Clubhouse",
-              "_changeIdx": 445,
-              "playerPower": 6,
-              "locationIndex": 0,
-              "opponentPower": 14
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AsgardBesieged",
-              "_changeIdx": 450,
-              "playerPower": 35,
-              "locationIndex": 1,
-              "opponentPower": 6
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "NewYork",
-              "_changeIdx": 453,
-              "playerPower": 6,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 456
-            }
-          ],
-          "chambers": {
-            "player": null,
-            "opponent": [
-              "RealityShot",
-              "PowerShot"
-            ]
-          },
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 6,
-              "opponentPower": 14
-            },
-            {
-              "winner": "player",
-              "playerPower": 35,
-              "opponentPower": 6
-            },
-            {
-              "winner": "player",
-              "playerPower": 6,
-              "opponentPower": 0
-            }
-          ]
-        },
-        81
-      ],
-      [
-        {
-          "turn": 6,
+          "turn": 4,
           "plays": [],
           "energy": {
-            "player": 6,
-            "opponent": 6
+            "player": 4,
+            "opponent": 4
           },
           "events": [
             {
-              "type": "cubePreview",
-              "_changeIdx": 460,
-              "cubeValueNextTurn": 2
+              "who": "player",
+              "type": "energy",
+              "energy": 4,
+              "_changeIdx": 318
             },
             {
               "who": "opponent",
               "type": "energy",
-              "energy": 6,
-              "_changeIdx": 462
+              "energy": 4,
+              "_changeIdx": 320
             },
             {
               "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 464
-            },
-            {
-              "who": "opponent",
-              "card": "ThanosFracturedFrontier",
-              "type": "draw",
-              "_changeIdx": 466
-            },
-            {
-              "who": "player",
-              "card": "ArthurPendragon",
-              "cost": 4,
+              "card": "OmegaRed",
+              "cost": 3,
               "type": "reveal",
-              "power": 4,
-              "entityId": 30,
-              "_changeIdx": 471,
+              "power": 6,
+              "entityId": 28,
+              "_changeIdx": 322,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "ArthurPendragon",
+              "card": "OmegaRed",
               "type": "draw",
-              "_changeIdx": 472
+              "_changeIdx": 323
+            },
+            {
+              "who": "opponent",
+              "card": "Demon",
+              "type": "draw",
+              "_changeIdx": 326
+            },
+            {
+              "who": "opponent",
+              "card": "ShadowlandsDaredevil",
+              "type": "power",
+              "newPower": 7,
+              "oldPower": 5,
+              "_changeIdx": 332,
+              "cardEntityId": 30
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "IslandPrison",
+              "_changeIdx": 337,
+              "playerPower": 2,
+              "locationIndex": 0,
+              "opponentPower": 15
             },
             {
               "tie": false,
               "type": "turnWinner",
-              "winner": "player",
-              "_changeIdx": 475
+              "winner": "opponent",
+              "_changeIdx": 340
             },
             {
-              "who": "player",
+              "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 476
+              "_changeIdx": 341
+            },
+            {
+              "who": "opponent",
+              "type": "snap",
+              "cubeValue": 2,
+              "_changeIdx": 344
+            },
+            {
+              "type": "cubePreview",
+              "_changeIdx": 344,
+              "cubeValueNextTurn": 2
             }
           ],
           "chambers": {
             "player": null,
             "opponent": [
-              "RealityShot",
-              "PowerShot"
+              "SpaceShot"
             ]
           },
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
+              "winner": "opponent",
+              "playerPower": 2,
+              "opponentPower": 15
             },
             {
               "winner": null,
@@ -4364,84 +2981,68 @@
             }
           ]
         },
-        86
+        58
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 9266,
-  "opp_sp": 4071,
+  "opp_cl": 8586,
+  "opp_sp": null,
   "bracket": null,
-  "match_id": "0da85ebc-8796-4203-8184-a736d95b729e",
-  "opp_name": "SlimShady",
+  "match_id": "fb97ac4f-4f68-4d42-9b4b-44c911eb6068",
+  "opp_name": "Steinbach",
   "opp_team": null,
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "Clubhouse",
-    "AsgardBesieged",
-    "NewYork"
-  ],
+  "locations": [],
   "player_cl": 12441,
   "player_sp": 4193,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "Nimrod",
-    "ArtVariantDefId": "Nimrod_02"
+    "CardDefId": "LukeCage",
+    "ArtVariantDefId": "LukeCage_04"
   },
   "opp_health": null,
-  "opp_is_bot": false,
+  "opp_is_bot": true,
   "mode_detail": null,
   "player_name": "SmokeFisher",
-  "current_turn": 7,
+  "current_turn": 5,
   "kudzu_spread": null,
-  "match_result": "win",
-  "match_status": "complete",
+  "match_result": null,
+  "match_status": "in_progress",
   "opp_champion": null,
-  "opp_clan_tag": "PIX",
+  "opp_clan_tag": "KRO",
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": true,
+  "opp_retreated": null,
   "player_avatar": null,
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
     "ThanosFracturedFrontier",
-    "Sunspot",
-    "BruceBanner",
-    "Hulk",
-    "HighEvolutionary",
-    "Armor",
-    "Scorpion"
+    "ShadowlandsDaredevil",
+    "WilsonFisk"
   ],
-  "last_updated_at": "2026-11-04T09:50:37.86+00:00",
+  "last_updated_at": "2026-11-04T09:51:42.821+00:00",
   "player_champion": null,
   "opp_played_cards": [],
   "player_deck_cards": [
-    "Doom2099",
-    "ArthurPendragon",
-    "AntiPolarMagneto",
     "AbsorbingMan",
     "Wave",
-    "ShangChi",
-    "Danger",
     "DrDoom",
-    "Psylocke",
     "Zabu",
-    "OmegaRed",
-    "IronLad"
+    "Doom2099",
+    "ArthurPendragon",
+    "OmegaRed"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
     "ThanosFracturedFrontier",
-    "Sunspot",
-    "BruceBanner",
-    "Hulk",
-    "HighEvolutionary",
-    "Armor",
-    "Scorpion"
+    "ShadowlandsDaredevil",
+    "Demon",
+    "WilsonFisk"
   ],
   "conquest_round_index": null
 }
