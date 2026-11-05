@@ -44,25 +44,25 @@
           },
           "h": [
             {
+              "cost": 6,
+              "power": 9,
+              "baseCost": 6,
+              "basePower": 9,
+              "cardDefId": "LivingTribunal"
+            },
+            {
+              "cost": 2,
+              "power": 2,
+              "baseCost": 2,
+              "basePower": 2,
+              "cardDefId": "RavonnaRenslayer"
+            },
+            {
               "cost": 4,
               "power": 7,
               "baseCost": 4,
               "basePower": 7,
               "cardDefId": "IronLad"
-            },
-            {
-              "cost": 5,
-              "power": 5,
-              "baseCost": 5,
-              "basePower": 5,
-              "cardDefId": "Sera"
-            },
-            {
-              "cost": 6,
-              "power": 8,
-              "baseCost": 6,
-              "basePower": 8,
-              "cardDefId": "Onslaught"
             }
           ],
           "n": {
@@ -86,14 +86,14 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 1
-            },
-            {
               "who": "opponent",
               "type": "energy",
-              "energy": 1
+              "energy": 2
+            },
+            {
+              "who": "player",
+              "type": "energy",
+              "energy": 2
             }
           ]
         },
@@ -106,7 +106,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "Kyln",
+              "to": "Superflow",
               "from": "RevealOn1",
               "type": "location",
               "locationIndex": 0
@@ -123,7 +123,7 @@
                 {
                   "location": [
                     0,
-                    "Kyln"
+                    "Superflow"
                   ],
                   "revealed": [
                     0,
@@ -142,22 +142,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Wave",
+              "card": "Crystal",
               "cost": 3,
               "type": "reveal",
               "power": 6,
-              "entityId": 23,
+              "entityId": 41,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Wave",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": "SinisterSix",
+              "card": "Crystal",
               "type": "draw"
             }
           ]
@@ -187,7 +187,7 @@
                   "power": 6,
                   "baseCost": 3,
                   "basePower": 6,
-                  "cardDefId": "Wave"
+                  "cardDefId": "Crystal"
                 }
               ]
             }
@@ -240,6 +240,134 @@
         {
           "_v": 2,
           "turn": 1,
+          "label": "Play",
+          "events": [
+            {
+              "who": "player",
+              "card": "RavonnaRenslayer",
+              "type": "play",
+              "entityId": 40,
+              "location": "RevealOn2",
+              "locationIndex": 1
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 2,
+                          "power": 2,
+                          "baseCost": 2,
+                          "entityId": 40,
+                          "basePower": 2,
+                          "cardDefId": "RavonnaRenslayer",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                3
+              ]
+            }
+          ],
+          "h": [
+            2,
+            3,
+            {
+              "1": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    4
+                  ],
+                  "power": [
+                    0,
+                    7
+                  ],
+                  "baseCost": [
+                    0,
+                    4
+                  ],
+                  "basePower": [
+                    0,
+                    7
+                  ],
+                  "cardDefId": [
+                    0,
+                    "IronLad"
+                  ]
+                }
+              ],
+              "2": [
+                1,
+                {
+                  "cost": [
+                    0,
+                    3
+                  ],
+                  "power": [
+                    0,
+                    6
+                  ],
+                  "baseCost": [
+                    0,
+                    3
+                  ],
+                  "basePower": [
+                    0,
+                    6
+                  ],
+                  "cardDefId": [
+                    0,
+                    "Crystal"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Staged",
+          "events": [
+            {
+              "who": "player",
+              "card": "RavonnaRenslayer",
+              "type": "cardStaged"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
           "label": "End Turn",
           "events": [
             {
@@ -258,11 +386,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Zero",
+              "card": "RedWolfFracturedFrontier",
               "type": "play",
-              "entityId": 32,
-              "location": "Kyln",
-              "locationIndex": 0
+              "entityId": 27,
+              "location": "RevealOn3",
+              "locationIndex": 2
             }
           ]
         },
@@ -271,7 +399,7 @@
             2,
             3,
             {
-              "0": [
+              "2": [
                 1,
                 {
                   "opponentCards": [
@@ -284,7 +412,7 @@
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 32,
+                          "entityId": 27,
                           "basePower": null,
                           "cardDefId": null,
                           "arrivalSeq": 0
@@ -315,11 +443,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Zero",
-              "cost": 1,
+              "card": "RedWolfFracturedFrontier",
+              "cost": 2,
               "type": "reveal",
-              "power": 3,
-              "entityId": 32,
+              "power": 1,
+              "entityId": 27,
               "drawReveal": false
             }
           ]
@@ -329,7 +457,7 @@
             2,
             3,
             {
-              "0": [
+              "2": [
                 1,
                 {
                   "opponentCards": [
@@ -341,23 +469,23 @@
                         {
                           "cost": [
                             0,
-                            1
+                            2
                           ],
                           "power": [
                             0,
-                            3
+                            1
                           ],
                           "baseCost": [
                             0,
-                            1
+                            2
                           ],
                           "basePower": [
                             0,
-                            3
+                            1
                           ],
                           "cardDefId": [
                             0,
-                            "Zero"
+                            "RedWolfFracturedFrontier"
                           ]
                         }
                       ]
@@ -377,7 +505,7 @@
           "events": [
             {
               "who": "opponent",
-              "card": "Zero",
+              "card": "RedWolfFracturedFrontier",
               "type": "cardRevealed"
             }
           ]
@@ -393,10 +521,125 @@
             {
               "type": "score",
               "winner": "opponent",
-              "location": "Kyln",
+              "location": "RevealOn3",
               "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
+              "locationIndex": 2,
+              "opponentPower": 1
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Power",
+          "events": [
+            {
+              "who": "opponent",
+              "card": "RedWolfFracturedFrontier",
+              "type": "power",
+              "newPower": 4,
+              "oldPower": 1,
+              "cardEntityId": 27
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "opponentCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        1,
+                        {
+                          "power": [
+                            0,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "RevealOn3",
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 4
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "RavonnaRenslayer",
+              "cost": 2,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 40,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "RevealOn2",
+              "playerPower": 2,
+              "locationIndex": 1,
+              "opponentPower": 0
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 1,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "RavonnaRenslayer",
+              "type": "cardResolved"
             }
           ]
         },
@@ -409,14 +652,14 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 2
-            },
-            {
               "who": "opponent",
               "type": "energy",
-              "energy": 2
+              "energy": 3
+            },
+            {
+              "who": "player",
+              "type": "energy",
+              "energy": 3
             }
           ]
         },
@@ -429,7 +672,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "CaveOfTheDragon",
+              "to": "VibraniumMines",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 1
@@ -452,7 +695,7 @@
                 {
                   "location": [
                     0,
-                    "CaveOfTheDragon"
+                    "VibraniumMines"
                   ],
                   "revealed": [
                     0,
@@ -484,22 +727,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": null,
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "LivingTribunal",
-              "cost": 6,
+              "card": "Wave",
+              "cost": 3,
               "type": "reveal",
-              "power": 9,
-              "entityId": 19,
+              "power": 6,
+              "entityId": 36,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "LivingTribunal",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "Wave",
               "type": "draw"
             }
           ]
@@ -510,7 +753,7 @@
             {
               "player": [
                 0,
-                5
+                4
               ],
               "opponent": [
                 0,
@@ -520,16 +763,16 @@
           ],
           "h": [
             2,
-            5,
+            4,
             {
-              "4": [
+              "3": [
                 0,
                 {
-                  "cost": 6,
-                  "power": 9,
-                  "baseCost": 6,
-                  "basePower": 9,
-                  "cardDefId": "LivingTribunal"
+                  "cost": 3,
+                  "power": 6,
+                  "baseCost": 3,
+                  "basePower": 6,
+                  "cardDefId": "Wave"
                 }
               ]
             }
@@ -573,6 +816,83 @@
             {
               "who": "opponent",
               "type": "initiative"
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Play",
+          "events": [
+            {
+              "who": "player",
+              "card": "Wave",
+              "type": "play",
+              "entityId": 36,
+              "location": "RevealOn2",
+              "locationIndex": 2
+            }
+          ]
+        },
+        {
+          "b": [
+            2,
+            3,
+            {
+              "2": [
+                1,
+                {
+                  "playerCards": [
+                    2,
+                    1,
+                    {
+                      "0": [
+                        0,
+                        {
+                          "cost": 3,
+                          "power": 6,
+                          "baseCost": 3,
+                          "entityId": 36,
+                          "basePower": 6,
+                          "cardDefId": "Wave",
+                          "arrivalSeq": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "c": [
+            1,
+            {
+              "player": [
+                0,
+                3
+              ]
+            }
+          ],
+          "h": [
+            2,
+            3,
+            {}
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Staged",
+          "events": [
+            {
+              "who": "player",
+              "card": "Wave",
+              "type": "cardStaged"
             }
           ]
         },
@@ -600,11 +920,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "FastballSpecial",
+              "card": "Domino",
               "type": "play",
-              "entityId": 40,
-              "location": "Kyln",
-              "locationIndex": 0
+              "entityId": 23,
+              "location": "VibraniumMines",
+              "locationIndex": 1
             }
           ]
         },
@@ -613,23 +933,23 @@
             2,
             3,
             {
-              "0": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
+                      "0": [
                         0,
                         {
                           "cost": null,
                           "power": null,
                           "baseCost": null,
-                          "entityId": 40,
+                          "entityId": 23,
                           "basePower": null,
                           "cardDefId": null,
-                          "arrivalSeq": 1
+                          "arrivalSeq": 0
                         }
                       ]
                     }
@@ -657,11 +977,11 @@
           "events": [
             {
               "who": "opponent",
-              "card": "FastballSpecial",
+              "card": "Domino",
               "cost": 2,
               "type": "reveal",
-              "power": 0,
-              "entityId": 40,
+              "power": 3,
+              "entityId": 23,
               "drawReveal": false
             }
           ]
@@ -671,14 +991,14 @@
             2,
             3,
             {
-              "0": [
+              "1": [
                 1,
                 {
                   "opponentCards": [
                     2,
-                    2,
+                    1,
                     {
-                      "1": [
+                      "0": [
                         1,
                         {
                           "cost": [
@@ -687,7 +1007,7 @@
                           ],
                           "power": [
                             0,
-                            0
+                            3
                           ],
                           "baseCost": [
                             0,
@@ -695,11 +1015,11 @@
                           ],
                           "basePower": [
                             0,
-                            0
+                            3
                           ],
                           "cardDefId": [
                             0,
-                            "FastballSpecial"
+                            "Domino"
                           ]
                         }
                       ]
@@ -715,27 +1035,11 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Silenced",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "textRemoved",
-              "removedBy": "Zero"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 2,
           "label": "Resolve",
           "events": [
             {
               "who": "opponent",
-              "card": "FastballSpecial",
+              "card": "Domino",
               "type": "cardRevealed"
             }
           ]
@@ -746,46 +1050,128 @@
         {
           "_v": 2,
           "turn": 2,
-          "label": "Removed",
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "VibraniumMines",
+              "playerPower": 2,
+              "locationIndex": 1,
+              "opponentPower": 3
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Draw",
           "events": [
             {
               "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "removed"
+              "card": "Vibranium",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 51,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Vibranium",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 52,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Vibranium",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 53,
+              "drawReveal": true
             }
           ]
         },
         {
-          "b": [
+          "r": [
+            1,
+            {
+              "opponent": [
+                0,
+                10
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Reveal",
+          "events": [
+            {
+              "who": "player",
+              "card": "Wave",
+              "cost": 3,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 36,
+              "drawReveal": false
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Score",
+          "events": [
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "RevealOn2",
+              "playerPower": 6,
+              "locationIndex": 2,
+              "opponentPower": 4
+            }
+          ]
+        },
+        {}
+      ],
+      [
+        {
+          "_v": 2,
+          "turn": 2,
+          "label": "Resolved",
+          "events": [
+            {
+              "who": "player",
+              "card": "Wave",
+              "type": "cardResolved"
+            }
+          ]
+        },
+        {
+          "h": [
             2,
             3,
             {
               "0": [
                 1,
                 {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "opponent": [
-                2,
-                1,
-                {
-                  "0": [
+                  "cost": [
                     0,
-                    {
-                      "cost": 2,
-                      "power": 0,
-                      "cardDefId": "FastballSpecial"
-                    }
+                    4
                   ]
                 }
               ]
@@ -800,14 +1186,14 @@
           "label": "Energy",
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 3
-            },
-            {
               "who": "opponent",
               "type": "energy",
-              "energy": 3
+              "energy": 4
+            },
+            {
+              "who": "player",
+              "type": "energy",
+              "energy": 4
             }
           ]
         },
@@ -820,7 +1206,7 @@
           "label": "Location",
           "events": [
             {
-              "to": "OnslaughtsCitadel",
+              "to": "Kyln",
               "from": "RevealOn2",
               "type": "location",
               "locationIndex": 2
@@ -837,7 +1223,7 @@
                 {
                   "location": [
                     0,
-                    "OnslaughtsCitadel"
+                    "Kyln"
                   ]
                 }
               ]
@@ -852,22 +1238,22 @@
           "label": "Draw",
           "events": [
             {
+              "who": "opponent",
+              "card": "Vibranium",
+              "type": "draw"
+            },
+            {
               "who": "player",
-              "card": "Jubilee",
-              "cost": 4,
+              "card": "IronMan",
+              "cost": 5,
               "type": "reveal",
-              "power": 1,
-              "entityId": 21,
+              "power": 0,
+              "entityId": 32,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "Jubilee",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
+              "card": "IronMan",
               "type": "draw"
             }
           ]
@@ -878,7 +1264,7 @@
             {
               "player": [
                 0,
-                6
+                4
               ],
               "opponent": [
                 0,
@@ -888,628 +1274,12 @@
           ],
           "h": [
             2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 4,
-                  "power": 1,
-                  "baseCost": 4,
-                  "basePower": 1,
-                  "cardDefId": "Jubilee"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                6
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "play",
-              "entityId": 23,
-              "location": "CaveOfTheDragon",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 6,
-                          "baseCost": 3,
-                          "entityId": 23,
-                          "basePower": 6,
-                          "cardDefId": "Wave",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
+            4,
             {
               "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ],
-                  "power": [
-                    0,
-                    9
-                  ],
-                  "baseCost": [
-                    0,
-                    6
-                  ],
-                  "basePower": [
-                    0,
-                    9
-                  ],
-                  "cardDefId": [
-                    0,
-                    "LivingTribunal"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Jubilee"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 3,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "play",
-              "entityId": 31,
-              "location": "Kyln",
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Wasp",
-              "type": "play",
-              "entityId": 39,
-              "location": "Kyln",
-              "locationIndex": 0
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 31,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ],
-                      "2": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 39,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 31,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            3
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            3
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Cosmo"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Kyln",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wasp",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 39,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "0": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            0
-                          ],
-                          "power": [
-                            0,
-                            1
-                          ],
-                          "baseCost": [
-                            0,
-                            0
-                          ],
-                          "basePower": [
-                            0,
-                            1
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Wasp"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Wasp",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Kyln",
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wave",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 23,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CaveOfTheDragon",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 3,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ]
-                }
-              ],
-              "3": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 4
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 4
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 22,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
                 0,
                 {
-                  "cost": 4,
+                  "cost": 5,
                   "power": 0,
                   "baseCost": 5,
                   "basePower": 0,
@@ -1523,835 +1293,11 @@
             {
               "player": [
                 0,
-                5
-              ],
-              "opponent": [
-                0,
-                5
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "play",
-              "entityId": 19,
-              "location": "OnslaughtsCitadel",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 9,
-                          "baseCost": 6,
-                          "entityId": 19,
-                          "basePower": 9,
-                          "cardDefId": "LivingTribunal",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "3": [
-                1,
-                {
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Jubilee"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "power": [
-                    0,
-                    0
-                  ],
-                  "baseCost": [
-                    0,
-                    5
-                  ],
-                  "basePower": [
-                    0,
-                    0
-                  ],
-                  "cardDefId": [
-                    0,
-                    "IronMan"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 4,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Play",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Nocturne",
-              "type": "play",
-              "entityId": 41,
-              "location": "CaveOfTheDragon",
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Martyr",
-              "type": "play",
-              "entityId": 30,
-              "location": "CaveOfTheDragon",
-              "locationIndex": 1
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 41,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 0
-                        }
-                      ],
-                      "1": [
-                        0,
-                        {
-                          "cost": null,
-                          "power": null,
-                          "baseCost": null,
-                          "entityId": 30,
-                          "basePower": null,
-                          "cardDefId": null,
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "opponent": [
-                0,
-                1
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Nocturne",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 41,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            3
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            3
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Nocturne"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Nocturne",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CaveOfTheDragon",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Martyr",
-              "cost": 1,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "power": [
-                            0,
-                            5
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "basePower": [
-                            0,
-                            5
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Martyr"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Martyr",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 10
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "cost": 6,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 19,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "doubleOngoing"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Kyln",
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 10
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OnslaughtsCitadel",
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Hela",
-              "cost": 6,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 48,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "StarlordMasterOfTheSun",
-              "cost": 5,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 49,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 7,
-                          "baseCost": 5,
-                          "entityId": 49,
-                          "basePower": 7,
-                          "cardDefId": "StarlordMasterOfTheSun",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 6,
-                          "baseCost": 6,
-                          "entityId": 48,
-                          "basePower": 6,
-                          "cardDefId": "Hela",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "Hela",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 16
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "StarlordMasterOfTheSun",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 4,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Kyln",
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 16
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OnslaughtsCitadel",
-              "playerPower": 7,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 7
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5
-            }
-          ]
-        },
-        {
-          "h": [
-            2,
-            5,
-            {
-              "1": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    6
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    5
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "Crystal",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 29,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
                 6
               ],
               "opponent": [
                 0,
-                2
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 3,
-                  "power": 6,
-                  "baseCost": 3,
-                  "basePower": 6,
-                  "cardDefId": "Crystal"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                4
-              ],
-              "opponent": [
-                0,
-                4
+                9
               ]
             }
           ]
@@ -2360,788 +1306,7 @@
       [
         {
           "_v": 2,
-          "turn": 5,
-          "label": "Turn Winner",
-          "events": [
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "opponent",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "play",
-              "entityId": 22,
-              "location": "OnslaughtsCitadel",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 5,
-                          "power": 0,
-                          "baseCost": 5,
-                          "entityId": 22,
-                          "basePower": 0,
-                          "cardDefId": "IronMan",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
-          "h": [
-            2,
-            5,
-            {
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Crystal"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Staged",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "cardStaged"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 11
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "End Turn",
-          "events": [
-            {
-              "turn": 5,
-              "type": "endTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Move",
-          "events": [
-            {
-              "to": "OnslaughtsCitadel",
-              "who": "opponent",
-              "card": "Nocturne",
-              "from": "CaveOfTheDragon",
-              "type": "move",
-              "entityId": 41,
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "1": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "0": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            1
-                          ],
-                          "baseCost": [
-                            0,
-                            1
-                          ],
-                          "entityId": [
-                            0,
-                            30
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Martyr"
-                          ]
-                        }
-                      ],
-                      "1": [
-                        1,
-                        {
-                          "cost": [
-                            0,
-                            6
-                          ],
-                          "power": [
-                            0,
-                            6
-                          ],
-                          "baseCost": [
-                            0,
-                            6
-                          ],
-                          "entityId": [
-                            0,
-                            48
-                          ],
-                          "basePower": [
-                            0,
-                            6
-                          ],
-                          "cardDefId": [
-                            0,
-                            "Hela"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {
-                      "0": [
-                        0,
-                        {
-                          "cost": 3,
-                          "power": 5,
-                          "baseCost": 3,
-                          "entityId": 41,
-                          "basePower": 5,
-                          "cardDefId": "Nocturne",
-                          "arrivalSeq": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OnslaughtsCitadel",
-              "playerPower": 7,
-              "locationIndex": 2,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Location",
-          "events": [
-            {
-              "to": "AstralPlane",
-              "from": "OnslaughtsCitadel",
-              "type": "location",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "location": [
-                    0,
-                    "AstralPlane"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Event",
-          "events": [
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "doubleOngoing"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 22,
-              "drawReveal": false
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Score",
-          "events": [
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "playerPower": 10,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "playerPower": 10,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AstralPlane",
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 5
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolved",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "cardResolved"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Reveal",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AdamantiumInfusion",
-              "cost": 4,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 50,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 51,
-              "drawReveal": false
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 7,
-                          "baseCost": 4,
-                          "entityId": 51,
-                          "basePower": 7,
-                          "cardDefId": "IronLad",
-                          "arrivalSeq": 2
-                        }
-                      ]
-                    }
-                  ],
-                  "opponentCards": [
-                    2,
-                    2,
-                    {
-                      "1": [
-                        0,
-                        {
-                          "cost": 4,
-                          "power": 0,
-                          "baseCost": 4,
-                          "entityId": 50,
-                          "basePower": 0,
-                          "cardDefId": "AdamantiumInfusion",
-                          "arrivalSeq": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Power",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "power",
-              "newPower": 0,
-              "oldPower": 7,
-              "cardEntityId": 51
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "power": [
-                            0,
-                            0
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AdamantiumInfusion",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Removed",
-          "events": [
-            {
-              "who": "opponent",
-              "card": "AdamantiumInfusion",
-              "type": "removed"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "opponentCards": [
-                    2,
-                    1,
-                    {}
-                  ]
-                }
-              ]
-            }
-          ],
-          "n": [
-            1,
-            {
-              "opponent": [
-                2,
-                2,
-                {
-                  "1": [
-                    0,
-                    {
-                      "cost": 4,
-                      "power": 0,
-                      "cardDefId": "AdamantiumInfusion"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Resolve",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardRevealed"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "HowardTheDuck",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 18,
-              "drawReveal": true
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Override",
-          "events": [
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "abilityOverride",
-              "overrideAbility": "HowardTheDuck"
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    3,
-                    {
-                      "2": [
-                        1,
-                        {
-                          "overrideAbility": [
-                            0,
-                            "HowardTheDuck"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 5,
-          "label": "Final Turn",
-          "events": [
-            {
-              "type": "finalTurn"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Cubes",
-          "events": [
-            {
-              "type": "cubePreview",
-              "cubeValueNextTurn": 2
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Energy",
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Draw",
-          "events": [
-            {
-              "who": "player",
-              "card": "HowardTheDuck",
-              "type": "draw"
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw"
-            }
-          ]
-        },
-        {
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                6
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ],
-          "h": [
-            2,
-            6,
-            {
-              "5": [
-                0,
-                {
-                  "cost": 1,
-                  "power": 2,
-                  "baseCost": 1,
-                  "basePower": 2,
-                  "cardDefId": "HowardTheDuck"
-                }
-              ]
-            }
-          ],
-          "r": [
-            1,
-            {
-              "player": [
-                0,
-                3
-              ],
-              "opponent": [
-                0,
-                3
-              ]
-            }
-          ]
-        }
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
+          "turn": 3,
           "label": "Turn Winner",
           "events": [
             {
@@ -3151,153 +1316,17 @@
             }
           ]
         },
-        {}
-      ],
-      [
         {
-          "_v": 2,
-          "turn": 6,
-          "label": "Initiative",
-          "events": [
-            {
-              "who": "player",
-              "type": "initiative"
-            }
-          ]
-        },
-        {}
-      ],
-      [
-        {
-          "_v": 2,
-          "turn": 6,
-          "label": "Play",
-          "events": [
-            {
-              "who": "player",
-              "card": "Onslaught",
-              "type": "play",
-              "entityId": 27,
-              "location": "AstralPlane",
-              "locationIndex": 2
-            }
-          ]
-        },
-        {
-          "b": [
-            2,
-            3,
-            {
-              "2": [
-                1,
-                {
-                  "playerCards": [
-                    2,
-                    4,
-                    {
-                      "3": [
-                        0,
-                        {
-                          "cost": 6,
-                          "power": 8,
-                          "baseCost": 6,
-                          "entityId": 27,
-                          "basePower": 8,
-                          "cardDefId": "Onslaught",
-                          "arrivalSeq": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "c": [
-            1,
-            {
-              "player": [
-                0,
-                5
-              ]
-            }
-          ],
           "h": [
             2,
-            5,
+            4,
             {
-              "2": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    4
-                  ],
-                  "power": [
-                    0,
-                    1
-                  ],
-                  "baseCost": [
-                    0,
-                    4
-                  ],
-                  "basePower": [
-                    0,
-                    1
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Jubilee"
-                  ]
-                }
-              ],
               "3": [
                 1,
                 {
                   "cost": [
                     0,
-                    3
-                  ],
-                  "power": [
-                    0,
-                    6
-                  ],
-                  "baseCost": [
-                    0,
-                    3
-                  ],
-                  "basePower": [
-                    0,
-                    6
-                  ],
-                  "cardDefId": [
-                    0,
-                    "Crystal"
-                  ]
-                }
-              ],
-              "4": [
-                1,
-                {
-                  "cost": [
-                    0,
-                    1
-                  ],
-                  "power": [
-                    0,
-                    2
-                  ],
-                  "baseCost": [
-                    0,
-                    1
-                  ],
-                  "basePower": [
-                    0,
-                    2
-                  ],
-                  "cardDefId": [
-                    0,
-                    "HowardTheDuck"
+                    4
                   ]
                 }
               ]
@@ -3308,19 +1337,13 @@
       [
         {
           "_v": 2,
-          "turn": 6,
-          "label": "Staged",
+          "turn": 3,
+          "label": "Initiative",
           "events": [
             {
               "who": "player",
-              "card": "Onslaught",
-              "type": "cardStaged"
+              "type": "initiative"
             }
-          ],
-          "survivingLocationIndexes": [
-            0,
-            1,
-            2
           ]
         },
         {}
@@ -3362,139 +1385,16 @@
           "turn": 1,
           "plays": [
             {
-              "card": "Zero",
+              "card": "RavonnaRenslayer",
+              "isPlayer": true,
+              "location": "VibraniumMines",
+              "locationIndex": 1
+            },
+            {
+              "card": "RedWolfFracturedFrontier",
               "isPlayer": false,
               "location": "Kyln",
-              "locationIndex": 0
-            }
-          ],
-          "energy": {
-            "player": 1,
-            "opponent": 1
-          },
-          "events": [
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 85
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 1,
-              "_changeIdx": 87
-            },
-            {
-              "to": "Kyln",
-              "from": "RevealOn1",
-              "type": "location",
-              "_changeIdx": 90,
-              "locationIndex": 0
-            },
-            {
-              "who": "player",
-              "card": "Wave",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 23,
-              "_changeIdx": 93,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "draw",
-              "_changeIdx": 94
-            },
-            {
-              "who": "opponent",
-              "card": "SinisterSix",
-              "type": "draw",
-              "_changeIdx": 97
-            },
-            {
-              "tie": true,
-              "type": "turnWinner",
-              "winner": null,
-              "_changeIdx": 100
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 101
-            },
-            {
-              "turn": 1,
-              "type": "endTurn",
-              "_changeIdx": 104
-            },
-            {
-              "who": "opponent",
-              "card": "Zero",
-              "type": "play",
-              "entityId": 32,
-              "location": "Kyln",
-              "_changeIdx": 105,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Zero",
-              "cost": 1,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 32,
-              "_changeIdx": 108,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Zero",
-              "type": "cardRevealed",
-              "_changeIdx": 109
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Kyln",
-              "_changeIdx": 111,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 3
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "opponent",
-              "playerPower": 0,
-              "opponentPower": 3
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
-            }
-          ]
-        },
-        8
-      ],
-      [
-        {
-          "turn": 2,
-          "plays": [
-            {
-              "card": "FastballSpecial",
-              "isPlayer": false,
-              "location": "Kyln",
-              "locationIndex": 0
+              "locationIndex": 2
             }
           ],
           "energy": {
@@ -3503,106 +1403,153 @@
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 2,
-              "_changeIdx": 124
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 2,
-              "_changeIdx": 126
-            },
-            {
-              "to": "CaveOfTheDragon",
-              "from": "RevealOn2",
-              "type": "location",
-              "_changeIdx": 129,
-              "locationIndex": 1
-            },
-            {
-              "to": "RevealOn2",
-              "from": "RevealOn3",
-              "type": "location",
-              "_changeIdx": 133,
-              "locationIndex": 2
+              "_changeIdx": 74
             },
             {
               "who": "player",
-              "card": "LivingTribunal",
-              "cost": 6,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 19,
-              "_changeIdx": 136,
-              "drawReveal": true
+              "type": "energy",
+              "energy": 2,
+              "_changeIdx": 76
             },
             {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "draw",
-              "_changeIdx": 137
+              "to": "Superflow",
+              "from": "RevealOn1",
+              "type": "location",
+              "_changeIdx": 79,
+              "locationIndex": 0
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 140
+              "_changeIdx": 88
             },
             {
-              "tie": false,
+              "who": "player",
+              "card": "Crystal",
+              "cost": 3,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 41,
+              "_changeIdx": 91,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Crystal",
+              "type": "draw",
+              "_changeIdx": 92
+            },
+            {
+              "tie": true,
               "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 143
+              "winner": null,
+              "_changeIdx": 95
             },
             {
               "who": "opponent",
               "type": "initiative",
-              "_changeIdx": 144
+              "_changeIdx": 96
             },
             {
-              "turn": 2,
-              "type": "endTurn",
-              "_changeIdx": 149
-            },
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
+              "who": "player",
+              "card": "RavonnaRenslayer",
               "type": "play",
               "entityId": 40,
-              "location": "Kyln",
-              "_changeIdx": 150,
-              "locationIndex": 0
+              "location": "RevealOn2",
+              "_changeIdx": 99,
+              "locationIndex": 1
+            },
+            {
+              "who": "player",
+              "card": "RavonnaRenslayer",
+              "type": "cardStaged",
+              "_changeIdx": 100
+            },
+            {
+              "turn": 1,
+              "type": "endTurn",
+              "_changeIdx": 103
             },
             {
               "who": "opponent",
-              "card": "FastballSpecial",
+              "card": "RedWolfFracturedFrontier",
+              "type": "play",
+              "entityId": 27,
+              "location": "RevealOn3",
+              "_changeIdx": 104,
+              "locationIndex": 2
+            },
+            {
+              "who": "opponent",
+              "card": "RedWolfFracturedFrontier",
               "cost": 2,
               "type": "reveal",
-              "power": 0,
-              "entityId": 40,
-              "_changeIdx": 154,
+              "power": 1,
+              "entityId": 27,
+              "_changeIdx": 108,
               "drawReveal": false
             },
             {
               "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "textRemoved",
-              "removedBy": "Zero",
-              "_changeIdx": 155
-            },
-            {
-              "who": "opponent",
-              "card": "FastballSpecial",
+              "card": "RedWolfFracturedFrontier",
               "type": "cardRevealed",
-              "_changeIdx": 158
+              "_changeIdx": 109
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "RevealOn3",
+              "_changeIdx": 111,
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 1
             },
             {
               "who": "opponent",
-              "card": "FastballSpecial",
-              "type": "removed",
-              "_changeIdx": 162
+              "card": "RedWolfFracturedFrontier",
+              "type": "power",
+              "newPower": 4,
+              "oldPower": 1,
+              "_changeIdx": 115,
+              "cardEntityId": 27
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "RevealOn3",
+              "_changeIdx": 119,
+              "playerPower": 0,
+              "locationIndex": 2,
+              "opponentPower": 4
+            },
+            {
+              "who": "player",
+              "card": "RavonnaRenslayer",
+              "cost": 2,
+              "type": "reveal",
+              "power": 2,
+              "entityId": 40,
+              "_changeIdx": 122,
+              "drawReveal": false
+            },
+            {
+              "type": "score",
+              "winner": "player",
+              "location": "RevealOn2",
+              "_changeIdx": 125,
+              "playerPower": 2,
+              "locationIndex": 1,
+              "opponentPower": 0
+            },
+            {
+              "who": "player",
+              "card": "RavonnaRenslayer",
+              "type": "cardResolved",
+              "_changeIdx": 128
             }
           ],
           "snapEvent": null,
@@ -3613,40 +1560,34 @@
               "opponentPower": 0
             },
             {
-              "winner": null,
-              "playerPower": 0,
+              "winner": "player",
+              "playerPower": 2,
               "opponentPower": 0
             },
             {
-              "winner": null,
+              "winner": "opponent",
               "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 4
             }
           ]
         },
-        21
+        13
       ],
       [
         {
-          "turn": 3,
+          "turn": 2,
           "plays": [
             {
               "card": "Wave",
               "isPlayer": true,
-              "location": "CaveOfTheDragon",
+              "location": "Kyln",
+              "locationIndex": 2
+            },
+            {
+              "card": "Domino",
+              "isPlayer": false,
+              "location": "VibraniumMines",
               "locationIndex": 1
-            },
-            {
-              "card": "Cosmo",
-              "isPlayer": false,
-              "location": "Kyln",
-              "locationIndex": 0
-            },
-            {
-              "card": "Wasp",
-              "isPlayer": false,
-              "location": "Kyln",
-              "locationIndex": 0
             }
           ],
           "energy": {
@@ -3655,144 +1596,36 @@
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 3,
-              "_changeIdx": 167
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 3,
-              "_changeIdx": 169
+              "_changeIdx": 132
             },
             {
-              "to": "OnslaughtsCitadel",
+              "who": "player",
+              "type": "energy",
+              "energy": 3,
+              "_changeIdx": 134
+            },
+            {
+              "to": "VibraniumMines",
               "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 172,
+              "_changeIdx": 143,
+              "locationIndex": 1
+            },
+            {
+              "to": "RevealOn2",
+              "from": "RevealOn3",
+              "type": "location",
+              "_changeIdx": 148,
               "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "cost": 4,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 21,
-              "_changeIdx": 176,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Jubilee",
-              "type": "draw",
-              "_changeIdx": 177
             },
             {
               "who": "opponent",
               "card": null,
               "type": "draw",
-              "_changeIdx": 180
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 186
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 187
-            },
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "play",
-              "entityId": 23,
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 190,
-              "locationIndex": 1
-            },
-            {
-              "who": "player",
-              "card": "Wave",
-              "type": "cardStaged",
-              "_changeIdx": 191
-            },
-            {
-              "turn": 3,
-              "type": "endTurn",
-              "_changeIdx": 196
-            },
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "play",
-              "entityId": 31,
-              "location": "Kyln",
-              "_changeIdx": 197,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Wasp",
-              "type": "play",
-              "entityId": 39,
-              "location": "Kyln",
-              "_changeIdx": 200,
-              "locationIndex": 0
-            },
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "cost": 3,
-              "type": "reveal",
-              "power": 3,
-              "entityId": 31,
-              "_changeIdx": 204,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Cosmo",
-              "type": "cardRevealed",
-              "_changeIdx": 205
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Kyln",
-              "_changeIdx": 208,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 6
-            },
-            {
-              "who": "opponent",
-              "card": "Wasp",
-              "cost": 0,
-              "type": "reveal",
-              "power": 1,
-              "entityId": 39,
-              "_changeIdx": 214,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Wasp",
-              "type": "cardRevealed",
-              "_changeIdx": 215
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Kyln",
-              "_changeIdx": 217,
-              "playerPower": 0,
-              "locationIndex": 0,
-              "opponentPower": 7
+              "_changeIdx": 152
             },
             {
               "who": "player",
@@ -3800,468 +1633,191 @@
               "cost": 3,
               "type": "reveal",
               "power": 6,
+              "entityId": 36,
+              "_changeIdx": 155,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Wave",
+              "type": "draw",
+              "_changeIdx": 156
+            },
+            {
+              "tie": false,
+              "type": "turnWinner",
+              "winner": "opponent",
+              "_changeIdx": 159
+            },
+            {
+              "who": "opponent",
+              "type": "initiative",
+              "_changeIdx": 160
+            },
+            {
+              "who": "player",
+              "card": "Wave",
+              "type": "play",
+              "entityId": 36,
+              "location": "RevealOn2",
+              "_changeIdx": 164,
+              "locationIndex": 2
+            },
+            {
+              "who": "player",
+              "card": "Wave",
+              "type": "cardStaged",
+              "_changeIdx": 165
+            },
+            {
+              "turn": 2,
+              "type": "endTurn",
+              "_changeIdx": 171
+            },
+            {
+              "who": "opponent",
+              "card": "Domino",
+              "type": "play",
               "entityId": 23,
-              "_changeIdx": 223,
+              "location": "VibraniumMines",
+              "_changeIdx": 172,
+              "locationIndex": 1
+            },
+            {
+              "who": "opponent",
+              "card": "Domino",
+              "cost": 2,
+              "type": "reveal",
+              "power": 3,
+              "entityId": 23,
+              "_changeIdx": 176,
+              "drawReveal": false
+            },
+            {
+              "who": "opponent",
+              "card": "Domino",
+              "type": "cardRevealed",
+              "_changeIdx": 177
+            },
+            {
+              "type": "score",
+              "winner": "opponent",
+              "location": "VibraniumMines",
+              "_changeIdx": 179,
+              "playerPower": 2,
+              "locationIndex": 1,
+              "opponentPower": 3
+            },
+            {
+              "who": "opponent",
+              "card": "Vibranium",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 51,
+              "_changeIdx": 184,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Vibranium",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 52,
+              "_changeIdx": 187,
+              "drawReveal": true
+            },
+            {
+              "who": "opponent",
+              "card": "Vibranium",
+              "cost": 1,
+              "type": "reveal",
+              "power": 4,
+              "entityId": 53,
+              "_changeIdx": 190,
+              "drawReveal": true
+            },
+            {
+              "who": "player",
+              "card": "Wave",
+              "cost": 3,
+              "type": "reveal",
+              "power": 6,
+              "entityId": 36,
+              "_changeIdx": 193,
               "drawReveal": false
             },
             {
               "type": "score",
               "winner": "player",
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 225,
+              "location": "RevealOn2",
+              "_changeIdx": 195,
               "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 0
+              "locationIndex": 2,
+              "opponentPower": 4
             },
             {
               "who": "player",
               "card": "Wave",
               "type": "cardResolved",
-              "_changeIdx": 244
+              "_changeIdx": 210
             }
           ],
           "snapEvent": null,
           "locationPower": [
             {
-              "winner": "opponent",
+              "winner": null,
               "playerPower": 0,
-              "opponentPower": 7
+              "opponentPower": 0
+            },
+            {
+              "winner": "opponent",
+              "playerPower": 2,
+              "opponentPower": 3
             },
             {
               "winner": "player",
               "playerPower": 6,
-              "opponentPower": 0
-            },
-            {
-              "winner": null,
-              "playerPower": 0,
-              "opponentPower": 0
+              "opponentPower": 4
             }
           ]
         },
-        39
+        33
       ],
       [
         {
-          "turn": 4,
-          "plays": [
-            {
-              "card": "LivingTribunal",
-              "isPlayer": true,
-              "location": "AstralPlane",
-              "locationIndex": 2
-            },
-            {
-              "card": "Nocturne",
-              "isPlayer": false,
-              "location": "CaveOfTheDragon",
-              "locationIndex": 1
-            },
-            {
-              "card": "Martyr",
-              "isPlayer": false,
-              "location": "CaveOfTheDragon",
-              "locationIndex": 1
-            }
-          ],
+          "turn": 3,
+          "plays": [],
           "energy": {
             "player": 4,
             "opponent": 4
           },
           "events": [
             {
-              "who": "player",
-              "type": "energy",
-              "energy": 4,
-              "_changeIdx": 250
-            },
-            {
               "who": "opponent",
               "type": "energy",
               "energy": 4,
-              "_changeIdx": 252
+              "_changeIdx": 214
             },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "cost": 5,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 22,
-              "_changeIdx": 254,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "draw",
-              "_changeIdx": 255
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 268
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 274
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 275
-            },
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "play",
-              "entityId": 19,
-              "location": "OnslaughtsCitadel",
-              "_changeIdx": 278,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "cardStaged",
-              "_changeIdx": 279
-            },
-            {
-              "turn": 4,
-              "type": "endTurn",
-              "_changeIdx": 297
-            },
-            {
-              "who": "opponent",
-              "card": "Nocturne",
-              "type": "play",
-              "entityId": 41,
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 298,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Martyr",
-              "type": "play",
-              "entityId": 30,
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 301,
-              "locationIndex": 1
-            },
-            {
-              "who": "opponent",
-              "card": "Nocturne",
-              "cost": 3,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 41,
-              "_changeIdx": 305,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Nocturne",
-              "type": "cardRevealed",
-              "_changeIdx": 306
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 308,
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 5
-            },
-            {
-              "who": "opponent",
-              "card": "Martyr",
-              "cost": 1,
-              "type": "reveal",
-              "power": 5,
-              "entityId": 30,
-              "_changeIdx": 314,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Martyr",
-              "type": "cardRevealed",
-              "_changeIdx": 315
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 317,
-              "playerPower": 6,
-              "locationIndex": 1,
-              "opponentPower": 10
-            },
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "cost": 6,
-              "type": "reveal",
-              "power": 9,
-              "entityId": 19,
-              "_changeIdx": 323,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "doubleOngoing",
-              "_changeIdx": 328
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "Kyln",
-              "_changeIdx": 330,
-              "playerPower": 5,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 333,
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 10
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OnslaughtsCitadel",
-              "_changeIdx": 336,
-              "playerPower": 5,
-              "locationIndex": 2,
-              "opponentPower": 0
-            },
-            {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "cardResolved",
-              "_changeIdx": 339
-            },
-            {
-              "who": "opponent",
-              "card": "Hela",
-              "cost": 6,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 48,
-              "_changeIdx": 343,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "StarlordMasterOfTheSun",
-              "cost": 5,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 49,
-              "_changeIdx": 346,
-              "drawReveal": false
-            },
-            {
-              "who": "opponent",
-              "card": "Hela",
-              "type": "cardRevealed",
-              "_changeIdx": 348
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 349,
-              "playerPower": 5,
-              "locationIndex": 1,
-              "opponentPower": 16
-            },
-            {
-              "who": "player",
-              "card": "StarlordMasterOfTheSun",
-              "type": "cardRevealed",
-              "_changeIdx": 355
-            },
-            {
-              "type": "score",
-              "winner": null,
-              "location": "Kyln",
-              "_changeIdx": 358,
-              "playerPower": 7,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 361,
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 16
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OnslaughtsCitadel",
-              "_changeIdx": 364,
-              "playerPower": 7,
-              "locationIndex": 2,
-              "opponentPower": 0
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": null,
-              "playerPower": 7,
-              "opponentPower": 7
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 7,
-              "opponentPower": 16
-            },
-            {
-              "winner": "player",
-              "playerPower": 7,
-              "opponentPower": 0
-            }
-          ]
-        },
-        58
-      ],
-      [
-        {
-          "turn": 5,
-          "plays": [
-            {
-              "card": "IronMan",
-              "isPlayer": true,
-              "location": "AstralPlane",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 7,
-            "opponent": 5
-          },
-          "events": [
             {
               "who": "player",
               "type": "energy",
-              "energy": 7,
-              "_changeIdx": 387
+              "energy": 4,
+              "_changeIdx": 216
             },
             {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 5,
-              "_changeIdx": 389
-            },
-            {
-              "who": "player",
-              "card": "Crystal",
-              "cost": 3,
-              "type": "reveal",
-              "power": 6,
-              "entityId": 29,
-              "_changeIdx": 395,
-              "drawReveal": true
-            },
-            {
-              "who": "player",
-              "card": "Crystal",
-              "type": "draw",
-              "_changeIdx": 396
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 399
-            },
-            {
-              "tie": false,
-              "type": "turnWinner",
-              "winner": "opponent",
-              "_changeIdx": 402
-            },
-            {
-              "who": "opponent",
-              "type": "initiative",
-              "_changeIdx": 403
-            },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "play",
-              "entityId": 22,
-              "location": "OnslaughtsCitadel",
-              "_changeIdx": 407,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "cardStaged",
-              "_changeIdx": 408
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 417,
-              "playerPower": 7,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "turn": 5,
-              "type": "endTurn",
-              "_changeIdx": 421
-            },
-            {
-              "to": "OnslaughtsCitadel",
-              "who": "opponent",
-              "card": "Nocturne",
-              "from": "CaveOfTheDragon",
-              "type": "move",
-              "entityId": 41,
-              "_changeIdx": 422,
-              "locationIndex": 2
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "OnslaughtsCitadel",
-              "_changeIdx": 429,
-              "playerPower": 7,
-              "locationIndex": 2,
-              "opponentPower": 5
-            },
-            {
-              "to": "AstralPlane",
-              "from": "OnslaughtsCitadel",
+              "to": "Kyln",
+              "from": "RevealOn2",
               "type": "location",
-              "_changeIdx": 434,
+              "_changeIdx": 225,
               "locationIndex": 2
             },
             {
-              "who": "player",
-              "card": "LivingTribunal",
-              "type": "doubleOngoing",
-              "_changeIdx": 437
+              "who": "opponent",
+              "card": "Vibranium",
+              "type": "draw",
+              "_changeIdx": 229
             },
             {
               "who": "player",
@@ -4269,203 +1825,26 @@
               "cost": 5,
               "type": "reveal",
               "power": 0,
-              "entityId": 22,
-              "_changeIdx": 443,
-              "drawReveal": false
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "Kyln",
-              "_changeIdx": 447,
-              "playerPower": 10,
-              "locationIndex": 0,
-              "opponentPower": 7
-            },
-            {
-              "type": "score",
-              "winner": "opponent",
-              "location": "CaveOfTheDragon",
-              "_changeIdx": 450,
-              "playerPower": 10,
-              "locationIndex": 1,
-              "opponentPower": 11
-            },
-            {
-              "type": "score",
-              "winner": "player",
-              "location": "AstralPlane",
-              "_changeIdx": 453,
-              "playerPower": 10,
-              "locationIndex": 2,
-              "opponentPower": 5
-            },
-            {
-              "who": "player",
-              "card": "IronMan",
-              "type": "cardResolved",
-              "_changeIdx": 456
-            },
-            {
-              "who": "opponent",
-              "card": "AdamantiumInfusion",
-              "cost": 4,
-              "type": "reveal",
-              "power": 0,
-              "entityId": 50,
-              "_changeIdx": 460,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "cost": 4,
-              "type": "reveal",
-              "power": 7,
-              "entityId": 51,
-              "_changeIdx": 463,
-              "drawReveal": false
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "power",
-              "newPower": 0,
-              "oldPower": 7,
-              "_changeIdx": 465,
-              "cardEntityId": 51
-            },
-            {
-              "who": "opponent",
-              "card": "AdamantiumInfusion",
-              "type": "cardRevealed",
-              "_changeIdx": 468
-            },
-            {
-              "who": "opponent",
-              "card": "AdamantiumInfusion",
-              "type": "removed",
-              "_changeIdx": 472
-            },
-            {
-              "who": "player",
-              "card": "IronLad",
-              "type": "cardRevealed",
-              "_changeIdx": 474
-            },
-            {
-              "who": "player",
-              "card": "HowardTheDuck",
-              "cost": 1,
-              "type": "reveal",
-              "power": 2,
-              "entityId": 18,
-              "_changeIdx": 476,
+              "entityId": 32,
+              "_changeIdx": 232,
               "drawReveal": true
             },
             {
               "who": "player",
-              "card": "IronLad",
-              "type": "abilityOverride",
-              "_changeIdx": 477,
-              "overrideAbility": "HowardTheDuck"
-            },
-            {
-              "type": "finalTurn",
-              "_changeIdx": 485
-            }
-          ],
-          "snapEvent": null,
-          "locationPower": [
-            {
-              "winner": "player",
-              "playerPower": 10,
-              "opponentPower": 7
-            },
-            {
-              "winner": "opponent",
-              "playerPower": 10,
-              "opponentPower": 11
-            },
-            {
-              "winner": "player",
-              "playerPower": 10,
-              "opponentPower": 5
-            }
-          ]
-        },
-        84
-      ],
-      [
-        {
-          "turn": 6,
-          "plays": [
-            {
-              "card": "Onslaught",
-              "isPlayer": true,
-              "location": "AstralPlane",
-              "locationIndex": 2
-            }
-          ],
-          "energy": {
-            "player": 6,
-            "opponent": 6
-          },
-          "events": [
-            {
-              "type": "cubePreview",
-              "_changeIdx": 487,
-              "cubeValueNextTurn": 2
-            },
-            {
-              "who": "player",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 489
-            },
-            {
-              "who": "opponent",
-              "type": "energy",
-              "energy": 6,
-              "_changeIdx": 491
-            },
-            {
-              "who": "player",
-              "card": "HowardTheDuck",
+              "card": "IronMan",
               "type": "draw",
-              "_changeIdx": 494
-            },
-            {
-              "who": "opponent",
-              "card": null,
-              "type": "draw",
-              "_changeIdx": 499
+              "_changeIdx": 233
             },
             {
               "tie": false,
               "type": "turnWinner",
               "winner": "player",
-              "_changeIdx": 505
+              "_changeIdx": 240
             },
             {
               "who": "player",
               "type": "initiative",
-              "_changeIdx": 506
-            },
-            {
-              "who": "player",
-              "card": "Onslaught",
-              "type": "play",
-              "entityId": 27,
-              "location": "AstralPlane",
-              "_changeIdx": 509,
-              "locationIndex": 2
-            },
-            {
-              "who": "player",
-              "card": "Onslaught",
-              "type": "cardStaged",
-              "_changeIdx": 510
+              "_changeIdx": 241
             }
           ],
           "snapEvent": null,
@@ -4487,46 +1866,41 @@
             }
           ]
         },
-        91
+        37
       ]
     ],
     "replayStorageVersion": 1
   },
-  "opp_cl": 7267,
-  "opp_sp": null,
+  "opp_cl": 17650,
+  "opp_sp": 4399,
   "bracket": null,
-  "match_id": "a56de76b-b3d7-48a4-8314-358ca92b0ad6",
-  "opp_name": "GrenouilleFou",
+  "match_id": "b830375a-8acd-41ca-9ba9-4153c86075db",
+  "opp_name": "JOJO ",
   "opp_team": null,
   "share_id": "pxjvfy",
   "game_name": "SmokeFisher",
-  "locations": [
-    "Kyln",
-    "CaveOfTheDragon",
-    "AstralPlane"
-  ],
+  "locations": [],
   "player_cl": 12494,
   "player_sp": 4193,
   "turn_data": null,
   "draft_deck": null,
   "opp_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
-    "CardDefId": "SpiderHam",
-    "ArtVariantDefId": "SpiderHam_08"
+    "CardDefId": "VampireKillmonger"
   },
   "opp_health": null,
-  "opp_is_bot": true,
+  "opp_is_bot": false,
   "mode_detail": null,
   "player_name": "SmokeFisher",
-  "current_turn": 7,
+  "current_turn": 4,
   "kudzu_spread": null,
-  "match_result": "win",
-  "match_status": "complete",
+  "match_result": null,
+  "match_status": "in_progress",
   "opp_champion": null,
-  "opp_clan_tag": "CUB",
+  "opp_clan_tag": null,
   "owner_status": "live",
   "next_match_id": null,
-  "opp_retreated": true,
+  "opp_retreated": null,
   "player_avatar": {
     "$type": "Cube.Common.CardArtAvatar, SecondDinner.Cube.Common",
     "CardDefId": "VampireKillmonger"
@@ -4534,42 +1908,25 @@
   "player_health": null,
   "wild_boosters": null,
   "opp_deck_cards": [
-    "SinisterSix",
-    "Zero",
-    "FastballSpecial",
-    "Cosmo",
-    "Wasp",
-    "Nocturne",
-    "Martyr"
+    "RedWolfFracturedFrontier",
+    "Domino"
   ],
-  "last_updated_at": "2026-11-05T10:06:32.278+00:00",
+  "last_updated_at": "2026-11-05T10:07:40.879+00:00",
   "player_champion": null,
   "opp_played_cards": [],
   "player_deck_cards": [
-    "Wave",
-    "RavonnaRenslayer",
-    "Magik",
-    "Mystique",
-    "Onslaught",
     "LivingTribunal",
-    "HowardTheDuck",
+    "RavonnaRenslayer",
     "IronLad",
-    "Sera",
     "Crystal",
-    "IronMan",
-    "Jubilee"
+    "Wave",
+    "IronMan"
   ],
   "booster_card_def_id": null,
   "opponent_cards_seen": [
-    "SinisterSix",
-    "Zero",
-    "Cosmo",
-    "Nocturne",
-    "FastballSpecial",
-    "Wasp",
-    "Martyr",
-    "Hela",
-    "AdamantiumInfusion"
+    "RedWolfFracturedFrontier",
+    "Domino",
+    "Vibranium"
   ],
   "conquest_round_index": null
 }
